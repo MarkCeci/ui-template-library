@@ -1,0 +1,533 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-06-04",
+  "description": "V1 enterprise UI style pack seed catalog for AI UI template library",
+  "styles": [
+    {
+      "id": "style-001-modern-saas-clean",
+      "name": "现代 SaaS 极简风",
+      "category": "通用后台 / SaaS",
+      "priority": "P0",
+      "scenario": "B2B SaaS、客户后台、运营平台、内部管理系统。",
+      "visual": "大留白、浅灰背景、卡片化、低饱和品牌色、弱边框、清晰层级。",
+      "v1": "后台 Dashboard、数据列表、详情抽屉；App 首页/列表；组件状态板。",
+      "tokens": "light / dark / brand-basic",
+      "tags": [
+        "saas",
+        "minimal",
+        "admin",
+        "card",
+        "clean"
+      ]
+    },
+    {
+      "id": "style-002-enterprise-classic-table",
+      "name": "企业经典表格风",
+      "category": "通用后台",
+      "priority": "P0",
+      "scenario": "ERP、CRM、订单、权限、审核、主数据管理。",
+      "visual": "信息密度高、表格优先、蓝灰色系、清晰分割线、强操作区。",
+      "v1": "筛选列表、批量操作、表单页、详情页、权限配置。",
+      "tokens": "light / compact / dark",
+      "tags": [
+        "enterprise",
+        "table",
+        "crud",
+        "antd-like",
+        "dense"
+      ]
+    },
+    {
+      "id": "style-003-fluent-office-collab",
+      "name": "Fluent 办公协同风",
+      "category": "办公协作",
+      "priority": "P0",
+      "scenario": "OA、知识库、团队协作、任务、文档、项目空间。",
+      "visual": "柔和圆角、轻阴影、微软办公感、上下文工具栏、渐进披露。",
+      "v1": "工作台、任务列表、文档详情、消息中心、个人中心。",
+      "tokens": "light / dark / copilot-accent",
+      "tags": [
+        "office",
+        "collaboration",
+        "fluent",
+        "copilot",
+        "productivity"
+      ]
+    },
+    {
+      "id": "style-004-carbon-data-enterprise",
+      "name": "Carbon 数据密集风",
+      "category": "企业软件 / 数据产品",
+      "priority": "P0",
+      "scenario": "云平台、企业数据管理、监控、复杂配置、AI 数据产品。",
+      "visual": "黑白灰基础、网格严谨、信息层级硬朗、数据卡片和表单规范。",
+      "v1": "资源列表、配置详情、监控页、数据集管理、模型管理。",
+      "tokens": "light / dark / high-contrast",
+      "tags": [
+        "carbon",
+        "data",
+        "ibm",
+        "cloud",
+        "dense"
+      ]
+    },
+    {
+      "id": "style-005-crm-salesforce-lightning",
+      "name": "CRM 商务销售风",
+      "category": "CRM / 销售管理",
+      "priority": "P0",
+      "scenario": "客户管理、线索、商机、销售漏斗、客户服务。",
+      "visual": "业务对象卡片、记录详情页、路径进度、右侧活动流、可配置布局。",
+      "v1": "客户列表、客户详情、商机看板、活动时间线、表单创建。",
+      "tokens": "light / brand-blue / compact",
+      "tags": [
+        "crm",
+        "sales",
+        "record",
+        "timeline",
+        "pipeline"
+      ]
+    },
+    {
+      "id": "style-006-atlassian-teamwork",
+      "name": "团队协作效率风",
+      "category": "协作 / 项目管理",
+      "priority": "P0",
+      "scenario": "项目管理、Issue、研发协作、需求池、任务看板。",
+      "visual": "清晰导航、标签状态、多列看板、快捷操作、强调可读性。",
+      "v1": "项目首页、看板、Issue 详情、筛选列表、团队空间。",
+      "tokens": "light / dark / agile",
+      "tags": [
+        "kanban",
+        "project",
+        "team",
+        "issue",
+        "collaboration"
+      ]
+    },
+    {
+      "id": "style-007-sap-process-enterprise",
+      "name": "流程型企业管理风",
+      "category": "ERP / 流程系统",
+      "priority": "P0",
+      "scenario": "采购、财务、人事、审批、供应链、企业流程。",
+      "visual": "角色导向、流程清晰、页签与对象页、状态流转、可适配多终端。",
+      "v1": "流程入口、对象详情、审批页、工作清单、移动审批。",
+      "tokens": "light / compact / role-based",
+      "tags": [
+        "process",
+        "sap-like",
+        "erp",
+        "workflow",
+        "adaptive"
+      ]
+    },
+    {
+      "id": "style-008-polars-merchant-ops",
+      "name": "商家运营管理风",
+      "category": "电商 / 商家后台",
+      "priority": "P0",
+      "scenario": "商品、订单、库存、营销、店铺设置、商家插件。",
+      "visual": "运营卡片、易懂表单、商品图+数据、操作引导、商家友好。",
+      "v1": "商品列表、订单详情、营销活动、店铺设置、数据概览。",
+      "tokens": "light / commerce / mobile-admin",
+      "tags": [
+        "commerce",
+        "merchant",
+        "orders",
+        "inventory",
+        "polaris-like"
+      ]
+    },
+    {
+      "id": "style-009-material-cross-platform",
+      "name": "Material 3 跨端自适应风",
+      "category": "跨端应用",
+      "priority": "P0",
+      "scenario": "Android、Web、移动 H5、跨端业务应用。",
+      "visual": "动态色、清晰 color roles、中等圆角、组件一致、适配移动。",
+      "v1": "App 首页、列表、详情、表单、后台轻量页。",
+      "tokens": "light / dark / dynamic-brand",
+      "tags": [
+        "material3",
+        "mobile",
+        "adaptive",
+        "cross-platform",
+        "tokens"
+      ]
+    },
+    {
+      "id": "style-010-apple-premium-mobile",
+      "name": "Apple 高质感移动风",
+      "category": "移动 App",
+      "priority": "P1",
+      "scenario": "高端移动端、企业员工 App、管理者移动工作台。",
+      "visual": "细腻层级、系统字体感、大标题、透明/模糊层、自然动效。",
+      "v1": "移动首页、消息、审批、详情、设置。",
+      "tokens": "ios-light / ios-dark",
+      "tags": [
+        "ios",
+        "mobile",
+        "premium",
+        "native",
+        "motion"
+      ]
+    },
+    {
+      "id": "style-011-fintech-trust",
+      "name": "金融科技可信风",
+      "category": "金融 / 支付 / 账户",
+      "priority": "P0",
+      "scenario": "钱包、支付、账户、资金管理、对账、财务系统。",
+      "visual": "深蓝/绿色状态、数字强调、风险提示明确、留白克制、安全感强。",
+      "v1": "账户概览、交易列表、转账确认、风控提示、对账表。",
+      "tokens": "light / dark / risk",
+      "tags": [
+        "fintech",
+        "trust",
+        "account",
+        "payment",
+        "risk"
+      ]
+    },
+    {
+      "id": "style-012-risk-compliance",
+      "name": "风控合规审计风",
+      "category": "合规 / 审计 / 风险",
+      "priority": "P1",
+      "scenario": "审计后台、合规检查、风控规则、异常复核。",
+      "visual": "状态分级、证据链、操作留痕、低调严肃、重点高亮异常。",
+      "v1": "风险列表、案件详情、规则配置、审核流、日志页。",
+      "tokens": "light / dark / severity",
+      "tags": [
+        "compliance",
+        "audit",
+        "risk",
+        "review",
+        "log"
+      ]
+    },
+    {
+      "id": "style-013-healthcare-clean",
+      "name": "医疗健康清洁风",
+      "category": "医疗 / 健康 / 预约",
+      "priority": "P1",
+      "scenario": "患者管理、预约、报告、健康档案、医生工作台。",
+      "visual": "白底、蓝绿低饱和、温和圆角、清晰警示、信息可信。",
+      "v1": "患者列表、报告详情、预约页、健康档案、移动咨询。",
+      "tokens": "light / clinical / accessible",
+      "tags": [
+        "healthcare",
+        "patient",
+        "report",
+        "appointment",
+        "clean"
+      ]
+    },
+    {
+      "id": "style-014-education-learning",
+      "name": "教育学习平台风",
+      "category": "教育 / 培训 / 知识",
+      "priority": "P1",
+      "scenario": "课程、作业、考试、企业培训、学习进度。",
+      "visual": "卡片式课程、进度可视化、轻插画、温和色彩、弱游戏化。",
+      "v1": "课程首页、课程详情、学习进度、作业列表、考试结果。",
+      "tokens": "light / playful / accessible",
+      "tags": [
+        "education",
+        "learning",
+        "progress",
+        "course",
+        "training"
+      ]
+    },
+    {
+      "id": "style-015-government-stable",
+      "name": "政务公共服务稳重风",
+      "category": "政务 / 公共服务",
+      "priority": "P1",
+      "scenario": "政务服务、公共机构门户、办事大厅、监管平台。",
+      "visual": "稳重蓝红、强层级、清晰入口、大字号、无障碍优先。",
+      "v1": "办事首页、事项列表、申报表单、进度查询、消息通知。",
+      "tokens": "light / high-contrast / public",
+      "tags": [
+        "government",
+        "public",
+        "service",
+        "accessibility",
+        "formal"
+      ]
+    },
+    {
+      "id": "style-016-industrial-iot",
+      "name": "工业 IoT 制造风",
+      "category": "制造 / 设备 / IoT",
+      "priority": "P1",
+      "scenario": "设备监控、工厂看板、产线、能耗、维保。",
+      "visual": "深色/灰蓝底、设备卡片、实时状态、告警明显、图表密集。",
+      "v1": "设备总览、设备详情、告警列表、维保工单、数据大屏。",
+      "tokens": "dark / light / alarm",
+      "tags": [
+        "iot",
+        "industrial",
+        "device",
+        "monitoring",
+        "alarm"
+      ]
+    },
+    {
+      "id": "style-017-logistics-ops",
+      "name": "物流调度运营风",
+      "category": "物流 / 供应链",
+      "priority": "P1",
+      "scenario": "运输调度、路线、仓储、运单、配送追踪。",
+      "visual": "地图/列表联动、状态时间轴、调度看板、运力颜色分级。",
+      "v1": "运单列表、地图调度、车辆详情、路线追踪、异常处理。",
+      "tokens": "light / map / operations",
+      "tags": [
+        "logistics",
+        "map",
+        "dispatch",
+        "tracking",
+        "supply-chain"
+      ]
+    },
+    {
+      "id": "style-018-marketing-growth",
+      "name": "营销增长运营风",
+      "category": "营销 / 增长 / 活动",
+      "priority": "P1",
+      "scenario": "活动配置、会员运营、增长看板、投放、A/B 测试。",
+      "visual": "数据卡片+活动模块、色彩更活跃、转化漏斗、目标进度。",
+      "v1": "增长看板、活动列表、活动配置、用户分群、效果详情。",
+      "tokens": "light / campaign / vivid",
+      "tags": [
+        "marketing",
+        "growth",
+        "campaign",
+        "abtest",
+        "funnel"
+      ]
+    },
+    {
+      "id": "style-019-cms-media",
+      "name": "内容媒体管理风",
+      "category": "CMS / 媒体 / 素材",
+      "priority": "P1",
+      "scenario": "文章、素材库、审核、视频/图片管理、发布平台。",
+      "visual": "瀑布/网格素材、预览优先、状态标签、编辑入口清晰。",
+      "v1": "素材库、文章列表、编辑详情、审核流、发布日历。",
+      "tokens": "light / media / editorial",
+      "tags": [
+        "cms",
+        "media",
+        "asset",
+        "editorial",
+        "review"
+      ]
+    },
+    {
+      "id": "style-020-hr-organization",
+      "name": "HR 组织管理风",
+      "category": "HR / 组织 / 人事",
+      "priority": "P1",
+      "scenario": "员工、组织架构、考勤、绩效、招聘、入离职。",
+      "visual": "人物头像、组织树、流程清晰、表单友好、隐私提示明确。",
+      "v1": "员工列表、员工详情、组织架构、招聘流程、绩效表单。",
+      "tokens": "light / people / compact",
+      "tags": [
+        "hr",
+        "people",
+        "organization",
+        "recruiting",
+        "performance"
+      ]
+    },
+    {
+      "id": "style-021-ai-copilot-workspace",
+      "name": "AI Copilot 助手工作台风",
+      "category": "AI / 智能助手",
+      "priority": "P0",
+      "scenario": "AI 助手、智能问答、知识库、办公自动化、辅助决策。",
+      "visual": "聊天/任务双栏、建议卡片、来源引用、渐进披露、低干扰。",
+      "v1": "Copilot 首页、对话页、任务建议、结果卡片、引用/溯源面板。",
+      "tokens": "light / dark / ai-accent",
+      "tags": [
+        "ai",
+        "copilot",
+        "chat",
+        "agent",
+        "workspace"
+      ]
+    },
+    {
+      "id": "style-022-agent-automation-canvas",
+      "name": "Agent 自动化编排风",
+      "category": "AI Agent / 自动化",
+      "priority": "P1",
+      "scenario": "任务流、自动化流程、Agent 编排、RPA、工作流节点。",
+      "visual": "画布、节点、连线、侧边配置、运行状态、日志结果。",
+      "v1": "流程画布、节点配置、运行日志、模板市场、执行结果页。",
+      "tokens": "light / dark / canvas",
+      "tags": [
+        "agent",
+        "automation",
+        "workflow",
+        "canvas",
+        "rpa"
+      ]
+    },
+    {
+      "id": "style-023-lowcode-builder",
+      "name": "低代码搭建器风",
+      "category": "低代码 / 配置平台",
+      "priority": "P1",
+      "scenario": "页面搭建、表单搭建、报表搭建、规则配置。",
+      "visual": "三栏编辑器、组件面板、画布、属性面板、预览/发布。",
+      "v1": "搭建器首页、编辑器、组件面板、属性面板、发布确认。",
+      "tokens": "light / builder / compact",
+      "tags": [
+        "lowcode",
+        "builder",
+        "editor",
+        "canvas",
+        "configuration"
+      ]
+    },
+    {
+      "id": "style-024-dark-dataviz-dashboard",
+      "name": "深色数据可视化大屏风",
+      "category": "数据可视化 / 大屏",
+      "priority": "P0",
+      "scenario": "经营大屏、监控中心、指挥中心、BI 展示。",
+      "visual": "深色背景、高对比图表、发光重点、模块边框、实时动效。",
+      "v1": "经营大屏、监控大屏、指标卡片、趋势图、地图模块。",
+      "tokens": "dark / high-contrast / chart",
+      "tags": [
+        "dashboard",
+        "dataviz",
+        "dark",
+        "command-center",
+        "realtime"
+      ]
+    },
+    {
+      "id": "style-025-cybersecurity-soc",
+      "name": "安全运营 SOC 暗色风",
+      "category": "网络安全 / SOC",
+      "priority": "P1",
+      "scenario": "安全态势、告警、事件调查、资产暴露、威胁情报。",
+      "visual": "暗底、红橙告警、拓扑/时间线、严重程度分级、证据视图。",
+      "v1": "安全总览、告警列表、事件详情、调查时间线、资产图谱。",
+      "tokens": "dark / severity / terminal",
+      "tags": [
+        "security",
+        "soc",
+        "threat",
+        "alert",
+        "dark"
+      ]
+    },
+    {
+      "id": "style-026-cloud-finops",
+      "name": "云资源 FinOps 管理风",
+      "category": "云平台 / 成本管理",
+      "priority": "P1",
+      "scenario": "云资源、账单、成本优化、容量、权限、服务目录。",
+      "visual": "资源树、成本趋势、配额卡片、告警和建议、表格密集。",
+      "v1": "资源概览、成本分析、账单列表、优化建议、资源详情。",
+      "tokens": "light / dark / cloud",
+      "tags": [
+        "cloud",
+        "finops",
+        "resource",
+        "billing",
+        "optimization"
+      ]
+    },
+    {
+      "id": "style-027-developer-console-api",
+      "name": "开发者控制台 / API 平台风",
+      "category": "开发者平台",
+      "priority": "P1",
+      "scenario": "API 管理、开发者门户、密钥、SDK、文档、日志。",
+      "visual": "代码块、文档侧栏、控制台卡片、密钥安全提示、终端感。",
+      "v1": "API 文档、密钥管理、调用日志、SDK 页面、控制台首页。",
+      "tokens": "light / dark / code",
+      "tags": [
+        "developer",
+        "api",
+        "console",
+        "docs",
+        "sdk"
+      ]
+    },
+    {
+      "id": "style-028-marketplace-plugin",
+      "name": "插件市场 / 应用市场风",
+      "category": "平台生态",
+      "priority": "P2",
+      "scenario": "插件市场、模板市场、应用中心、集成市场。",
+      "visual": "卡片网格、评分/标签、安装引导、详情页、兼容性信息。",
+      "v1": "市场首页、插件列表、插件详情、安装配置、我的应用。",
+      "tokens": "light / marketplace / brand",
+      "tags": [
+        "marketplace",
+        "plugin",
+        "app-store",
+        "integration",
+        "template"
+      ]
+    },
+    {
+      "id": "style-029-white-label-multitenant",
+      "name": "多租户白标换肤风",
+      "category": "多品牌 / 多租户",
+      "priority": "P0",
+      "scenario": "SaaS 多租户、渠道品牌、客户私有化、OEM。",
+      "visual": "结构稳定、品牌色可替换、Logo/导航/图标可配置、主题可切换。",
+      "v1": "品牌配置、租户首页、主题预览、模板套用、权限隔离。",
+      "tokens": "brand-a / brand-b / dark / compact",
+      "tags": [
+        "white-label",
+        "tenant",
+        "theme",
+        "brand",
+        "configurable"
+      ]
+    },
+    {
+      "id": "style-030-mobile-first-enterprise",
+      "name": "移动优先企业轻办公风",
+      "category": "企业移动端",
+      "priority": "P0",
+      "scenario": "员工 App、移动审批、门店巡检、销售外勤、移动 CRM。",
+      "visual": "底部导航、大触控区、卡片流、状态醒目、离线/弱网友好。",
+      "v1": "移动工作台、审批详情、任务列表、巡检表单、消息中心。",
+      "tokens": "mobile-light / mobile-dark / compact",
+      "tags": [
+        "mobile",
+        "enterprise",
+        "oa",
+        "fieldwork",
+        "app"
+      ]
+    }
+  ],
+  "required_depth_rule": {
+    "all_styles": [
+      "style cover",
+      "1 admin sample",
+      "1 app/mobile sample",
+      "component state board",
+      "metadata",
+      "token mode summary",
+      "AI prompt"
+    ],
+    "P0_styles_extra": [
+      "5 admin templates",
+      "5 app/mobile templates",
+      "Storybook/code mapping priority"
+    ]
+  }
+}
