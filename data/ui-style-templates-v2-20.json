@@ -1,0 +1,3108 @@
+{
+    "schemaVersion": "ui-style-template-library.v2",
+    "generatedAt": "2026-06-05T00:00:00-04:00",
+    "locale": "zh-CN",
+    "libraryName": "UI\u8bbe\u8ba1\u6a21\u7248\u5e93 - \u7b2c\u4e8c\u6279\u7a81\u51fa\u98ce\u683c\u6a21\u677f",
+    "importMode": "append",
+    "appendTargetKey": "styleTemplates",
+    "templateCount": 20,
+    "baseTokens": {
+        "grid": 8,
+        "mobileCanvas": {
+            "width": 390,
+            "height": 844,
+            "safeArea": true
+        },
+        "spacing": {
+            "pageX": 16,
+            "sectionY": 24,
+            "cardPadding": 16,
+            "componentGap": 16,
+            "largeGap": 32
+        },
+        "typographyBase": {
+            "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+            "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+            "sizes": {
+                "display": 32,
+                "h1": 24,
+                "h2": 20,
+                "h3": 18,
+                "body": 15,
+                "caption": 12
+            },
+            "lineHeights": {
+                "display": 40,
+                "h1": 32,
+                "h2": 28,
+                "h3": 24,
+                "body": 24,
+                "caption": 16
+            }
+        }
+    },
+    "usage": {
+        "howToUse": "\u5c06\u672c JSON \u7684 templates \u6570\u7ec4\u8ffd\u52a0\u5230\u9879\u76ee\u73b0\u6709 styleTemplates/templateStyles \u6570\u636e\u6e90\u4e2d\uff1b\u6bcf\u4e2a\u6a21\u677f\u5747\u53ef\u72ec\u7acb\u7528\u4e8e\u751f\u6210\u9884\u89c8\u9875\u3001\u7b5b\u9009\u6807\u7b7e\u3001CSS\u53d8\u91cf\u548c\u8bbe\u8ba1\u63d0\u793a\u8bcd\u3002",
+        "recommendedImporterPseudoCode": "const data = await fetch('/data/ui-style-templates-v2-20.json').then(r=>r.json()); styleTemplates.push(...data.templates);",
+        "dedupeKey": "id",
+        "renderHint": "\u4f18\u5148\u8bfb\u53d6 cssVariables\u3001palette\u3001layout\u3001shape\u3001effects\u3001components \u751f\u6210\u53ef\u89c6\u5316\u6a21\u677f\u5361\uff1bpreviewPrompt \u53ef\u7528\u4e8e AI \u751f\u6210\u9996\u5c4f\u9884\u89c8\u3002"
+    },
+    "templates": [
+        {
+            "id": "style_liquid_glass_aqua",
+            "name": "\u6db2\u4f53\u73bb\u7483\u98ce",
+            "nameEn": "Liquid Glass Aqua",
+            "version": "1.0.0",
+            "category": [
+                "\u9ad8\u7aefAPP",
+                "AI\u4ea7\u54c1",
+                "\u7cfb\u7edf\u5de5\u5177",
+                "\u4f1a\u5458\u4e2d\u5fc3"
+            ],
+            "description": "\u4ee5\u901a\u900f\u73bb\u7483\u3001\u6d41\u52a8\u9ad8\u5149\u3001\u6298\u5c04\u5c42\u7ea7\u548c\u8f7b\u76c8\u5706\u89d2\u6784\u6210\u7684\u9ad8\u7aef\u672a\u6765\u611f\u98ce\u683c\uff0c\u9002\u5408\u9700\u8981\u660e\u663e\u9ad8\u7ea7\u611f\u4f46\u4ecd\u4fdd\u6301\u6e05\u6670\u53ef\u7528\u7684\u4ea7\u54c1\u3002",
+            "personality": [
+                "\u901a\u900f",
+                "\u9ad8\u7aef",
+                "\u672a\u6765",
+                "\u8f7b\u76c8",
+                "\u514b\u5236\u79d1\u6280\u611f"
+            ],
+            "bestFor": [
+                "AI\u52a9\u624b",
+                "\u5f71\u50cf\u5de5\u5177",
+                "\u9ad8\u7aef\u533b\u7f8e",
+                "\u4f1a\u5458\u6743\u76ca",
+                "\u4e2a\u4eba\u6548\u7387\u5de5\u5177"
+            ],
+            "avoidFor": [
+                "\u91cd\u8868\u683c\u540e\u53f0",
+                "\u4f4e\u7aef\u8bbe\u5907\u4f18\u5148\u573a\u666f",
+                "\u5927\u91cf\u957f\u6587\u672c\u9875\u9762"
+            ],
+            "palette": {
+                "mode": "light",
+                "primary": "#4E8CFF",
+                "secondary": "#9B7CFF",
+                "accent": "#32E6D1",
+                "background": "#F5FBFF",
+                "surface": "rgba(255,255,255,0.58)",
+                "surfaceStrong": "rgba(255,255,255,0.78)",
+                "textPrimary": "#102033",
+                "textSecondary": "#5B6B82",
+                "border": "rgba(255,255,255,0.66)",
+                "success": "#18C78A",
+                "warning": "#FFB020",
+                "danger": "#FF5A72"
+            },
+            "gradients": [
+                {
+                    "name": "\u6c34\u5149\u84dd\u7d2b",
+                    "css": "linear-gradient(135deg, #DDF7FF 0%, #EAF0FF 44%, #F7E9FF 100%)"
+                },
+                {
+                    "name": "\u6d41\u4f53\u9ad8\u5149",
+                    "css": "radial-gradient(circle at 20% 10%, rgba(50,230,209,.44), transparent 36%), radial-gradient(circle at 80% 0%, rgba(155,124,255,.38), transparent 34%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 16,
+                "sectionGap": 24,
+                "cardGap": 16,
+                "cardPadding": 16,
+                "density": "comfortable",
+                "nav": "\u60ac\u6d6e\u80f6\u56ca\u5f0f\u5e95\u90e8\u5bfc\u822a"
+            },
+            "shape": {
+                "cardRadius": 28,
+                "buttonRadius": 999,
+                "inputRadius": 18,
+                "chipRadius": 999,
+                "imageRadius": 24
+            },
+            "effects": {
+                "cardShadow": "0 20px 60px rgba(78,140,255,0.16)",
+                "border": "1px solid rgba(255,255,255,.66)",
+                "blur": "backdrop-filter: blur(24px) saturate(1.4)",
+                "highlight": "\u5185\u4fa7 1px \u767d\u8272\u9ad8\u5149 + \u5916\u4fa7\u67d4\u548c\u84dd\u7d2b\u6295\u5f71"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u4e3b\u6309\u94ae\u4f7f\u7528\u534a\u900f\u660e\u84dd\u8272\u80f6\u56ca\uff0c\u53e0\u52a0 1px \u5185\u9ad8\u5149\uff1b\u70b9\u51fb\u6001\u8f7b\u5fae\u7f29\u653e\u5230 0.98\u3002",
+                "card": "\u5361\u7247\u60ac\u6d6e\u5728\u6e10\u53d8\u80cc\u666f\u4e0a\uff0c\u4f7f\u7528\u6bdb\u73bb\u7483\u3001\u67d4\u548c\u9634\u5f71\u548c\u6d45\u8272\u63cf\u8fb9\uff1b\u6838\u5fc3\u5361\u7247\u53ef\u6dfb\u52a0\u6d41\u52a8\u9ad8\u5149\u5c42\u3002",
+                "input": "\u8f93\u5165\u6846\u534a\u900f\u660e\u767d\u5e95\uff0c\u7126\u70b9\u6001\u4f7f\u7528\u84dd\u8272\u5916\u53d1\u5149\u3002",
+                "tabBar": "\u5e95\u90e8\u5bfc\u822a\u505a\u72ec\u7acb\u6f02\u6d6e\u80f6\u56ca\uff0c\u5f53\u524d\u9879\u4e3a\u9ad8\u4eae\u73bb\u7483\u6c14\u6ce1\u3002",
+                "charts": "\u56fe\u8868\u7ebf\u6761\u7528\u84dd\u3001\u9752\u3001\u7d2b\u4e09\u8272\u6e10\u53d8\uff0c\u7f51\u683c\u7ebf\u900f\u660e\u5ea6\u4f4e\u4e8e 12%\u3002"
+            },
+            "imagery": {
+                "illustration": "\u62bd\u8c61\u6c34\u6ef4\u3001\u900f\u660e\u6c14\u6ce1\u3001\u67d4\u548c 3D \u73bb\u7483\u56fe\u6807",
+                "photoTreatment": "\u56fe\u7247\u4e0a\u65b9\u53e0\u52a0\u8f7b\u5ea6\u84dd\u7d2b\u73bb\u7483\u8499\u7248",
+                "icon": "\u5706\u6da6\u7ebf\u6027\u56fe\u6807\uff0c\u5c40\u90e8\u4f7f\u7528\u6e10\u53d8\u63cf\u8fb9"
+            },
+            "motion": {
+                "duration": "220ms",
+                "easing": "cubic-bezier(.2,.8,.2,1)",
+                "microInteraction": "\u5361\u7247\u968f\u6eda\u52a8\u4ea7\u751f\u6781\u8f7b\u89c6\u5dee\uff1b\u5f39\u5c42\u4ece\u73bb\u7483\u6c14\u6ce1\u6269\u5f20\u51fa\u73b0\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "\u53ea\u5728\u6838\u5fc3\u9762\u677f\u4f7f\u7528\u73bb\u7483\uff0c\u666e\u901a\u5217\u8868\u4fdd\u6301\u6e05\u6670\u767d\u5e95",
+                "\u4fdd\u8bc1\u6587\u5b57\u6240\u5728\u533a\u57df\u6709\u8db3\u591f\u906e\u7f69\u4e0d\u88ab\u80cc\u666f\u5e72\u6270",
+                "\u7528\u5927\u5706\u89d2\u548c\u8f7b\u6295\u5f71\u5efa\u7acb\u5c42\u7ea7"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u5168\u9875\u9762\u5230\u5904\u6bdb\u73bb\u7483",
+                "\u4e0d\u8981\u628a\u6b63\u6587\u76f4\u63a5\u653e\u5728\u590d\u6742\u56fe\u7247\u4e0a",
+                "\u4e0d\u8981\u4f7f\u7528\u8fc7\u591a\u9ad8\u9971\u548c\u9713\u8679\u8272"
+            ],
+            "searchTags": [
+                "liquid glass",
+                "glassmorphism",
+                "iOS",
+                "AI",
+                "\u9ad8\u7aef",
+                "\u900f\u660e",
+                "\u84dd\u7d2b"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2a\u79fb\u52a8\u7aef\u9996\u9875\uff1a\u6d45\u84dd\u7d2b\u6e10\u53d8\u80cc\u666f\uff0c\u60ac\u6d6e\u6db2\u4f53\u73bb\u7483\u5361\u7247\uff0c\u5706\u6da6\u80f6\u56ca\u6309\u94ae\uff0cAI \u9ad8\u7aef\u611f\uff0c\u5185\u5bb9\u6e05\u6670\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#4E8CFF",
+                "--color-secondary": "#9B7CFF",
+                "--color-accent": "#32E6D1",
+                "--color-bg": "#F5FBFF",
+                "--color-surface": "rgba(255,255,255,0.58)",
+                "--color-text-primary": "#102033",
+                "--color-text-secondary": "#5B6B82",
+                "--color-border": "rgba(255,255,255,0.66)",
+                "--radius-card": "28px",
+                "--radius-button": "999px",
+                "--shadow-card": "0 20px 60px rgba(78,140,255,0.16)",
+                "--glass-blur": "blur(24px) saturate(1.4)",
+                "--glass-highlight": "inset 0 1px 0 rgba(255,255,255,.72)"
+            }
+        },
+        {
+            "id": "style_local_life_meituan_yellow",
+            "name": "\u672c\u5730\u751f\u6d3b\u660e\u9ec4\u98ce",
+            "nameEn": "Meituan-like Local Life Yellow",
+            "version": "1.0.0",
+            "category": [
+                "\u751f\u6d3b\u670d\u52a1",
+                "\u5916\u5356\u5230\u5e97",
+                "\u7535\u5546\u4fc3\u9500",
+                "\u56e2\u8d2d",
+                "\u6d3b\u52a8\u8fd0\u8425"
+            ],
+            "description": "\u7528\u9ad8\u8bc6\u522b\u5ea6\u9ec4\u8272\u5efa\u7acb\u5373\u65f6\u3001\u70ed\u95f9\u3001\u63a5\u5730\u6c14\u7684\u6d88\u8d39\u5fc3\u667a\uff0c\u5f3a\u8c03\u4f18\u60e0\u3001\u5165\u53e3\u5bc6\u5ea6\u548c\u5feb\u901f\u51b3\u7b56\u3002",
+            "personality": [
+                "\u70ed\u95f9",
+                "\u4eb2\u5207",
+                "\u9ad8\u8f6c\u5316",
+                "\u751f\u6d3b\u611f",
+                "\u9192\u76ee"
+            ],
+            "bestFor": [
+                "\u5916\u5356",
+                "\u5230\u5e97\u56e2\u8d2d",
+                "\u95e8\u5e97\u9884\u7ea6",
+                "\u4f18\u60e0\u5238",
+                "\u672c\u5730\u751f\u6d3b\u5e73\u53f0"
+            ],
+            "avoidFor": [
+                "\u5962\u4f88\u54c1",
+                "\u4e25\u8083\u91d1\u878d",
+                "\u9ad8\u7aef\u533b\u7597\u62a5\u544a",
+                "\u9700\u8981\u6781\u5ea6\u5b89\u9759\u7684\u5de5\u5177\u578b\u540e\u53f0"
+            ],
+            "palette": {
+                "mode": "light",
+                "primary": "#FFD100",
+                "secondary": "#FF8A00",
+                "accent": "#18C76F",
+                "background": "#FFF9E6",
+                "surface": "#FFFFFF",
+                "surfaceStrong": "#FFF3B8",
+                "textPrimary": "#221B08",
+                "textSecondary": "#755B14",
+                "border": "#F2E2A2",
+                "success": "#18C76F",
+                "warning": "#FF8A00",
+                "danger": "#F53F3F"
+            },
+            "gradients": [
+                {
+                    "name": "\u9633\u5149\u4fc3\u9500",
+                    "css": "linear-gradient(135deg, #FFD100 0%, #FFB800 52%, #FF8A00 100%)"
+                },
+                {
+                    "name": "\u6d45\u9ec4\u5e95\u7eb9",
+                    "css": "linear-gradient(180deg, #FFF6C7 0%, #FFFFFF 52%, #FFF9E6 100%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 12,
+                "sectionGap": 20,
+                "cardGap": 12,
+                "cardPadding": 12,
+                "density": "compact",
+                "nav": "\u9ad8\u9891\u5165\u53e3\u5bab\u683c + \u5e95\u90e8\u56fa\u5b9a\u5bfc\u822a"
+            },
+            "shape": {
+                "cardRadius": 16,
+                "buttonRadius": 999,
+                "inputRadius": 12,
+                "chipRadius": 999,
+                "imageRadius": 12
+            },
+            "effects": {
+                "cardShadow": "0 8px 24px rgba(255,177,0,0.14)",
+                "border": "1px solid #F7E3A1",
+                "blur": "none",
+                "highlight": "\u5927\u5757\u9ec4\u8272\u5934\u56fe + \u767d\u8272\u5185\u5bb9\u5361\u7247\u538b\u4e0a"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u4e3b\u6309\u94ae\u9ec4\u8272\u6216\u6a59\u9ec4\u6e10\u53d8\uff0c\u6587\u5b57\u7528\u6df1\u68d5\u9ed1\uff1b\u4fc3\u9500\u6309\u94ae\u53ef\u7528\u7ea2\u8272\u89d2\u6807\u3002",
+                "card": "\u5546\u54c1/\u95e8\u5e97\u5361\u7247\u4fe1\u606f\u5bc6\u5ea6\u8f83\u9ad8\uff0c\u4ef7\u683c\u3001\u5238\u3001\u8ddd\u79bb\u3001\u8bc4\u5206\u4f18\u5148\u7a81\u51fa\u3002",
+                "input": "\u641c\u7d22\u6846\u653e\u5728\u9ec4\u8272\u5934\u90e8\u533a\u57df\uff0c\u767d\u5e95\u5706\u89d2\uff0c\u5de6\u4fa7\u641c\u7d22\u56fe\u6807\u3002",
+                "tabBar": "\u9009\u4e2d\u6001\u4f7f\u7528\u9ec4\u8272\u5706\u89d2\u5e95\u6216\u9ec4\u8272\u56fe\u6807\uff0c\u672a\u9009\u4e2d\u4e3a\u4e2d\u6027\u7070\u3002",
+                "charts": "\u8fd0\u8425\u56fe\u8868\u7528\u9ec4\u8272\u4e3b\u7ebf\uff0c\u7ea2\u8272\u8868\u793a\u7206\u6b3e/\u4e0a\u6da8\uff0c\u7eff\u8272\u8868\u793a\u5b8c\u6210\u3002"
+            },
+            "imagery": {
+                "illustration": "\u751f\u6d3b\u5316\u98df\u7269\u3001\u95e8\u5e97\u3001\u9a91\u624b\u3001\u4f18\u60e0\u5238\u5c0f\u63d2\u753b",
+                "photoTreatment": "\u5546\u54c1\u56fe\u660e\u4eae\u9971\u6ee1\uff0c\u4ef7\u683c\u6807\u7b7e\u8986\u76d6\u5728\u56fe\u7247\u4e0b\u65b9",
+                "icon": "\u9762\u6027\u56fe\u6807\uff0c\u5706\u6da6\uff0c\u9002\u5408\u5bab\u683c\u5165\u53e3"
+            },
+            "motion": {
+                "duration": "180ms",
+                "easing": "ease-out",
+                "microInteraction": "\u9886\u5238\u3001\u4e0b\u5355\u3001\u52a0\u5165\u8d2d\u7269\u8f66\u7528\u8f7b\u5f39\u8df3\u548c\u6570\u5b57\u589e\u957f\u53cd\u9988\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "\u9ec4\u8272\u7528\u4e8e\u5934\u90e8\u3001\u6d3b\u52a8\u533a\u3001\u5173\u952e\u6309\u94ae",
+                "\u4ef7\u683c\u548c\u4f18\u60e0\u4fe1\u606f\u8981\u6bd4\u8bf4\u660e\u6587\u6848\u66f4\u9192\u76ee",
+                "\u7528\u767d\u5361\u627f\u8f7d\u5217\u8868\u907f\u514d\u9875\u9762\u8fc7\u5435"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u6574\u9875\u7eaf\u9ec4\u5bfc\u81f4\u75b2\u52b3",
+                "\u4e0d\u8981\u8ba9\u9ec4\u8272\u6587\u5b57\u51fa\u73b0\u5728\u767d\u5e95\u4e0a",
+                "\u4e0d\u8981\u590d\u5236\u4efb\u4f55\u54c1\u724c Logo \u6216\u4e13\u5c5e IP"
+            ],
+            "searchTags": [
+                "\u672c\u5730\u751f\u6d3b",
+                "\u7f8e\u56e2\u611f",
+                "\u9ec4\u8272",
+                "\u5916\u5356",
+                "\u56e2\u8d2d",
+                "\u4fc3\u9500",
+                "\u63a5\u5730\u6c14"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2a\u672c\u5730\u751f\u6d3bAPP\u9996\u9875\uff1a\u660e\u9ec4\u8272\u5934\u90e8\uff0c\u641c\u7d22\u6846\uff0c\u4f18\u60e0\u5238\u3001\u95e8\u5e97\u5361\u7247\u3001\u5bab\u683c\u5165\u53e3\uff0c\u70ed\u95f9\u4f46\u6574\u6d01\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#FFD100",
+                "--color-secondary": "#FF8A00",
+                "--color-accent": "#18C76F",
+                "--color-bg": "#FFF9E6",
+                "--color-surface": "#FFFFFF",
+                "--color-text-primary": "#221B08",
+                "--color-text-secondary": "#755B14",
+                "--color-border": "#F2E2A2",
+                "--radius-card": "16px",
+                "--radius-button": "999px",
+                "--shadow-card": "0 8px 24px rgba(255,177,0,0.14)"
+            }
+        },
+        {
+            "id": "style_bright_iridescent_dream",
+            "name": "\u660e\u4eae\u5e7b\u5f69\u6e10\u53d8\u68a6\u5e7b\u98ce",
+            "nameEn": "Bright Iridescent Dream Gradient",
+            "version": "1.0.0",
+            "category": [
+                "\u5e74\u8f7b\u6d88\u8d39",
+                "\u7f8e\u4e1a",
+                "\u6f6e\u73a9",
+                "\u793e\u4ea4",
+                "\u5185\u5bb9\u793e\u533a"
+            ],
+            "description": "\u4ee5\u9ad8\u660e\u5ea6\u7c89\u3001\u7d2b\u3001\u84dd\u3001\u9752\u591a\u8272\u6e10\u53d8\u5236\u9020\u68a6\u5e7b\u3001\u8f7b\u5feb\u548c\u62cd\u7167\u5206\u4eab\u611f\uff0c\u9002\u5408\u5e74\u8f7b\u5316\u89c6\u89c9\u548c\u5f3a\u6c1b\u56f4\u843d\u5730\u9875\u3002",
+            "personality": [
+                "\u68a6\u5e7b",
+                "\u8f7b\u76c8",
+                "\u5e74\u8f7b",
+                "\u751c\u9177",
+                "\u6d3b\u529b"
+            ],
+            "bestFor": [
+                "\u7f8e\u5986\u62a4\u80a4",
+                "\u533b\u7f8e\u8f7b\u54a8\u8be2",
+                "\u6f6e\u73a9\u6d3b\u52a8",
+                "\u4f1a\u5458\u62c9\u65b0",
+                "\u521b\u4f5c\u8005\u5de5\u5177"
+            ],
+            "avoidFor": [
+                "\u4e25\u8083\u653f\u4f01",
+                "\u6570\u636e\u5bc6\u96c6\u540e\u53f0",
+                "\u8001\u4eba\u7528\u6237\u4e3a\u4e3b\u7684\u4ea7\u54c1"
+            ],
+            "palette": {
+                "mode": "light",
+                "primary": "#FF6BD6",
+                "secondary": "#7C5CFF",
+                "accent": "#22D3EE",
+                "background": "#FFF7FD",
+                "surface": "rgba(255,255,255,0.82)",
+                "surfaceStrong": "#FFFFFF",
+                "textPrimary": "#221632",
+                "textSecondary": "#7A668A",
+                "border": "#F2D7FF",
+                "success": "#22C55E",
+                "warning": "#FDBA21",
+                "danger": "#FF4D8D"
+            },
+            "gradients": [
+                {
+                    "name": "\u5e7b\u5f69\u7cd6\u7eb8",
+                    "css": "linear-gradient(135deg, #FFB7E8 0%, #BFA7FF 36%, #8EE7FF 68%, #B8FFD9 100%)"
+                },
+                {
+                    "name": "\u68a6\u5e7b\u5149\u6591",
+                    "css": "radial-gradient(circle at 18% 16%, rgba(255,107,214,.42), transparent 35%), radial-gradient(circle at 86% 12%, rgba(34,211,238,.36), transparent 38%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 16,
+                "sectionGap": 24,
+                "cardGap": 16,
+                "cardPadding": 16,
+                "density": "comfortable",
+                "nav": "\u6e10\u53d8\u56fe\u6807 Tab + \u60ac\u6d6e\u53d1\u5e03\u6309\u94ae"
+            },
+            "shape": {
+                "cardRadius": 24,
+                "buttonRadius": 999,
+                "inputRadius": 18,
+                "chipRadius": 999,
+                "imageRadius": 20
+            },
+            "effects": {
+                "cardShadow": "0 16px 40px rgba(124,92,255,0.14)",
+                "border": "1px solid rgba(255,255,255,.72)",
+                "blur": "backdrop-filter: blur(14px)",
+                "highlight": "\u5361\u7247\u9876\u90e8\u4f7f\u7528\u534a\u900f\u660e\u5f69\u8679\u5149\u5e26"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u4e3b\u6309\u94ae\u4f7f\u7528\u7c89\u7d2b\u84dd\u6e10\u53d8\uff0c\u767d\u5b57\uff0c\u5e26\u8f7b\u5fae\u5916\u53d1\u5149\u3002",
+                "card": "\u767d\u8272\u534a\u900f\u660e\u5361\u7247\uff0c\u5c40\u90e8\u4f7f\u7528\u6d41\u5149\u8d34\u7eb8\u3001\u5706\u5f62\u6e10\u53d8\u88c5\u9970\u3002",
+                "input": "\u641c\u7d22/\u8f93\u5165\u6846\u767d\u5e95\uff0c\u805a\u7126\u6001\u8fb9\u6846\u4e3a\u7c89\u7d2b\u6e10\u53d8\u3002",
+                "tabBar": "\u9009\u4e2d\u56fe\u6807\u53ef\u4f7f\u7528\u7ebf\u6027\u6e10\u53d8\uff0c\u672a\u9009\u4e2d\u964d\u4f4e\u9971\u548c\u5ea6\u3002",
+                "charts": "\u73af\u5f62\u8fdb\u5ea6\u3001\u80fd\u91cf\u6761\u3001\u6807\u7b7e\u4e91\u9002\u5408\u4f7f\u7528\u5f69\u8272\u6e10\u53d8\u3002"
+            },
+            "imagery": {
+                "illustration": "\u661f\u5149\u3001\u5149\u6655\u3001\u6ce1\u6ce1\u3001\u4e1d\u5e26\u3001\u8d34\u7eb8\u611f\u56fe\u5f62",
+                "photoTreatment": "\u56fe\u7247\u52a0\u67d4\u5149\u6ee4\u955c\uff0c\u8fb9\u7f18\u53ef\u53e0\u52a0\u6e10\u53d8\u8499\u7248",
+                "icon": "\u7ebf\u9762\u7ed3\u5408\uff0c\u5c40\u90e8\u4f7f\u7528\u5f69\u8272\u6e10\u53d8"
+            },
+            "motion": {
+                "duration": "240ms",
+                "easing": "cubic-bezier(.16,1,.3,1)",
+                "microInteraction": "\u6309\u94ae\u70b9\u51fb\u51fa\u73b0\u5c0f\u661f\u661f/\u5149\u6591\u6269\u6563\uff0c\u5361\u7247\u8fdb\u5165\u4f7f\u7528\u8f7b\u67d4\u4e0a\u6d6e\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "\u5927\u9762\u79ef\u7528\u6d45\u8272\u80cc\u666f\uff0c\u91cd\u70b9\u533a\u518d\u7528\u9971\u548c\u6e10\u53d8",
+                "\u4fdd\u6301\u6587\u5b57\u6df1\u8272\uff0c\u907f\u514d\u53ef\u8bfb\u6027\u4e0b\u964d",
+                "\u9002\u5408\u628a CTA \u505a\u5f97\u975e\u5e38\u660e\u663e"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u6bcf\u5f20\u5361\u90fd\u4f7f\u7528\u4e0d\u540c\u6e10\u53d8",
+                "\u4e0d\u8981\u628a\u6e10\u53d8\u6587\u5b57\u7528\u4e8e\u957f\u6587",
+                "\u4e0d\u8981\u53e0\u52a0\u8fc7\u591a\u95ea\u5149\u5143\u7d20"
+            ],
+            "searchTags": [
+                "\u5e7b\u5f69",
+                "\u6e10\u53d8",
+                "\u68a6\u5e7b",
+                "\u5e74\u8f7b\u5316",
+                "\u7c89\u7d2b\u84dd",
+                "\u7f8e\u4e1a"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2a\u5e74\u8f7b\u5316\u7f8e\u4e1aAPP\u9996\u9875\uff1a\u7c89\u7d2b\u84dd\u9752\u5e7b\u5f69\u6e10\u53d8\uff0c\u767d\u8272\u534a\u900f\u660e\u5361\u7247\uff0c\u8d34\u7eb8\u5149\u6591\uff0c\u68a6\u5e7b\u4f46\u53ef\u7528\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#FF6BD6",
+                "--color-secondary": "#7C5CFF",
+                "--color-accent": "#22D3EE",
+                "--color-bg": "#FFF7FD",
+                "--color-surface": "rgba(255,255,255,0.82)",
+                "--color-text-primary": "#221632",
+                "--color-text-secondary": "#7A668A",
+                "--color-border": "#F2D7FF",
+                "--radius-card": "24px",
+                "--radius-button": "999px",
+                "--shadow-card": "0 16px 40px rgba(124,92,255,0.14)"
+            }
+        },
+        {
+            "id": "style_dopamine_pop_candy",
+            "name": "\u591a\u5df4\u80fa\u7cd6\u679c\u98ce",
+            "nameEn": "Dopamine Candy Pop",
+            "version": "1.0.0",
+            "category": [
+                "\u6d3b\u52a8\u9875",
+                "\u6f6e\u6d41\u7535\u5546",
+                "\u513f\u7ae5\u4eb2\u5b50",
+                "\u5c0f\u6e38\u620f",
+                "\u793e\u7fa4\u589e\u957f"
+            ],
+            "description": "\u9ad8\u9971\u548c\u649e\u8272\u3001\u5706\u80d6\u7ec4\u4ef6\u548c\u8d34\u7eb8\u5f0f\u89c6\u89c9\uff0c\u5236\u9020\u5feb\u4e50\u3001\u51b2\u52a8\u70b9\u51fb\u548c\u793e\u4ea4\u4f20\u64ad\u611f\u3002",
+            "personality": [
+                "\u5feb\u4e50",
+                "\u9192\u76ee",
+                "\u53ef\u7231",
+                "\u51b2\u52a8",
+                "\u5f3a\u8fd0\u8425"
+            ],
+            "bestFor": [
+                "\u9650\u65f6\u6d3b\u52a8",
+                "\u62bd\u5956",
+                "\u76f2\u76d2",
+                "\u4eb2\u5b50\u6559\u80b2",
+                "\u6f6e\u6d41\u96f6\u552e"
+            ],
+            "avoidFor": [
+                "B\u7aef\u540e\u53f0",
+                "\u9ad8\u7aef\u5962\u4f88",
+                "\u533b\u7597\u8bca\u65ad",
+                "\u6cd5\u5f8b\u91d1\u878d"
+            ],
+            "palette": {
+                "mode": "light",
+                "primary": "#FF4D6D",
+                "secondary": "#5B7CFA",
+                "accent": "#FFE45E",
+                "background": "#FFF4F8",
+                "surface": "#FFFFFF",
+                "surfaceStrong": "#FFF0B8",
+                "textPrimary": "#231622",
+                "textSecondary": "#7D6472",
+                "border": "#FFD2E0",
+                "success": "#35D07F",
+                "warning": "#FFB703",
+                "danger": "#FF2D55"
+            },
+            "gradients": [
+                {
+                    "name": "\u7cd6\u679c\u649e\u8272",
+                    "css": "linear-gradient(135deg, #FF4D6D 0%, #FFE45E 45%, #42E6A4 100%)"
+                },
+                {
+                    "name": "\u84dd\u8393\u6c7d\u6c34",
+                    "css": "linear-gradient(135deg, #5B7CFA 0%, #7CFFCB 100%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 16,
+                "sectionGap": 24,
+                "cardGap": 12,
+                "cardPadding": 16,
+                "density": "energetic",
+                "nav": "\u5927\u56fe\u6807\u5e95\u90e8\u5bfc\u822a\uff0c\u9009\u4e2d\u6001\u6709\u8d34\u7eb8\u5e95"
+            },
+            "shape": {
+                "cardRadius": 24,
+                "buttonRadius": 20,
+                "inputRadius": 16,
+                "chipRadius": 999,
+                "imageRadius": 20
+            },
+            "effects": {
+                "cardShadow": "6px 8px 0 rgba(35,22,34,0.12)",
+                "border": "2px solid rgba(35,22,34,.08)",
+                "blur": "none",
+                "highlight": "\u8d34\u7eb8\u63cf\u8fb9\u3001\u659c\u89d2\u6807\u7b7e\u3001\u7206\u70b8\u5f62\u89d2\u6807"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u6309\u94ae\u5706\u80d6\u539a\u5b9e\uff0c\u53ef\u4f7f\u7528\u9ed1\u8272\u8f7b\u63cf\u8fb9\u548c\u504f\u79fb\u6295\u5f71\u3002",
+                "card": "\u5361\u7247\u50cf\u8d34\u7eb8\u4e00\u6837\u6d6e\u5728\u80cc\u666f\u4e0a\uff0c\u5141\u8bb8\u8f7b\u5fae\u65cb\u8f6c\u88c5\u9970\uff0c\u4f46\u5185\u5bb9\u4e3b\u4f53\u4ecd\u5bf9\u9f50\u3002",
+                "input": "\u641c\u7d22\u6846\u5706\u89d2\u8f83\u5927\uff0c\u5de6\u4fa7\u56fe\u6807\u53ef\u505a\u5f69\u8272\u9762\u6027\u3002",
+                "tabBar": "\u56fe\u6807\u5927\u3001\u6587\u5b57\u77ed\uff0c\u9009\u4e2d\u6001\u53ef\u52a0\u9ec4\u8272\u6c14\u6ce1\u3002",
+                "charts": "\u4f7f\u7528\u5f69\u8272\u67f1\u72b6\u3001\u5956\u7ae0\u3001\u8fdb\u5ea6\u6761\uff0c\u66f4\u9002\u5408\u8fd0\u8425\u6570\u636e\u800c\u975e\u4e25\u8083\u62a5\u8868\u3002"
+            },
+            "imagery": {
+                "illustration": "\u7cd6\u679c\u3001\u8d34\u7eb8\u3001\u7b11\u8138\u3001\u7206\u70b8\u6846\u3001\u624b\u7ed8\u7bad\u5934",
+                "photoTreatment": "\u56fe\u7247\u9ad8\u9971\u548c\u9ad8\u4eae\uff0c\u914d\u7c97\u5706\u89d2",
+                "icon": "\u9762\u6027\u53ef\u7231\u56fe\u6807\uff0c\u5141\u8bb8\u53cc\u8272\u586b\u5145"
+            },
+            "motion": {
+                "duration": "180ms",
+                "easing": "cubic-bezier(.34,1.56,.64,1)",
+                "microInteraction": "\u70b9\u51fb\u6309\u94ae\u4ea7\u751f\u5f39\u8df3\uff1b\u4f18\u60e0\u5238\u9886\u53d6\u540e\u53ef\u98de\u5165\u5361\u5305\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "\u628a\u9ad8\u9971\u548c\u8272\u96c6\u4e2d\u5728 CTA\u3001\u89d2\u6807\u548c\u6d3b\u52a8\u5934\u56fe",
+                "\u9875\u9762\u7ed3\u6784\u4ecd\u4f7f\u7528 8px \u7f51\u683c",
+                "\u7528\u77ed\u6587\u6848\u914d\u5927\u6309\u94ae"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u5728 B \u7aef\u590d\u6742\u8868\u5355\u4e2d\u4f7f\u7528",
+                "\u4e0d\u8981\u540c\u65f6\u4f7f\u7528\u8d85\u8fc7 4 \u4e2a\u4e3b\u89c6\u89c9\u9ad8\u9971\u548c\u8272",
+                "\u4e0d\u8981\u727a\u7272\u4ef7\u683c/\u89c4\u5219\u53ef\u8bfb\u6027"
+            ],
+            "searchTags": [
+                "\u591a\u5df4\u80fa",
+                "\u7cd6\u679c\u8272",
+                "\u8fd0\u8425\u6d3b\u52a8",
+                "\u4eb2\u5b50",
+                "\u7535\u5546",
+                "\u53ef\u7231"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2a\u591a\u5df4\u80fa\u6d3b\u52a8\u9875\uff1a\u7cd6\u679c\u649e\u8272\u3001\u5706\u80d6\u6309\u94ae\u3001\u8d34\u7eb8\u5361\u7247\u3001\u4f18\u60e0\u5238\u548c\u62bd\u5956\u5165\u53e3\uff0c\u6d3b\u6cfc\u9ad8\u8f6c\u5316\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#FF4D6D",
+                "--color-secondary": "#5B7CFA",
+                "--color-accent": "#FFE45E",
+                "--color-bg": "#FFF4F8",
+                "--color-surface": "#FFFFFF",
+                "--color-text-primary": "#231622",
+                "--color-text-secondary": "#7D6472",
+                "--color-border": "#FFD2E0",
+                "--radius-card": "24px",
+                "--radius-button": "20px",
+                "--shadow-card": "6px 8px 0 rgba(35,22,34,0.12)"
+            }
+        },
+        {
+            "id": "style_neobrutalism_yellow_black",
+            "name": "\u65b0\u7c97\u91ce\u4e3b\u4e49\u649e\u8272\u98ce",
+            "nameEn": "Neo Brutalism Yellow Black",
+            "version": "1.0.0",
+            "category": [
+                "\u521b\u610f\u5de5\u5177",
+                "\u6f6e\u724c",
+                "\u4f5c\u54c1\u96c6",
+                "\u5f00\u53d1\u8005\u793e\u533a",
+                "\u5b9e\u9a8c\u6027\u4ea7\u54c1"
+            ],
+            "description": "\u7c97\u9ed1\u63cf\u8fb9\u3001\u786c\u9634\u5f71\u3001\u9ad8\u5bf9\u6bd4\u8272\u5757\u548c\u76f4\u7ed9\u6587\u6848\uff0c\u5f62\u6210\u5f3a\u70c8\u6001\u5ea6\u548c\u5e74\u8f7b\u53cd\u53db\u611f\u3002",
+            "personality": [
+                "\u6709\u6001\u5ea6",
+                "\u76f4\u63a5",
+                "\u53cd\u7cbe\u81f4",
+                "\u6f6e\u6d41",
+                "\u5f3a\u8bc6\u522b"
+            ],
+            "bestFor": [
+                "\u521b\u610f\u5e73\u53f0",
+                "\u72ec\u7acb\u54c1\u724c",
+                "\u62db\u8058\u6d3b\u52a8",
+                "\u6f6e\u724c\u5546\u57ce",
+                "\u5f00\u53d1\u8005\u5de5\u5177"
+            ],
+            "avoidFor": [
+                "\u9ad8\u7aef\u533b\u7597",
+                "\u653f\u5e9c\u7cfb\u7edf",
+                "\u4f20\u7edf\u4f01\u4e1aOA",
+                "\u4e25\u8083\u91d1\u878d"
+            ],
+            "palette": {
+                "mode": "light",
+                "primary": "#FFE500",
+                "secondary": "#111111",
+                "accent": "#FF3B30",
+                "background": "#F7F2E8",
+                "surface": "#FFFFFF",
+                "surfaceStrong": "#FFE500",
+                "textPrimary": "#111111",
+                "textSecondary": "#3D3D3D",
+                "border": "#111111",
+                "success": "#20C997",
+                "warning": "#FFB000",
+                "danger": "#FF3B30"
+            },
+            "gradients": [
+                {
+                    "name": "\u786c\u6838\u9ec4\u9ed1",
+                    "css": "linear-gradient(135deg, #FFE500 0%, #FFFFFF 62%, #111111 62%, #111111 100%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 16,
+                "sectionGap": 24,
+                "cardGap": 16,
+                "cardPadding": 16,
+                "density": "bold",
+                "nav": "\u7c97\u63cf\u8fb9\u6309\u94ae\u5f0f\u5bfc\u822a"
+            },
+            "shape": {
+                "cardRadius": 6,
+                "buttonRadius": 6,
+                "inputRadius": 4,
+                "chipRadius": 6,
+                "imageRadius": 8
+            },
+            "effects": {
+                "cardShadow": "8px 8px 0 #111111",
+                "border": "2px solid #111111",
+                "blur": "none",
+                "highlight": "\u786c\u8fb9\u8272\u5757\u3001\u7c97\u7ebf\u3001\u89d2\u6807\u3001\u7b49\u5bbd\u6570\u5b57"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u4e3b\u6309\u94ae\u9ec4\u5e95\u9ed1\u5b57\u9ed1\u63cf\u8fb9\uff0c\u60ac\u6d6e/\u70b9\u51fb\u6539\u53d8\u504f\u79fb\u9634\u5f71\u3002",
+                "card": "\u767d\u5e95\u9ed1\u8fb9\u786c\u9634\u5f71\uff0c\u6807\u9898\u5927\u5b57\u91cd\u6392\uff0c\u5141\u8bb8\u4e0d\u5bf9\u79f0\u6784\u56fe\u3002",
+                "input": "\u9ed1\u8272 2px \u8fb9\u6846\uff0c\u805a\u7126\u6001\u53d8\u9ec4\u5e95\u3002",
+                "tabBar": "\u50cf\u4e00\u6392\u5b9e\u4f53\u6309\u94ae\uff0c\u9009\u4e2d\u9879\u9ec4\u5e95\u9ed1\u8fb9\u3002",
+                "charts": "\u7c97\u67f1\u72b6\u56fe\u3001\u9ed1\u8272\u5750\u6807\u8f74\u3001\u5c11\u91cf\u7ea2\u8272\u5f3a\u8c03\u5f02\u5e38\u3002"
+            },
+            "imagery": {
+                "illustration": "\u7c97\u7ebf\u624b\u7ed8\u3001\u590d\u53e4\u5370\u5237\u3001\u8d34\u7eb8\u3001\u6f2b\u753b\u7206\u70b8\u6846",
+                "photoTreatment": "\u56fe\u7247\u53ef\u52a0\u9ed1\u8272\u63cf\u8fb9\u548c\u534a\u8c03\u7f51\u70b9",
+                "icon": "\u7c97\u7ebf\u6027\u6216\u5b9e\u5fc3\u56fe\u6807\uff0c2px \u4ee5\u4e0a\u7ebf\u5bbd"
+            },
+            "motion": {
+                "duration": "120ms",
+                "easing": "steps(2,end)",
+                "microInteraction": "\u6309\u94ae\u6309\u4e0b\u65f6\u9634\u5f71\u4ece 8px \u964d\u5230 2px\uff0c\u50cf\u5b9e\u4f53\u6309\u952e\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "\u7528\u7c97\u6807\u9898\u5efa\u7acb\u6c14\u52bf",
+                "\u5c11\u91cf\u4e3b\u8272\u53cd\u590d\u4f7f\u7528\u5f62\u6210\u8bb0\u5fc6\u70b9",
+                "\u590d\u6742\u4fe1\u606f\u4ecd\u8981\u7528\u7f51\u683c\u5bf9\u9f50"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u7528\u5927\u91cf\u67d4\u548c\u9634\u5f71",
+                "\u4e0d\u8981\u628a\u5706\u89d2\u505a\u5f97\u8fc7\u5927",
+                "\u4e0d\u8981\u7528\u4e8e\u9700\u8981\u6e29\u67d4\u53ef\u4fe1\u7684\u884c\u4e1a"
+            ],
+            "searchTags": [
+                "\u65b0\u7c97\u91ce",
+                "brutalism",
+                "\u9ec4\u9ed1",
+                "\u6f6e\u724c",
+                "\u521b\u610f",
+                "\u5f3a\u5bf9\u6bd4"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2a\u521b\u610f\u5de5\u5177\u9996\u9875\uff1a\u9ec4\u9ed1\u65b0\u7c97\u91ce\u4e3b\u4e49\uff0c\u7c97\u63cf\u8fb9\u786c\u9634\u5f71\uff0c\u5927\u6807\u9898\u3001\u6309\u94ae\u50cf\u8d34\u7eb8\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#FFE500",
+                "--color-secondary": "#111111",
+                "--color-accent": "#FF3B30",
+                "--color-bg": "#F7F2E8",
+                "--color-surface": "#FFFFFF",
+                "--color-text-primary": "#111111",
+                "--color-text-secondary": "#3D3D3D",
+                "--color-border": "#111111",
+                "--radius-card": "6px",
+                "--radius-button": "6px",
+                "--shadow-card": "8px 8px 0 #111111"
+            }
+        },
+        {
+            "id": "style_fresh_mint_health",
+            "name": "\u6e05\u65b0\u8584\u8377\u5065\u5eb7\u98ce",
+            "nameEn": "Fresh Mint Health",
+            "version": "1.0.0",
+            "category": [
+                "\u5065\u5eb7\u7ba1\u7406",
+                "\u8f7b\u533b\u7597",
+                "\u8fd0\u52a8",
+                "\u7761\u7720",
+                "\u996e\u98df\u8bb0\u5f55"
+            ],
+            "description": "\u4f4e\u9971\u548c\u8584\u8377\u7eff\u4e0e\u5976\u767d\u5e95\u6784\u6210\u6e05\u723d\u5b89\u5168\u611f\uff0c\u9002\u5408\u957f\u671f\u4f7f\u7528\u548c\u5065\u5eb7\u6570\u636e\u5448\u73b0\u3002",
+            "personality": [
+                "\u6e05\u65b0",
+                "\u5b89\u5168",
+                "\u8212\u9002",
+                "\u8f7b\u91cf",
+                "\u53ef\u4fe1"
+            ],
+            "bestFor": [
+                "\u5065\u5eb7\u6253\u5361",
+                "\u7761\u7720\u8bb0\u5f55",
+                "\u8425\u517b\u7ba1\u7406",
+                "\u8f7b\u95ee\u8bca",
+                "\u8fd0\u52a8\u5eb7\u590d"
+            ],
+            "avoidFor": [
+                "\u5f3a\u4fc3\u9500\u7535\u5546",
+                "\u6697\u9ed1\u79d1\u6280",
+                "\u5962\u4f88\u54c1\u5c55\u793a"
+            ],
+            "palette": {
+                "mode": "light",
+                "primary": "#23CFA7",
+                "secondary": "#79E6C8",
+                "accent": "#7CCBFF",
+                "background": "#F2FFFB",
+                "surface": "#FFFFFF",
+                "surfaceStrong": "#E4FFF7",
+                "textPrimary": "#102A2B",
+                "textSecondary": "#5F7978",
+                "border": "#CDEFE8",
+                "success": "#20C997",
+                "warning": "#F9B233",
+                "danger": "#F45B69"
+            },
+            "gradients": [
+                {
+                    "name": "\u8584\u8377\u6668\u96fe",
+                    "css": "linear-gradient(180deg, #E4FFF7 0%, #FFFFFF 56%, #F2FFFB 100%)"
+                },
+                {
+                    "name": "\u5065\u5eb7\u80fd\u91cf",
+                    "css": "linear-gradient(135deg, #23CFA7 0%, #7CCBFF 100%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 16,
+                "sectionGap": 24,
+                "cardGap": 16,
+                "cardPadding": 16,
+                "density": "calm",
+                "nav": "\u5e95\u90e8\u7ebf\u6027\u56fe\u6807\u5bfc\u822a"
+            },
+            "shape": {
+                "cardRadius": 22,
+                "buttonRadius": 16,
+                "inputRadius": 16,
+                "chipRadius": 999,
+                "imageRadius": 18
+            },
+            "effects": {
+                "cardShadow": "0 12px 32px rgba(35,207,167,0.12)",
+                "border": "1px solid #D7F5EF",
+                "blur": "none",
+                "highlight": "\u6d45\u7eff\u8272\u72b6\u6001\u6761\u548c\u5706\u73af\u8fdb\u5ea6"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u4e3b\u6309\u94ae\u8584\u8377\u7eff\u5b9e\u5e95\uff0c\u6b21\u6309\u94ae\u767d\u5e95\u7eff\u8fb9\u3002",
+                "card": "\u5706\u89d2\u767d\u5361\uff0c\u9876\u90e8\u53ef\u653e\u5c0f\u578b\u5065\u5eb7\u72b6\u6001\u5fbd\u7ae0\u3002",
+                "input": "\u8f93\u5165\u533a\u57df\u5927\u7559\u767d\uff0c\u63d0\u793a\u6587\u6848\u6e29\u548c\u3002",
+                "tabBar": "\u9009\u4e2d\u6001\u7eff\u5e95\u6d45\u80f6\u56ca\uff0c\u672a\u9009\u4e2d\u7070\u7eff\u3002",
+                "charts": "\u5706\u73af\u3001\u6298\u7ebf\u3001\u7761\u7720\u6761\u4ee5\u7eff\u84dd\u4e3a\u4e3b\uff0c\u5f02\u5e38\u624d\u7528\u6a59\u7ea2\u3002"
+            },
+            "imagery": {
+                "illustration": "\u53f6\u7247\u3001\u6c34\u6ef4\u3001\u547c\u5438\u7ebf\u3001\u4eba\u7269\u8fd0\u52a8\u8f7b\u63d2\u753b",
+                "photoTreatment": "\u56fe\u7247\u504f\u660e\u4eae\u67d4\u548c\uff0c\u907f\u514d\u5f3a\u70c8\u533b\u7597\u538b\u8feb\u611f",
+                "icon": "\u7ec6\u7ebf\u5706\u89d2\u56fe\u6807\uff0c\u7eff\u8272\u5c40\u90e8\u586b\u5145"
+            },
+            "motion": {
+                "duration": "220ms",
+                "easing": "ease-out",
+                "microInteraction": "\u6253\u5361\u5b8c\u6210\u51fa\u73b0\u7eff\u8272\u5706\u73af\u6269\u6563\u548c\u8f7b\u63d0\u793a\u97f3\u611f\u52a8\u753b\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "\u5065\u5eb7\u6570\u636e\u4f18\u5148\u4f7f\u7528\u7eff\u8272\u548c\u84dd\u8272\u8868\u8fbe\u6b63\u5e38",
+                "\u5f02\u5e38\u72b6\u6001\u5fc5\u987b\u8bed\u4e49\u6e05\u695a",
+                "\u754c\u9762\u7559\u767d\u8981\u5145\u5206"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u628a\u533b\u7597\u98ce\u9669\u7528\u7eff\u8272\u5f31\u5316",
+                "\u4e0d\u8981\u4f7f\u7528\u8fc7\u591a\u53ef\u7231\u8d34\u7eb8",
+                "\u4e0d\u8981\u8ba9\u56fe\u8868\u989c\u8272\u6ca1\u6709\u8bed\u4e49"
+            ],
+            "searchTags": [
+                "\u8584\u8377\u7eff",
+                "\u5065\u5eb7",
+                "\u8fd0\u52a8",
+                "\u7761\u7720",
+                "\u8f7b\u533b\u7597",
+                "\u6e05\u65b0"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2a\u5065\u5eb7\u7ba1\u7406APP\u9996\u9875\uff1a\u8584\u8377\u7eff\u5976\u767d\u80cc\u666f\uff0c\u5706\u89d2\u5065\u5eb7\u6570\u636e\u5361\u3001\u5706\u73af\u8fdb\u5ea6\u3001\u6253\u5361\u6309\u94ae\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#23CFA7",
+                "--color-secondary": "#79E6C8",
+                "--color-accent": "#7CCBFF",
+                "--color-bg": "#F2FFFB",
+                "--color-surface": "#FFFFFF",
+                "--color-text-primary": "#102A2B",
+                "--color-text-secondary": "#5F7978",
+                "--color-border": "#CDEFE8",
+                "--radius-card": "22px",
+                "--radius-button": "16px",
+                "--shadow-card": "0 12px 32px rgba(35,207,167,0.12)"
+            }
+        },
+        {
+            "id": "style_modern_guochao_red_gold",
+            "name": "\u73b0\u4ee3\u56fd\u6f6e\u7ea2\u91d1\u98ce",
+            "nameEn": "Modern Guochao Red Gold",
+            "version": "1.0.0",
+            "category": [
+                "\u6587\u5316\u6d88\u8d39",
+                "\u8336\u996e\u9910\u996e",
+                "\u8282\u65e5\u6d3b\u52a8",
+                "\u56fd\u8d27\u54c1\u724c",
+                "\u6587\u65c5"
+            ],
+            "description": "\u4ee5\u6731\u7802\u7ea2\u3001\u938f\u91d1\u3001\u7c73\u767d\u548c\u73b0\u4ee3\u7559\u767d\u7ec4\u5408\u4f20\u7edf\u4e1c\u65b9\u6c14\u8d28\u4e0e\u5e74\u8f7b\u5546\u4e1a\u8868\u8fbe\u3002",
+            "personality": [
+                "\u4e1c\u65b9",
+                "\u70ed\u70c8",
+                "\u4eea\u5f0f\u611f",
+                "\u9ad8\u7ea7",
+                "\u6587\u5316\u611f"
+            ],
+            "bestFor": [
+                "\u65b0\u4e2d\u5f0f\u9910\u996e",
+                "\u56fd\u8d27\u7535\u5546",
+                "\u6625\u8282/\u4e2d\u79cb\u6d3b\u52a8",
+                "\u6587\u65c5\u9884\u7ea6",
+                "\u8336\u996e\u4f1a\u5458"
+            ],
+            "avoidFor": [
+                "\u65e5\u5e38\u6548\u7387\u5de5\u5177",
+                "\u6781\u7b80\u540e\u53f0",
+                "\u56fd\u9645\u5316\u51b7\u79d1\u6280"
+            ],
+            "palette": {
+                "mode": "light",
+                "primary": "#C62828",
+                "secondary": "#D9A441",
+                "accent": "#0F766E",
+                "background": "#FFF8ED",
+                "surface": "#FFFFFF",
+                "surfaceStrong": "#F8E3C2",
+                "textPrimary": "#2A120E",
+                "textSecondary": "#7C5A45",
+                "border": "#E8C98F",
+                "success": "#0F9F76",
+                "warning": "#D9A441",
+                "danger": "#C62828"
+            },
+            "gradients": [
+                {
+                    "name": "\u6731\u7802\u938f\u91d1",
+                    "css": "linear-gradient(135deg, #C62828 0%, #8F1D1D 52%, #D9A441 100%)"
+                },
+                {
+                    "name": "\u5ba3\u7eb8\u6696\u5e95",
+                    "css": "linear-gradient(180deg, #FFF8ED 0%, #FFFFFF 60%, #F8E3C2 100%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 16,
+                "sectionGap": 24,
+                "cardGap": 16,
+                "cardPadding": 16,
+                "density": "ceremonial",
+                "nav": "\u56fe\u7ae0\u5f0f\u9009\u4e2d\u6001\u5bfc\u822a"
+            },
+            "shape": {
+                "cardRadius": 18,
+                "buttonRadius": 14,
+                "inputRadius": 14,
+                "chipRadius": 999,
+                "imageRadius": 16
+            },
+            "effects": {
+                "cardShadow": "0 12px 36px rgba(198,40,40,0.12)",
+                "border": "1px solid rgba(217,164,65,.45)",
+                "blur": "none",
+                "highlight": "\u91d1\u8272\u7ec6\u7ebf\u3001\u5370\u7ae0\u89d2\u6807\u3001\u5ba3\u7eb8\u7eb9\u7406"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u4e3b\u6309\u94ae\u6731\u7802\u7ea2\u6216\u7ea2\u91d1\u6e10\u53d8\uff0c\u6587\u5b57\u7528\u7c73\u767d\uff1b\u91cd\u8981\u6d3b\u52a8\u53ef\u52a0\u91d1\u8272\u63cf\u8fb9\u3002",
+                "card": "\u767d\u5361\u642d\u914d\u91d1\u8272\u5206\u5272\u7ebf\u3001\u7ea2\u8272\u6807\u9898\u7ae0\u548c\u7559\u767d\u3002",
+                "input": "\u641c\u7d22/\u8868\u5355\u4f7f\u7528\u7c73\u767d\u5e95\u548c\u7ea2\u8272\u805a\u7126\u8fb9\u6846\u3002",
+                "tabBar": "\u9009\u4e2d\u9879\u50cf\u5c0f\u5370\u7ae0\u6216\u7ea2\u8272\u80f6\u56ca\u3002",
+                "charts": "\u6570\u636e\u56fe\u5c3d\u91cf\u514b\u5236\uff0c\u7528\u7ea2\u91d1\u5f3a\u8c03\uff0c\u4e0d\u505a\u8fc7\u591a\u5f69\u8272\u3002"
+            },
+            "imagery": {
+                "illustration": "\u7965\u4e91\u3001\u7a97\u68c2\u3001\u5370\u7ae0\u3001\u6298\u6247\u3001\u5c71\u6c34\u7eb9\u6837\u7684\u73b0\u4ee3\u62bd\u8c61\u5316",
+                "photoTreatment": "\u56fe\u7247\u504f\u6696\uff0c\u8fb9\u89d2\u53ef\u53e0\u52a0\u91d1\u8272\u7ec6\u7ebf",
+                "icon": "\u7ebf\u6027\u56fe\u6807\u878d\u5408\u4e1c\u65b9\u51e0\u4f55\u7eb9\u6837"
+            },
+            "motion": {
+                "duration": "220ms",
+                "easing": "ease-out",
+                "microInteraction": "\u6309\u94ae\u548c\u5361\u7247\u51fa\u73b0\u65f6\u50cf\u5377\u8f74\u8f7b\u5c55\u5f00\uff0c\u89d2\u6807\u8f7b\u5fae\u76d6\u7ae0\u52a8\u753b\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "\u4f20\u7edf\u5143\u7d20\u8981\u62bd\u8c61\u5316\uff0c\u4e0d\u8981\u5806\u780c",
+                "\u91d1\u8272\u4ec5\u7528\u4e8e\u5206\u5272\u7ebf\u548c\u91cd\u70b9\uff0c\u4e0d\u5927\u9762\u79ef\u94fa\u6ee1",
+                "\u6807\u9898\u53ef\u9002\u5ea6\u52a0\u7c97\u5236\u9020\u4eea\u5f0f\u611f"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u4f7f\u7528\u5ec9\u4ef7\u5927\u7ea2\u5927\u91d1\u5168\u94fa",
+                "\u4e0d\u8981\u6df7\u7528\u8fc7\u591a\u4f20\u7edf\u7eb9\u6837",
+                "\u4e0d\u8981\u628a\u6b63\u6587\u505a\u6210\u4e66\u6cd5\u5b57\u4f53"
+            ],
+            "searchTags": [
+                "\u56fd\u6f6e",
+                "\u7ea2\u91d1",
+                "\u65b0\u4e2d\u5f0f",
+                "\u9910\u996e",
+                "\u6587\u65c5",
+                "\u8282\u65e5"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2a\u65b0\u4e2d\u5f0f\u8336\u996eAPP\u9996\u9875\uff1a\u6731\u7802\u7ea2\u91d1\u8272\u3001\u5ba3\u7eb8\u7c73\u767d\u80cc\u666f\u3001\u73b0\u4ee3\u56fd\u6f6e\u5361\u7247\u3001\u5370\u7ae0\u89d2\u6807\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#C62828",
+                "--color-secondary": "#D9A441",
+                "--color-accent": "#0F766E",
+                "--color-bg": "#FFF8ED",
+                "--color-surface": "#FFFFFF",
+                "--color-text-primary": "#2A120E",
+                "--color-text-secondary": "#7C5A45",
+                "--color-border": "#E8C98F",
+                "--radius-card": "18px",
+                "--radius-button": "14px",
+                "--shadow-card": "0 12px 36px rgba(198,40,40,0.12)"
+            }
+        },
+        {
+            "id": "style_dark_ai_cyber_saas",
+            "name": "\u6697\u8272AI\u8d5b\u535aSaaS\u98ce",
+            "nameEn": "Dark AI Cyber SaaS",
+            "version": "1.0.0",
+            "category": [
+                "AI\u540e\u53f0",
+                "\u6570\u636e\u9a7e\u9a76\u8231",
+                "\u5b89\u5168\u7cfb\u7edf",
+                "\u5f00\u53d1\u8005\u5e73\u53f0",
+                "Web3\u5de5\u5177"
+            ],
+            "description": "\u6df1\u8272\u5e95\u3001\u9752\u7d2b\u9713\u8679\u8fb9\u7f18\u5149\u3001\u7f51\u683c\u80cc\u666f\u548c\u9ad8\u5bc6\u5ea6\u6570\u636e\u6a21\u5757\uff0c\u9002\u5408\u79d1\u6280\u611f\u5f3a\u7684\u5de5\u5177\u548c\u540e\u53f0\u3002",
+            "personality": [
+                "\u4e13\u4e1a",
+                "\u672a\u6765",
+                "\u51b7\u9759",
+                "\u9ad8\u6027\u80fd",
+                "\u667a\u80fd"
+            ],
+            "bestFor": [
+                "AI\u63a7\u5236\u53f0",
+                "\u6570\u636e\u76d1\u63a7",
+                "\u5b89\u5168\u6001\u52bf",
+                "\u5f00\u53d1\u8005\u4eea\u8868\u76d8",
+                "\u91cf\u5316\u5de5\u5177"
+            ],
+            "avoidFor": [
+                "\u513f\u7ae5\u4eb2\u5b50",
+                "\u751f\u6d3b\u670d\u52a1",
+                "\u8001\u5e74\u7528\u6237",
+                "\u7eaf\u5185\u5bb9\u9605\u8bfb"
+            ],
+            "palette": {
+                "mode": "dark",
+                "primary": "#00E5FF",
+                "secondary": "#7C3AED",
+                "accent": "#19FFB2",
+                "background": "#070B14",
+                "surface": "#101827",
+                "surfaceStrong": "#162033",
+                "textPrimary": "#EAF7FF",
+                "textSecondary": "#8FA6BF",
+                "border": "rgba(0,229,255,0.22)",
+                "success": "#19FFB2",
+                "warning": "#FACC15",
+                "danger": "#FB7185"
+            },
+            "gradients": [
+                {
+                    "name": "\u8d5b\u535a\u8fb9\u7f18\u5149",
+                    "css": "linear-gradient(135deg, rgba(0,229,255,.24) 0%, rgba(124,58,237,.22) 50%, rgba(25,255,178,.18) 100%)"
+                },
+                {
+                    "name": "\u6697\u7f51\u683c\u80cc\u666f",
+                    "css": "radial-gradient(circle at 20% 10%, rgba(0,229,255,.18), transparent 28%), radial-gradient(circle at 80% 0%, rgba(124,58,237,.20), transparent 32%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 16,
+                "sectionGap": 24,
+                "cardGap": 16,
+                "cardPadding": 16,
+                "density": "data_dense",
+                "nav": "\u4fa7\u8fb9/\u5e95\u90e8\u6697\u8272\u56fe\u6807\u5bfc\u822a"
+            },
+            "shape": {
+                "cardRadius": 18,
+                "buttonRadius": 12,
+                "inputRadius": 12,
+                "chipRadius": 999,
+                "imageRadius": 14
+            },
+            "effects": {
+                "cardShadow": "0 0 32px rgba(0,229,255,0.10)",
+                "border": "1px solid rgba(0,229,255,.22)",
+                "blur": "backdrop-filter: blur(10px)",
+                "highlight": "\u8fb9\u7f18\u9713\u8679\u5149\u3001\u626b\u63cf\u7ebf\u3001\u7f51\u683c\u5e95\u7eb9"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u4e3b\u6309\u94ae\u9752\u8272\u6216\u9752\u7d2b\u6e10\u53d8\uff0c\u5e26\u5916\u53d1\u5149\uff1b\u5371\u9669\u64cd\u4f5c\u7528\u7ea2\u8272\u7ebf\u6846\u3002",
+                "card": "\u6df1\u8272\u5361\u7247\uff0c\u8fb9\u6846\u4f4e\u900f\u660e\u9713\u8679\uff0c\u9876\u90e8\u5c0f\u6807\u9898\u548c\u6570\u636e\u6807\u7b7e\u5206\u5c42\u3002",
+                "input": "\u6697\u8272\u8f93\u5165\u6846\uff0c\u7126\u70b9\u6001\u9752\u8272\u8fb9\u6846\u548c\u5149\u6655\u3002",
+                "tabBar": "\u9009\u4e2d\u6001\u56fe\u6807\u53d1\u5149\uff0c\u907f\u514d\u5927\u9762\u79ef\u4eae\u8272\u5e95\u3002",
+                "charts": "\u6298\u7ebf\u3001\u70ed\u529b\u3001\u96f7\u8fbe\u56fe\u9002\u5408\u4f7f\u7528\u9752\u3001\u7d2b\u3001\u7eff\uff1b\u7f51\u683c\u7ebf\u4f4e\u900f\u660e\u3002"
+            },
+            "imagery": {
+                "illustration": "\u62bd\u8c61AI\u8282\u70b9\u3001\u5149\u675f\u3001\u82af\u7247\u3001\u7c92\u5b50\u7403",
+                "photoTreatment": "\u56fe\u7247\u6697\u5316\u5e76\u53e0\u52a0\u9752\u7d2b\u5149",
+                "icon": "\u7ec6\u7ebf\u79d1\u6280\u56fe\u6807\uff0c1.5px \u7ebf\u5bbd\uff0c\u5c40\u90e8\u53d1\u5149"
+            },
+            "motion": {
+                "duration": "180ms",
+                "easing": "ease-out",
+                "microInteraction": "\u52a0\u8f7d\u6001\u4f7f\u7528\u626b\u63cf\u5149\u7ebf\uff0c\u6570\u636e\u5237\u65b0\u4f7f\u7528\u6570\u5b57\u6eda\u52a8\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "\u6df1\u8272\u9875\u9762\u8981\u62c9\u5f00\u5361\u7247\u548c\u80cc\u666f\u5c42\u7ea7",
+                "\u9713\u8679\u53ea\u7528\u4e8e\u8fb9\u7f18\u548c\u91cd\u70b9\u6570\u636e",
+                "\u8868\u683c\u533a\u57df\u8981\u4fdd\u8bc1\u7070\u5ea6\u5c42\u7ea7\u6e05\u6670"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u7528\u7eaf\u9ed1\u914d\u7eaf\u767d\u9020\u6210\u523a\u773c",
+                "\u4e0d\u8981\u7ed9\u6240\u6709\u7ec4\u4ef6\u52a0\u53d1\u5149",
+                "\u4e0d\u8981\u8ba9\u52a8\u6548\u6301\u7eed\u95ea\u70c1"
+            ],
+            "searchTags": [
+                "AI",
+                "\u6697\u8272",
+                "SaaS",
+                "\u8d5b\u535a",
+                "\u6570\u636e\u9a7e\u9a76\u8231",
+                "\u9752\u7d2b"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2aAI\u6570\u636e\u9a7e\u9a76\u8231\u79fb\u52a8\u7aef\uff1a\u6df1\u8272\u80cc\u666f\u3001\u9752\u7d2b\u9713\u8679\u8fb9\u6846\u3001\u6570\u636e\u5361\u7247\u3001\u7f51\u683c\u5149\u6548\uff0c\u9ad8\u7ea7\u79d1\u6280\u611f\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#00E5FF",
+                "--color-secondary": "#7C3AED",
+                "--color-accent": "#19FFB2",
+                "--color-bg": "#070B14",
+                "--color-surface": "#101827",
+                "--color-text-primary": "#EAF7FF",
+                "--color-text-secondary": "#8FA6BF",
+                "--color-border": "rgba(0,229,255,0.22)",
+                "--radius-card": "18px",
+                "--radius-button": "12px",
+                "--shadow-card": "0 0 32px rgba(0,229,255,0.10)"
+            }
+        },
+        {
+            "id": "style_warm_clay_lifestyle",
+            "name": "\u6696\u9676\u751f\u6d3b\u65b9\u5f0f\u98ce",
+            "nameEn": "Warm Clay Lifestyle",
+            "version": "1.0.0",
+            "category": [
+                "\u5bb6\u5c45",
+                "\u6bcd\u5a74",
+                "\u751f\u6d3b\u65b9\u5f0f",
+                "\u5fc3\u7406\u54a8\u8be2",
+                "\u6162\u54c1\u724c\u7535\u5546"
+            ],
+            "description": "\u9676\u571f\u6a59\u3001\u5976\u6cb9\u7c73\u3001\u67d4\u68d5\u548c\u624b\u4f5c\u8d28\u611f\uff0c\u8425\u9020\u6e29\u6696\u3001\u771f\u5b9e\u3001\u6162\u751f\u6d3b\u7684\u4eb2\u8fd1\u611f\u3002",
+            "personality": [
+                "\u6e29\u6696",
+                "\u771f\u5b9e",
+                "\u677e\u5f1b",
+                "\u6cbb\u6108",
+                "\u751f\u6d3b\u611f"
+            ],
+            "bestFor": [
+                "\u5bb6\u5c45\u5546\u57ce",
+                "\u9999\u6c1b\u54c1\u724c",
+                "\u6bcd\u5a74\u62a4\u7406",
+                "\u5fc3\u7406\u966a\u4f34",
+                "\u751f\u6d3b\u5185\u5bb9\u793e\u533a"
+            ],
+            "avoidFor": [
+                "\u9ad8\u9891\u4fc3\u9500",
+                "\u786c\u6838\u6280\u672f\u540e\u53f0",
+                "\u7535\u7ade/\u8d5b\u535a\u4ea7\u54c1"
+            ],
+            "palette": {
+                "mode": "light",
+                "primary": "#C96F43",
+                "secondary": "#E8B98A",
+                "accent": "#7A9B76",
+                "background": "#FBF3E9",
+                "surface": "#FFFDF8",
+                "surfaceStrong": "#F3D9C3",
+                "textPrimary": "#2D1C14",
+                "textSecondary": "#7B6152",
+                "border": "#E8D4C4",
+                "success": "#7A9B76",
+                "warning": "#D99B43",
+                "danger": "#C85A54"
+            },
+            "gradients": [
+                {
+                    "name": "\u9676\u571f\u6668\u5149",
+                    "css": "linear-gradient(135deg, #FBF3E9 0%, #F3D9C3 58%, #E8B98A 100%)"
+                },
+                {
+                    "name": "\u6a44\u6984\u70b9\u7f00",
+                    "css": "linear-gradient(135deg, #C96F43 0%, #7A9B76 100%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 16,
+                "sectionGap": 32,
+                "cardGap": 16,
+                "cardPadding": 16,
+                "density": "relaxed",
+                "nav": "\u6587\u5b57+\u5c0f\u56fe\u6807\u7b80\u6d01\u5bfc\u822a"
+            },
+            "shape": {
+                "cardRadius": 22,
+                "buttonRadius": 16,
+                "inputRadius": 16,
+                "chipRadius": 999,
+                "imageRadius": 20
+            },
+            "effects": {
+                "cardShadow": "0 12px 32px rgba(96,52,30,0.10)",
+                "border": "1px solid #E8D4C4",
+                "blur": "none",
+                "highlight": "\u7eb8\u5f20\u7eb9\u7406\u3001\u67d4\u548c\u5185\u9634\u5f71\u3001\u624b\u4f5c\u63d2\u753b"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u4e3b\u6309\u94ae\u9676\u571f\u6a59\u5b9e\u5e95\uff0c\u6587\u5b57\u5976\u767d\uff1b\u6b21\u6309\u94ae\u7c73\u767d\u5e95\u68d5\u8272\u8fb9\u3002",
+                "card": "\u5927\u7559\u767d\u56fe\u7247\u5361\uff0c\u6587\u5b57\u5c11\u800c\u6e29\u67d4\uff0c\u9002\u5408\u5185\u5bb9\u63a8\u8350\u3002",
+                "input": "\u8f93\u5165\u6846\u7c73\u767d\u5e95\uff0c\u63d0\u793a\u8bed\u53e3\u543b\u81ea\u7136\u3002",
+                "tabBar": "\u9009\u4e2d\u6001\u4f7f\u7528\u9676\u571f\u8272\u5c0f\u5706\u70b9\u6216\u4e0b\u5212\u7ebf\u3002",
+                "charts": "\u4e0d\u5f3a\u8c03\u5f3a\u6570\u636e\uff0c\u53ef\u7528\u67d4\u548c\u8fdb\u5ea6\u6761\u3001\u5fc3\u60c5\u66f2\u7ebf\u3002"
+            },
+            "imagery": {
+                "illustration": "\u624b\u7ed8\u690d\u7269\u3001\u9676\u5668\u3001\u5bb6\u5c45\u7ebf\u7a3f\u3001\u67d4\u548c\u4eba\u7269",
+                "photoTreatment": "\u4f4e\u5bf9\u6bd4\u6696\u8272\u80f6\u7247\u611f\uff0c\u9634\u5f71\u67d4\u548c",
+                "icon": "\u7ebf\u6027\u624b\u4f5c\u98ce\u56fe\u6807\uff0c\u7aef\u70b9\u5706\u6da6"
+            },
+            "motion": {
+                "duration": "260ms",
+                "easing": "ease-out",
+                "microInteraction": "\u5361\u7247\u8fdb\u5165\u4f7f\u7528\u8f7b\u7f13\u6de1\u5165\uff0c\u6536\u85cf\u6309\u94ae\u50cf\u8d34\u7eb8\u8f7b\u8f7b\u843d\u4e0b\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "\u5927\u56fe\u548c\u7559\u767d\u662f\u6838\u5fc3",
+                "\u6587\u6848\u53e3\u543b\u8981\u6e29\u6696\u77ed\u53e5",
+                "\u8272\u5f69\u4fdd\u6301\u4f4e\u9971\u548c"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u4f7f\u7528\u5f3a\u70c8\u9713\u8679\u548c\u9ad8\u5bf9\u6bd4\u9ed1",
+                "\u4e0d\u8981\u628a\u9875\u9762\u505a\u5f97\u592a\u6324",
+                "\u4e0d\u8981\u8fc7\u5ea6\u4fc3\u9500\u5316"
+            ],
+            "searchTags": [
+                "\u6696\u9676",
+                "\u751f\u6d3b\u65b9\u5f0f",
+                "\u5bb6\u5c45",
+                "\u6bcd\u5a74",
+                "\u6cbb\u6108",
+                "\u677e\u5f1b\u611f"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2a\u751f\u6d3b\u65b9\u5f0fAPP\u9996\u9875\uff1a\u5976\u6cb9\u7c73\u80cc\u666f\u3001\u9676\u571f\u6a59\u6309\u94ae\u3001\u5bb6\u5c45\u5185\u5bb9\u5361\u3001\u624b\u4f5c\u63d2\u753b\uff0c\u6e29\u6696\u677e\u5f1b\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#C96F43",
+                "--color-secondary": "#E8B98A",
+                "--color-accent": "#7A9B76",
+                "--color-bg": "#FBF3E9",
+                "--color-surface": "#FFFDF8",
+                "--color-text-primary": "#2D1C14",
+                "--color-text-secondary": "#7B6152",
+                "--color-border": "#E8D4C4",
+                "--radius-card": "22px",
+                "--radius-button": "16px",
+                "--shadow-card": "0 12px 32px rgba(96,52,30,0.10)"
+            }
+        },
+        {
+            "id": "style_japanese_muji_minimal",
+            "name": "\u65e5\u7cfb\u65e0\u5370\u6781\u7b80\u98ce",
+            "nameEn": "Japanese Muji Minimal",
+            "version": "1.0.0",
+            "category": [
+                "\u5de5\u5177",
+                "\u9605\u8bfb",
+                "\u6548\u7387",
+                "\u77e5\u8bc6\u7ba1\u7406",
+                "\u65e5\u7a0b"
+            ],
+            "description": "\u7c73\u767d\u3001\u7070\u68d5\u3001\u7ec6\u7ebf\u548c\u4f4e\u88c5\u9970\u6784\u6210\u5b89\u9759\u3001\u8010\u770b\u3001\u53ef\u957f\u671f\u4f7f\u7528\u7684\u6781\u7b80\u754c\u9762\u3002",
+            "personality": [
+                "\u5b89\u9759",
+                "\u514b\u5236",
+                "\u8010\u770b",
+                "\u81ea\u7136",
+                "\u79e9\u5e8f"
+            ],
+            "bestFor": [
+                "\u5f85\u529e\u6e05\u5355",
+                "\u7b14\u8bb0",
+                "\u9605\u8bfb",
+                "\u65e5\u7a0b\u7ba1\u7406",
+                "\u8f7b\u91cf\u540e\u53f0"
+            ],
+            "avoidFor": [
+                "\u5f3a\u8425\u9500\u6d3b\u52a8",
+                "\u6f6e\u6d41\u5a31\u4e50",
+                "\u9700\u8981\u5f3a\u54c1\u724c\u523a\u6fc0\u7684\u9996\u9875"
+            ],
+            "palette": {
+                "mode": "light",
+                "primary": "#6B5B4E",
+                "secondary": "#B7A99A",
+                "accent": "#8A9A5B",
+                "background": "#F7F3EC",
+                "surface": "#FFFEFA",
+                "surfaceStrong": "#EFE7DC",
+                "textPrimary": "#25211D",
+                "textSecondary": "#766C62",
+                "border": "#E0D8CE",
+                "success": "#7D9460",
+                "warning": "#C49A4A",
+                "danger": "#B45A4A"
+            },
+            "gradients": [
+                {
+                    "name": "\u548c\u7eb8\u7c73\u767d",
+                    "css": "linear-gradient(180deg, #F7F3EC 0%, #FFFEFA 100%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 20,
+                "sectionGap": 32,
+                "cardGap": 16,
+                "cardPadding": 16,
+                "density": "minimal",
+                "nav": "\u6587\u5b57\u4f18\u5148\u7684\u4f4e\u5b58\u5728\u611f\u5bfc\u822a"
+            },
+            "shape": {
+                "cardRadius": 12,
+                "buttonRadius": 10,
+                "inputRadius": 10,
+                "chipRadius": 999,
+                "imageRadius": 12
+            },
+            "effects": {
+                "cardShadow": "0 4px 16px rgba(51,43,35,0.05)",
+                "border": "1px solid #E0D8CE",
+                "blur": "none",
+                "highlight": "\u7ec6\u5206\u5272\u7ebf\u3001\u81ea\u7136\u7eb8\u611f\u80cc\u666f\u3001\u5c11\u88c5\u9970"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u4e3b\u6309\u94ae\u6df1\u7070\u68d5\u5e95\uff0c\u6b21\u6309\u94ae\u4ec5\u7ebf\u6846\uff1b\u6309\u94ae\u9ad8\u5ea6\u8db3\u591f\u4f46\u4e0d\u5f20\u626c\u3002",
+                "card": "\u5361\u7247\u8fb9\u6846\u6d45\u3001\u9634\u5f71\u6781\u8f7b\uff0c\u4fe1\u606f\u6392\u7248\u9760\u95f4\u8ddd\u533a\u5206\u3002",
+                "input": "\u8868\u5355\u7b80\u6d01\uff0c\u6807\u7b7e\u6e05\u695a\uff0c\u5c11\u7528\u56fe\u6807\u3002",
+                "tabBar": "\u9009\u4e2d\u6001\u7528\u5c0f\u4e0b\u5212\u7ebf\u6216\u6587\u5b57\u52a0\u6df1\u3002",
+                "charts": "\u7528\u5355\u8272\u7ec6\u7ebf\u548c\u6d45\u586b\u5145\uff0c\u4e0d\u505a\u590d\u6742\u88c5\u9970\u3002"
+            },
+            "imagery": {
+                "illustration": "\u6781\u7b80\u7ebf\u7a3f\u3001\u690d\u7269\u3001\u5c0f\u7269\u4ef6\u3001\u7eb8\u5f20\u7eb9\u7406",
+                "photoTreatment": "\u81ea\u7136\u5149\u3001\u4f4e\u9971\u548c\u3001\u6d45\u666f\u6df1",
+                "icon": "1.5px \u7ebf\u6027\u56fe\u6807\uff0c\u5c11\u91cf\u4f7f\u7528"
+            },
+            "motion": {
+                "duration": "200ms",
+                "easing": "ease-out",
+                "microInteraction": "\u53ea\u505a\u5fc5\u8981\u53cd\u9988\uff0c\u5982\u900f\u660e\u5ea6\u53d8\u5316\u548c\u8f7b\u4f4d\u79fb\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "\u7528\u95f4\u8ddd\u548c\u5b57\u4f53\u5c42\u7ea7\u800c\u4e0d\u662f\u8272\u5f69\u5236\u9020\u79e9\u5e8f",
+                "\u6587\u672c\u5c3d\u91cf\u77ed\uff0c\u4fe1\u606f\u5b89\u9759\u5448\u73b0",
+                "\u9002\u5408\u957f\u671f\u4f7f\u7528\u7684\u5de5\u5177\u754c\u9762"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u4f7f\u7528\u9ad8\u9971\u548c\u6e10\u53d8",
+                "\u4e0d\u8981\u52a0\u539a\u91cd\u9634\u5f71",
+                "\u4e0d\u8981\u628a\u5165\u53e3\u505a\u5f97\u8fc7\u4e8e\u5bc6\u96c6"
+            ],
+            "searchTags": [
+                "\u65e5\u7cfb",
+                "\u65e0\u5370",
+                "\u6781\u7b80",
+                "\u7c73\u767d",
+                "\u9605\u8bfb",
+                "\u6548\u7387"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2a\u6781\u7b80\u65e5\u7a0bAPP\u9996\u9875\uff1a\u7c73\u767d\u80cc\u666f\u3001\u7070\u68d5\u6587\u5b57\u3001\u7ec6\u7ebf\u5361\u7247\u3001\u4f4e\u88c5\u9970\u3001\u5b89\u9759\u8010\u770b\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#6B5B4E",
+                "--color-secondary": "#B7A99A",
+                "--color-accent": "#8A9A5B",
+                "--color-bg": "#F7F3EC",
+                "--color-surface": "#FFFEFA",
+                "--color-text-primary": "#25211D",
+                "--color-text-secondary": "#766C62",
+                "--color-border": "#E0D8CE",
+                "--radius-card": "12px",
+                "--radius-button": "10px",
+                "--shadow-card": "0 4px 16px rgba(51,43,35,0.05)"
+            }
+        },
+        {
+            "id": "style_enterprise_blue_clean",
+            "name": "\u53ef\u4fe1\u4f01\u4e1a\u84dd\u767d\u98ce",
+            "nameEn": "Clean Enterprise Blue",
+            "version": "1.0.0",
+            "category": [
+                "\u4f01\u4e1a\u540e\u53f0",
+                "CRM",
+                "ERP",
+                "OA",
+                "\u653f\u4f01\u670d\u52a1"
+            ],
+            "description": "\u7ecf\u5178\u84dd\u767d\u7070\u4f01\u4e1a\u98ce\u7684\u73b0\u4ee3\u5316\u7248\u672c\uff0c\u5f3a\u8c03\u7a33\u5b9a\u3001\u89c4\u8303\u3001\u53ef\u6269\u5c55\u548c\u4f4e\u5b66\u4e60\u6210\u672c\u3002",
+            "personality": [
+                "\u4e13\u4e1a",
+                "\u53ef\u4fe1",
+                "\u6e05\u6670",
+                "\u7a33\u5b9a",
+                "\u9ad8\u6548"
+            ],
+            "bestFor": [
+                "\u4f01\u4e1a\u540e\u53f0",
+                "\u6570\u636e\u7ba1\u7406",
+                "\u5ba1\u6279\u6d41\u7a0b",
+                "CRM",
+                "SaaS\u63a7\u5236\u53f0"
+            ],
+            "avoidFor": [
+                "\u5e74\u8f7b\u6f6e\u73a9",
+                "\u5f3a\u793e\u4ea4\u5185\u5bb9",
+                "\u9700\u8981\u7a81\u51fa\u4e2a\u6027\u7684\u54c1\u724c\u5b98\u7f51"
+            ],
+            "palette": {
+                "mode": "light",
+                "primary": "#2563EB",
+                "secondary": "#0EA5E9",
+                "accent": "#14B8A6",
+                "background": "#F5F7FB",
+                "surface": "#FFFFFF",
+                "surfaceStrong": "#EAF1FF",
+                "textPrimary": "#111827",
+                "textSecondary": "#667085",
+                "border": "#E5E7EB",
+                "success": "#12B76A",
+                "warning": "#F79009",
+                "danger": "#F04438"
+            },
+            "gradients": [
+                {
+                    "name": "\u4f01\u4e1a\u84dd\u6e10\u53d8",
+                    "css": "linear-gradient(135deg, #2563EB 0%, #0EA5E9 100%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 16,
+                "sectionGap": 24,
+                "cardGap": 16,
+                "cardPadding": 16,
+                "density": "efficient",
+                "nav": "\u5de6\u4fa7\u83dc\u5355/\u9876\u90e8\u6807\u7b7e/\u79fb\u52a8\u7aef\u5e95\u90e8\u5bfc\u822a\u5747\u53ef"
+            },
+            "shape": {
+                "cardRadius": 12,
+                "buttonRadius": 8,
+                "inputRadius": 8,
+                "chipRadius": 6,
+                "imageRadius": 10
+            },
+            "effects": {
+                "cardShadow": "0 4px 16px rgba(16,24,40,0.06)",
+                "border": "1px solid #E5E7EB",
+                "blur": "none",
+                "highlight": "\u84dd\u8272\u9009\u4e2d\u6761\u3001\u72b6\u6001\u6807\u7b7e\u3001\u8868\u683c\u6591\u9a6c\u7eb9"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u4e3b\u6309\u94ae\u84dd\u5e95\u767d\u5b57\uff0c\u6b21\u6309\u94ae\u767d\u5e95\u7070\u8fb9\uff1b\u5371\u9669\u64cd\u4f5c\u4f7f\u7528\u7ea2\u8272\u4f46\u4e8c\u6b21\u786e\u8ba4\u3002",
+                "card": "\u6570\u636e\u5361\u3001\u8868\u683c\u5361\u3001\u7b5b\u9009\u5361\u5206\u5c42\u6e05\u6670\uff0c\u6807\u9898\u4e0e\u64cd\u4f5c\u6309\u94ae\u5bf9\u9f50\u3002",
+                "input": "\u8868\u5355\u9ad8\u5ea6\u7edf\u4e00\uff0c\u9519\u8bef\u63d0\u793a\u7d27\u8d34\u5b57\u6bb5\u4e0b\u65b9\u3002",
+                "tabBar": "\u9009\u4e2d\u6001\u84dd\u8272\u7ebf\u6761\u6216\u6d45\u84dd\u80cc\u666f\u3002",
+                "charts": "\u4e3b\u6570\u636e\u84dd\u8272\uff0c\u8f85\u52a9\u6570\u636e\u9752\u8272/\u7eff\u8272\uff0c\u8b66\u544a\u6a59\u8272\uff0c\u5f02\u5e38\u7ea2\u8272\u3002"
+            },
+            "imagery": {
+                "illustration": "\u5c11\u7528\u63d2\u753b\uff0c\u5fc5\u8981\u65f6\u4f7f\u7528\u6241\u5e73\u5546\u52a1\u63d2\u56fe",
+                "photoTreatment": "\u5934\u50cf\u548c\u8bc1\u4ef6\u7167\u4fdd\u6301\u771f\u5b9e\u6e05\u6670",
+                "icon": "\u4f01\u4e1a\u7ebf\u6027\u56fe\u6807\uff0c\u8bed\u4e49\u5f3a\u4e8e\u88c5\u9970"
+            },
+            "motion": {
+                "duration": "160ms",
+                "easing": "ease-out",
+                "microInteraction": "\u7b5b\u9009\u3001\u4fdd\u5b58\u3001\u5ba1\u6279\u53cd\u9988\u660e\u786e\uff0c\u4ee5 Toast \u548c\u72b6\u6001\u6807\u7b7e\u4e3a\u4e3b\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "\u7edf\u4e00\u7ec4\u4ef6\u5c3a\u5bf8\u548c\u72b6\u6001\u8272",
+                "\u540e\u53f0\u4f18\u5148\u4fdd\u969c\u8868\u683c\u3001\u8868\u5355\u548c\u7b5b\u9009\u6548\u7387",
+                "\u4e3b\u8272\u96c6\u4e2d\u5728\u64cd\u4f5c\u548c\u9009\u4e2d\u6001"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u4f7f\u7528\u8fc7\u591a\u6e10\u53d8\u548c\u5927\u9762\u79ef\u63d2\u753b",
+                "\u4e0d\u8981\u628a\u72b6\u6001\u8272\u5f53\u88c5\u9970\u8272",
+                "\u4e0d\u8981\u7834\u574f\u8868\u683c\u5bf9\u9f50"
+            ],
+            "searchTags": [
+                "\u4f01\u4e1a\u84dd",
+                "\u540e\u53f0",
+                "SaaS",
+                "CRM",
+                "ERP",
+                "\u89c4\u8303"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2a\u4f01\u4e1aSaaS\u79fb\u52a8\u7aef\u5de5\u4f5c\u53f0\uff1a\u84dd\u767d\u7070\u3001\u6570\u636e\u5361\u3001\u5f85\u529e\u5ba1\u6279\u3001\u8868\u683c\u6458\u8981\uff0c\u4e13\u4e1a\u6e05\u6670\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#2563EB",
+                "--color-secondary": "#0EA5E9",
+                "--color-accent": "#14B8A6",
+                "--color-bg": "#F5F7FB",
+                "--color-surface": "#FFFFFF",
+                "--color-text-primary": "#111827",
+                "--color-text-secondary": "#667085",
+                "--color-border": "#E5E7EB",
+                "--radius-card": "12px",
+                "--radius-button": "8px",
+                "--shadow-card": "0 4px 16px rgba(16,24,40,0.06)"
+            }
+        },
+        {
+            "id": "style_nature_camping_earth",
+            "name": "\u81ea\u7136\u9732\u8425\u5927\u5730\u98ce",
+            "nameEn": "Nature Camping Earth",
+            "version": "1.0.0",
+            "category": [
+                "\u6237\u5916",
+                "\u6587\u65c5",
+                "\u519c\u4ea7\u54c1",
+                "\u73af\u4fdd",
+                "\u5ba0\u7269"
+            ],
+            "description": "\u68ee\u6797\u7eff\u3001\u571f\u68d5\u3001\u7c73\u767d\u548c\u81ea\u7136\u7eb9\u7406\u7ec4\u5408\uff0c\u4f20\u9012\u6237\u5916\u3001\u53ef\u6301\u7eed\u548c\u771f\u5b9e\u751f\u6d3b\u611f\u3002",
+            "personality": [
+                "\u81ea\u7136",
+                "\u81ea\u7531",
+                "\u6734\u7d20",
+                "\u53ef\u9760",
+                "\u63a2\u7d22"
+            ],
+            "bestFor": [
+                "\u6237\u5916\u6d3b\u52a8",
+                "\u6c11\u5bbf\u6587\u65c5",
+                "\u519c\u4ea7\u54c1\u5546\u57ce",
+                "\u73af\u4fdd\u516c\u76ca",
+                "\u5ba0\u7269\u751f\u6d3b"
+            ],
+            "avoidFor": [
+                "\u91d1\u878d\u4ea4\u6613",
+                "AI\u63a7\u5236\u53f0",
+                "\u5feb\u8282\u594f\u4fc3\u9500"
+            ],
+            "palette": {
+                "mode": "light",
+                "primary": "#2F6B45",
+                "secondary": "#A77B4E",
+                "accent": "#F2B84B",
+                "background": "#F4F1E8",
+                "surface": "#FFFEF8",
+                "surfaceStrong": "#E7E0CE",
+                "textPrimary": "#1D261E",
+                "textSecondary": "#6E6A5E",
+                "border": "#D8CEB8",
+                "success": "#2F8F5B",
+                "warning": "#F2B84B",
+                "danger": "#C8553D"
+            },
+            "gradients": [
+                {
+                    "name": "\u68ee\u6797\u6668\u5149",
+                    "css": "linear-gradient(135deg, #2F6B45 0%, #7A9B55 50%, #F2B84B 100%)"
+                },
+                {
+                    "name": "\u5927\u5730\u5e95\u8272",
+                    "css": "linear-gradient(180deg, #F4F1E8 0%, #FFFEF8 100%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 16,
+                "sectionGap": 28,
+                "cardGap": 16,
+                "cardPadding": 16,
+                "density": "relaxed",
+                "nav": "\u5e95\u90e8\u5bfc\u822a\u6216\u5730\u56fe+\u5361\u7247\u6a21\u5f0f"
+            },
+            "shape": {
+                "cardRadius": 20,
+                "buttonRadius": 14,
+                "inputRadius": 14,
+                "chipRadius": 999,
+                "imageRadius": 18
+            },
+            "effects": {
+                "cardShadow": "0 10px 28px rgba(47,107,69,0.10)",
+                "border": "1px solid #D8CEB8",
+                "blur": "none",
+                "highlight": "\u7eb8\u7eb9\u3001\u5730\u56fe\u7ebf\u3001\u6728\u8d28\u8272\u5757\u3001\u81ea\u7136\u6807\u7b7e"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u4e3b\u6309\u94ae\u68ee\u6797\u7eff\uff0c\u6b21\u6309\u94ae\u7c73\u767d\u5e95\u68d5\u8272\u8fb9\uff0c\u6d3b\u52a8\u6309\u94ae\u53ef\u7528\u6696\u9ec4\u3002",
+                "card": "\u5927\u56fe\u5361\u7247 + \u5730\u70b9/\u8ddd\u79bb/\u6807\u7b7e\uff0c\u9002\u5408\u63a8\u8350\u4e0e\u8def\u7ebf\u3002",
+                "input": "\u641c\u7d22\u6846\u50cf\u5730\u56fe\u5de5\u5177\u6761\uff0c\u767d\u5e95\u52a0\u7eff\u56fe\u6807\u3002",
+                "tabBar": "\u9009\u4e2d\u6001\u7eff\u8272\uff0c\u56fe\u6807\u53ef\u7ed3\u5408\u5e10\u7bf7\u3001\u5c71\u3001\u8db3\u8ff9\u8bed\u4e49\u3002",
+                "charts": "\u73af\u4fdd/\u6d3b\u52a8\u6570\u636e\u4f7f\u7528\u7eff\u68d5\u9ec4\uff0c\u4e0d\u505a\u5f3a\u79d1\u6280\u53d1\u5149\u3002"
+            },
+            "imagery": {
+                "illustration": "\u5c71\u3001\u6811\u3001\u5e10\u7bf7\u3001\u5730\u5f62\u7ebf\u3001\u624b\u7ed8\u5730\u56fe",
+                "photoTreatment": "\u81ea\u7136\u5149\u3001\u6696\u7eff\u8272\u8c03\u3001\u771f\u5b9e\u6237\u5916\u7167\u7247",
+                "icon": "\u6237\u5916\u7ebf\u6027\u56fe\u6807\uff0c\u7aef\u70b9\u5706\u6da6"
+            },
+            "motion": {
+                "duration": "240ms",
+                "easing": "ease-out",
+                "microInteraction": "\u8def\u7ebf\u5361\u7247\u6ed1\u5165\u3001\u6536\u85cf\u5730\u70b9\u8f7b\u5fae\u7f29\u653e\u3001\u5730\u56fe\u70b9\u4f4d\u5f39\u51fa\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "\u591a\u7528\u771f\u5b9e\u56fe\u7247\u548c\u5730\u7406\u4fe1\u606f",
+                "\u7eff\u8272\u4e3b\u8272\u8981\u6c89\u7a33\u4e0d\u8981\u8367\u5149",
+                "\u6807\u7b7e\u4f53\u7cfb\u6e05\u695a\u5c55\u793a\u96be\u5ea6\u3001\u8ddd\u79bb\u3001\u4ef7\u683c"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u7528\u9713\u8679\u79d1\u6280\u6548\u679c",
+                "\u4e0d\u8981\u628a\u81ea\u7136\u7eb9\u7406\u505a\u5f97\u592a\u810f",
+                "\u4e0d\u8981\u5f31\u5316\u5b89\u5168\u63d0\u793a"
+            ],
+            "searchTags": [
+                "\u6237\u5916",
+                "\u9732\u8425",
+                "\u5927\u5730\u8272",
+                "\u6587\u65c5",
+                "\u73af\u4fdd",
+                "\u81ea\u7136"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2a\u9732\u8425\u6587\u65c5APP\u9996\u9875\uff1a\u68ee\u6797\u7eff\u5927\u5730\u8272\u3001\u5730\u70b9\u63a8\u8350\u5361\u3001\u5730\u56fe\u7ebf\u6761\u3001\u81ea\u7136\u7167\u7247\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#2F6B45",
+                "--color-secondary": "#A77B4E",
+                "--color-accent": "#F2B84B",
+                "--color-bg": "#F4F1E8",
+                "--color-surface": "#FFFEF8",
+                "--color-text-primary": "#1D261E",
+                "--color-text-secondary": "#6E6A5E",
+                "--color-border": "#D8CEB8",
+                "--radius-card": "20px",
+                "--radius-button": "14px",
+                "--shadow-card": "0 10px 28px rgba(47,107,69,0.10)"
+            }
+        },
+        {
+            "id": "style_cyberpunk_neon_night",
+            "name": "\u9713\u8679\u591c\u57ce\u8d5b\u535a\u98ce",
+            "nameEn": "Cyberpunk Neon Night",
+            "version": "1.0.0",
+            "category": [
+                "\u7535\u7ade",
+                "\u97f3\u4e50\u73b0\u573a",
+                "\u6f6e\u6d41\u6d3b\u52a8",
+                "Web3",
+                "\u591c\u7ecf\u6d4e"
+            ],
+            "description": "\u9ed1\u7d2b\u6df1\u591c\u5e95\u8272\u53e0\u52a0\u5f3a\u70c8\u9713\u8679\u7c89\u3001\u84dd\u3001\u9ec4\uff0c\u5f62\u6210\u591c\u57ce\u3001\u97f3\u4e50\u3001\u7535\u7ade\u548c\u672a\u6765\u53cd\u53db\u6c14\u8d28\u3002",
+            "personality": [
+                "\u523a\u6fc0",
+                "\u53cd\u53db",
+                "\u591c\u95f4",
+                "\u6c89\u6d78",
+                "\u9ad8\u80fd"
+            ],
+            "bestFor": [
+                "\u7535\u7ade\u8d5b\u4e8b",
+                "Livehouse",
+                "\u591c\u5e97\u6d3b\u52a8",
+                "\u6f6e\u6d41\u7968\u52a1",
+                "Web3\u6d3b\u52a8"
+            ],
+            "avoidFor": [
+                "\u65e5\u5e38\u529e\u516c",
+                "\u533b\u7597\u5065\u5eb7",
+                "\u513f\u7ae5\u4ea7\u54c1",
+                "\u653f\u4f01\u670d\u52a1"
+            ],
+            "palette": {
+                "mode": "dark",
+                "primary": "#FF2BD6",
+                "secondary": "#00D9FF",
+                "accent": "#F9FF00",
+                "background": "#070011",
+                "surface": "#140A24",
+                "surfaceStrong": "#24113D",
+                "textPrimary": "#FFFFFF",
+                "textSecondary": "#AFA3C7",
+                "border": "rgba(255,43,214,0.32)",
+                "success": "#00FFA3",
+                "warning": "#F9FF00",
+                "danger": "#FF3864"
+            },
+            "gradients": [
+                {
+                    "name": "\u9713\u8679\u51b2\u51fb",
+                    "css": "linear-gradient(135deg, #FF2BD6 0%, #00D9FF 55%, #F9FF00 100%)"
+                },
+                {
+                    "name": "\u591c\u57ce\u5149\u6655",
+                    "css": "radial-gradient(circle at 10% 10%, rgba(255,43,214,.32), transparent 36%), radial-gradient(circle at 90% 20%, rgba(0,217,255,.30), transparent 38%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 16,
+                "sectionGap": 24,
+                "cardGap": 16,
+                "cardPadding": 16,
+                "density": "immersive",
+                "nav": "\u9713\u8679\u56fe\u6807\u5e95\u90e8\u5bfc\u822a/\u5168\u5c4f\u6d3b\u52a8\u9875"
+            },
+            "shape": {
+                "cardRadius": 14,
+                "buttonRadius": 10,
+                "inputRadius": 10,
+                "chipRadius": 999,
+                "imageRadius": 14
+            },
+            "effects": {
+                "cardShadow": "0 0 36px rgba(255,43,214,0.20)",
+                "border": "1px solid rgba(255,43,214,.32)",
+                "blur": "backdrop-filter: blur(8px)",
+                "highlight": "\u9713\u8679\u63cf\u8fb9\u3001\u6545\u969c\u98ce\u5207\u7247\u3001\u626b\u63cf\u7ebf"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u4e3b\u6309\u94ae\u4f7f\u7528\u9713\u8679\u7c89\u84dd\u6e10\u53d8\uff0c\u5e26\u5916\u53d1\u5149\uff1b\u6b21\u6309\u94ae\u4e3a\u900f\u660e\u7ebf\u6846\u3002",
+                "card": "\u6df1\u8272\u5361\u7247\u53e0\u52a0\u9713\u8679\u8fb9\u6846\uff0c\u6d3b\u52a8\u5c01\u9762\u53ef\u4ee5\u6ee1\u7248\u51b2\u51fb\u3002",
+                "input": "\u8f93\u5165\u6846\u4f4e\u900f\u660e\u6697\u5e95\uff0c\u7126\u70b9\u6001\u84dd\u8272\u53d1\u5149\u3002",
+                "tabBar": "\u9009\u4e2d\u56fe\u6807\u6709\u9713\u8679\u5149\u6655\u548c\u5c0f\u6a2a\u7ebf\u3002",
+                "charts": "\u9002\u5408\u80fd\u91cf\u6761\u3001\u6392\u884c\u699c\u3001\u5b9e\u65f6\u70ed\u5ea6\uff0c\u4e0d\u9002\u5408\u5927\u91cf\u4e25\u8083\u62a5\u8868\u3002"
+            },
+            "imagery": {
+                "illustration": "\u57ce\u5e02\u5929\u9645\u7ebf\u3001\u7f51\u683c\u5730\u9762\u3001\u6545\u969c\u5b57\u7b26\u3001\u6fc0\u5149\u5149\u675f",
+                "photoTreatment": "\u7167\u7247\u6697\u5316\u3001\u9ad8\u5bf9\u6bd4\u3001\u53e0\u52a0\u7c89\u84dd\u5149",
+                "icon": "\u5c16\u9510\u7ebf\u6027\u56fe\u6807\uff0c\u53ef\u5e26\u53d1\u5149"
+            },
+            "motion": {
+                "duration": "150ms",
+                "easing": "ease-out",
+                "microInteraction": "\u5361\u7247\u8fdb\u5165\u53ef\u7528 glitch \u95ea\u52a8\u4e00\u6b21\uff0c\u6309\u94ae hover/press \u6709\u5149\u6655\u589e\u5f3a\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "\u53ea\u8ba9\u5173\u952e\u5143\u7d20\u53d1\u5149",
+                "\u9ed1\u5e95\u533a\u57df\u8981\u6709\u8db3\u591f\u7070\u9636\u5c42\u6b21",
+                "\u6587\u5b57\u533a\u907f\u514d\u590d\u6742\u80cc\u666f"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u957f\u65f6\u95f4\u95ea\u70c1\u9020\u6210\u4e0d\u9002",
+                "\u4e0d\u8981\u7528\u4e8e\u4e25\u8083\u53ef\u4fe1\u573a\u666f",
+                "\u4e0d\u8981\u6240\u6709\u6587\u5b57\u90fd\u7528\u9713\u8679\u8272"
+            ],
+            "searchTags": [
+                "\u8d5b\u535a\u670b\u514b",
+                "\u9713\u8679",
+                "\u7535\u7ade",
+                "\u591c\u7ecf\u6d4e",
+                "\u97f3\u4e50",
+                "\u7c89\u84dd"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2a\u7535\u7ade\u6d3b\u52a8APP\u9996\u9875\uff1a\u9ed1\u7d2b\u591c\u57ce\u80cc\u666f\uff0c\u9713\u8679\u7c89\u84dd\u9ec4\uff0c\u6392\u884c\u699c\u3001\u7968\u52a1\u5361\u3001\u53d1\u5149\u6309\u94ae\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#FF2BD6",
+                "--color-secondary": "#00D9FF",
+                "--color-accent": "#F9FF00",
+                "--color-bg": "#070011",
+                "--color-surface": "#140A24",
+                "--color-text-primary": "#FFFFFF",
+                "--color-text-secondary": "#AFA3C7",
+                "--color-border": "rgba(255,43,214,0.32)",
+                "--radius-card": "14px",
+                "--radius-button": "10px",
+                "--shadow-card": "0 0 36px rgba(255,43,214,0.20)"
+            }
+        },
+        {
+            "id": "style_soft_neumorphism_cloud",
+            "name": "\u67d4\u548c\u8f6f\u62df\u6001\u4e91\u6735\u98ce",
+            "nameEn": "Soft Neumorphism Cloud",
+            "version": "1.0.0",
+            "category": [
+                "\u667a\u80fd\u5bb6\u5c45",
+                "\u8bbe\u7f6e\u4e2d\u5fc3",
+                "\u97f3\u4e50",
+                "\u8f7b\u5de5\u5177",
+                "\u5929\u6c14"
+            ],
+            "description": "\u6d45\u8272\u80cc\u666f\u4e2d\u7528\u5185\u5916\u67d4\u5f71\u5236\u9020\u5fae\u51f8\u8d77\u548c\u6309\u538b\u8d28\u611f\uff0c\u9002\u5408\u4f4e\u5bc6\u5ea6\u63a7\u5236\u9762\u677f\u3002",
+            "personality": [
+                "\u67d4\u548c",
+                "\u89e6\u611f",
+                "\u5b89\u9759",
+                "\u7cbe\u81f4",
+                "\u8f7b\u79d1\u6280"
+            ],
+            "bestFor": [
+                "\u667a\u80fd\u5bb6\u5c45\u63a7\u5236",
+                "\u97f3\u4e50\u64ad\u653e\u5668",
+                "\u5929\u6c14\u5361\u7247",
+                "\u8bbe\u5907\u8bbe\u7f6e",
+                "\u8f7b\u91cf\u5de5\u5177"
+            ],
+            "avoidFor": [
+                "\u65e0\u969c\u788d\u8981\u6c42\u6781\u9ad8\u7684\u590d\u6742\u540e\u53f0",
+                "\u5f3a\u4fc3\u9500\u7535\u5546",
+                "\u957f\u6587\u672c\u9605\u8bfb"
+            ],
+            "palette": {
+                "mode": "light",
+                "primary": "#7BA7FF",
+                "secondary": "#B5C7E6",
+                "accent": "#A3E4DB",
+                "background": "#EEF3FA",
+                "surface": "#EEF3FA",
+                "surfaceStrong": "#F8FBFF",
+                "textPrimary": "#243044",
+                "textSecondary": "#738199",
+                "border": "#DDE6F3",
+                "success": "#55CFAE",
+                "warning": "#F4B860",
+                "danger": "#EF6F7A"
+            },
+            "gradients": [
+                {
+                    "name": "\u4e91\u5c42\u6d45\u84dd",
+                    "css": "linear-gradient(145deg, #F8FBFF 0%, #E8EEF8 100%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 20,
+                "sectionGap": 28,
+                "cardGap": 20,
+                "cardPadding": 20,
+                "density": "low_density",
+                "nav": "\u5706\u5f62\u51f8\u8d77\u6309\u94ae\u5f0f\u5bfc\u822a"
+            },
+            "shape": {
+                "cardRadius": 24,
+                "buttonRadius": 20,
+                "inputRadius": 18,
+                "chipRadius": 999,
+                "imageRadius": 22
+            },
+            "effects": {
+                "cardShadow": "8px 8px 18px rgba(163,177,198,.42), -8px -8px 18px rgba(255,255,255,.88)",
+                "border": "1px solid rgba(255,255,255,.55)",
+                "blur": "none",
+                "highlight": "\u5185\u51f9/\u5916\u51f8\u53cc\u9634\u5f71\u3001\u67d4\u548c\u6309\u538b\u6001"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u9ed8\u8ba4\u51f8\u8d77\uff0c\u6309\u4e0b\u6001\u53d8\u5185\u51f9\uff1b\u4e3b\u6309\u94ae\u52a0\u5165\u84dd\u8272\u5c0f\u9762\u79ef\u9ad8\u4eae\u3002",
+                "card": "\u6574\u4f53\u80cc\u666f\u548c\u5361\u7247\u540c\u8272\uff0c\u901a\u8fc7\u53cc\u5411\u9634\u5f71\u533a\u5206\u5c42\u7ea7\u3002",
+                "input": "\u5185\u51f9\u8f93\u5165\u6846\uff0c\u7126\u70b9\u6001\u52a0\u84dd\u8272\u5fae\u5149\u3002",
+                "tabBar": "\u6bcf\u4e2a\u56fe\u6807\u50cf\u5b9e\u4f53\u8f6f\u952e\uff0c\u9009\u4e2d\u6001\u5185\u51f9\u6216\u84dd\u8272\u586b\u5145\u3002",
+                "charts": "\u4f7f\u7528\u67d4\u548c\u5706\u73af\u3001\u6ed1\u6746\u3001\u5f00\u5173\uff0c\u4e0d\u9002\u5408\u9ad8\u5bc6\u5ea6\u590d\u6742\u56fe\u8868\u3002"
+            },
+            "imagery": {
+                "illustration": "\u4e91\u6735\u3001\u67d4\u548c 3D \u5c0f\u7269\u3001\u667a\u80fd\u8bbe\u5907\u56fe\u6807",
+                "photoTreatment": "\u56fe\u7247\u5c11\u7528\uff0c\u4fdd\u6301\u6d45\u8272\u540c\u8c03",
+                "icon": "\u5706\u6da6\u7ebf\u6027\u6216\u8f7b 3D \u56fe\u6807"
+            },
+            "motion": {
+                "duration": "200ms",
+                "easing": "ease-out",
+                "microInteraction": "\u6309\u94ae\u6309\u4e0b\u660e\u663e\u53d8\u5185\u51f9\uff0c\u6ed1\u6746\u62d6\u52a8\u6709\u67d4\u548c\u9634\u5f71\u53d8\u5316\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "\u63a7\u5236\u9875\u9762\u8981\u4f4e\u5bc6\u5ea6",
+                "\u6bcf\u4e2a\u53ef\u70b9\u51fb\u5143\u7d20\u7684\u72b6\u6001\u8981\u6e05\u695a",
+                "\u7528\u6587\u5b57\u6807\u7b7e\u8865\u8db3\u4f4e\u5bf9\u6bd4\u5e26\u6765\u7684\u7406\u89e3\u95ee\u9898"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u5728\u590d\u6742\u8868\u5355\u548c\u8868\u683c\u4e2d\u5927\u91cf\u4f7f\u7528",
+                "\u4e0d\u8981\u628a\u9634\u5f71\u505a\u5f97\u8fc7\u6de1\u5bfc\u81f4\u770b\u4e0d\u51fa\u6309\u94ae",
+                "\u4e0d\u8981\u6b63\u6587\u4f4e\u5bf9\u6bd4"
+            ],
+            "searchTags": [
+                "\u8f6f\u62df\u6001",
+                "neumorphism",
+                "\u667a\u80fd\u5bb6\u5c45",
+                "\u5929\u6c14",
+                "\u63a7\u5236\u9762\u677f",
+                "\u4e91\u6735"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2a\u667a\u80fd\u5bb6\u5c45\u63a7\u5236APP\uff1a\u6d45\u84dd\u7070\u8f6f\u62df\u6001\uff0c\u5185\u5916\u67d4\u5f71\u6309\u94ae\uff0c\u8bbe\u5907\u5361\u548c\u5f00\u5173\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#7BA7FF",
+                "--color-secondary": "#B5C7E6",
+                "--color-accent": "#A3E4DB",
+                "--color-bg": "#EEF3FA",
+                "--color-surface": "#EEF3FA",
+                "--color-text-primary": "#243044",
+                "--color-text-secondary": "#738199",
+                "--color-border": "#DDE6F3",
+                "--radius-card": "24px",
+                "--radius-button": "20px",
+                "--shadow-card": "8px 8px 18px rgba(163,177,198,.42), -8px -8px 18px rgba(255,255,255,.88)"
+            }
+        },
+        {
+            "id": "style_bento_pastel_showcase",
+            "name": "\u5f69\u8272Bento\u5c55\u793a\u98ce",
+            "nameEn": "Pastel Bento Showcase",
+            "version": "1.0.0",
+            "category": [
+                "\u5b98\u7f51",
+                "\u4ea7\u54c1\u4ecb\u7ecd",
+                "AI\u5de5\u5177",
+                "\u529f\u80fd\u5c55\u793a",
+                "SaaS\u8425\u9500\u9875"
+            ],
+            "description": "\u4ee5 Bento \u7f51\u683c\u628a\u529f\u80fd\u62c6\u6210\u53ef\u6d4f\u89c8\u6a21\u5757\uff0c\u642d\u914d\u67d4\u548c\u591a\u5f69\u5361\u7247\u548c\u6e05\u6670\u4ea7\u54c1\u5356\u70b9\uff0c\u9002\u5408\u8ba9\u975e\u4e13\u4e1a\u7528\u6237\u5feb\u901f\u7406\u89e3\u4ea7\u54c1\u3002",
+            "personality": [
+                "\u6e05\u6670",
+                "\u6a21\u5757\u5316",
+                "\u53cb\u597d",
+                "\u73b0\u4ee3",
+                "\u4ea7\u54c1\u611f"
+            ],
+            "bestFor": [
+                "AI\u4ea7\u54c1\u5b98\u7f51",
+                "\u529f\u80fd\u603b\u89c8",
+                "\u6a21\u677f\u5e93\u5c55\u793a",
+                "\u63d2\u4ef6\u5e02\u573a",
+                "SaaS\u843d\u5730\u9875"
+            ],
+            "avoidFor": [
+                "\u957f\u5217\u8868\u4ea4\u6613",
+                "\u7eaf\u5185\u5bb9\u793e\u533a",
+                "\u4f20\u7edf\u8868\u683c\u540e\u53f0"
+            ],
+            "palette": {
+                "mode": "light",
+                "primary": "#6366F1",
+                "secondary": "#06B6D4",
+                "accent": "#F59E0B",
+                "background": "#F8FAFC",
+                "surface": "#FFFFFF",
+                "surfaceStrong": "#EEF2FF",
+                "textPrimary": "#0F172A",
+                "textSecondary": "#64748B",
+                "border": "#E2E8F0",
+                "success": "#22C55E",
+                "warning": "#F59E0B",
+                "danger": "#EF4444"
+            },
+            "gradients": [
+                {
+                    "name": "\u67d4\u548c\u529f\u80fd\u5361",
+                    "css": "linear-gradient(135deg, #EEF2FF 0%, #ECFEFF 50%, #FFF7ED 100%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 16,
+                "sectionGap": 24,
+                "cardGap": 12,
+                "cardPadding": 16,
+                "density": "modular",
+                "nav": "\u9876\u90e8\u5206\u7c7b Tabs + Bento \u5361\u7247\u6d41"
+            },
+            "shape": {
+                "cardRadius": 24,
+                "buttonRadius": 14,
+                "inputRadius": 14,
+                "chipRadius": 999,
+                "imageRadius": 18
+            },
+            "effects": {
+                "cardShadow": "0 12px 32px rgba(15,23,42,0.06)",
+                "border": "1px solid #E2E8F0",
+                "blur": "none",
+                "highlight": "\u4e0d\u540c\u5c3a\u5bf8\u5361\u7247\u3001\u67d4\u548c\u5f69\u8272\u80cc\u666f\u5757\u3001\u56fe\u6807\u89d2\u6807"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u4e3b\u6309\u94ae\u975b\u84dd\u8272\uff0c\u6b21\u6309\u94ae\u767d\u5e95\u8fb9\u6846\uff1bCTA \u653e\u5728\u6700\u5927 Bento \u5361\u4e2d\u3002",
+                "card": "\u5361\u7247\u5c3a\u5bf8\u6709\u5927\u4e2d\u5c0f\u53d8\u5316\uff0c\u4f46\u5bf9\u9f50\u4e25\u683c\uff1b\u6bcf\u5f20\u5361\u53ea\u8868\u8fbe\u4e00\u4e2a\u5356\u70b9\u3002",
+                "input": "\u641c\u7d22/\u7b5b\u9009\u6761\u4e0e\u5361\u7247\u5706\u89d2\u4e00\u81f4\u3002",
+                "tabBar": "\u5206\u7c7b Tabs \u4f7f\u7528\u6d45\u8272\u80f6\u56ca\uff0c\u9009\u4e2d\u6001\u4e3b\u8272\u5e95\u3002",
+                "charts": "\u7528\u5c0f\u578b\u53ef\u89c6\u5316\u4f5c\u4e3a\u5361\u7247\u88c5\u9970\uff0c\u4e0d\u627f\u62c5\u590d\u6742\u5206\u6790\u3002"
+            },
+            "imagery": {
+                "illustration": "\u5fae\u578b\u4ea7\u54c1\u622a\u56fe\u30013D\u5c0f\u56fe\u6807\u3001\u529f\u80fd\u6d41\u7a0b\u7ebf",
+                "photoTreatment": "\u5c11\u7528\u4eba\u7269\u7167\u7247\uff0c\u591a\u7528\u4ea7\u54c1UI\u622a\u5c4f",
+                "icon": "\u5f69\u8272\u9762\u6027\u56fe\u6807\uff0c\u7edf\u4e00\u5706\u89d2\u5bb9\u5668"
+            },
+            "motion": {
+                "duration": "220ms",
+                "easing": "cubic-bezier(.2,.8,.2,1)",
+                "microInteraction": "\u5361\u7247 hover/press \u4e0a\u6d6e 2px\uff0c\u5c55\u5f00\u65f6\u4fdd\u7559 Bento \u5bf9\u9f50\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "\u6bcf\u5f20 Bento \u5361\u53ea\u653e\u4e00\u4e2a\u6838\u5fc3\u529f\u80fd",
+                "\u9996\u5c4f\u5fc5\u987b\u6709\u6700\u5927\u4e3b\u5356\u70b9\u5361",
+                "\u5361\u7247\u989c\u8272\u7528\u4e8e\u5206\u7c7b\u800c\u975e\u968f\u610f\u88c5\u9970"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u8ba9\u6bcf\u4e2a\u5361\u7247\u90fd\u7b49\u5927\u5bfc\u81f4\u65e0\u91cd\u70b9",
+                "\u4e0d\u8981\u5806\u592a\u591a\u6587\u6848",
+                "\u4e0d\u8981\u989c\u8272\u8fc7\u9971\u548c"
+            ],
+            "searchTags": [
+                "Bento",
+                "\u4ea7\u54c1\u5c55\u793a",
+                "AI\u5de5\u5177",
+                "SaaS",
+                "\u6a21\u677f\u5e93",
+                "\u591a\u5f69\u5361\u7247"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2aAI\u4ea7\u54c1\u6a21\u677f\u5e93\u9996\u9875\uff1aBento\u7f51\u683c\u3001\u591a\u5f69\u67d4\u548c\u529f\u80fd\u5361\u3001\u4ea7\u54c1\u622a\u56fe\u3001\u6e05\u6670CTA\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#6366F1",
+                "--color-secondary": "#06B6D4",
+                "--color-accent": "#F59E0B",
+                "--color-bg": "#F8FAFC",
+                "--color-surface": "#FFFFFF",
+                "--color-text-primary": "#0F172A",
+                "--color-text-secondary": "#64748B",
+                "--color-border": "#E2E8F0",
+                "--radius-card": "24px",
+                "--radius-button": "14px",
+                "--shadow-card": "0 12px 32px rgba(15,23,42,0.06)"
+            }
+        },
+        {
+            "id": "style_luxury_editorial_black_gold",
+            "name": "\u5962\u534e\u6742\u5fd7\u9ed1\u91d1\u98ce",
+            "nameEn": "Luxury Editorial Black Gold",
+            "version": "1.0.0",
+            "category": [
+                "\u9ad8\u7aef\u533b\u7f8e",
+                "\u5962\u4f88\u54c1",
+                "\u7cbe\u54c1\u9152\u5e97",
+                "\u9ad8\u7aef\u54a8\u8be2",
+                "\u73e0\u5b9d\u7f8e\u5b66"
+            ],
+            "description": "\u9ed1\u3001\u8c61\u7259\u767d\u548c\u9999\u69df\u91d1\u7ed3\u5408\u5927\u7559\u767d\u3001\u6742\u5fd7\u6392\u7248\u548c\u9ad8\u8d28\u611f\u56fe\u7247\uff0c\u5f3a\u8c03\u9ad8\u7ea7\u3001\u7a00\u7f3a\u548c\u5ba1\u7f8e\u6743\u5a01\u3002",
+            "personality": [
+                "\u9ad8\u7ea7",
+                "\u514b\u5236",
+                "\u7cbe\u82f1",
+                "\u4eea\u5f0f\u611f",
+                "\u5ba1\u7f8e"
+            ],
+            "bestFor": [
+                "\u9ad8\u7aef\u533b\u7f8e",
+                "\u73e0\u5b9d\u8155\u8868",
+                "\u7cbe\u54c1\u9152\u5e97",
+                "\u9ad8\u7ea7\u4f1a\u5458",
+                "\u54c1\u724c\u6545\u4e8b"
+            ],
+            "avoidFor": [
+                "\u9ad8\u9891\u4f4e\u4ef7\u4fc3\u9500",
+                "\u513f\u7ae5\u4eb2\u5b50",
+                "\u5916\u5356\u751f\u6d3b\u670d\u52a1"
+            ],
+            "palette": {
+                "mode": "dark",
+                "primary": "#C6A15B",
+                "secondary": "#F4E7C5",
+                "accent": "#8B5E3C",
+                "background": "#080808",
+                "surface": "#141414",
+                "surfaceStrong": "#1F1B16",
+                "textPrimary": "#F8F4EA",
+                "textSecondary": "#B8AA94",
+                "border": "rgba(198,161,91,0.32)",
+                "success": "#7EA77B",
+                "warning": "#C6A15B",
+                "danger": "#D66A5C"
+            },
+            "gradients": [
+                {
+                    "name": "\u9ed1\u91d1\u7f0e\u9762",
+                    "css": "linear-gradient(135deg, #080808 0%, #1F1B16 55%, #C6A15B 140%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 20,
+                "sectionGap": 40,
+                "cardGap": 20,
+                "cardPadding": 20,
+                "density": "editorial",
+                "nav": "\u6781\u7b80\u6587\u5b57\u5bfc\u822a/\u5e95\u90e8\u4f4e\u5b58\u5728\u611f\u5bfc\u822a"
+            },
+            "shape": {
+                "cardRadius": 10,
+                "buttonRadius": 4,
+                "inputRadius": 6,
+                "chipRadius": 999,
+                "imageRadius": 8
+            },
+            "effects": {
+                "cardShadow": "0 24px 60px rgba(0,0,0,0.38)",
+                "border": "1px solid rgba(198,161,91,.32)",
+                "blur": "none",
+                "highlight": "\u91d1\u8272\u7ec6\u7ebf\u3001\u5927\u56fe\u3001\u886c\u7ebf\u6807\u9898\u3001\u6742\u5fd7\u5206\u680f"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u4e3b\u6309\u94ae\u9999\u69df\u91d1\u5e95\u9ed1\u5b57\u6216\u9ed1\u5e95\u91d1\u8fb9\uff0c\u5f62\u6001\u514b\u5236\u3002",
+                "card": "\u5361\u7247\u5c11\u800c\u5927\uff0c\u56fe\u7247\u5360\u6bd4\u9ad8\uff0c\u6587\u5b57\u50cf\u6742\u5fd7\u6807\u9898\u3002",
+                "input": "\u8868\u5355\u8fb9\u6846\u7ec6\uff0c\u7126\u70b9\u6001\u91d1\u8272\u8fb9\u6846\u3002",
+                "tabBar": "\u9009\u4e2d\u6001\u4ec5\u91d1\u8272\u7ec6\u7ebf\u6216\u6587\u5b57\u989c\u8272\u53d8\u5316\u3002",
+                "charts": "\u9ad8\u7aef\u62a5\u544a\u53ef\u7528\u9ed1\u5e95\u91d1\u7ebf\uff0c\u907f\u514d\u82b1\u54e8\u8272\u5f69\u3002"
+            },
+            "imagery": {
+                "illustration": "\u5c11\u7528\u63d2\u753b\uff0c\u591a\u7528\u9ad8\u8d28\u91cf\u6444\u5f71\u3001\u91d1\u5c5e\u6750\u8d28\u3001\u5c40\u90e8\u7279\u5199",
+                "photoTreatment": "\u4f4e\u9971\u548c\u9ad8\u5bf9\u6bd4\uff0c\u9ed1\u767d\u6216\u6696\u91d1\u8c03",
+                "icon": "\u6781\u7ec6\u7ebf\u56fe\u6807\uff0c\u51e0\u4f55\u514b\u5236"
+            },
+            "motion": {
+                "duration": "260ms",
+                "easing": "ease-out",
+                "microInteraction": "\u9875\u9762\u5207\u6362\u6de1\u5165\uff0c\u56fe\u7247\u7f13\u6162\u653e\u5927 1.02 \u500d\uff0c\u4fdd\u6301\u514b\u5236\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "\u7559\u767d\u548c\u56fe\u7247\u8d28\u91cf\u51b3\u5b9a\u9ad8\u7ea7\u611f",
+                "\u91d1\u8272\u53ea\u7528\u4e8e\u7ebf\u6761\u548c CTA",
+                "\u6587\u5b57\u5c42\u7ea7\u8981\u50cf\u6742\u5fd7\u5c01\u9762"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u6ee1\u5c4f\u91d1\u8272",
+                "\u4e0d\u8981\u4f7f\u7528\u5361\u901a\u56fe\u6807",
+                "\u4e0d\u8981\u628a\u4ef7\u683c\u4fc3\u9500\u505a\u5f97\u592a\u5435"
+            ],
+            "searchTags": [
+                "\u9ed1\u91d1",
+                "\u5962\u534e",
+                "\u6742\u5fd7",
+                "\u9ad8\u7aef\u533b\u7f8e",
+                "\u9152\u5e97",
+                "\u73e0\u5b9d"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2a\u9ad8\u7aef\u533b\u7f8e\u4f1a\u5458\u9996\u9875\uff1a\u9ed1\u91d1\u914d\u8272\u3001\u6742\u5fd7\u5927\u56fe\u3001\u9999\u69df\u91d1\u7ec6\u7ebf\u3001\u6781\u7b80CTA\uff0c\u9ad8\u7ea7\u514b\u5236\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#C6A15B",
+                "--color-secondary": "#F4E7C5",
+                "--color-accent": "#8B5E3C",
+                "--color-bg": "#080808",
+                "--color-surface": "#141414",
+                "--color-text-primary": "#F8F4EA",
+                "--color-text-secondary": "#B8AA94",
+                "--color-border": "rgba(198,161,91,0.32)",
+                "--radius-card": "10px",
+                "--radius-button": "4px",
+                "--shadow-card": "0 24px 60px rgba(0,0,0,0.38)"
+            }
+        },
+        {
+            "id": "style_medical_clean_azure",
+            "name": "\u533b\u7597\u6d01\u51c0\u84dd\u7eff\u98ce",
+            "nameEn": "Medical Clean Azure",
+            "version": "1.0.0",
+            "category": [
+                "\u533b\u7597",
+                "\u4f53\u68c0",
+                "\u76ae\u80a4\u68c0\u6d4b",
+                "\u533b\u7f8e\u62a5\u544a",
+                "\u533b\u9662\u7cfb\u7edf"
+            ],
+            "description": "\u767d\u5e95\u3001\u533b\u7597\u84dd\u7eff\u3001\u660e\u786e\u72b6\u6001\u8272\u548c\u89c4\u6574\u5361\u7247\uff0c\u5f3a\u8c03\u53ef\u4fe1\u3001\u6d01\u51c0\u3001\u5ba2\u89c2\u548c\u4e13\u4e1a\u3002",
+            "personality": [
+                "\u6d01\u51c0",
+                "\u4e13\u4e1a",
+                "\u53ef\u4fe1",
+                "\u7406\u6027",
+                "\u5b89\u5168"
+            ],
+            "bestFor": [
+                "\u68c0\u6d4b\u62a5\u544a",
+                "\u9884\u7ea6\u95ee\u8bca",
+                "\u4f53\u68c0\u4e2d\u5fc3",
+                "\u533b\u7f8e\u672f\u524d\u672f\u540e",
+                "\u533b\u9662\u5c0f\u7a0b\u5e8f"
+            ],
+            "avoidFor": [
+                "\u6f6e\u6d41\u5a31\u4e50",
+                "\u5f3a\u4fc3\u9500",
+                "\u5962\u4f88\u54c1\u5c55\u793a"
+            ],
+            "palette": {
+                "mode": "light",
+                "primary": "#0EA5E9",
+                "secondary": "#14B8A6",
+                "accent": "#6366F1",
+                "background": "#F6FBFF",
+                "surface": "#FFFFFF",
+                "surfaceStrong": "#EAF8FF",
+                "textPrimary": "#102033",
+                "textSecondary": "#64748B",
+                "border": "#D8E8F2",
+                "success": "#12B76A",
+                "warning": "#F79009",
+                "danger": "#F04438"
+            },
+            "gradients": [
+                {
+                    "name": "\u533b\u7597\u84dd\u7eff",
+                    "css": "linear-gradient(135deg, #0EA5E9 0%, #14B8A6 100%)"
+                },
+                {
+                    "name": "\u6d01\u51c0\u80cc\u666f",
+                    "css": "linear-gradient(180deg, #F6FBFF 0%, #FFFFFF 100%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 16,
+                "sectionGap": 24,
+                "cardGap": 16,
+                "cardPadding": 16,
+                "density": "clinical",
+                "nav": "\u62a5\u544a/\u9884\u7ea6/\u6863\u6848\u6e05\u6670\u5206\u533a"
+            },
+            "shape": {
+                "cardRadius": 16,
+                "buttonRadius": 12,
+                "inputRadius": 12,
+                "chipRadius": 999,
+                "imageRadius": 14
+            },
+            "effects": {
+                "cardShadow": "0 8px 28px rgba(14,165,233,0.08)",
+                "border": "1px solid #D8E8F2",
+                "blur": "none",
+                "highlight": "\u72b6\u6001\u6807\u7b7e\u3001\u98ce\u9669\u7b49\u7ea7\u3001\u62a5\u544a\u6458\u8981\u5361"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u4e3b\u6309\u94ae\u533b\u7597\u84dd\uff0c\u786e\u8ba4/\u901a\u8fc7\u53ef\u7528\u7eff\u8272\uff0c\u98ce\u9669\u63d0\u793a\u7ea2/\u6a59\u5fc5\u987b\u8bed\u4e49\u660e\u786e\u3002",
+                "card": "\u62a5\u544a\u5361\u7247\u8981\u6709\u7ed3\u8bba\u3001\u6307\u6807\u3001\u5efa\u8bae\u4e09\u5c42\u7ed3\u6784\u3002",
+                "input": "\u8868\u5355\u5b57\u6bb5\u6807\u7b7e\u660e\u786e\uff0c\u9519\u8bef\u63d0\u793a\u9192\u76ee\u4f46\u4e0d\u6050\u5413\u3002",
+                "tabBar": "\u6e05\u6670\u6587\u5b57\u6807\u7b7e\uff0c\u9009\u4e2d\u6001\u84dd\u8272\u5e95\u6216\u4e0b\u5212\u7ebf\u3002",
+                "charts": "\u6307\u6807\u8d8b\u52bf\u7ebf\u3001\u96f7\u8fbe\u56fe\u3001\u533a\u95f4\u6761\u5fc5\u987b\u6709\u6b63\u5e38\u8303\u56f4\u6807\u8bc6\u3002"
+            },
+            "imagery": {
+                "illustration": "\u533b\u7597\u7ebf\u6027\u63d2\u753b\u3001\u62a5\u544a\u56fe\u6807\u3001\u4eba\u4f53\u7ed3\u6784\u62bd\u8c61\u56fe",
+                "photoTreatment": "\u4e34\u5e8a\u56fe\u7247\u4fdd\u6301\u771f\u5b9e\u6e05\u695a\uff0c\u907f\u514d\u8fc7\u5ea6\u7f8e\u5316",
+                "icon": "\u7ebf\u6027\u533b\u7597\u56fe\u6807\uff0c\u8bed\u4e49\u51c6\u786e"
+            },
+            "motion": {
+                "duration": "180ms",
+                "easing": "ease-out",
+                "microInteraction": "\u62a5\u544a\u751f\u6210\u8fdb\u5ea6\u6e05\u695a\uff0c\u98ce\u9669\u9879\u5c55\u5f00\u6709\u786e\u8ba4\u53cd\u9988\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "\u91cd\u8981\u7ed3\u8bba\u8981\u6709\u6587\u5b57\u89e3\u91ca\uff0c\u4e0d\u53ea\u7528\u989c\u8272",
+                "\u72b6\u6001\u8272\u4fdd\u6301\u8bed\u4e49\u4e00\u81f4",
+                "\u62a5\u544a\u9875\u9762\u4f18\u5148\u53ef\u8bfb\u6027\u548c\u8bc1\u636e\u94fe"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u7528\u68a6\u5e7b\u6ee4\u955c\u5f31\u5316\u533b\u7597\u771f\u5b9e\u6027",
+                "\u4e0d\u8981\u7528\u7ea2\u8272\u505a\u666e\u901a\u88c5\u9970",
+                "\u4e0d\u8981\u8ba9\u56fe\u8868\u7f3a\u5c11\u5355\u4f4d\u548c\u8303\u56f4"
+            ],
+            "searchTags": [
+                "\u533b\u7597",
+                "\u4f53\u68c0",
+                "\u76ae\u80a4\u68c0\u6d4b",
+                "\u62a5\u544a",
+                "\u84dd\u7eff",
+                "\u4e13\u4e1a"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2a\u76ae\u80a4\u68c0\u6d4b\u62a5\u544aAPP\uff1a\u9996\u9875\u767d\u5e95\u84dd\u7eff\uff0c\u6307\u6807\u5361\u3001\u98ce\u9669\u6807\u7b7e\u3001\u5efa\u8bae\u6a21\u5757\u3001\u4e13\u4e1a\u53ef\u4fe1\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#0EA5E9",
+                "--color-secondary": "#14B8A6",
+                "--color-accent": "#6366F1",
+                "--color-bg": "#F6FBFF",
+                "--color-surface": "#FFFFFF",
+                "--color-text-primary": "#102033",
+                "--color-text-secondary": "#64748B",
+                "--color-border": "#D8E8F2",
+                "--radius-card": "16px",
+                "--radius-button": "12px",
+                "--shadow-card": "0 8px 28px rgba(14,165,233,0.08)"
+            }
+        },
+        {
+            "id": "style_fintech_dark_emerald_gold",
+            "name": "\u91d1\u878d\u6697\u7eff\u91d1\u98ce",
+            "nameEn": "Fintech Dark Emerald Gold",
+            "version": "1.0.0",
+            "category": [
+                "\u91d1\u878d",
+                "\u6295\u8d44",
+                "\u4f1a\u5458\u8d44\u4ea7",
+                "\u4f01\u4e1a\u8d22\u52a1",
+                "\u4fdd\u9669"
+            ],
+            "description": "\u6df1\u58a8\u7eff\u4e0e\u91d1\u8272\u5f3a\u8c03\u8d22\u5bcc\u3001\u7a33\u5065\u548c\u4e13\u4e1a\uff0c\u914d\u5408\u4e25\u8c28\u6570\u5b57\u6392\u7248\u548c\u5b89\u5168\u611f\u7ec4\u4ef6\u3002",
+            "personality": [
+                "\u7a33\u5065",
+                "\u8d22\u5bcc\u611f",
+                "\u4e13\u4e1a",
+                "\u5b89\u5168",
+                "\u9ad8\u51c0\u503c"
+            ],
+            "bestFor": [
+                "\u8d44\u4ea7\u770b\u677f",
+                "\u6295\u8d44\u7406\u8d22",
+                "\u4fdd\u9669\u987e\u95ee",
+                "\u4f01\u4e1a\u8d22\u52a1",
+                "\u9ad8\u7aef\u4f1a\u5458"
+            ],
+            "avoidFor": [
+                "\u513f\u7ae5\u4ea7\u54c1",
+                "\u5a31\u4e50\u793e\u533a",
+                "\u4f4e\u4ef7\u56e2\u8d2d"
+            ],
+            "palette": {
+                "mode": "dark",
+                "primary": "#0E7A53",
+                "secondary": "#D6B35A",
+                "accent": "#3DDC97",
+                "background": "#071713",
+                "surface": "#10241E",
+                "surfaceStrong": "#17372E",
+                "textPrimary": "#F2FFF9",
+                "textSecondary": "#9AB7AC",
+                "border": "rgba(214,179,90,0.24)",
+                "success": "#3DDC97",
+                "warning": "#D6B35A",
+                "danger": "#E85D75"
+            },
+            "gradients": [
+                {
+                    "name": "\u7fe1\u7fe0\u91d1",
+                    "css": "linear-gradient(135deg, #0E7A53 0%, #17372E 58%, #D6B35A 120%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 16,
+                "sectionGap": 24,
+                "cardGap": 16,
+                "cardPadding": 16,
+                "density": "financial",
+                "nav": "\u8d44\u4ea7/\u4ea4\u6613/\u62a5\u544a\u4f18\u5148"
+            },
+            "shape": {
+                "cardRadius": 18,
+                "buttonRadius": 12,
+                "inputRadius": 12,
+                "chipRadius": 999,
+                "imageRadius": 14
+            },
+            "effects": {
+                "cardShadow": "0 16px 40px rgba(0,0,0,0.28)",
+                "border": "1px solid rgba(214,179,90,.24)",
+                "blur": "none",
+                "highlight": "\u91d1\u8272\u7ec6\u7ebf\u3001\u6570\u5b57\u5927\u5b57\u3001\u98ce\u9669\u6807\u7b7e"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u4e3b\u6309\u94ae\u7528\u7fe1\u7fe0\u7eff\uff0c\u91d1\u8272\u7528\u4e8e\u4f1a\u5458/\u6536\u76ca\u5f3a\u8c03\uff1b\u4ea4\u6613\u786e\u8ba4\u6309\u94ae\u9700\u7a33\u91cd\u3002",
+                "card": "\u8d44\u4ea7\u5361\u5927\u6570\u5b57\u4f18\u5148\uff0c\u6536\u76ca/\u98ce\u9669/\u65f6\u95f4\u7ef4\u5ea6\u6e05\u695a\u3002",
+                "input": "\u91d1\u989d\u8f93\u5165\u4f7f\u7528\u5927\u53f7\u6570\u5b57\u5b57\u4f53\uff0c\u5206\u7ec4\u548c\u6821\u9a8c\u660e\u663e\u3002",
+                "tabBar": "\u9009\u4e2d\u6001\u7eff\u8272\u6216\u91d1\u8272\u7ec6\u7ebf\uff0c\u907f\u514d\u5927\u9762\u79ef\u91d1\u3002",
+                "charts": "\u6536\u76ca\u66f2\u7ebf\u3001KPI\u5361\u3001\u98ce\u9669\u7b49\u7ea7\u4f7f\u7528\u7eff\u91d1\u7ea2\u4e09\u7c7b\u8bed\u4e49\u8272\u3002"
+            },
+            "imagery": {
+                "illustration": "\u91d1\u5c5e\u7ebf\u6761\u3001\u5361\u7247\u3001\u76fe\u724c\u3001\u62bd\u8c61\u589e\u957f\u7ebf",
+                "photoTreatment": "\u5c11\u7528\u4eba\u7269\u7167\uff0c\u4f7f\u7528\u9ad8\u8d28\u611f\u6750\u8d28\u80cc\u666f",
+                "icon": "\u7ec6\u7ebf\u91d1\u878d\u56fe\u6807\uff0c\u6570\u5b57\u5b57\u4f53\u7a81\u51fa"
+            },
+            "motion": {
+                "duration": "180ms",
+                "easing": "ease-out",
+                "microInteraction": "\u91d1\u989d\u53d8\u5316\u6570\u5b57\u6eda\u52a8\uff0c\u98ce\u9669\u786e\u8ba4\u5f39\u5c42\u6e05\u695a\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "\u6570\u5b57\u548c\u5355\u4f4d\u5fc5\u987b\u6e05\u695a",
+                "\u98ce\u9669\u8bf4\u660e\u4e0d\u80fd\u88ab\u88c5\u9970\u5f31\u5316",
+                "\u91d1\u8272\u53ea\u7528\u4e8e\u4ef7\u503c\u5f3a\u8c03"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u6697\u793a\u65e0\u98ce\u9669\u6536\u76ca",
+                "\u4e0d\u8981\u7528\u8fc7\u591a\u52a8\u6001\u56fe\u9020\u6210\u4ea4\u6613\u8bef\u89e6",
+                "\u4e0d\u8981\u628a\u7ea2\u7eff\u542b\u4e49\u6df7\u4e71"
+            ],
+            "searchTags": [
+                "\u91d1\u878d",
+                "\u6697\u7eff",
+                "\u91d1\u8272",
+                "\u8d44\u4ea7",
+                "\u6295\u8d44",
+                "\u9ad8\u7aef\u4f1a\u5458"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2a\u91d1\u878d\u8d44\u4ea7APP\u9996\u9875\uff1a\u6df1\u58a8\u7eff\u80cc\u666f\u3001\u91d1\u8272\u7ec6\u7ebf\u3001\u8d44\u4ea7\u603b\u89c8\u3001\u6536\u76ca\u66f2\u7ebf\u3001\u7a33\u5065\u9ad8\u7ea7\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#0E7A53",
+                "--color-secondary": "#D6B35A",
+                "--color-accent": "#3DDC97",
+                "--color-bg": "#071713",
+                "--color-surface": "#10241E",
+                "--color-text-primary": "#F2FFF9",
+                "--color-text-secondary": "#9AB7AC",
+                "--color-border": "rgba(214,179,90,0.24)",
+                "--radius-card": "18px",
+                "--radius-button": "12px",
+                "--shadow-card": "0 16px 40px rgba(0,0,0,0.28)"
+            }
+        },
+        {
+            "id": "style_xiaohongshu_seed_content",
+            "name": "\u79cd\u8349\u5185\u5bb9\u793e\u533a\u98ce",
+            "nameEn": "Seed Content Community Red",
+            "version": "1.0.0",
+            "category": [
+                "\u5185\u5bb9\u793e\u533a",
+                "\u7f8e\u5986\u7a7f\u642d",
+                "\u63a2\u5e97",
+                "\u533b\u7f8e\u65e5\u8bb0",
+                "\u751f\u6d3b\u5206\u4eab"
+            ],
+            "description": "\u767d\u5e95\u7011\u5e03\u6d41\u3001\u7ea2\u8272\u4e92\u52a8\u70b9\u7f00\u3001\u771f\u5b9e\u56fe\u7247\u548c\u7b14\u8bb0\u6807\u7b7e\uff0c\u5f3a\u8c03\u8f7b\u793e\u4ea4\u3001\u6536\u85cf\u3001\u5206\u4eab\u548c\u6d88\u8d39\u51b3\u7b56\u3002",
+            "personality": [
+                "\u771f\u5b9e",
+                "\u8f7b\u793e\u4ea4",
+                "\u7cbe\u81f4",
+                "\u5206\u4eab",
+                "\u79cd\u8349"
+            ],
+            "bestFor": [
+                "\u7f8e\u5986\u7a7f\u642d",
+                "\u63a2\u5e97\u653b\u7565",
+                "\u533b\u7f8e\u6848\u4f8b",
+                "\u751f\u6d3b\u7b14\u8bb0",
+                "\u8fbe\u4eba\u793e\u533a"
+            ],
+            "avoidFor": [
+                "\u91cd\u540e\u53f0",
+                "\u4e25\u8083\u91d1\u878d",
+                "\u7eaf\u5de5\u5177\u65e0\u5185\u5bb9\u4ea7\u54c1"
+            ],
+            "palette": {
+                "mode": "light",
+                "primary": "#FF2442",
+                "secondary": "#FF7A90",
+                "accent": "#FFD166",
+                "background": "#FFFFFF",
+                "surface": "#FFFFFF",
+                "surfaceStrong": "#FFF2F4",
+                "textPrimary": "#1F1F1F",
+                "textSecondary": "#777777",
+                "border": "#EEEEEE",
+                "success": "#22C55E",
+                "warning": "#F59E0B",
+                "danger": "#FF2442"
+            },
+            "gradients": [
+                {
+                    "name": "\u7ea2\u7c89\u4e92\u52a8",
+                    "css": "linear-gradient(135deg, #FF2442 0%, #FF7A90 100%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 12,
+                "sectionGap": 16,
+                "cardGap": 8,
+                "cardPadding": 10,
+                "density": "feed",
+                "nav": "\u9876\u90e8\u9891\u9053Tabs + \u53cc\u5217\u7011\u5e03\u6d41"
+            },
+            "shape": {
+                "cardRadius": 14,
+                "buttonRadius": 999,
+                "inputRadius": 999,
+                "chipRadius": 999,
+                "imageRadius": 12
+            },
+            "effects": {
+                "cardShadow": "0 4px 14px rgba(0,0,0,0.05)",
+                "border": "1px solid #EEEEEE",
+                "blur": "none",
+                "highlight": "\u7011\u5e03\u6d41\u56fe\u7247\u3001\u7ea2\u8272\u70b9\u8d5e\u6536\u85cf\u3001\u6807\u7b7e\u80f6\u56ca"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u5173\u6ce8/\u53d1\u5e03\u6309\u94ae\u4f7f\u7528\u7ea2\u8272\uff0c\u666e\u901a\u7b5b\u9009\u6807\u7b7e\u767d\u5e95\u7070\u8fb9\u3002",
+                "card": "\u5185\u5bb9\u5361\u56fe\u7247\u4f18\u5148\uff0c\u6807\u9898\u4e24\u884c\u5185\uff0c\u4f5c\u8005\u548c\u4e92\u52a8\u6570\u636e\u6e05\u695a\u3002",
+                "input": "\u641c\u7d22\u6846\u7070\u767d\u80f6\u56ca\uff0c\u9002\u5408\u5173\u952e\u8bcd\u548c\u70ed\u95e8\u641c\u7d22\u3002",
+                "tabBar": "\u9009\u4e2d\u6001\u7ea2\u8272\u6587\u5b57+\u4e0b\u5212\u7ebf\uff0c\u5e95\u90e8\u53d1\u5e03\u6309\u94ae\u7a81\u51fa\u3002",
+                "charts": "\u793e\u533a\u6570\u636e\u4ec5\u7528\u4e8e\u4f5c\u8005\u4e2d\u5fc3\uff0c\u4f7f\u7528\u7b80\u6d01\u7ea2\u7c89\u5f3a\u8c03\u3002"
+            },
+            "imagery": {
+                "illustration": "\u5c11\u7528\u63d2\u753b\uff0c\u4ee5\u771f\u5b9e\u7167\u7247\u3001\u7528\u6237\u5934\u50cf\u3001\u8d34\u7eb8\u6807\u7b7e\u4e3a\u4e3b",
+                "photoTreatment": "\u56fe\u7247\u771f\u5b9e\u660e\u4eae\uff0c\u4e0d\u8981\u8fc7\u5ea6\u5546\u4e1a\u5927\u7247",
+                "icon": "\u7ebf\u6027\u793e\u4ea4\u56fe\u6807\uff0c\u70b9\u8d5e\u6536\u85cf\u53ef\u9762\u6027"
+            },
+            "motion": {
+                "duration": "180ms",
+                "easing": "ease-out",
+                "microInteraction": "\u70b9\u8d5e\u7ea2\u5fc3\u5f39\u51fa\uff0c\u6536\u85cf\u6309\u94ae\u8f7b\u5f39\uff0c\u7011\u5e03\u6d41\u61d2\u52a0\u8f7d\u6de1\u5165\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "\u56fe\u7247\u771f\u5b9e\u6027\u6bd4\u88c5\u9970\u66f4\u91cd\u8981",
+                "\u6807\u9898\u77ed\u800c\u6709\u4fe1\u606f\u91cf",
+                "\u7ea2\u8272\u53ea\u7528\u4e8e\u4e92\u52a8\u548c\u5173\u952e\u52a8\u4f5c"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u5168\u5c4f\u7ea2\u8272",
+                "\u4e0d\u8981\u8ba9\u5361\u7247\u4fe1\u606f\u8fc7\u5bc6",
+                "\u4e0d\u8981\u590d\u5236\u5177\u4f53\u5e73\u53f0\u89c6\u89c9\u8d44\u4ea7"
+            ],
+            "searchTags": [
+                "\u79cd\u8349",
+                "\u5185\u5bb9\u793e\u533a",
+                "\u7011\u5e03\u6d41",
+                "\u5c0f\u7ea2\u4e66\u611f",
+                "\u7f8e\u5986",
+                "\u63a2\u5e97"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2a\u79cd\u8349\u793e\u533aAPP\u9996\u9875\uff1a\u767d\u5e95\u53cc\u5217\u7011\u5e03\u6d41\u3001\u7ea2\u8272\u4e92\u52a8\u6309\u94ae\u3001\u771f\u5b9e\u56fe\u7247\u3001\u9876\u90e8\u9891\u9053\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#FF2442",
+                "--color-secondary": "#FF7A90",
+                "--color-accent": "#FFD166",
+                "--color-bg": "#FFFFFF",
+                "--color-surface": "#FFFFFF",
+                "--color-text-primary": "#1F1F1F",
+                "--color-text-secondary": "#777777",
+                "--color-border": "#EEEEEE",
+                "--radius-card": "14px",
+                "--radius-button": "999px",
+                "--shadow-card": "0 4px 14px rgba(0,0,0,0.05)"
+            }
+        },
+        {
+            "id": "style_spatial_3d_soft_ui",
+            "name": "\u8f6f\u7a7a\u95f43D\u98ce",
+            "nameEn": "Soft Spatial 3D UI",
+            "version": "1.0.0",
+            "category": [
+                "AI\u52a9\u624b",
+                "\u7a7a\u95f4\u8ba1\u7b97",
+                "\u865a\u62df\u5c55\u5385",
+                "\u4ea7\u54c1\u5c55\u793a",
+                "\u521b\u610f\u5de5\u5177"
+            ],
+            "description": "\u67d4\u548c\u6e10\u53d8\u80cc\u666f\u3001\u60ac\u6d6e 3D \u7269\u4ef6\u3001\u7a7a\u95f4\u5c42\u7ea7\u548c\u8f7b\u9634\u5f71\uff0c\u8425\u9020\u53ef\u89e6\u6478\u7684\u672a\u6765\u611f\u3002",
+            "personality": [
+                "\u7a7a\u95f4\u611f",
+                "\u67d4\u548c\u79d1\u6280",
+                "\u6c89\u6d78",
+                "\u65b0\u9c9c",
+                "\u9ad8\u7ea7"
+            ],
+            "bestFor": [
+                "AI\u52a9\u624b",
+                "3D\u4ea7\u54c1\u5c55\u5385",
+                "\u865a\u62df\u8bd5\u7528",
+                "\u521b\u610f\u7f16\u8f91\u5668",
+                "\u667a\u80fd\u8bbe\u5907"
+            ],
+            "avoidFor": [
+                "\u4f4e\u6027\u80fd\u8bbe\u5907",
+                "\u91cd\u6587\u672c\u8868\u5355",
+                "\u4f20\u7edf\u540e\u53f0"
+            ],
+            "palette": {
+                "mode": "light",
+                "primary": "#7C5CFF",
+                "secondary": "#63C7FF",
+                "accent": "#FFB86B",
+                "background": "#F7F8FF",
+                "surface": "#FFFFFF",
+                "surfaceStrong": "#EEF0FF",
+                "textPrimary": "#17172A",
+                "textSecondary": "#6F7190",
+                "border": "#E4E7FF",
+                "success": "#22C55E",
+                "warning": "#FFB86B",
+                "danger": "#FF6B8A"
+            },
+            "gradients": [
+                {
+                    "name": "\u7a7a\u95f4\u67d4\u5149",
+                    "css": "radial-gradient(circle at 25% 0%, rgba(124,92,255,.22), transparent 36%), radial-gradient(circle at 80% 10%, rgba(99,199,255,.24), transparent 32%), linear-gradient(180deg, #F7F8FF 0%, #FFFFFF 100%)"
+                },
+                {
+                    "name": "3D\u6309\u94ae",
+                    "css": "linear-gradient(135deg, #7C5CFF 0%, #63C7FF 100%)"
+                }
+            ],
+            "layout": {
+                "grid": 8,
+                "pageMargin": 16,
+                "sectionGap": 32,
+                "cardGap": 16,
+                "cardPadding": 16,
+                "density": "spatial",
+                "nav": "\u60ac\u6d6e\u5706\u89d2\u5bfc\u822a/\u7a7a\u95f4\u5c42\u53e0\u5361\u7247"
+            },
+            "shape": {
+                "cardRadius": 26,
+                "buttonRadius": 18,
+                "inputRadius": 18,
+                "chipRadius": 999,
+                "imageRadius": 24
+            },
+            "effects": {
+                "cardShadow": "0 24px 60px rgba(124,92,255,0.14)",
+                "border": "1px solid #E4E7FF",
+                "blur": "backdrop-filter: blur(12px)",
+                "highlight": "\u60ac\u6d6e3D\u7269\u4ef6\u3001\u6df1\u6d45\u5c42\u7ea7\u3001\u67d4\u5149\u80cc\u666f"
+            },
+            "typography": {
+                "fontFamilyCN": "PingFang SC, HarmonyOS Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+                "fontFamilyNumber": "DIN Alternate, Inter, SF Pro Display, Arial, sans-serif",
+                "sizes": {
+                    "display": 32,
+                    "h1": 24,
+                    "h2": 20,
+                    "h3": 18,
+                    "body": 15,
+                    "caption": 12
+                },
+                "lineHeights": {
+                    "display": 40,
+                    "h1": 32,
+                    "h2": 28,
+                    "h3": 24,
+                    "body": 24,
+                    "caption": 16
+                }
+            },
+            "components": {
+                "button": "\u6309\u94ae\u4f7f\u7528\u67d4\u548c\u6e10\u53d8\u548c\u4e0b\u65b9\u8f6f\u9634\u5f71\uff0c\u50cf\u6f02\u6d6e\u5b9e\u4f53\u3002",
+                "card": "\u5361\u7247\u5206\u524d\u4e2d\u540e\u4e09\u5c42\uff0c\u6838\u5fc3\u5361\u6700\u5927\u5e76\u53e0\u52a03D\u56fe\u5f62\u3002",
+                "input": "\u8f93\u5165\u6846\u767d\u5e95\u534a\u900f\u660e\uff0c\u9002\u5408AI\u5bf9\u8bdd\u548c\u6307\u4ee4\u5165\u53e3\u3002",
+                "tabBar": "\u60ac\u6d6e\u80f6\u56ca\uff0c\u56fe\u6807\u53ef\u4f7f\u7528\u8f7b3D\u98ce\u683c\u3002",
+                "charts": "\u75283D\u8fdb\u5ea6\u7403\u3001\u7a7a\u95f4\u5361\u7247\u5c55\u793a\uff0c\u4f46\u6838\u5fc3\u6570\u636e\u4ecd\u9700\u5e73\u9762\u53ef\u8bfb\u3002"
+            },
+            "imagery": {
+                "illustration": "\u67d4\u548c 3D \u7403\u4f53\u3001\u7acb\u65b9\u4f53\u3001\u8bbe\u5907\u6a21\u578b\u3001\u7a7a\u95f4\u5149\u5f71",
+                "photoTreatment": "\u4ea7\u54c1\u56fe\u53ef\u505a\u534a\u60ac\u6d6e\u900f\u89c6",
+                "icon": "\u8f7b3D\u6216\u6e10\u53d8\u9762\u6027\u56fe\u6807"
+            },
+            "motion": {
+                "duration": "260ms",
+                "easing": "cubic-bezier(.2,.8,.2,1)",
+                "microInteraction": "\u5361\u7247\u8fdb\u5165\u6709 Z \u8f74\u4e0a\u6d6e\uff0c3D\u7269\u4ef6\u53ef\u8f7b\u5fae\u6f02\u6d6e\u3002"
+            },
+            "accessibility": {
+                "contrastPolicy": "\u6b63\u6587\u4e0e\u5173\u952e\u6309\u94ae\u5fc5\u987b\u6ee1\u8db3 WCAG AA\uff1b\u4f4e\u5bf9\u6bd4\u88c5\u9970\u8272\u4ec5\u7528\u4e8e\u80cc\u666f\u3001\u63d2\u753b\u3001\u6c1b\u56f4\uff0c\u4e0d\u627f\u8f7d\u6838\u5fc3\u4fe1\u606f\u3002",
+                "touchTarget": "\u79fb\u52a8\u7aef\u4e3b\u8981\u53ef\u70b9\u51fb\u533a\u57df\u4e0d\u5c0f\u4e8e 44x44px\u3002",
+                "fallback": "\u590d\u6742\u8d28\u611f\u3001\u6e10\u53d8\u3001\u6bdb\u73bb\u7483\u6548\u679c\u5fc5\u987b\u63d0\u4f9b\u7eaf\u8272\u6216\u4f4e\u6027\u80fd\u964d\u7ea7\u65b9\u6848\u3002"
+            },
+            "dos": [
+                "3D\u5143\u7d20\u670d\u52a1\u4e8e\u7406\u89e3\uff0c\u4e0d\u53ea\u662f\u88c5\u9970",
+                "\u80cc\u666f\u4fdd\u6301\u6d45\u8272\u964d\u4f4e\u7729\u6655",
+                "\u63d0\u4f9b\u4f4e\u6027\u80fd\u9759\u6001\u56fe fallback"
+            ],
+            "donts": [
+                "\u4e0d\u8981\u8ba9 3D \u6a21\u578b\u906e\u6321\u4fe1\u606f",
+                "\u4e0d\u8981\u5f3a\u5236\u590d\u6742\u89c6\u5dee",
+                "\u4e0d\u8981\u5728\u8001\u65e7\u8bbe\u5907\u4e0a\u4f9d\u8d56\u91cd\u52a8\u753b"
+            ],
+            "searchTags": [
+                "\u7a7a\u95f4UI",
+                "3D",
+                "AI\u52a9\u624b",
+                "\u672a\u6765",
+                "\u67d4\u548c\u79d1\u6280",
+                "\u4ea7\u54c1\u5c55\u793a"
+            ],
+            "previewPrompt": "\u751f\u6210\u4e00\u4e2aAI\u52a9\u624bAPP\u9996\u9875\uff1a\u6d45\u8272\u7a7a\u95f4\u6e10\u53d8\u3001\u60ac\u6d6e3D\u7269\u4ef6\u3001\u5706\u89d2\u5361\u7247\u3001\u67d4\u548c\u79d1\u6280\u611f\uff0c390x844\u3002",
+            "cssVariables": {
+                "--color-primary": "#7C5CFF",
+                "--color-secondary": "#63C7FF",
+                "--color-accent": "#FFB86B",
+                "--color-bg": "#F7F8FF",
+                "--color-surface": "#FFFFFF",
+                "--color-text-primary": "#17172A",
+                "--color-text-secondary": "#6F7190",
+                "--color-border": "#E4E7FF",
+                "--radius-card": "26px",
+                "--radius-button": "18px",
+                "--shadow-card": "0 24px 60px rgba(124,92,255,0.14)"
+            }
+        }
+    ]
+}
