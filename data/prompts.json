@@ -1,0 +1,3153 @@
+{
+  "version": "2.0.0",
+  "schema_version": "2.0.0",
+  "generated_at": "2026-06-04",
+  "description": "V2 prompt catalog for style and template generation.",
+  "prompts": [
+    {
+      "id": "prompt-style-001-modern-saas-clean",
+      "name": "现代 SaaS 极简风 页面生成 Prompt",
+      "description": "用于基于「现代 SaaS 极简风」生成企业级页面的风格 Prompt。",
+      "status": "approved",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p0",
+        "saas",
+        "minimal",
+        "admin",
+        "card",
+        "clean"
+      ],
+      "related_items": {
+        "style_pack": "style-001-modern-saas-clean",
+        "templates": [
+          "tpl-sample-001",
+          "tpl-p0-001"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「现代 SaaS 极简风」设计一个企业级业务页面。\n适用场景：B2B SaaS、客户后台、运营平台、内部管理系统。\n视觉方向：大留白、浅灰背景、卡片化、低饱和品牌色、弱边框、清晰层级。\n建议页面：后台 Dashboard、数据列表、详情抽屉；App 首页/列表；组件状态板。\n主题模式：light / dark / brand-basic\n关键词：saas、minimal、admin、card、clean\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-001-modern-saas-clean"
+    },
+    {
+      "id": "prompt-style-002-enterprise-classic-table",
+      "name": "企业经典表格风 页面生成 Prompt",
+      "description": "用于基于「企业经典表格风」生成企业级页面的风格 Prompt。",
+      "status": "approved",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p0",
+        "enterprise",
+        "table",
+        "crud",
+        "antd-like",
+        "dense"
+      ],
+      "related_items": {
+        "style_pack": "style-002-enterprise-classic-table",
+        "templates": [
+          "tpl-sample-002",
+          "tpl-p0-002"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「企业经典表格风」设计一个企业级业务页面。\n适用场景：ERP、CRM、订单、权限、审核、主数据管理。\n视觉方向：信息密度高、表格优先、蓝灰色系、清晰分割线、强操作区。\n建议页面：筛选列表、批量操作、表单页、详情页、权限配置。\n主题模式：light / compact / dark\n关键词：enterprise、table、crud、antd-like、dense\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-002-enterprise-classic-table"
+    },
+    {
+      "id": "prompt-style-003-fluent-office-collab",
+      "name": "Fluent 办公协同风 页面生成 Prompt",
+      "description": "用于基于「Fluent 办公协同风」生成企业级页面的风格 Prompt。",
+      "status": "approved",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p0",
+        "office",
+        "collaboration",
+        "fluent",
+        "copilot",
+        "productivity"
+      ],
+      "related_items": {
+        "style_pack": "style-003-fluent-office-collab",
+        "templates": [
+          "tpl-sample-003",
+          "tpl-p0-003"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「Fluent 办公协同风」设计一个企业级业务页面。\n适用场景：OA、知识库、团队协作、任务、文档、项目空间。\n视觉方向：柔和圆角、轻阴影、微软办公感、上下文工具栏、渐进披露。\n建议页面：工作台、任务列表、文档详情、消息中心、个人中心。\n主题模式：light / dark / copilot-accent\n关键词：office、collaboration、fluent、copilot、productivity\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-003-fluent-office-collab"
+    },
+    {
+      "id": "prompt-style-004-carbon-data-enterprise",
+      "name": "Carbon 数据密集风 页面生成 Prompt",
+      "description": "用于基于「Carbon 数据密集风」生成企业级页面的风格 Prompt。",
+      "status": "approved",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p0",
+        "carbon",
+        "data",
+        "ibm",
+        "cloud",
+        "dense"
+      ],
+      "related_items": {
+        "style_pack": "style-004-carbon-data-enterprise",
+        "templates": [
+          "tpl-sample-004",
+          "tpl-p0-004"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「Carbon 数据密集风」设计一个企业级业务页面。\n适用场景：云平台、企业数据管理、监控、复杂配置、AI 数据产品。\n视觉方向：黑白灰基础、网格严谨、信息层级硬朗、数据卡片和表单规范。\n建议页面：资源列表、配置详情、监控页、数据集管理、模型管理。\n主题模式：light / dark / high-contrast\n关键词：carbon、data、ibm、cloud、dense\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-004-carbon-data-enterprise"
+    },
+    {
+      "id": "prompt-style-005-crm-salesforce-lightning",
+      "name": "CRM 商务销售风 页面生成 Prompt",
+      "description": "用于基于「CRM 商务销售风」生成企业级页面的风格 Prompt。",
+      "status": "approved",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p0",
+        "crm",
+        "sales",
+        "record",
+        "timeline",
+        "pipeline"
+      ],
+      "related_items": {
+        "style_pack": "style-005-crm-salesforce-lightning",
+        "templates": [
+          "tpl-sample-005",
+          "tpl-p0-005"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「CRM 商务销售风」设计一个企业级业务页面。\n适用场景：客户管理、线索、商机、销售漏斗、客户服务。\n视觉方向：业务对象卡片、记录详情页、路径进度、右侧活动流、可配置布局。\n建议页面：客户列表、客户详情、商机看板、活动时间线、表单创建。\n主题模式：light / brand-blue / compact\n关键词：crm、sales、record、timeline、pipeline\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-005-crm-salesforce-lightning"
+    },
+    {
+      "id": "prompt-style-006-atlassian-teamwork",
+      "name": "团队协作效率风 页面生成 Prompt",
+      "description": "用于基于「团队协作效率风」生成企业级页面的风格 Prompt。",
+      "status": "approved",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p0",
+        "kanban",
+        "project",
+        "team",
+        "issue",
+        "collaboration"
+      ],
+      "related_items": {
+        "style_pack": "style-006-atlassian-teamwork",
+        "templates": [
+          "tpl-sample-006",
+          "tpl-p0-006"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「团队协作效率风」设计一个企业级业务页面。\n适用场景：项目管理、Issue、研发协作、需求池、任务看板。\n视觉方向：清晰导航、标签状态、多列看板、快捷操作、强调可读性。\n建议页面：项目首页、看板、Issue 详情、筛选列表、团队空间。\n主题模式：light / dark / agile\n关键词：kanban、project、team、issue、collaboration\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-006-atlassian-teamwork"
+    },
+    {
+      "id": "prompt-style-007-sap-process-enterprise",
+      "name": "流程型企业管理风 页面生成 Prompt",
+      "description": "用于基于「流程型企业管理风」生成企业级页面的风格 Prompt。",
+      "status": "approved",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p0",
+        "process",
+        "sap-like",
+        "erp",
+        "workflow",
+        "adaptive"
+      ],
+      "related_items": {
+        "style_pack": "style-007-sap-process-enterprise",
+        "templates": [
+          "tpl-sample-007",
+          "tpl-p0-007"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「流程型企业管理风」设计一个企业级业务页面。\n适用场景：采购、财务、人事、审批、供应链、企业流程。\n视觉方向：角色导向、流程清晰、页签与对象页、状态流转、可适配多终端。\n建议页面：流程入口、对象详情、审批页、工作清单、移动审批。\n主题模式：light / compact / role-based\n关键词：process、sap-like、erp、workflow、adaptive\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-007-sap-process-enterprise"
+    },
+    {
+      "id": "prompt-style-008-polars-merchant-ops",
+      "name": "商家运营管理风 页面生成 Prompt",
+      "description": "用于基于「商家运营管理风」生成企业级页面的风格 Prompt。",
+      "status": "approved",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p0",
+        "commerce",
+        "merchant",
+        "orders",
+        "inventory",
+        "polaris-like"
+      ],
+      "related_items": {
+        "style_pack": "style-008-polars-merchant-ops",
+        "templates": [
+          "tpl-sample-008",
+          "tpl-p0-008"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「商家运营管理风」设计一个企业级业务页面。\n适用场景：商品、订单、库存、营销、店铺设置、商家插件。\n视觉方向：运营卡片、易懂表单、商品图+数据、操作引导、商家友好。\n建议页面：商品列表、订单详情、营销活动、店铺设置、数据概览。\n主题模式：light / commerce / mobile-admin\n关键词：commerce、merchant、orders、inventory、polaris-like\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-008-polars-merchant-ops"
+    },
+    {
+      "id": "prompt-style-009-material-cross-platform",
+      "name": "Material 3 跨端自适应风 页面生成 Prompt",
+      "description": "用于基于「Material 3 跨端自适应风」生成企业级页面的风格 Prompt。",
+      "status": "approved",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p0",
+        "material3",
+        "mobile",
+        "adaptive",
+        "cross-platform",
+        "tokens"
+      ],
+      "related_items": {
+        "style_pack": "style-009-material-cross-platform",
+        "templates": [
+          "tpl-sample-009"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「Material 3 跨端自适应风」设计一个企业级业务页面。\n适用场景：Android、Web、移动 H5、跨端业务应用。\n视觉方向：动态色、清晰 color roles、中等圆角、组件一致、适配移动。\n建议页面：App 首页、列表、详情、表单、后台轻量页。\n主题模式：light / dark / dynamic-brand\n关键词：material3、mobile、adaptive、cross-platform、tokens\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-009-material-cross-platform"
+    },
+    {
+      "id": "prompt-style-010-apple-premium-mobile",
+      "name": "Apple 高质感移动风 页面生成 Prompt",
+      "description": "用于基于「Apple 高质感移动风」生成企业级页面的风格 Prompt。",
+      "status": "reviewing",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p1",
+        "ios",
+        "mobile",
+        "premium",
+        "native",
+        "motion"
+      ],
+      "related_items": {
+        "style_pack": "style-010-apple-premium-mobile",
+        "templates": [
+          "tpl-sample-010"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「Apple 高质感移动风」设计一个企业级业务页面。\n适用场景：高端移动端、企业员工 App、管理者移动工作台。\n视觉方向：细腻层级、系统字体感、大标题、透明/模糊层、自然动效。\n建议页面：移动首页、消息、审批、详情、设置。\n主题模式：ios-light / ios-dark\n关键词：ios、mobile、premium、native、motion\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-010-apple-premium-mobile"
+    },
+    {
+      "id": "prompt-style-011-fintech-trust",
+      "name": "金融科技可信风 页面生成 Prompt",
+      "description": "用于基于「金融科技可信风」生成企业级页面的风格 Prompt。",
+      "status": "approved",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p0",
+        "fintech",
+        "trust",
+        "account",
+        "payment",
+        "risk"
+      ],
+      "related_items": {
+        "style_pack": "style-011-fintech-trust",
+        "templates": [
+          "tpl-sample-011"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「金融科技可信风」设计一个企业级业务页面。\n适用场景：钱包、支付、账户、资金管理、对账、财务系统。\n视觉方向：深蓝/绿色状态、数字强调、风险提示明确、留白克制、安全感强。\n建议页面：账户概览、交易列表、转账确认、风控提示、对账表。\n主题模式：light / dark / risk\n关键词：fintech、trust、account、payment、risk\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-011-fintech-trust"
+    },
+    {
+      "id": "prompt-style-012-risk-compliance",
+      "name": "风控合规审计风 页面生成 Prompt",
+      "description": "用于基于「风控合规审计风」生成企业级页面的风格 Prompt。",
+      "status": "reviewing",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p1",
+        "compliance",
+        "audit",
+        "risk",
+        "review",
+        "log"
+      ],
+      "related_items": {
+        "style_pack": "style-012-risk-compliance",
+        "templates": [
+          "tpl-sample-012"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「风控合规审计风」设计一个企业级业务页面。\n适用场景：审计后台、合规检查、风控规则、异常复核。\n视觉方向：状态分级、证据链、操作留痕、低调严肃、重点高亮异常。\n建议页面：风险列表、案件详情、规则配置、审核流、日志页。\n主题模式：light / dark / severity\n关键词：compliance、audit、risk、review、log\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-012-risk-compliance"
+    },
+    {
+      "id": "prompt-style-013-healthcare-clean",
+      "name": "医疗健康清洁风 页面生成 Prompt",
+      "description": "用于基于「医疗健康清洁风」生成企业级页面的风格 Prompt。",
+      "status": "reviewing",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p1",
+        "healthcare",
+        "patient",
+        "report",
+        "appointment",
+        "clean"
+      ],
+      "related_items": {
+        "style_pack": "style-013-healthcare-clean",
+        "templates": [
+          "tpl-sample-013"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「医疗健康清洁风」设计一个企业级业务页面。\n适用场景：患者管理、预约、报告、健康档案、医生工作台。\n视觉方向：白底、蓝绿低饱和、温和圆角、清晰警示、信息可信。\n建议页面：患者列表、报告详情、预约页、健康档案、移动咨询。\n主题模式：light / clinical / accessible\n关键词：healthcare、patient、report、appointment、clean\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-013-healthcare-clean"
+    },
+    {
+      "id": "prompt-style-014-education-learning",
+      "name": "教育学习平台风 页面生成 Prompt",
+      "description": "用于基于「教育学习平台风」生成企业级页面的风格 Prompt。",
+      "status": "reviewing",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p1",
+        "education",
+        "learning",
+        "progress",
+        "course",
+        "training"
+      ],
+      "related_items": {
+        "style_pack": "style-014-education-learning",
+        "templates": [
+          "tpl-sample-014"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「教育学习平台风」设计一个企业级业务页面。\n适用场景：课程、作业、考试、企业培训、学习进度。\n视觉方向：卡片式课程、进度可视化、轻插画、温和色彩、弱游戏化。\n建议页面：课程首页、课程详情、学习进度、作业列表、考试结果。\n主题模式：light / playful / accessible\n关键词：education、learning、progress、course、training\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-014-education-learning"
+    },
+    {
+      "id": "prompt-style-015-government-stable",
+      "name": "政务公共服务稳重风 页面生成 Prompt",
+      "description": "用于基于「政务公共服务稳重风」生成企业级页面的风格 Prompt。",
+      "status": "reviewing",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p1",
+        "government",
+        "public",
+        "service",
+        "accessibility",
+        "formal"
+      ],
+      "related_items": {
+        "style_pack": "style-015-government-stable",
+        "templates": [
+          "tpl-sample-015"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「政务公共服务稳重风」设计一个企业级业务页面。\n适用场景：政务服务、公共机构门户、办事大厅、监管平台。\n视觉方向：稳重蓝红、强层级、清晰入口、大字号、无障碍优先。\n建议页面：办事首页、事项列表、申报表单、进度查询、消息通知。\n主题模式：light / high-contrast / public\n关键词：government、public、service、accessibility、formal\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-015-government-stable"
+    },
+    {
+      "id": "prompt-style-016-industrial-iot",
+      "name": "工业 IoT 制造风 页面生成 Prompt",
+      "description": "用于基于「工业 IoT 制造风」生成企业级页面的风格 Prompt。",
+      "status": "reviewing",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p1",
+        "iot",
+        "industrial",
+        "device",
+        "monitoring",
+        "alarm"
+      ],
+      "related_items": {
+        "style_pack": "style-016-industrial-iot",
+        "templates": [
+          "tpl-sample-016"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「工业 IoT 制造风」设计一个企业级业务页面。\n适用场景：设备监控、工厂看板、产线、能耗、维保。\n视觉方向：深色/灰蓝底、设备卡片、实时状态、告警明显、图表密集。\n建议页面：设备总览、设备详情、告警列表、维保工单、数据大屏。\n主题模式：dark / light / alarm\n关键词：iot、industrial、device、monitoring、alarm\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-016-industrial-iot"
+    },
+    {
+      "id": "prompt-style-017-logistics-ops",
+      "name": "物流调度运营风 页面生成 Prompt",
+      "description": "用于基于「物流调度运营风」生成企业级页面的风格 Prompt。",
+      "status": "reviewing",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p1",
+        "logistics",
+        "map",
+        "dispatch",
+        "tracking",
+        "supply-chain"
+      ],
+      "related_items": {
+        "style_pack": "style-017-logistics-ops",
+        "templates": [
+          "tpl-sample-017"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「物流调度运营风」设计一个企业级业务页面。\n适用场景：运输调度、路线、仓储、运单、配送追踪。\n视觉方向：地图/列表联动、状态时间轴、调度看板、运力颜色分级。\n建议页面：运单列表、地图调度、车辆详情、路线追踪、异常处理。\n主题模式：light / map / operations\n关键词：logistics、map、dispatch、tracking、supply-chain\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-017-logistics-ops"
+    },
+    {
+      "id": "prompt-style-018-marketing-growth",
+      "name": "营销增长运营风 页面生成 Prompt",
+      "description": "用于基于「营销增长运营风」生成企业级页面的风格 Prompt。",
+      "status": "reviewing",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p1",
+        "marketing",
+        "growth",
+        "campaign",
+        "abtest",
+        "funnel"
+      ],
+      "related_items": {
+        "style_pack": "style-018-marketing-growth",
+        "templates": [
+          "tpl-sample-018"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「营销增长运营风」设计一个企业级业务页面。\n适用场景：活动配置、会员运营、增长看板、投放、A/B 测试。\n视觉方向：数据卡片+活动模块、色彩更活跃、转化漏斗、目标进度。\n建议页面：增长看板、活动列表、活动配置、用户分群、效果详情。\n主题模式：light / campaign / vivid\n关键词：marketing、growth、campaign、abtest、funnel\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-018-marketing-growth"
+    },
+    {
+      "id": "prompt-style-019-cms-media",
+      "name": "内容媒体管理风 页面生成 Prompt",
+      "description": "用于基于「内容媒体管理风」生成企业级页面的风格 Prompt。",
+      "status": "reviewing",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p1",
+        "cms",
+        "media",
+        "asset",
+        "editorial",
+        "review"
+      ],
+      "related_items": {
+        "style_pack": "style-019-cms-media",
+        "templates": [
+          "tpl-sample-019"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「内容媒体管理风」设计一个企业级业务页面。\n适用场景：文章、素材库、审核、视频/图片管理、发布平台。\n视觉方向：瀑布/网格素材、预览优先、状态标签、编辑入口清晰。\n建议页面：素材库、文章列表、编辑详情、审核流、发布日历。\n主题模式：light / media / editorial\n关键词：cms、media、asset、editorial、review\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-019-cms-media"
+    },
+    {
+      "id": "prompt-style-020-hr-organization",
+      "name": "HR 组织管理风 页面生成 Prompt",
+      "description": "用于基于「HR 组织管理风」生成企业级页面的风格 Prompt。",
+      "status": "reviewing",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p1",
+        "hr",
+        "people",
+        "organization",
+        "recruiting",
+        "performance"
+      ],
+      "related_items": {
+        "style_pack": "style-020-hr-organization",
+        "templates": [
+          "tpl-sample-020"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「HR 组织管理风」设计一个企业级业务页面。\n适用场景：员工、组织架构、考勤、绩效、招聘、入离职。\n视觉方向：人物头像、组织树、流程清晰、表单友好、隐私提示明确。\n建议页面：员工列表、员工详情、组织架构、招聘流程、绩效表单。\n主题模式：light / people / compact\n关键词：hr、people、organization、recruiting、performance\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-020-hr-organization"
+    },
+    {
+      "id": "prompt-style-021-ai-copilot-workspace",
+      "name": "AI Copilot 助手工作台风 页面生成 Prompt",
+      "description": "用于基于「AI Copilot 助手工作台风」生成企业级页面的风格 Prompt。",
+      "status": "approved",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p0",
+        "ai",
+        "copilot",
+        "chat",
+        "agent",
+        "workspace"
+      ],
+      "related_items": {
+        "style_pack": "style-021-ai-copilot-workspace",
+        "templates": [
+          "tpl-sample-021"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「AI Copilot 助手工作台风」设计一个企业级业务页面。\n适用场景：AI 助手、智能问答、知识库、办公自动化、辅助决策。\n视觉方向：聊天/任务双栏、建议卡片、来源引用、渐进披露、低干扰。\n建议页面：Copilot 首页、对话页、任务建议、结果卡片、引用/溯源面板。\n主题模式：light / dark / ai-accent\n关键词：ai、copilot、chat、agent、workspace\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-021-ai-copilot-workspace"
+    },
+    {
+      "id": "prompt-style-022-agent-automation-canvas",
+      "name": "Agent 自动化编排风 页面生成 Prompt",
+      "description": "用于基于「Agent 自动化编排风」生成企业级页面的风格 Prompt。",
+      "status": "reviewing",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p1",
+        "agent",
+        "automation",
+        "workflow",
+        "canvas",
+        "rpa"
+      ],
+      "related_items": {
+        "style_pack": "style-022-agent-automation-canvas",
+        "templates": [
+          "tpl-sample-022"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「Agent 自动化编排风」设计一个企业级业务页面。\n适用场景：任务流、自动化流程、Agent 编排、RPA、工作流节点。\n视觉方向：画布、节点、连线、侧边配置、运行状态、日志结果。\n建议页面：流程画布、节点配置、运行日志、模板市场、执行结果页。\n主题模式：light / dark / canvas\n关键词：agent、automation、workflow、canvas、rpa\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-022-agent-automation-canvas"
+    },
+    {
+      "id": "prompt-style-023-lowcode-builder",
+      "name": "低代码搭建器风 页面生成 Prompt",
+      "description": "用于基于「低代码搭建器风」生成企业级页面的风格 Prompt。",
+      "status": "reviewing",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p1",
+        "lowcode",
+        "builder",
+        "editor",
+        "canvas",
+        "configuration"
+      ],
+      "related_items": {
+        "style_pack": "style-023-lowcode-builder",
+        "templates": [
+          "tpl-sample-023"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「低代码搭建器风」设计一个企业级业务页面。\n适用场景：页面搭建、表单搭建、报表搭建、规则配置。\n视觉方向：三栏编辑器、组件面板、画布、属性面板、预览/发布。\n建议页面：搭建器首页、编辑器、组件面板、属性面板、发布确认。\n主题模式：light / builder / compact\n关键词：lowcode、builder、editor、canvas、configuration\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-023-lowcode-builder"
+    },
+    {
+      "id": "prompt-style-024-dark-dataviz-dashboard",
+      "name": "深色数据可视化大屏风 页面生成 Prompt",
+      "description": "用于基于「深色数据可视化大屏风」生成企业级页面的风格 Prompt。",
+      "status": "approved",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p0",
+        "dashboard",
+        "dataviz",
+        "dark",
+        "command-center",
+        "realtime"
+      ],
+      "related_items": {
+        "style_pack": "style-024-dark-dataviz-dashboard",
+        "templates": [
+          "tpl-sample-024",
+          "tpl-p0-009"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「深色数据可视化大屏风」设计一个企业级业务页面。\n适用场景：经营大屏、监控中心、指挥中心、BI 展示。\n视觉方向：深色背景、高对比图表、发光重点、模块边框、实时动效。\n建议页面：经营大屏、监控大屏、指标卡片、趋势图、地图模块。\n主题模式：dark / high-contrast / chart\n关键词：dashboard、dataviz、dark、command-center、realtime\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-024-dark-dataviz-dashboard"
+    },
+    {
+      "id": "prompt-style-025-cybersecurity-soc",
+      "name": "安全运营 SOC 暗色风 页面生成 Prompt",
+      "description": "用于基于「安全运营 SOC 暗色风」生成企业级页面的风格 Prompt。",
+      "status": "reviewing",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p1",
+        "security",
+        "soc",
+        "threat",
+        "alert",
+        "dark"
+      ],
+      "related_items": {
+        "style_pack": "style-025-cybersecurity-soc",
+        "templates": [
+          "tpl-sample-025"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「安全运营 SOC 暗色风」设计一个企业级业务页面。\n适用场景：安全态势、告警、事件调查、资产暴露、威胁情报。\n视觉方向：暗底、红橙告警、拓扑/时间线、严重程度分级、证据视图。\n建议页面：安全总览、告警列表、事件详情、调查时间线、资产图谱。\n主题模式：dark / severity / terminal\n关键词：security、soc、threat、alert、dark\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-025-cybersecurity-soc"
+    },
+    {
+      "id": "prompt-style-026-cloud-finops",
+      "name": "云资源 FinOps 管理风 页面生成 Prompt",
+      "description": "用于基于「云资源 FinOps 管理风」生成企业级页面的风格 Prompt。",
+      "status": "reviewing",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p1",
+        "cloud",
+        "finops",
+        "resource",
+        "billing",
+        "optimization"
+      ],
+      "related_items": {
+        "style_pack": "style-026-cloud-finops",
+        "templates": [
+          "tpl-sample-026"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「云资源 FinOps 管理风」设计一个企业级业务页面。\n适用场景：云资源、账单、成本优化、容量、权限、服务目录。\n视觉方向：资源树、成本趋势、配额卡片、告警和建议、表格密集。\n建议页面：资源概览、成本分析、账单列表、优化建议、资源详情。\n主题模式：light / dark / cloud\n关键词：cloud、finops、resource、billing、optimization\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-026-cloud-finops"
+    },
+    {
+      "id": "prompt-style-027-developer-console-api",
+      "name": "开发者控制台 / API 平台风 页面生成 Prompt",
+      "description": "用于基于「开发者控制台 / API 平台风」生成企业级页面的风格 Prompt。",
+      "status": "reviewing",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p1",
+        "developer",
+        "api",
+        "console",
+        "docs",
+        "sdk"
+      ],
+      "related_items": {
+        "style_pack": "style-027-developer-console-api",
+        "templates": [
+          "tpl-sample-027"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「开发者控制台 / API 平台风」设计一个企业级业务页面。\n适用场景：API 管理、开发者门户、密钥、SDK、文档、日志。\n视觉方向：代码块、文档侧栏、控制台卡片、密钥安全提示、终端感。\n建议页面：API 文档、密钥管理、调用日志、SDK 页面、控制台首页。\n主题模式：light / dark / code\n关键词：developer、api、console、docs、sdk\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-027-developer-console-api"
+    },
+    {
+      "id": "prompt-style-028-marketplace-plugin",
+      "name": "插件市场 / 应用市场风 页面生成 Prompt",
+      "description": "用于基于「插件市场 / 应用市场风」生成企业级页面的风格 Prompt。",
+      "status": "draft",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p2",
+        "marketplace",
+        "plugin",
+        "app-store",
+        "integration",
+        "template"
+      ],
+      "related_items": {
+        "style_pack": "style-028-marketplace-plugin",
+        "templates": [
+          "tpl-sample-028"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「插件市场 / 应用市场风」设计一个企业级业务页面。\n适用场景：插件市场、模板市场、应用中心、集成市场。\n视觉方向：卡片网格、评分/标签、安装引导、详情页、兼容性信息。\n建议页面：市场首页、插件列表、插件详情、安装配置、我的应用。\n主题模式：light / marketplace / brand\n关键词：marketplace、plugin、app-store、integration、template\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-028-marketplace-plugin"
+    },
+    {
+      "id": "prompt-style-029-white-label-multitenant",
+      "name": "多租户白标换肤风 页面生成 Prompt",
+      "description": "用于基于「多租户白标换肤风」生成企业级页面的风格 Prompt。",
+      "status": "approved",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p0",
+        "white-label",
+        "tenant",
+        "theme",
+        "brand",
+        "configurable"
+      ],
+      "related_items": {
+        "style_pack": "style-029-white-label-multitenant",
+        "templates": [
+          "tpl-sample-029"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「多租户白标换肤风」设计一个企业级业务页面。\n适用场景：SaaS 多租户、渠道品牌、客户私有化、OEM。\n视觉方向：结构稳定、品牌色可替换、Logo/导航/图标可配置、主题可切换。\n建议页面：品牌配置、租户首页、主题预览、模板套用、权限隔离。\n主题模式：brand-a / brand-b / dark / compact\n关键词：white-label、tenant、theme、brand、configurable\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-029-white-label-multitenant"
+    },
+    {
+      "id": "prompt-style-030-mobile-first-enterprise",
+      "name": "移动优先企业轻办公风 页面生成 Prompt",
+      "description": "用于基于「移动优先企业轻办公风」生成企业级页面的风格 Prompt。",
+      "status": "approved",
+      "version": "2.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "style",
+        "generation",
+        "p0",
+        "mobile",
+        "enterprise",
+        "oa",
+        "fieldwork",
+        "app"
+      ],
+      "related_items": {
+        "style_pack": "style-030-mobile-first-enterprise",
+        "templates": [
+          "tpl-sample-030",
+          "tpl-p0-010"
+        ]
+      },
+      "prompt_type": "style_generation",
+      "target_user": "产品、设计、开发和 AI 工具",
+      "input_variables": [
+        "business_goal",
+        "platform",
+        "page_type",
+        "data_density"
+      ],
+      "prompt_text": "请基于「移动优先企业轻办公风」设计一个企业级业务页面。\n适用场景：员工 App、移动审批、门店巡检、销售外勤、移动 CRM。\n视觉方向：底部导航、大触控区、卡片流、状态醒目、离线/弱网友好。\n建议页面：移动工作台、审批详情、任务列表、巡检表单、消息中心。\n主题模式：mobile-light / mobile-dark / compact\n关键词：mobile、enterprise、oa、fieldwork、app\n要求界面干净、现代、信息层级清晰，适合真实企业产品使用。",
+      "related_template_id": null,
+      "related_style_id": "style-030-mobile-first-enterprise"
+    },
+    {
+      "id": "prompt-template-tpl-sample-001",
+      "name": "现代 SaaS 极简风 · 后台 Dashboard样张 Prompt",
+      "description": "用于生成或复用「现代 SaaS 极简风 · 后台 Dashboard样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin dashboard",
+        "saas",
+        "minimal",
+        "admin",
+        "card",
+        "clean",
+        "dashboard",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-sample-001",
+        "style_pack": "style-001-modern-saas-clean",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "saas marker",
+          "minimal marker",
+          "admin marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「现代 SaaS 极简风」生成一个后台 Dashboard的admin dashboard页面。\n风格要求：大留白、浅灰背景、卡片化、低饱和品牌色、弱边框、清晰层级。\nToken modes：light / dark / brand-basic\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：现代 SaaS 极简风 · 后台 Dashboard样张\nAI 标签：saas、minimal、admin、card、clean",
+      "related_template_id": "tpl-sample-001",
+      "related_style_id": "style-001-modern-saas-clean"
+    },
+    {
+      "id": "prompt-template-tpl-sample-002",
+      "name": "企业经典表格风 · 筛选列表样张 Prompt",
+      "description": "用于生成或复用「企业经典表格风 · 筛选列表样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin list",
+        "enterprise",
+        "table",
+        "crud",
+        "antd-like",
+        "dense",
+        "admin",
+        "list",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-sample-002",
+        "style_pack": "style-002-enterprise-classic-table",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "enterprise marker",
+          "table marker",
+          "crud marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「企业经典表格风」生成一个筛选列表的admin list页面。\n风格要求：信息密度高、表格优先、蓝灰色系、清晰分割线、强操作区。\nToken modes：light / compact / dark\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：企业经典表格风 · 筛选列表样张\nAI 标签：enterprise、table、crud、antd-like、dense",
+      "related_template_id": "tpl-sample-002",
+      "related_style_id": "style-002-enterprise-classic-table"
+    },
+    {
+      "id": "prompt-template-tpl-sample-003",
+      "name": "Fluent 办公协同风 · 工作台样张 Prompt",
+      "description": "用于生成或复用「Fluent 办公协同风 · 工作台样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin dashboard",
+        "office",
+        "collaboration",
+        "fluent",
+        "copilot",
+        "productivity",
+        "admin",
+        "dashboard",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-sample-003",
+        "style_pack": "style-003-fluent-office-collab",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "office marker",
+          "collaboration marker",
+          "fluent marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「Fluent 办公协同风」生成一个工作台的admin dashboard页面。\n风格要求：柔和圆角、轻阴影、微软办公感、上下文工具栏、渐进披露。\nToken modes：light / dark / copilot-accent\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：Fluent 办公协同风 · 工作台样张\nAI 标签：office、collaboration、fluent、copilot、productivity",
+      "related_template_id": "tpl-sample-003",
+      "related_style_id": "style-003-fluent-office-collab"
+    },
+    {
+      "id": "prompt-template-tpl-sample-004",
+      "name": "Carbon 数据密集风 · 资源列表样张 Prompt",
+      "description": "用于生成或复用「Carbon 数据密集风 · 资源列表样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin list",
+        "carbon",
+        "data",
+        "ibm",
+        "cloud",
+        "dense",
+        "admin",
+        "list",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-sample-004",
+        "style_pack": "style-004-carbon-data-enterprise",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "carbon marker",
+          "data marker",
+          "ibm marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「Carbon 数据密集风」生成一个资源列表的admin list页面。\n风格要求：黑白灰基础、网格严谨、信息层级硬朗、数据卡片和表单规范。\nToken modes：light / dark / high-contrast\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：Carbon 数据密集风 · 资源列表样张\nAI 标签：carbon、data、ibm、cloud、dense",
+      "related_template_id": "tpl-sample-004",
+      "related_style_id": "style-004-carbon-data-enterprise"
+    },
+    {
+      "id": "prompt-template-tpl-sample-005",
+      "name": "CRM 商务销售风 · 客户列表样张 Prompt",
+      "description": "用于生成或复用「CRM 商务销售风 · 客户列表样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin list",
+        "crm",
+        "sales",
+        "record",
+        "timeline",
+        "pipeline",
+        "admin",
+        "list",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-sample-005",
+        "style_pack": "style-005-crm-salesforce-lightning",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "crm marker",
+          "sales marker",
+          "record marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「CRM 商务销售风」生成一个客户列表的admin list页面。\n风格要求：业务对象卡片、记录详情页、路径进度、右侧活动流、可配置布局。\nToken modes：light / brand-blue / compact\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：CRM 商务销售风 · 客户列表样张\nAI 标签：crm、sales、record、timeline、pipeline",
+      "related_template_id": "tpl-sample-005",
+      "related_style_id": "style-005-crm-salesforce-lightning"
+    },
+    {
+      "id": "prompt-template-tpl-sample-006",
+      "name": "团队协作效率风 · 项目首页样张 Prompt",
+      "description": "用于生成或复用「团队协作效率风 · 项目首页样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin dashboard",
+        "kanban",
+        "project",
+        "team",
+        "issue",
+        "collaboration",
+        "admin",
+        "dashboard",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-sample-006",
+        "style_pack": "style-006-atlassian-teamwork",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "kanban marker",
+          "project marker",
+          "team marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「团队协作效率风」生成一个项目首页的admin dashboard页面。\n风格要求：清晰导航、标签状态、多列看板、快捷操作、强调可读性。\nToken modes：light / dark / agile\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：团队协作效率风 · 项目首页样张\nAI 标签：kanban、project、team、issue、collaboration",
+      "related_template_id": "tpl-sample-006",
+      "related_style_id": "style-006-atlassian-teamwork"
+    },
+    {
+      "id": "prompt-template-tpl-sample-007",
+      "name": "流程型企业管理风 · 流程入口样张 Prompt",
+      "description": "用于生成或复用「流程型企业管理风 · 流程入口样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin approval",
+        "process",
+        "sap-like",
+        "erp",
+        "workflow",
+        "adaptive",
+        "admin",
+        "approval",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-sample-007",
+        "style_pack": "style-007-sap-process-enterprise",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "approval card",
+          "evidence viewer",
+          "decision buttons",
+          "audit log",
+          "process marker",
+          "sap-like marker",
+          "erp marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「流程型企业管理风」生成一个流程入口的admin approval页面。\n风格要求：角色导向、流程清晰、页签与对象页、状态流转、可适配多终端。\nToken modes：light / compact / role-based\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：流程型企业管理风 · 流程入口样张\nAI 标签：process、sap-like、erp、workflow、adaptive",
+      "related_template_id": "tpl-sample-007",
+      "related_style_id": "style-007-sap-process-enterprise"
+    },
+    {
+      "id": "prompt-template-tpl-sample-008",
+      "name": "商家运营管理风 · 商品列表样张 Prompt",
+      "description": "用于生成或复用「商家运营管理风 · 商品列表样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin list",
+        "commerce",
+        "merchant",
+        "orders",
+        "inventory",
+        "polaris-like",
+        "admin",
+        "list",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-sample-008",
+        "style_pack": "style-008-polars-merchant-ops",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "commerce marker",
+          "merchant marker",
+          "orders marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「商家运营管理风」生成一个商品列表的admin list页面。\n风格要求：运营卡片、易懂表单、商品图+数据、操作引导、商家友好。\nToken modes：light / commerce / mobile-admin\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：商家运营管理风 · 商品列表样张\nAI 标签：commerce、merchant、orders、inventory、polaris-like",
+      "related_template_id": "tpl-sample-008",
+      "related_style_id": "style-008-polars-merchant-ops"
+    },
+    {
+      "id": "prompt-template-tpl-sample-009",
+      "name": "Material 3 跨端自适应风 · App 首页样张 Prompt",
+      "description": "用于生成或复用「Material 3 跨端自适应风 · App 首页样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "mobile",
+        "mobile workbench",
+        "material3",
+        "adaptive",
+        "cross-platform",
+        "tokens",
+        "workbench",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-sample-009",
+        "style_pack": "style-009-material-cross-platform",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "mobile card",
+          "bottom nav",
+          "large tap button",
+          "message badge",
+          "material3 marker",
+          "mobile marker",
+          "adaptive marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「Material 3 跨端自适应风」生成一个App 首页的mobile workbench页面。\n风格要求：动态色、清晰 color roles、中等圆角、组件一致、适配移动。\nToken modes：light / dark / dynamic-brand\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：Material 3 跨端自适应风 · App 首页样张\nAI 标签：material3、mobile、adaptive、cross-platform、tokens",
+      "related_template_id": "tpl-sample-009",
+      "related_style_id": "style-009-material-cross-platform"
+    },
+    {
+      "id": "prompt-template-tpl-sample-010",
+      "name": "Apple 高质感移动风 · 移动首页样张 Prompt",
+      "description": "用于生成或复用「Apple 高质感移动风 · 移动首页样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "mobile",
+        "mobile workbench",
+        "ios",
+        "premium",
+        "native",
+        "motion",
+        "workbench",
+        "p1"
+      ],
+      "related_items": {
+        "template": "tpl-sample-010",
+        "style_pack": "style-010-apple-premium-mobile",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "mobile card",
+          "bottom nav",
+          "large tap button",
+          "message badge",
+          "ios marker",
+          "mobile marker",
+          "premium marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「Apple 高质感移动风」生成一个移动首页的mobile workbench页面。\n风格要求：细腻层级、系统字体感、大标题、透明/模糊层、自然动效。\nToken modes：ios-light / ios-dark\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：Apple 高质感移动风 · 移动首页样张\nAI 标签：ios、mobile、premium、native、motion",
+      "related_template_id": "tpl-sample-010",
+      "related_style_id": "style-010-apple-premium-mobile"
+    },
+    {
+      "id": "prompt-template-tpl-sample-011",
+      "name": "金融科技可信风 · 账户概览样张 Prompt",
+      "description": "用于生成或复用「金融科技可信风 · 账户概览样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin dashboard",
+        "fintech",
+        "trust",
+        "account",
+        "payment",
+        "risk",
+        "admin",
+        "dashboard",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-sample-011",
+        "style_pack": "style-011-fintech-trust",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "fintech marker",
+          "trust marker",
+          "account marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「金融科技可信风」生成一个账户概览的admin dashboard页面。\n风格要求：深蓝/绿色状态、数字强调、风险提示明确、留白克制、安全感强。\nToken modes：light / dark / risk\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：金融科技可信风 · 账户概览样张\nAI 标签：fintech、trust、account、payment、risk",
+      "related_template_id": "tpl-sample-011",
+      "related_style_id": "style-011-fintech-trust"
+    },
+    {
+      "id": "prompt-template-tpl-sample-012",
+      "name": "风控合规审计风 · 风险列表样张 Prompt",
+      "description": "用于生成或复用「风控合规审计风 · 风险列表样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin list",
+        "compliance",
+        "audit",
+        "risk",
+        "review",
+        "log",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "related_items": {
+        "template": "tpl-sample-012",
+        "style_pack": "style-012-risk-compliance",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "compliance marker",
+          "audit marker",
+          "risk marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「风控合规审计风」生成一个风险列表的admin list页面。\n风格要求：状态分级、证据链、操作留痕、低调严肃、重点高亮异常。\nToken modes：light / dark / severity\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：风控合规审计风 · 风险列表样张\nAI 标签：compliance、audit、risk、review、log",
+      "related_template_id": "tpl-sample-012",
+      "related_style_id": "style-012-risk-compliance"
+    },
+    {
+      "id": "prompt-template-tpl-sample-013",
+      "name": "医疗健康清洁风 · 患者列表样张 Prompt",
+      "description": "用于生成或复用「医疗健康清洁风 · 患者列表样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin list",
+        "healthcare",
+        "patient",
+        "report",
+        "appointment",
+        "clean",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "related_items": {
+        "template": "tpl-sample-013",
+        "style_pack": "style-013-healthcare-clean",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "healthcare marker",
+          "patient marker",
+          "report marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「医疗健康清洁风」生成一个患者列表的admin list页面。\n风格要求：白底、蓝绿低饱和、温和圆角、清晰警示、信息可信。\nToken modes：light / clinical / accessible\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：医疗健康清洁风 · 患者列表样张\nAI 标签：healthcare、patient、report、appointment、clean",
+      "related_template_id": "tpl-sample-013",
+      "related_style_id": "style-013-healthcare-clean"
+    },
+    {
+      "id": "prompt-template-tpl-sample-014",
+      "name": "教育学习平台风 · 课程首页样张 Prompt",
+      "description": "用于生成或复用「教育学习平台风 · 课程首页样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin list",
+        "education",
+        "learning",
+        "progress",
+        "course",
+        "training",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "related_items": {
+        "template": "tpl-sample-014",
+        "style_pack": "style-014-education-learning",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "education marker",
+          "learning marker",
+          "progress marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「教育学习平台风」生成一个课程首页的admin list页面。\n风格要求：卡片式课程、进度可视化、轻插画、温和色彩、弱游戏化。\nToken modes：light / playful / accessible\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：教育学习平台风 · 课程首页样张\nAI 标签：education、learning、progress、course、training",
+      "related_template_id": "tpl-sample-014",
+      "related_style_id": "style-014-education-learning"
+    },
+    {
+      "id": "prompt-template-tpl-sample-015",
+      "name": "政务公共服务稳重风 · 办事首页样张 Prompt",
+      "description": "用于生成或复用「政务公共服务稳重风 · 办事首页样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin dashboard",
+        "government",
+        "public",
+        "service",
+        "accessibility",
+        "formal",
+        "admin",
+        "dashboard",
+        "p1"
+      ],
+      "related_items": {
+        "template": "tpl-sample-015",
+        "style_pack": "style-015-government-stable",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "government marker",
+          "public marker",
+          "service marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「政务公共服务稳重风」生成一个办事首页的admin dashboard页面。\n风格要求：稳重蓝红、强层级、清晰入口、大字号、无障碍优先。\nToken modes：light / high-contrast / public\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：政务公共服务稳重风 · 办事首页样张\nAI 标签：government、public、service、accessibility、formal",
+      "related_template_id": "tpl-sample-015",
+      "related_style_id": "style-015-government-stable"
+    },
+    {
+      "id": "prompt-template-tpl-sample-016",
+      "name": "工业 IoT 制造风 · 设备总览样张 Prompt",
+      "description": "用于生成或复用「工业 IoT 制造风 · 设备总览样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin dashboard",
+        "iot",
+        "industrial",
+        "device",
+        "monitoring",
+        "alarm",
+        "admin",
+        "dashboard",
+        "p1"
+      ],
+      "related_items": {
+        "template": "tpl-sample-016",
+        "style_pack": "style-016-industrial-iot",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "iot marker",
+          "industrial marker",
+          "device marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「工业 IoT 制造风」生成一个设备总览的admin dashboard页面。\n风格要求：深色/灰蓝底、设备卡片、实时状态、告警明显、图表密集。\nToken modes：dark / light / alarm\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：工业 IoT 制造风 · 设备总览样张\nAI 标签：iot、industrial、device、monitoring、alarm",
+      "related_template_id": "tpl-sample-016",
+      "related_style_id": "style-016-industrial-iot"
+    },
+    {
+      "id": "prompt-template-tpl-sample-017",
+      "name": "物流调度运营风 · 运单列表样张 Prompt",
+      "description": "用于生成或复用「物流调度运营风 · 运单列表样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin list",
+        "logistics",
+        "map",
+        "dispatch",
+        "tracking",
+        "supply-chain",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "related_items": {
+        "template": "tpl-sample-017",
+        "style_pack": "style-017-logistics-ops",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "logistics marker",
+          "map marker",
+          "dispatch marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「物流调度运营风」生成一个运单列表的admin list页面。\n风格要求：地图/列表联动、状态时间轴、调度看板、运力颜色分级。\nToken modes：light / map / operations\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：物流调度运营风 · 运单列表样张\nAI 标签：logistics、map、dispatch、tracking、supply-chain",
+      "related_template_id": "tpl-sample-017",
+      "related_style_id": "style-017-logistics-ops"
+    },
+    {
+      "id": "prompt-template-tpl-sample-018",
+      "name": "营销增长运营风 · 增长看板样张 Prompt",
+      "description": "用于生成或复用「营销增长运营风 · 增长看板样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin dashboard",
+        "marketing",
+        "growth",
+        "campaign",
+        "abtest",
+        "funnel",
+        "admin",
+        "dashboard",
+        "p1"
+      ],
+      "related_items": {
+        "template": "tpl-sample-018",
+        "style_pack": "style-018-marketing-growth",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "marketing marker",
+          "growth marker",
+          "campaign marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「营销增长运营风」生成一个增长看板的admin dashboard页面。\n风格要求：数据卡片+活动模块、色彩更活跃、转化漏斗、目标进度。\nToken modes：light / campaign / vivid\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：营销增长运营风 · 增长看板样张\nAI 标签：marketing、growth、campaign、abtest、funnel",
+      "related_template_id": "tpl-sample-018",
+      "related_style_id": "style-018-marketing-growth"
+    },
+    {
+      "id": "prompt-template-tpl-sample-019",
+      "name": "内容媒体管理风 · 素材库样张 Prompt",
+      "description": "用于生成或复用「内容媒体管理风 · 素材库样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin list",
+        "cms",
+        "media",
+        "asset",
+        "editorial",
+        "review",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "related_items": {
+        "template": "tpl-sample-019",
+        "style_pack": "style-019-cms-media",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "cms marker",
+          "media marker",
+          "asset marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「内容媒体管理风」生成一个素材库的admin list页面。\n风格要求：瀑布/网格素材、预览优先、状态标签、编辑入口清晰。\nToken modes：light / media / editorial\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：内容媒体管理风 · 素材库样张\nAI 标签：cms、media、asset、editorial、review",
+      "related_template_id": "tpl-sample-019",
+      "related_style_id": "style-019-cms-media"
+    },
+    {
+      "id": "prompt-template-tpl-sample-020",
+      "name": "HR 组织管理风 · 员工列表样张 Prompt",
+      "description": "用于生成或复用「HR 组织管理风 · 员工列表样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin list",
+        "hr",
+        "people",
+        "organization",
+        "recruiting",
+        "performance",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "related_items": {
+        "template": "tpl-sample-020",
+        "style_pack": "style-020-hr-organization",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "hr marker",
+          "people marker",
+          "organization marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「HR 组织管理风」生成一个员工列表的admin list页面。\n风格要求：人物头像、组织树、流程清晰、表单友好、隐私提示明确。\nToken modes：light / people / compact\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：HR 组织管理风 · 员工列表样张\nAI 标签：hr、people、organization、recruiting、performance",
+      "related_template_id": "tpl-sample-020",
+      "related_style_id": "style-020-hr-organization"
+    },
+    {
+      "id": "prompt-template-tpl-sample-021",
+      "name": "AI Copilot 助手工作台风 · Copilot 首页样张 Prompt",
+      "description": "用于生成或复用「AI Copilot 助手工作台风 · Copilot 首页样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin dashboard",
+        "ai",
+        "copilot",
+        "chat",
+        "agent",
+        "workspace",
+        "admin",
+        "dashboard",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-sample-021",
+        "style_pack": "style-021-ai-copilot-workspace",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "ai marker",
+          "copilot marker",
+          "chat marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「AI Copilot 助手工作台风」生成一个Copilot 首页的admin dashboard页面。\n风格要求：聊天/任务双栏、建议卡片、来源引用、渐进披露、低干扰。\nToken modes：light / dark / ai-accent\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：AI Copilot 助手工作台风 · Copilot 首页样张\nAI 标签：ai、copilot、chat、agent、workspace",
+      "related_template_id": "tpl-sample-021",
+      "related_style_id": "style-021-ai-copilot-workspace"
+    },
+    {
+      "id": "prompt-template-tpl-sample-022",
+      "name": "Agent 自动化编排风 · 流程画布样张 Prompt",
+      "description": "用于生成或复用「Agent 自动化编排风 · 流程画布样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin approval",
+        "agent",
+        "automation",
+        "workflow",
+        "canvas",
+        "rpa",
+        "admin",
+        "approval",
+        "p1"
+      ],
+      "related_items": {
+        "template": "tpl-sample-022",
+        "style_pack": "style-022-agent-automation-canvas",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "approval card",
+          "evidence viewer",
+          "decision buttons",
+          "audit log",
+          "agent marker",
+          "automation marker",
+          "workflow marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「Agent 自动化编排风」生成一个流程画布的admin approval页面。\n风格要求：画布、节点、连线、侧边配置、运行状态、日志结果。\nToken modes：light / dark / canvas\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：Agent 自动化编排风 · 流程画布样张\nAI 标签：agent、automation、workflow、canvas、rpa",
+      "related_template_id": "tpl-sample-022",
+      "related_style_id": "style-022-agent-automation-canvas"
+    },
+    {
+      "id": "prompt-template-tpl-sample-023",
+      "name": "低代码搭建器风 · 搭建器首页样张 Prompt",
+      "description": "用于生成或复用「低代码搭建器风 · 搭建器首页样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin form",
+        "lowcode",
+        "builder",
+        "editor",
+        "canvas",
+        "configuration",
+        "admin",
+        "form",
+        "p1"
+      ],
+      "related_items": {
+        "template": "tpl-sample-023",
+        "style_pack": "style-023-lowcode-builder",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "form field",
+          "select",
+          "validation message",
+          "sticky submit bar",
+          "lowcode marker",
+          "builder marker",
+          "editor marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「低代码搭建器风」生成一个搭建器首页的admin form页面。\n风格要求：三栏编辑器、组件面板、画布、属性面板、预览/发布。\nToken modes：light / builder / compact\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：低代码搭建器风 · 搭建器首页样张\nAI 标签：lowcode、builder、editor、canvas、configuration",
+      "related_template_id": "tpl-sample-023",
+      "related_style_id": "style-023-lowcode-builder"
+    },
+    {
+      "id": "prompt-template-tpl-sample-024",
+      "name": "深色数据可视化大屏风 · 经营大屏样张 Prompt",
+      "description": "用于生成或复用「深色数据可视化大屏风 · 经营大屏样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "large screen",
+        "dark dashboard",
+        "dashboard",
+        "dataviz",
+        "dark",
+        "command-center",
+        "realtime",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-sample-024",
+        "style_pack": "style-024-dark-dataviz-dashboard",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "dark metric tile",
+          "glow chart",
+          "map module",
+          "realtime ticker",
+          "dashboard marker",
+          "dataviz marker",
+          "dark marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「深色数据可视化大屏风」生成一个经营大屏的dark dashboard页面。\n风格要求：深色背景、高对比图表、发光重点、模块边框、实时动效。\nToken modes：dark / high-contrast / chart\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：深色数据可视化大屏风 · 经营大屏样张\nAI 标签：dashboard、dataviz、dark、command-center、realtime",
+      "related_template_id": "tpl-sample-024",
+      "related_style_id": "style-024-dark-dataviz-dashboard"
+    },
+    {
+      "id": "prompt-template-tpl-sample-025",
+      "name": "安全运营 SOC 暗色风 · 安全总览样张 Prompt",
+      "description": "用于生成或复用「安全运营 SOC 暗色风 · 安全总览样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin dashboard",
+        "security",
+        "soc",
+        "threat",
+        "alert",
+        "dark",
+        "admin",
+        "dashboard",
+        "p1"
+      ],
+      "related_items": {
+        "template": "tpl-sample-025",
+        "style_pack": "style-025-cybersecurity-soc",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "security marker",
+          "soc marker",
+          "threat marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「安全运营 SOC 暗色风」生成一个安全总览的admin dashboard页面。\n风格要求：暗底、红橙告警、拓扑/时间线、严重程度分级、证据视图。\nToken modes：dark / severity / terminal\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：安全运营 SOC 暗色风 · 安全总览样张\nAI 标签：security、soc、threat、alert、dark",
+      "related_template_id": "tpl-sample-025",
+      "related_style_id": "style-025-cybersecurity-soc"
+    },
+    {
+      "id": "prompt-template-tpl-sample-026",
+      "name": "云资源 FinOps 管理风 · 资源概览样张 Prompt",
+      "description": "用于生成或复用「云资源 FinOps 管理风 · 资源概览样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin list",
+        "cloud",
+        "finops",
+        "resource",
+        "billing",
+        "optimization",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "related_items": {
+        "template": "tpl-sample-026",
+        "style_pack": "style-026-cloud-finops",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "cloud marker",
+          "finops marker",
+          "resource marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「云资源 FinOps 管理风」生成一个资源概览的admin list页面。\n风格要求：资源树、成本趋势、配额卡片、告警和建议、表格密集。\nToken modes：light / dark / cloud\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：云资源 FinOps 管理风 · 资源概览样张\nAI 标签：cloud、finops、resource、billing、optimization",
+      "related_template_id": "tpl-sample-026",
+      "related_style_id": "style-026-cloud-finops"
+    },
+    {
+      "id": "prompt-template-tpl-sample-027",
+      "name": "开发者控制台 / API 平台风 · API 文档样张 Prompt",
+      "description": "用于生成或复用「开发者控制台 / API 平台风 · API 文档样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin list",
+        "developer",
+        "api",
+        "console",
+        "docs",
+        "sdk",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "related_items": {
+        "template": "tpl-sample-027",
+        "style_pack": "style-027-developer-console-api",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "developer marker",
+          "api marker",
+          "console marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「开发者控制台 / API 平台风」生成一个API 文档的admin list页面。\n风格要求：代码块、文档侧栏、控制台卡片、密钥安全提示、终端感。\nToken modes：light / dark / code\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：开发者控制台 / API 平台风 · API 文档样张\nAI 标签：developer、api、console、docs、sdk",
+      "related_template_id": "tpl-sample-027",
+      "related_style_id": "style-027-developer-console-api"
+    },
+    {
+      "id": "prompt-template-tpl-sample-028",
+      "name": "插件市场 / 应用市场风 · 市场首页样张 Prompt",
+      "description": "用于生成或复用「插件市场 / 应用市场风 · 市场首页样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Incubation",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin dashboard",
+        "marketplace",
+        "plugin",
+        "app-store",
+        "integration",
+        "admin",
+        "dashboard",
+        "p2"
+      ],
+      "related_items": {
+        "template": "tpl-sample-028",
+        "style_pack": "style-028-marketplace-plugin",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "marketplace marker",
+          "plugin marker",
+          "app-store marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「插件市场 / 应用市场风」生成一个市场首页的admin dashboard页面。\n风格要求：卡片网格、评分/标签、安装引导、详情页、兼容性信息。\nToken modes：light / marketplace / brand\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：插件市场 / 应用市场风 · 市场首页样张\nAI 标签：marketplace、plugin、app-store、integration、template",
+      "related_template_id": "tpl-sample-028",
+      "related_style_id": "style-028-marketplace-plugin"
+    },
+    {
+      "id": "prompt-template-tpl-sample-029",
+      "name": "多租户白标换肤风 · 品牌配置样张 Prompt",
+      "description": "用于生成或复用「多租户白标换肤风 · 品牌配置样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin form",
+        "white-label",
+        "tenant",
+        "theme",
+        "brand",
+        "configurable",
+        "admin",
+        "form",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-sample-029",
+        "style_pack": "style-029-white-label-multitenant",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "form field",
+          "select",
+          "validation message",
+          "sticky submit bar",
+          "white-label marker",
+          "tenant marker",
+          "theme marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「多租户白标换肤风」生成一个品牌配置的admin form页面。\n风格要求：结构稳定、品牌色可替换、Logo/导航/图标可配置、主题可切换。\nToken modes：brand-a / brand-b / dark / compact\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：多租户白标换肤风 · 品牌配置样张\nAI 标签：white-label、tenant、theme、brand、configurable",
+      "related_template_id": "tpl-sample-029",
+      "related_style_id": "style-029-white-label-multitenant"
+    },
+    {
+      "id": "prompt-template-tpl-sample-030",
+      "name": "移动优先企业轻办公风 · 移动工作台样张 Prompt",
+      "description": "用于生成或复用「移动优先企业轻办公风 · 移动工作台样张」的页面 Prompt。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "mobile",
+        "mobile workbench",
+        "enterprise",
+        "oa",
+        "fieldwork",
+        "app",
+        "workbench",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-sample-030",
+        "style_pack": "style-030-mobile-first-enterprise",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "mobile card",
+          "bottom nav",
+          "large tap button",
+          "message badge",
+          "mobile marker",
+          "enterprise marker",
+          "oa marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「移动优先企业轻办公风」生成一个移动工作台的mobile workbench页面。\n风格要求：底部导航、大触控区、卡片流、状态醒目、离线/弱网友好。\nToken modes：mobile-light / mobile-dark / compact\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：移动优先企业轻办公风 · 移动工作台样张\nAI 标签：mobile、enterprise、oa、fieldwork、app",
+      "related_template_id": "tpl-sample-030",
+      "related_style_id": "style-030-mobile-first-enterprise"
+    },
+    {
+      "id": "prompt-template-tpl-p0-001",
+      "name": "现代 SaaS 极简风 · SaaS 经营驾驶舱 Prompt",
+      "description": "用于生成或复用「现代 SaaS 极简风 · SaaS 经营驾驶舱」的页面 Prompt。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin dashboard",
+        "saas",
+        "minimal",
+        "admin",
+        "card",
+        "clean",
+        "dashboard",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-p0-001",
+        "style_pack": "style-001-modern-saas-clean",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "saas marker",
+          "minimal marker",
+          "admin marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「现代 SaaS 极简风」生成一个SaaS 经营驾驶舱的admin dashboard页面。\n风格要求：大留白、浅灰背景、卡片化、低饱和品牌色、弱边框、清晰层级。\nToken modes：light / dark / brand-basic\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：现代 SaaS 极简风 · SaaS 经营驾驶舱\nAI 标签：saas、minimal、admin、card、clean",
+      "related_template_id": "tpl-p0-001",
+      "related_style_id": "style-001-modern-saas-clean"
+    },
+    {
+      "id": "prompt-template-tpl-p0-002",
+      "name": "企业经典表格风 · 企业高密度筛选列表 Prompt",
+      "description": "用于生成或复用「企业经典表格风 · 企业高密度筛选列表」的页面 Prompt。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin list",
+        "enterprise",
+        "table",
+        "crud",
+        "antd-like",
+        "dense",
+        "admin",
+        "list",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-p0-002",
+        "style_pack": "style-002-enterprise-classic-table",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "enterprise marker",
+          "table marker",
+          "crud marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「企业经典表格风」生成一个企业高密度筛选列表的admin list页面。\n风格要求：信息密度高、表格优先、蓝灰色系、清晰分割线、强操作区。\nToken modes：light / compact / dark\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：企业经典表格风 · 企业高密度筛选列表\nAI 标签：enterprise、table、crud、antd-like、dense",
+      "related_template_id": "tpl-p0-002",
+      "related_style_id": "style-002-enterprise-classic-table"
+    },
+    {
+      "id": "prompt-template-tpl-p0-003",
+      "name": "Fluent 办公协同风 · 办公协同工作台 Prompt",
+      "description": "用于生成或复用「Fluent 办公协同风 · 办公协同工作台」的页面 Prompt。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "responsive app",
+        "app home",
+        "office",
+        "collaboration",
+        "fluent",
+        "copilot",
+        "productivity",
+        "app",
+        "home",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-p0-003",
+        "style_pack": "style-003-fluent-office-collab",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "welcome panel",
+          "quick action",
+          "feed card",
+          "notification item",
+          "office marker",
+          "collaboration marker",
+          "fluent marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「Fluent 办公协同风」生成一个办公协同工作台的app home页面。\n风格要求：柔和圆角、轻阴影、微软办公感、上下文工具栏、渐进披露。\nToken modes：light / dark / copilot-accent\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：Fluent 办公协同风 · 办公协同工作台\nAI 标签：office、collaboration、fluent、copilot、productivity",
+      "related_template_id": "tpl-p0-003",
+      "related_style_id": "style-003-fluent-office-collab"
+    },
+    {
+      "id": "prompt-template-tpl-p0-004",
+      "name": "Carbon 数据密集风 · 云资源配置详情 Prompt",
+      "description": "用于生成或复用「Carbon 数据密集风 · 云资源配置详情」的页面 Prompt。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin detail",
+        "carbon",
+        "data",
+        "ibm",
+        "cloud",
+        "dense",
+        "admin",
+        "detail",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-p0-004",
+        "style_pack": "style-004-carbon-data-enterprise",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "detail header",
+          "tab group",
+          "description list",
+          "timeline",
+          "carbon marker",
+          "data marker",
+          "ibm marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「Carbon 数据密集风」生成一个云资源配置详情的admin detail页面。\n风格要求：黑白灰基础、网格严谨、信息层级硬朗、数据卡片和表单规范。\nToken modes：light / dark / high-contrast\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：Carbon 数据密集风 · 云资源配置详情\nAI 标签：carbon、data、ibm、cloud、dense",
+      "related_template_id": "tpl-p0-004",
+      "related_style_id": "style-004-carbon-data-enterprise"
+    },
+    {
+      "id": "prompt-template-tpl-p0-005",
+      "name": "CRM 商务销售风 · CRM 客户记录详情 Prompt",
+      "description": "用于生成或复用「CRM 商务销售风 · CRM 客户记录详情」的页面 Prompt。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "responsive app",
+        "app detail",
+        "crm",
+        "sales",
+        "record",
+        "timeline",
+        "pipeline",
+        "app",
+        "detail",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-p0-005",
+        "style_pack": "style-005-crm-salesforce-lightning",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "record summary",
+          "side activity",
+          "related list",
+          "comment box",
+          "crm marker",
+          "sales marker",
+          "record marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「CRM 商务销售风」生成一个CRM 客户记录详情的app detail页面。\n风格要求：业务对象卡片、记录详情页、路径进度、右侧活动流、可配置布局。\nToken modes：light / brand-blue / compact\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：CRM 商务销售风 · CRM 客户记录详情\nAI 标签：crm、sales、record、timeline、pipeline",
+      "related_template_id": "tpl-p0-005",
+      "related_style_id": "style-005-crm-salesforce-lightning"
+    },
+    {
+      "id": "prompt-template-tpl-p0-006",
+      "name": "团队协作效率风 · 研发任务看板列表 Prompt",
+      "description": "用于生成或复用「团队协作效率风 · 研发任务看板列表」的页面 Prompt。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "responsive app",
+        "app list",
+        "kanban",
+        "project",
+        "team",
+        "issue",
+        "collaboration",
+        "app",
+        "list",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-p0-006",
+        "style_pack": "style-006-atlassian-teamwork",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "kanban column",
+          "list item",
+          "status filter",
+          "assignee chip",
+          "kanban marker",
+          "project marker",
+          "team marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「团队协作效率风」生成一个研发任务看板列表的app list页面。\n风格要求：清晰导航、标签状态、多列看板、快捷操作、强调可读性。\nToken modes：light / dark / agile\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：团队协作效率风 · 研发任务看板列表\nAI 标签：kanban、project、team、issue、collaboration",
+      "related_template_id": "tpl-p0-006",
+      "related_style_id": "style-006-atlassian-teamwork"
+    },
+    {
+      "id": "prompt-template-tpl-p0-007",
+      "name": "流程型企业管理风 · 企业流程审批中心 Prompt",
+      "description": "用于生成或复用「流程型企业管理风 · 企业流程审批中心」的页面 Prompt。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin approval",
+        "process",
+        "sap-like",
+        "erp",
+        "workflow",
+        "adaptive",
+        "admin",
+        "approval",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-p0-007",
+        "style_pack": "style-007-sap-process-enterprise",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "approval card",
+          "evidence viewer",
+          "decision buttons",
+          "audit log",
+          "process marker",
+          "sap-like marker",
+          "erp marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「流程型企业管理风」生成一个企业流程审批中心的admin approval页面。\n风格要求：角色导向、流程清晰、页签与对象页、状态流转、可适配多终端。\nToken modes：light / compact / role-based\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：流程型企业管理风 · 企业流程审批中心\nAI 标签：process、sap-like、erp、workflow、adaptive",
+      "related_template_id": "tpl-p0-007",
+      "related_style_id": "style-007-sap-process-enterprise"
+    },
+    {
+      "id": "prompt-template-tpl-p0-008",
+      "name": "商家运营管理风 · 商家营销活动配置 Prompt",
+      "description": "用于生成或复用「商家运营管理风 · 商家营销活动配置」的页面 Prompt。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "web admin",
+        "admin form",
+        "commerce",
+        "merchant",
+        "orders",
+        "inventory",
+        "polaris-like",
+        "admin",
+        "form",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-p0-008",
+        "style_pack": "style-008-polars-merchant-ops",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "form field",
+          "select",
+          "validation message",
+          "sticky submit bar",
+          "commerce marker",
+          "merchant marker",
+          "orders marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「商家运营管理风」生成一个商家营销活动配置的admin form页面。\n风格要求：运营卡片、易懂表单、商品图+数据、操作引导、商家友好。\nToken modes：light / commerce / mobile-admin\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：商家运营管理风 · 商家营销活动配置\nAI 标签：commerce、merchant、orders、inventory、polaris-like",
+      "related_template_id": "tpl-p0-008",
+      "related_style_id": "style-008-polars-merchant-ops"
+    },
+    {
+      "id": "prompt-template-tpl-p0-009",
+      "name": "深色数据可视化大屏风 · 经营监控深色大屏 Prompt",
+      "description": "用于生成或复用「深色数据可视化大屏风 · 经营监控深色大屏」的页面 Prompt。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "large screen",
+        "dark dashboard",
+        "dashboard",
+        "dataviz",
+        "dark",
+        "command-center",
+        "realtime",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-p0-009",
+        "style_pack": "style-024-dark-dataviz-dashboard",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "dark metric tile",
+          "glow chart",
+          "map module",
+          "realtime ticker",
+          "dashboard marker",
+          "dataviz marker",
+          "dark marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「深色数据可视化大屏风」生成一个经营监控深色大屏的dark dashboard页面。\n风格要求：深色背景、高对比图表、发光重点、模块边框、实时动效。\nToken modes：dark / high-contrast / chart\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：深色数据可视化大屏风 · 经营监控深色大屏\nAI 标签：dashboard、dataviz、dark、command-center、realtime",
+      "related_template_id": "tpl-p0-009",
+      "related_style_id": "style-024-dark-dataviz-dashboard"
+    },
+    {
+      "id": "prompt-template-tpl-p0-010",
+      "name": "移动优先企业轻办公风 · 移动轻办公工作台 Prompt",
+      "description": "用于生成或复用「移动优先企业轻办公风 · 移动轻办公工作台」的页面 Prompt。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "template",
+        "mobile",
+        "mobile workbench",
+        "enterprise",
+        "oa",
+        "fieldwork",
+        "app",
+        "workbench",
+        "p0"
+      ],
+      "related_items": {
+        "template": "tpl-p0-010",
+        "style_pack": "style-030-mobile-first-enterprise",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "mobile card",
+          "bottom nav",
+          "large tap button",
+          "message badge",
+          "mobile marker",
+          "enterprise marker",
+          "oa marker"
+        ]
+      },
+      "prompt_type": "template_generation",
+      "target_user": "产品经理、设计师、前端工程师和 AI 工具",
+      "input_variables": [
+        "business_object",
+        "primary_actions",
+        "data_source",
+        "permission_rules"
+      ],
+      "prompt_text": "请使用「移动优先企业轻办公风」生成一个移动轻办公工作台的mobile workbench页面。\n风格要求：底部导航、大触控区、卡片流、状态醒目、离线/弱网友好。\nToken modes：mobile-light / mobile-dark / compact\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：移动优先企业轻办公风 · 移动轻办公工作台\nAI 标签：mobile、enterprise、oa、fieldwork、app",
+      "related_template_id": "tpl-p0-010",
+      "related_style_id": "style-030-mobile-first-enterprise"
+    }
+  ]
+}

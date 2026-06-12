@@ -1,0 +1,4959 @@
+{
+  "version": "2.0.0",
+  "schema_version": "2.0.0",
+  "generated_at": "2026-06-04",
+  "description": "V2 normalized template catalog.",
+  "template_types": [
+    "admin dashboard",
+    "admin list",
+    "admin form",
+    "admin detail",
+    "admin approval",
+    "app home",
+    "app list",
+    "app detail",
+    "mobile workbench",
+    "dark dashboard"
+  ],
+  "templates": [
+    {
+      "id": "tpl-sample-001",
+      "name": "现代 SaaS 极简风 · 后台 Dashboard样张",
+      "description": "基于「现代 SaaS 极简风」的风格样张模板，用于展示「后台 Dashboard」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin dashboard",
+        "后台 Dashboard",
+        "reviewing",
+        "saas",
+        "minimal",
+        "admin",
+        "card",
+        "clean",
+        "dashboard",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-001-modern-saas-clean",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "saas marker",
+          "minimal marker",
+          "admin marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-001"
+        ],
+        "tokens": [
+          "token-light-dark-brand-basic"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin dashboard",
+      "scene": "后台 Dashboard",
+      "style_pack_id": "style-001-modern-saas-clean",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "metric header",
+          "chart grid",
+          "task panel",
+          "recent activity"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "metric card",
+        "line chart",
+        "bar chart",
+        "activity list",
+        "saas marker",
+        "minimal marker",
+        "admin marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "active",
+        "completed"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-001",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-001",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-001",
+      "ai_prompt_id": "prompt-template-tpl-sample-001",
+      "ai_prompt": "请使用「现代 SaaS 极简风」生成一个后台 Dashboard的admin dashboard页面。\n风格要求：大留白、浅灰背景、卡片化、低饱和品牌色、弱边框、清晰层级。\nToken modes：light / dark / brand-basic\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：现代 SaaS 极简风 · 后台 Dashboard样张\nAI 标签：saas、minimal、admin、card、clean",
+      "preview_type": "css-dashboard-cards",
+      "suitable_for": [
+        "指标概览",
+        "趋势分析",
+        "异常监控"
+      ],
+      "not_suitable_for": [
+        "大量逐条编辑",
+        "复杂长表单录入"
+      ],
+      "ai_tags": [
+        "saas",
+        "minimal",
+        "admin",
+        "card",
+        "clean",
+        "dashboard",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-001&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-001",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-002",
+      "name": "企业经典表格风 · 筛选列表样张",
+      "description": "基于「企业经典表格风」的风格样张模板，用于展示「筛选列表」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin list",
+        "筛选列表",
+        "reviewing",
+        "enterprise",
+        "table",
+        "crud",
+        "antd-like",
+        "dense",
+        "admin",
+        "list",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-002-enterprise-classic-table",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "enterprise marker",
+          "table marker",
+          "crud marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-002"
+        ],
+        "tokens": [
+          "token-light-compact-dark"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin list",
+      "scene": "筛选列表",
+      "style_pack_id": "style-002-enterprise-classic-table",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "compact",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "filter bar",
+          "toolbar",
+          "data table",
+          "pagination",
+          "batch actions"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "search input",
+        "filter group",
+        "data table",
+        "batch action bar",
+        "enterprise marker",
+        "table marker",
+        "crud marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "filtered",
+        "selected rows",
+        "batch processing"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-002",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-002",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-002",
+      "ai_prompt_id": "prompt-template-tpl-sample-002",
+      "ai_prompt": "请使用「企业经典表格风」生成一个筛选列表的admin list页面。\n风格要求：信息密度高、表格优先、蓝灰色系、清晰分割线、强操作区。\nToken modes：light / compact / dark\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：企业经典表格风 · 筛选列表样张\nAI 标签：enterprise、table、crud、antd-like、dense",
+      "preview_type": "css-admin-table",
+      "suitable_for": [
+        "对象数量多",
+        "需要搜索筛选",
+        "需要批量操作"
+      ],
+      "not_suitable_for": [
+        "强营销页面",
+        "少量精选内容展示"
+      ],
+      "ai_tags": [
+        "enterprise",
+        "table",
+        "crud",
+        "antd-like",
+        "dense",
+        "admin",
+        "list",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-002&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-002",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-003",
+      "name": "Fluent 办公协同风 · 工作台样张",
+      "description": "基于「Fluent 办公协同风」的风格样张模板，用于展示「工作台」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin dashboard",
+        "工作台",
+        "reviewing",
+        "office",
+        "collaboration",
+        "fluent",
+        "copilot",
+        "productivity",
+        "admin",
+        "dashboard",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-003-fluent-office-collab",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "office marker",
+          "collaboration marker",
+          "fluent marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-003"
+        ],
+        "tokens": [
+          "token-light-dark-copilot-accent"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin dashboard",
+      "scene": "工作台",
+      "style_pack_id": "style-003-fluent-office-collab",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "metric header",
+          "chart grid",
+          "task panel",
+          "recent activity"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "metric card",
+        "line chart",
+        "bar chart",
+        "activity list",
+        "office marker",
+        "collaboration marker",
+        "fluent marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "active",
+        "completed"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-003",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-003",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-003",
+      "ai_prompt_id": "prompt-template-tpl-sample-003",
+      "ai_prompt": "请使用「Fluent 办公协同风」生成一个工作台的admin dashboard页面。\n风格要求：柔和圆角、轻阴影、微软办公感、上下文工具栏、渐进披露。\nToken modes：light / dark / copilot-accent\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：Fluent 办公协同风 · 工作台样张\nAI 标签：office、collaboration、fluent、copilot、productivity",
+      "preview_type": "css-ai-copilot-workspace",
+      "suitable_for": [
+        "指标概览",
+        "趋势分析",
+        "异常监控"
+      ],
+      "not_suitable_for": [
+        "大量逐条编辑",
+        "复杂长表单录入"
+      ],
+      "ai_tags": [
+        "office",
+        "collaboration",
+        "fluent",
+        "copilot",
+        "productivity",
+        "admin",
+        "dashboard",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-003&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-003",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-004",
+      "name": "Carbon 数据密集风 · 资源列表样张",
+      "description": "基于「Carbon 数据密集风」的风格样张模板，用于展示「资源列表」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin list",
+        "资源列表",
+        "reviewing",
+        "carbon",
+        "data",
+        "ibm",
+        "cloud",
+        "dense",
+        "admin",
+        "list",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-004-carbon-data-enterprise",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "carbon marker",
+          "data marker",
+          "ibm marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-004"
+        ],
+        "tokens": [
+          "token-light-dark-high-contrast"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin list",
+      "scene": "资源列表",
+      "style_pack_id": "style-004-carbon-data-enterprise",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "filter bar",
+          "toolbar",
+          "data table",
+          "pagination",
+          "batch actions"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "search input",
+        "filter group",
+        "data table",
+        "batch action bar",
+        "carbon marker",
+        "data marker",
+        "ibm marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "filtered",
+        "selected rows",
+        "batch processing"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-004",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-004",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-004",
+      "ai_prompt_id": "prompt-template-tpl-sample-004",
+      "ai_prompt": "请使用「Carbon 数据密集风」生成一个资源列表的admin list页面。\n风格要求：黑白灰基础、网格严谨、信息层级硬朗、数据卡片和表单规范。\nToken modes：light / dark / high-contrast\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：Carbon 数据密集风 · 资源列表样张\nAI 标签：carbon、data、ibm、cloud、dense",
+      "preview_type": "css-admin-table",
+      "suitable_for": [
+        "对象数量多",
+        "需要搜索筛选",
+        "需要批量操作"
+      ],
+      "not_suitable_for": [
+        "强营销页面",
+        "少量精选内容展示"
+      ],
+      "ai_tags": [
+        "carbon",
+        "data",
+        "ibm",
+        "cloud",
+        "dense",
+        "admin",
+        "list",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-004&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-004",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-005",
+      "name": "CRM 商务销售风 · 客户列表样张",
+      "description": "基于「CRM 商务销售风」的风格样张模板，用于展示「客户列表」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin list",
+        "客户列表",
+        "reviewing",
+        "crm",
+        "sales",
+        "record",
+        "timeline",
+        "pipeline",
+        "admin",
+        "list",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-005-crm-salesforce-lightning",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "crm marker",
+          "sales marker",
+          "record marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-005"
+        ],
+        "tokens": [
+          "token-light-brand-blue-compact"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin list",
+      "scene": "客户列表",
+      "style_pack_id": "style-005-crm-salesforce-lightning",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "compact",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "filter bar",
+          "toolbar",
+          "data table",
+          "pagination",
+          "batch actions"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "search input",
+        "filter group",
+        "data table",
+        "batch action bar",
+        "crm marker",
+        "sales marker",
+        "record marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "filtered",
+        "selected rows",
+        "batch processing"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-005",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-005",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-005",
+      "ai_prompt_id": "prompt-template-tpl-sample-005",
+      "ai_prompt": "请使用「CRM 商务销售风」生成一个客户列表的admin list页面。\n风格要求：业务对象卡片、记录详情页、路径进度、右侧活动流、可配置布局。\nToken modes：light / brand-blue / compact\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：CRM 商务销售风 · 客户列表样张\nAI 标签：crm、sales、record、timeline、pipeline",
+      "preview_type": "css-admin-table",
+      "suitable_for": [
+        "对象数量多",
+        "需要搜索筛选",
+        "需要批量操作"
+      ],
+      "not_suitable_for": [
+        "强营销页面",
+        "少量精选内容展示"
+      ],
+      "ai_tags": [
+        "crm",
+        "sales",
+        "record",
+        "timeline",
+        "pipeline",
+        "admin",
+        "list",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-005&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-005",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-006",
+      "name": "团队协作效率风 · 项目首页样张",
+      "description": "基于「团队协作效率风」的风格样张模板，用于展示「项目首页」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin dashboard",
+        "项目首页",
+        "reviewing",
+        "kanban",
+        "project",
+        "team",
+        "issue",
+        "collaboration",
+        "admin",
+        "dashboard",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-006-atlassian-teamwork",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "kanban marker",
+          "project marker",
+          "team marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-006"
+        ],
+        "tokens": [
+          "token-light-dark-agile"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin dashboard",
+      "scene": "项目首页",
+      "style_pack_id": "style-006-atlassian-teamwork",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "metric header",
+          "chart grid",
+          "task panel",
+          "recent activity"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "metric card",
+        "line chart",
+        "bar chart",
+        "activity list",
+        "kanban marker",
+        "project marker",
+        "team marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "active",
+        "completed"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-006",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-006",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-006",
+      "ai_prompt_id": "prompt-template-tpl-sample-006",
+      "ai_prompt": "请使用「团队协作效率风」生成一个项目首页的admin dashboard页面。\n风格要求：清晰导航、标签状态、多列看板、快捷操作、强调可读性。\nToken modes：light / dark / agile\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：团队协作效率风 · 项目首页样张\nAI 标签：kanban、project、team、issue、collaboration",
+      "preview_type": "css-kanban-board",
+      "suitable_for": [
+        "指标概览",
+        "趋势分析",
+        "异常监控"
+      ],
+      "not_suitable_for": [
+        "大量逐条编辑",
+        "复杂长表单录入"
+      ],
+      "ai_tags": [
+        "kanban",
+        "project",
+        "team",
+        "issue",
+        "collaboration",
+        "admin",
+        "dashboard",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-006&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-006",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-007",
+      "name": "流程型企业管理风 · 流程入口样张",
+      "description": "基于「流程型企业管理风」的风格样张模板，用于展示「流程入口」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin approval",
+        "流程入口",
+        "reviewing",
+        "process",
+        "sap-like",
+        "erp",
+        "workflow",
+        "adaptive",
+        "admin",
+        "approval",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-007-sap-process-enterprise",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "approval card",
+          "evidence viewer",
+          "decision buttons",
+          "audit log",
+          "process marker",
+          "sap-like marker",
+          "erp marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-007"
+        ],
+        "tokens": [
+          "token-light-compact-role-based"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin approval",
+      "scene": "流程入口",
+      "style_pack_id": "style-007-sap-process-enterprise",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "compact",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "approval queue",
+          "evidence panel",
+          "decision actions",
+          "audit trail"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "approval card",
+        "evidence viewer",
+        "decision buttons",
+        "audit log",
+        "process marker",
+        "sap-like marker",
+        "erp marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "pending",
+        "approved",
+        "rejected",
+        "returned"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-007",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-007",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-007",
+      "ai_prompt_id": "prompt-template-tpl-sample-007",
+      "ai_prompt": "请使用「流程型企业管理风」生成一个流程入口的admin approval页面。\n风格要求：角色导向、流程清晰、页签与对象页、状态流转、可适配多终端。\nToken modes：light / compact / role-based\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：流程型企业管理风 · 流程入口样张\nAI 标签：process、sap-like、erp、workflow、adaptive",
+      "preview_type": "css-process-flow",
+      "suitable_for": [
+        "流程审批",
+        "节点流转",
+        "处理意见"
+      ],
+      "not_suitable_for": [
+        "无流程状态的内容页",
+        "纯数据大屏"
+      ],
+      "ai_tags": [
+        "process",
+        "sap-like",
+        "erp",
+        "workflow",
+        "adaptive",
+        "admin",
+        "approval",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-007&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-007",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-008",
+      "name": "商家运营管理风 · 商品列表样张",
+      "description": "基于「商家运营管理风」的风格样张模板，用于展示「商品列表」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin list",
+        "商品列表",
+        "reviewing",
+        "commerce",
+        "merchant",
+        "orders",
+        "inventory",
+        "polaris-like",
+        "admin",
+        "list",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-008-polars-merchant-ops",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "commerce marker",
+          "merchant marker",
+          "orders marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-008"
+        ],
+        "tokens": [
+          "token-light-commerce-mobile-admin"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin list",
+      "scene": "商品列表",
+      "style_pack_id": "style-008-polars-merchant-ops",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "filter bar",
+          "toolbar",
+          "data table",
+          "pagination",
+          "batch actions"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "search input",
+        "filter group",
+        "data table",
+        "batch action bar",
+        "commerce marker",
+        "merchant marker",
+        "orders marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "filtered",
+        "selected rows",
+        "batch processing"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-008",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-008",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-008",
+      "ai_prompt_id": "prompt-template-tpl-sample-008",
+      "ai_prompt": "请使用「商家运营管理风」生成一个商品列表的admin list页面。\n风格要求：运营卡片、易懂表单、商品图+数据、操作引导、商家友好。\nToken modes：light / commerce / mobile-admin\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：商家运营管理风 · 商品列表样张\nAI 标签：commerce、merchant、orders、inventory、polaris-like",
+      "preview_type": "css-commerce-ops",
+      "suitable_for": [
+        "对象数量多",
+        "需要搜索筛选",
+        "需要批量操作"
+      ],
+      "not_suitable_for": [
+        "强营销页面",
+        "少量精选内容展示"
+      ],
+      "ai_tags": [
+        "commerce",
+        "merchant",
+        "orders",
+        "inventory",
+        "polaris-like",
+        "admin",
+        "list",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-008&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-008",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-009",
+      "name": "Material 3 跨端自适应风 · App 首页样张",
+      "description": "基于「Material 3 跨端自适应风」的风格样张模板，用于展示「App 首页」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "mobile",
+        "mobile workbench",
+        "App 首页",
+        "reviewing",
+        "material3",
+        "adaptive",
+        "cross-platform",
+        "tokens",
+        "workbench",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-009-material-cross-platform",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "mobile card",
+          "bottom nav",
+          "large tap button",
+          "message badge",
+          "material3 marker",
+          "mobile marker",
+          "adaptive marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-009"
+        ],
+        "tokens": [
+          "token-light-dark-dynamic-brand"
+        ]
+      },
+      "platform": "mobile-web",
+      "legacy_platform": "mobile",
+      "type": "mobile workbench",
+      "scene": "App 首页",
+      "style_pack_id": "style-009-material-cross-platform",
+      "layout": {
+        "shell": "mobile app shell",
+        "density": "standard",
+        "navigation": "bottom tabs",
+        "responsive": "mobile first, tablet compatible",
+        "regions": [
+          "mobile header",
+          "card feed",
+          "bottom navigation",
+          "offline hint"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "mobile card",
+        "bottom nav",
+        "large tap button",
+        "message badge",
+        "material3 marker",
+        "mobile marker",
+        "adaptive marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "offline",
+        "weak network",
+        "new message"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-009",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-009",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-009",
+      "ai_prompt_id": "prompt-template-tpl-sample-009",
+      "ai_prompt": "请使用「Material 3 跨端自适应风」生成一个App 首页的mobile workbench页面。\n风格要求：动态色、清晰 color roles、中等圆角、组件一致、适配移动。\nToken modes：light / dark / dynamic-brand\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：Material 3 跨端自适应风 · App 首页样张\nAI 标签：material3、mobile、adaptive、cross-platform、tokens",
+      "preview_type": "css-mobile-workbench",
+      "suitable_for": [
+        "移动办公",
+        "快速入口",
+        "任务处理"
+      ],
+      "not_suitable_for": [
+        "超宽复杂表格",
+        "桌面端重配置流程"
+      ],
+      "ai_tags": [
+        "material3",
+        "mobile",
+        "adaptive",
+        "cross-platform",
+        "tokens",
+        "workbench",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-009&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-009",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-010",
+      "name": "Apple 高质感移动风 · 移动首页样张",
+      "description": "基于「Apple 高质感移动风」的风格样张模板，用于展示「移动首页」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "mobile",
+        "mobile workbench",
+        "移动首页",
+        "reviewing",
+        "ios",
+        "premium",
+        "native",
+        "motion",
+        "workbench",
+        "p1"
+      ],
+      "related_items": {
+        "style_pack": "style-010-apple-premium-mobile",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "mobile card",
+          "bottom nav",
+          "large tap button",
+          "message badge",
+          "ios marker",
+          "mobile marker",
+          "premium marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-010"
+        ],
+        "tokens": [
+          "token-ios-light-ios-dark"
+        ]
+      },
+      "platform": "mobile-web",
+      "legacy_platform": "mobile",
+      "type": "mobile workbench",
+      "scene": "移动首页",
+      "style_pack_id": "style-010-apple-premium-mobile",
+      "layout": {
+        "shell": "mobile app shell",
+        "density": "standard",
+        "navigation": "bottom tabs",
+        "responsive": "mobile first, tablet compatible",
+        "regions": [
+          "mobile header",
+          "card feed",
+          "bottom navigation",
+          "offline hint"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "mobile card",
+        "bottom nav",
+        "large tap button",
+        "message badge",
+        "ios marker",
+        "mobile marker",
+        "premium marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "offline",
+        "weak network",
+        "new message"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-010",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-010",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-010",
+      "ai_prompt_id": "prompt-template-tpl-sample-010",
+      "ai_prompt": "请使用「Apple 高质感移动风」生成一个移动首页的mobile workbench页面。\n风格要求：细腻层级、系统字体感、大标题、透明/模糊层、自然动效。\nToken modes：ios-light / ios-dark\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：Apple 高质感移动风 · 移动首页样张\nAI 标签：ios、mobile、premium、native、motion",
+      "preview_type": "css-mobile-workbench",
+      "suitable_for": [
+        "移动办公",
+        "快速入口",
+        "任务处理"
+      ],
+      "not_suitable_for": [
+        "超宽复杂表格",
+        "桌面端重配置流程"
+      ],
+      "ai_tags": [
+        "ios",
+        "mobile",
+        "premium",
+        "native",
+        "motion",
+        "workbench",
+        "p1"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-010&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-010",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Extended",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-011",
+      "name": "金融科技可信风 · 账户概览样张",
+      "description": "基于「金融科技可信风」的风格样张模板，用于展示「账户概览」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin dashboard",
+        "账户概览",
+        "reviewing",
+        "fintech",
+        "trust",
+        "account",
+        "payment",
+        "risk",
+        "admin",
+        "dashboard",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-011-fintech-trust",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "fintech marker",
+          "trust marker",
+          "account marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-011"
+        ],
+        "tokens": [
+          "token-light-dark-risk"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin dashboard",
+      "scene": "账户概览",
+      "style_pack_id": "style-011-fintech-trust",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "metric header",
+          "chart grid",
+          "task panel",
+          "recent activity"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "metric card",
+        "line chart",
+        "bar chart",
+        "activity list",
+        "fintech marker",
+        "trust marker",
+        "account marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "active",
+        "completed"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-011",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-011",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-011",
+      "ai_prompt_id": "prompt-template-tpl-sample-011",
+      "ai_prompt": "请使用「金融科技可信风」生成一个账户概览的admin dashboard页面。\n风格要求：深蓝/绿色状态、数字强调、风险提示明确、留白克制、安全感强。\nToken modes：light / dark / risk\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：金融科技可信风 · 账户概览样张\nAI 标签：fintech、trust、account、payment、risk",
+      "preview_type": "css-dashboard-cards",
+      "suitable_for": [
+        "指标概览",
+        "趋势分析",
+        "异常监控"
+      ],
+      "not_suitable_for": [
+        "大量逐条编辑",
+        "复杂长表单录入"
+      ],
+      "ai_tags": [
+        "fintech",
+        "trust",
+        "account",
+        "payment",
+        "risk",
+        "admin",
+        "dashboard",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-011&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-011",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-012",
+      "name": "风控合规审计风 · 风险列表样张",
+      "description": "基于「风控合规审计风」的风格样张模板，用于展示「风险列表」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin list",
+        "风险列表",
+        "reviewing",
+        "compliance",
+        "audit",
+        "risk",
+        "review",
+        "log",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "related_items": {
+        "style_pack": "style-012-risk-compliance",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "compliance marker",
+          "audit marker",
+          "risk marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-012"
+        ],
+        "tokens": [
+          "token-light-dark-severity"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin list",
+      "scene": "风险列表",
+      "style_pack_id": "style-012-risk-compliance",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "filter bar",
+          "toolbar",
+          "data table",
+          "pagination",
+          "batch actions"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "search input",
+        "filter group",
+        "data table",
+        "batch action bar",
+        "compliance marker",
+        "audit marker",
+        "risk marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "filtered",
+        "selected rows",
+        "batch processing"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-012",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-012",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-012",
+      "ai_prompt_id": "prompt-template-tpl-sample-012",
+      "ai_prompt": "请使用「风控合规审计风」生成一个风险列表的admin list页面。\n风格要求：状态分级、证据链、操作留痕、低调严肃、重点高亮异常。\nToken modes：light / dark / severity\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：风控合规审计风 · 风险列表样张\nAI 标签：compliance、audit、risk、review、log",
+      "preview_type": "css-admin-table",
+      "suitable_for": [
+        "对象数量多",
+        "需要搜索筛选",
+        "需要批量操作"
+      ],
+      "not_suitable_for": [
+        "强营销页面",
+        "少量精选内容展示"
+      ],
+      "ai_tags": [
+        "compliance",
+        "audit",
+        "risk",
+        "review",
+        "log",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-012&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-012",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Extended",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-013",
+      "name": "医疗健康清洁风 · 患者列表样张",
+      "description": "基于「医疗健康清洁风」的风格样张模板，用于展示「患者列表」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin list",
+        "患者列表",
+        "reviewing",
+        "healthcare",
+        "patient",
+        "report",
+        "appointment",
+        "clean",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "related_items": {
+        "style_pack": "style-013-healthcare-clean",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "healthcare marker",
+          "patient marker",
+          "report marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-013"
+        ],
+        "tokens": [
+          "token-light-clinical-accessible"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin list",
+      "scene": "患者列表",
+      "style_pack_id": "style-013-healthcare-clean",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "filter bar",
+          "toolbar",
+          "data table",
+          "pagination",
+          "batch actions"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "search input",
+        "filter group",
+        "data table",
+        "batch action bar",
+        "healthcare marker",
+        "patient marker",
+        "report marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "filtered",
+        "selected rows",
+        "batch processing"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-013",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-013",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-013",
+      "ai_prompt_id": "prompt-template-tpl-sample-013",
+      "ai_prompt": "请使用「医疗健康清洁风」生成一个患者列表的admin list页面。\n风格要求：白底、蓝绿低饱和、温和圆角、清晰警示、信息可信。\nToken modes：light / clinical / accessible\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：医疗健康清洁风 · 患者列表样张\nAI 标签：healthcare、patient、report、appointment、clean",
+      "preview_type": "css-admin-table",
+      "suitable_for": [
+        "对象数量多",
+        "需要搜索筛选",
+        "需要批量操作"
+      ],
+      "not_suitable_for": [
+        "强营销页面",
+        "少量精选内容展示"
+      ],
+      "ai_tags": [
+        "healthcare",
+        "patient",
+        "report",
+        "appointment",
+        "clean",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-013&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-013",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Extended",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-014",
+      "name": "教育学习平台风 · 课程首页样张",
+      "description": "基于「教育学习平台风」的风格样张模板，用于展示「课程首页」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin list",
+        "课程首页",
+        "reviewing",
+        "education",
+        "learning",
+        "progress",
+        "course",
+        "training",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "related_items": {
+        "style_pack": "style-014-education-learning",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "education marker",
+          "learning marker",
+          "progress marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-014"
+        ],
+        "tokens": [
+          "token-light-playful-accessible"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin list",
+      "scene": "课程首页",
+      "style_pack_id": "style-014-education-learning",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "filter bar",
+          "toolbar",
+          "data table",
+          "pagination",
+          "batch actions"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "search input",
+        "filter group",
+        "data table",
+        "batch action bar",
+        "education marker",
+        "learning marker",
+        "progress marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "filtered",
+        "selected rows",
+        "batch processing"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-014",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-014",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-014",
+      "ai_prompt_id": "prompt-template-tpl-sample-014",
+      "ai_prompt": "请使用「教育学习平台风」生成一个课程首页的admin list页面。\n风格要求：卡片式课程、进度可视化、轻插画、温和色彩、弱游戏化。\nToken modes：light / playful / accessible\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：教育学习平台风 · 课程首页样张\nAI 标签：education、learning、progress、course、training",
+      "preview_type": "css-admin-table",
+      "suitable_for": [
+        "对象数量多",
+        "需要搜索筛选",
+        "需要批量操作"
+      ],
+      "not_suitable_for": [
+        "强营销页面",
+        "少量精选内容展示"
+      ],
+      "ai_tags": [
+        "education",
+        "learning",
+        "progress",
+        "course",
+        "training",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-014&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-014",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Extended",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-015",
+      "name": "政务公共服务稳重风 · 办事首页样张",
+      "description": "基于「政务公共服务稳重风」的风格样张模板，用于展示「办事首页」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin dashboard",
+        "办事首页",
+        "reviewing",
+        "government",
+        "public",
+        "service",
+        "accessibility",
+        "formal",
+        "admin",
+        "dashboard",
+        "p1"
+      ],
+      "related_items": {
+        "style_pack": "style-015-government-stable",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "government marker",
+          "public marker",
+          "service marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-015"
+        ],
+        "tokens": [
+          "token-light-high-contrast-public"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin dashboard",
+      "scene": "办事首页",
+      "style_pack_id": "style-015-government-stable",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "metric header",
+          "chart grid",
+          "task panel",
+          "recent activity"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "metric card",
+        "line chart",
+        "bar chart",
+        "activity list",
+        "government marker",
+        "public marker",
+        "service marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "active",
+        "completed"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-015",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-015",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-015",
+      "ai_prompt_id": "prompt-template-tpl-sample-015",
+      "ai_prompt": "请使用「政务公共服务稳重风」生成一个办事首页的admin dashboard页面。\n风格要求：稳重蓝红、强层级、清晰入口、大字号、无障碍优先。\nToken modes：light / high-contrast / public\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：政务公共服务稳重风 · 办事首页样张\nAI 标签：government、public、service、accessibility、formal",
+      "preview_type": "css-dashboard-cards",
+      "suitable_for": [
+        "指标概览",
+        "趋势分析",
+        "异常监控"
+      ],
+      "not_suitable_for": [
+        "大量逐条编辑",
+        "复杂长表单录入"
+      ],
+      "ai_tags": [
+        "government",
+        "public",
+        "service",
+        "accessibility",
+        "formal",
+        "admin",
+        "dashboard",
+        "p1"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-015&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-015",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Extended",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-016",
+      "name": "工业 IoT 制造风 · 设备总览样张",
+      "description": "基于「工业 IoT 制造风」的风格样张模板，用于展示「设备总览」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin dashboard",
+        "设备总览",
+        "reviewing",
+        "iot",
+        "industrial",
+        "device",
+        "monitoring",
+        "alarm",
+        "admin",
+        "dashboard",
+        "p1"
+      ],
+      "related_items": {
+        "style_pack": "style-016-industrial-iot",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "iot marker",
+          "industrial marker",
+          "device marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-016"
+        ],
+        "tokens": [
+          "token-dark-light-alarm"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin dashboard",
+      "scene": "设备总览",
+      "style_pack_id": "style-016-industrial-iot",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "metric header",
+          "chart grid",
+          "task panel",
+          "recent activity"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "metric card",
+        "line chart",
+        "bar chart",
+        "activity list",
+        "iot marker",
+        "industrial marker",
+        "device marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "active",
+        "completed"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-016",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-016",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-016",
+      "ai_prompt_id": "prompt-template-tpl-sample-016",
+      "ai_prompt": "请使用「工业 IoT 制造风」生成一个设备总览的admin dashboard页面。\n风格要求：深色/灰蓝底、设备卡片、实时状态、告警明显、图表密集。\nToken modes：dark / light / alarm\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：工业 IoT 制造风 · 设备总览样张\nAI 标签：iot、industrial、device、monitoring、alarm",
+      "preview_type": "css-dashboard-cards",
+      "suitable_for": [
+        "指标概览",
+        "趋势分析",
+        "异常监控"
+      ],
+      "not_suitable_for": [
+        "大量逐条编辑",
+        "复杂长表单录入"
+      ],
+      "ai_tags": [
+        "iot",
+        "industrial",
+        "device",
+        "monitoring",
+        "alarm",
+        "admin",
+        "dashboard",
+        "p1"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-016&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-016",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Extended",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-017",
+      "name": "物流调度运营风 · 运单列表样张",
+      "description": "基于「物流调度运营风」的风格样张模板，用于展示「运单列表」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin list",
+        "运单列表",
+        "reviewing",
+        "logistics",
+        "map",
+        "dispatch",
+        "tracking",
+        "supply-chain",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "related_items": {
+        "style_pack": "style-017-logistics-ops",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "logistics marker",
+          "map marker",
+          "dispatch marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-017"
+        ],
+        "tokens": [
+          "token-light-map-operations"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin list",
+      "scene": "运单列表",
+      "style_pack_id": "style-017-logistics-ops",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "filter bar",
+          "toolbar",
+          "data table",
+          "pagination",
+          "batch actions"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "search input",
+        "filter group",
+        "data table",
+        "batch action bar",
+        "logistics marker",
+        "map marker",
+        "dispatch marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "filtered",
+        "selected rows",
+        "batch processing"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-017",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-017",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-017",
+      "ai_prompt_id": "prompt-template-tpl-sample-017",
+      "ai_prompt": "请使用「物流调度运营风」生成一个运单列表的admin list页面。\n风格要求：地图/列表联动、状态时间轴、调度看板、运力颜色分级。\nToken modes：light / map / operations\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：物流调度运营风 · 运单列表样张\nAI 标签：logistics、map、dispatch、tracking、supply-chain",
+      "preview_type": "css-map-dispatch",
+      "suitable_for": [
+        "对象数量多",
+        "需要搜索筛选",
+        "需要批量操作"
+      ],
+      "not_suitable_for": [
+        "强营销页面",
+        "少量精选内容展示"
+      ],
+      "ai_tags": [
+        "logistics",
+        "map",
+        "dispatch",
+        "tracking",
+        "supply-chain",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-017&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-017",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Extended",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-018",
+      "name": "营销增长运营风 · 增长看板样张",
+      "description": "基于「营销增长运营风」的风格样张模板，用于展示「增长看板」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin dashboard",
+        "增长看板",
+        "reviewing",
+        "marketing",
+        "growth",
+        "campaign",
+        "abtest",
+        "funnel",
+        "admin",
+        "dashboard",
+        "p1"
+      ],
+      "related_items": {
+        "style_pack": "style-018-marketing-growth",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "marketing marker",
+          "growth marker",
+          "campaign marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-018"
+        ],
+        "tokens": [
+          "token-light-campaign-vivid"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin dashboard",
+      "scene": "增长看板",
+      "style_pack_id": "style-018-marketing-growth",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "metric header",
+          "chart grid",
+          "task panel",
+          "recent activity"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "metric card",
+        "line chart",
+        "bar chart",
+        "activity list",
+        "marketing marker",
+        "growth marker",
+        "campaign marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "active",
+        "completed"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-018",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-018",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-018",
+      "ai_prompt_id": "prompt-template-tpl-sample-018",
+      "ai_prompt": "请使用「营销增长运营风」生成一个增长看板的admin dashboard页面。\n风格要求：数据卡片+活动模块、色彩更活跃、转化漏斗、目标进度。\nToken modes：light / campaign / vivid\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：营销增长运营风 · 增长看板样张\nAI 标签：marketing、growth、campaign、abtest、funnel",
+      "preview_type": "css-dashboard-cards",
+      "suitable_for": [
+        "指标概览",
+        "趋势分析",
+        "异常监控"
+      ],
+      "not_suitable_for": [
+        "大量逐条编辑",
+        "复杂长表单录入"
+      ],
+      "ai_tags": [
+        "marketing",
+        "growth",
+        "campaign",
+        "abtest",
+        "funnel",
+        "admin",
+        "dashboard",
+        "p1"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-018&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-018",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Extended",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-019",
+      "name": "内容媒体管理风 · 素材库样张",
+      "description": "基于「内容媒体管理风」的风格样张模板，用于展示「素材库」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin list",
+        "素材库",
+        "reviewing",
+        "cms",
+        "media",
+        "asset",
+        "editorial",
+        "review",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "related_items": {
+        "style_pack": "style-019-cms-media",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "cms marker",
+          "media marker",
+          "asset marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-019"
+        ],
+        "tokens": [
+          "token-light-media-editorial"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin list",
+      "scene": "素材库",
+      "style_pack_id": "style-019-cms-media",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "filter bar",
+          "toolbar",
+          "data table",
+          "pagination",
+          "batch actions"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "search input",
+        "filter group",
+        "data table",
+        "batch action bar",
+        "cms marker",
+        "media marker",
+        "asset marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "filtered",
+        "selected rows",
+        "batch processing"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-019",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-019",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-019",
+      "ai_prompt_id": "prompt-template-tpl-sample-019",
+      "ai_prompt": "请使用「内容媒体管理风」生成一个素材库的admin list页面。\n风格要求：瀑布/网格素材、预览优先、状态标签、编辑入口清晰。\nToken modes：light / media / editorial\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：内容媒体管理风 · 素材库样张\nAI 标签：cms、media、asset、editorial、review",
+      "preview_type": "css-admin-table",
+      "suitable_for": [
+        "对象数量多",
+        "需要搜索筛选",
+        "需要批量操作"
+      ],
+      "not_suitable_for": [
+        "强营销页面",
+        "少量精选内容展示"
+      ],
+      "ai_tags": [
+        "cms",
+        "media",
+        "asset",
+        "editorial",
+        "review",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-019&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-019",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Extended",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-020",
+      "name": "HR 组织管理风 · 员工列表样张",
+      "description": "基于「HR 组织管理风」的风格样张模板，用于展示「员工列表」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin list",
+        "员工列表",
+        "reviewing",
+        "hr",
+        "people",
+        "organization",
+        "recruiting",
+        "performance",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "related_items": {
+        "style_pack": "style-020-hr-organization",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "hr marker",
+          "people marker",
+          "organization marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-020"
+        ],
+        "tokens": [
+          "token-light-people-compact"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin list",
+      "scene": "员工列表",
+      "style_pack_id": "style-020-hr-organization",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "compact",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "filter bar",
+          "toolbar",
+          "data table",
+          "pagination",
+          "batch actions"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "search input",
+        "filter group",
+        "data table",
+        "batch action bar",
+        "hr marker",
+        "people marker",
+        "organization marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "filtered",
+        "selected rows",
+        "batch processing"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-020",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-020",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-020",
+      "ai_prompt_id": "prompt-template-tpl-sample-020",
+      "ai_prompt": "请使用「HR 组织管理风」生成一个员工列表的admin list页面。\n风格要求：人物头像、组织树、流程清晰、表单友好、隐私提示明确。\nToken modes：light / people / compact\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：HR 组织管理风 · 员工列表样张\nAI 标签：hr、people、organization、recruiting、performance",
+      "preview_type": "css-admin-table",
+      "suitable_for": [
+        "对象数量多",
+        "需要搜索筛选",
+        "需要批量操作"
+      ],
+      "not_suitable_for": [
+        "强营销页面",
+        "少量精选内容展示"
+      ],
+      "ai_tags": [
+        "hr",
+        "people",
+        "organization",
+        "recruiting",
+        "performance",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-020&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-020",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Extended",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-021",
+      "name": "AI Copilot 助手工作台风 · Copilot 首页样张",
+      "description": "基于「AI Copilot 助手工作台风」的风格样张模板，用于展示「Copilot 首页」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin dashboard",
+        "Copilot 首页",
+        "reviewing",
+        "ai",
+        "copilot",
+        "chat",
+        "agent",
+        "workspace",
+        "admin",
+        "dashboard",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-021-ai-copilot-workspace",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "ai marker",
+          "copilot marker",
+          "chat marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-021"
+        ],
+        "tokens": [
+          "token-light-dark-ai-accent"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin dashboard",
+      "scene": "Copilot 首页",
+      "style_pack_id": "style-021-ai-copilot-workspace",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "metric header",
+          "chart grid",
+          "task panel",
+          "recent activity"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "metric card",
+        "line chart",
+        "bar chart",
+        "activity list",
+        "ai marker",
+        "copilot marker",
+        "chat marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "active",
+        "completed"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-021",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-021",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-021",
+      "ai_prompt_id": "prompt-template-tpl-sample-021",
+      "ai_prompt": "请使用「AI Copilot 助手工作台风」生成一个Copilot 首页的admin dashboard页面。\n风格要求：聊天/任务双栏、建议卡片、来源引用、渐进披露、低干扰。\nToken modes：light / dark / ai-accent\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：AI Copilot 助手工作台风 · Copilot 首页样张\nAI 标签：ai、copilot、chat、agent、workspace",
+      "preview_type": "css-ai-copilot-workspace",
+      "suitable_for": [
+        "指标概览",
+        "趋势分析",
+        "异常监控"
+      ],
+      "not_suitable_for": [
+        "大量逐条编辑",
+        "复杂长表单录入"
+      ],
+      "ai_tags": [
+        "ai",
+        "copilot",
+        "chat",
+        "agent",
+        "workspace",
+        "admin",
+        "dashboard",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-021&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-021",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-022",
+      "name": "Agent 自动化编排风 · 流程画布样张",
+      "description": "基于「Agent 自动化编排风」的风格样张模板，用于展示「流程画布」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin approval",
+        "流程画布",
+        "reviewing",
+        "agent",
+        "automation",
+        "workflow",
+        "canvas",
+        "rpa",
+        "admin",
+        "approval",
+        "p1"
+      ],
+      "related_items": {
+        "style_pack": "style-022-agent-automation-canvas",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "approval card",
+          "evidence viewer",
+          "decision buttons",
+          "audit log",
+          "agent marker",
+          "automation marker",
+          "workflow marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-022"
+        ],
+        "tokens": [
+          "token-light-dark-canvas"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin approval",
+      "scene": "流程画布",
+      "style_pack_id": "style-022-agent-automation-canvas",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "approval queue",
+          "evidence panel",
+          "decision actions",
+          "audit trail"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "approval card",
+        "evidence viewer",
+        "decision buttons",
+        "audit log",
+        "agent marker",
+        "automation marker",
+        "workflow marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "pending",
+        "approved",
+        "rejected",
+        "returned"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-022",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-022",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-022",
+      "ai_prompt_id": "prompt-template-tpl-sample-022",
+      "ai_prompt": "请使用「Agent 自动化编排风」生成一个流程画布的admin approval页面。\n风格要求：画布、节点、连线、侧边配置、运行状态、日志结果。\nToken modes：light / dark / canvas\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：Agent 自动化编排风 · 流程画布样张\nAI 标签：agent、automation、workflow、canvas、rpa",
+      "preview_type": "css-ai-copilot-workspace",
+      "suitable_for": [
+        "流程审批",
+        "节点流转",
+        "处理意见"
+      ],
+      "not_suitable_for": [
+        "无流程状态的内容页",
+        "纯数据大屏"
+      ],
+      "ai_tags": [
+        "agent",
+        "automation",
+        "workflow",
+        "canvas",
+        "rpa",
+        "admin",
+        "approval",
+        "p1"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-022&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-022",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Extended",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-023",
+      "name": "低代码搭建器风 · 搭建器首页样张",
+      "description": "基于「低代码搭建器风」的风格样张模板，用于展示「搭建器首页」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin form",
+        "搭建器首页",
+        "reviewing",
+        "lowcode",
+        "builder",
+        "editor",
+        "canvas",
+        "configuration",
+        "admin",
+        "form",
+        "p1"
+      ],
+      "related_items": {
+        "style_pack": "style-023-lowcode-builder",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "form field",
+          "select",
+          "validation message",
+          "sticky submit bar",
+          "lowcode marker",
+          "builder marker",
+          "editor marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-023"
+        ],
+        "tokens": [
+          "token-light-builder-compact"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin form",
+      "scene": "搭建器首页",
+      "style_pack_id": "style-023-lowcode-builder",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "compact",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "step header",
+          "form sections",
+          "side help",
+          "submit bar"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "form field",
+        "select",
+        "validation message",
+        "sticky submit bar",
+        "lowcode marker",
+        "builder marker",
+        "editor marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "dirty",
+        "validation error",
+        "submit success"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-023",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-023",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-023",
+      "ai_prompt_id": "prompt-template-tpl-sample-023",
+      "ai_prompt": "请使用「低代码搭建器风」生成一个搭建器首页的admin form页面。\n风格要求：三栏编辑器、组件面板、画布、属性面板、预览/发布。\nToken modes：light / builder / compact\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：低代码搭建器风 · 搭建器首页样张\nAI 标签：lowcode、builder、editor、canvas、configuration",
+      "preview_type": "css-builder-canvas",
+      "suitable_for": [
+        "信息录入",
+        "配置创建",
+        "校验反馈"
+      ],
+      "not_suitable_for": [
+        "强品牌传播页",
+        "完全定制交互页面"
+      ],
+      "ai_tags": [
+        "lowcode",
+        "builder",
+        "editor",
+        "canvas",
+        "configuration",
+        "admin",
+        "form",
+        "p1"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-023&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-023",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Extended",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-024",
+      "name": "深色数据可视化大屏风 · 经营大屏样张",
+      "description": "基于「深色数据可视化大屏风」的风格样张模板，用于展示「经营大屏」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "large screen",
+        "dark dashboard",
+        "经营大屏",
+        "reviewing",
+        "dashboard",
+        "dataviz",
+        "dark",
+        "command-center",
+        "realtime",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-024-dark-dataviz-dashboard",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "dark metric tile",
+          "glow chart",
+          "map module",
+          "realtime ticker",
+          "dashboard marker",
+          "dataviz marker",
+          "dark marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-024"
+        ],
+        "tokens": [
+          "token-dark-high-contrast-chart"
+        ]
+      },
+      "platform": "dashboard",
+      "legacy_platform": "large screen",
+      "type": "dark dashboard",
+      "scene": "经营大屏",
+      "style_pack_id": "style-024-dark-dataviz-dashboard",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "full screen canvas",
+          "realtime metrics",
+          "chart modules",
+          "map panel"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "dark metric tile",
+        "glow chart",
+        "map module",
+        "realtime ticker",
+        "dashboard marker",
+        "dataviz marker",
+        "dark marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "live",
+        "warning",
+        "critical"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-024",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-024",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-024",
+      "ai_prompt_id": "prompt-template-tpl-sample-024",
+      "ai_prompt": "请使用「深色数据可视化大屏风」生成一个经营大屏的dark dashboard页面。\n风格要求：深色背景、高对比图表、发光重点、模块边框、实时动效。\nToken modes：dark / high-contrast / chart\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：深色数据可视化大屏风 · 经营大屏样张\nAI 标签：dashboard、dataviz、dark、command-center、realtime",
+      "preview_type": "css-dark-dataviz-dashboard",
+      "suitable_for": [
+        "指标概览",
+        "趋势分析",
+        "异常监控"
+      ],
+      "not_suitable_for": [
+        "大量逐条编辑",
+        "复杂长表单录入"
+      ],
+      "ai_tags": [
+        "dashboard",
+        "dataviz",
+        "dark",
+        "command-center",
+        "realtime",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-024&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-024",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-025",
+      "name": "安全运营 SOC 暗色风 · 安全总览样张",
+      "description": "基于「安全运营 SOC 暗色风」的风格样张模板，用于展示「安全总览」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin dashboard",
+        "安全总览",
+        "reviewing",
+        "security",
+        "soc",
+        "threat",
+        "alert",
+        "dark",
+        "admin",
+        "dashboard",
+        "p1"
+      ],
+      "related_items": {
+        "style_pack": "style-025-cybersecurity-soc",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "security marker",
+          "soc marker",
+          "threat marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-025"
+        ],
+        "tokens": [
+          "token-dark-severity-terminal"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin dashboard",
+      "scene": "安全总览",
+      "style_pack_id": "style-025-cybersecurity-soc",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "metric header",
+          "chart grid",
+          "task panel",
+          "recent activity"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "metric card",
+        "line chart",
+        "bar chart",
+        "activity list",
+        "security marker",
+        "soc marker",
+        "threat marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "active",
+        "completed"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-025",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-025",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-025",
+      "ai_prompt_id": "prompt-template-tpl-sample-025",
+      "ai_prompt": "请使用「安全运营 SOC 暗色风」生成一个安全总览的admin dashboard页面。\n风格要求：暗底、红橙告警、拓扑/时间线、严重程度分级、证据视图。\nToken modes：dark / severity / terminal\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：安全运营 SOC 暗色风 · 安全总览样张\nAI 标签：security、soc、threat、alert、dark",
+      "preview_type": "css-dashboard-cards",
+      "suitable_for": [
+        "指标概览",
+        "趋势分析",
+        "异常监控"
+      ],
+      "not_suitable_for": [
+        "大量逐条编辑",
+        "复杂长表单录入"
+      ],
+      "ai_tags": [
+        "security",
+        "soc",
+        "threat",
+        "alert",
+        "dark",
+        "admin",
+        "dashboard",
+        "p1"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-025&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-025",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Extended",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-026",
+      "name": "云资源 FinOps 管理风 · 资源概览样张",
+      "description": "基于「云资源 FinOps 管理风」的风格样张模板，用于展示「资源概览」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin list",
+        "资源概览",
+        "reviewing",
+        "cloud",
+        "finops",
+        "resource",
+        "billing",
+        "optimization",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "related_items": {
+        "style_pack": "style-026-cloud-finops",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "cloud marker",
+          "finops marker",
+          "resource marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-026"
+        ],
+        "tokens": [
+          "token-light-dark-cloud"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin list",
+      "scene": "资源概览",
+      "style_pack_id": "style-026-cloud-finops",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "filter bar",
+          "toolbar",
+          "data table",
+          "pagination",
+          "batch actions"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "search input",
+        "filter group",
+        "data table",
+        "batch action bar",
+        "cloud marker",
+        "finops marker",
+        "resource marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "filtered",
+        "selected rows",
+        "batch processing"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-026",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-026",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-026",
+      "ai_prompt_id": "prompt-template-tpl-sample-026",
+      "ai_prompt": "请使用「云资源 FinOps 管理风」生成一个资源概览的admin list页面。\n风格要求：资源树、成本趋势、配额卡片、告警和建议、表格密集。\nToken modes：light / dark / cloud\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：云资源 FinOps 管理风 · 资源概览样张\nAI 标签：cloud、finops、resource、billing、optimization",
+      "preview_type": "css-admin-table",
+      "suitable_for": [
+        "对象数量多",
+        "需要搜索筛选",
+        "需要批量操作"
+      ],
+      "not_suitable_for": [
+        "强营销页面",
+        "少量精选内容展示"
+      ],
+      "ai_tags": [
+        "cloud",
+        "finops",
+        "resource",
+        "billing",
+        "optimization",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-026&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-026",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Extended",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-027",
+      "name": "开发者控制台 / API 平台风 · API 文档样张",
+      "description": "基于「开发者控制台 / API 平台风」的风格样张模板，用于展示「API 文档」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Extended",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin list",
+        "API 文档",
+        "reviewing",
+        "developer",
+        "api",
+        "console",
+        "docs",
+        "sdk",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "related_items": {
+        "style_pack": "style-027-developer-console-api",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "developer marker",
+          "api marker",
+          "console marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-027"
+        ],
+        "tokens": [
+          "token-light-dark-code"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin list",
+      "scene": "API 文档",
+      "style_pack_id": "style-027-developer-console-api",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "filter bar",
+          "toolbar",
+          "data table",
+          "pagination",
+          "batch actions"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "search input",
+        "filter group",
+        "data table",
+        "batch action bar",
+        "developer marker",
+        "api marker",
+        "console marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "filtered",
+        "selected rows",
+        "batch processing"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-027",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-027",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-027",
+      "ai_prompt_id": "prompt-template-tpl-sample-027",
+      "ai_prompt": "请使用「开发者控制台 / API 平台风」生成一个API 文档的admin list页面。\n风格要求：代码块、文档侧栏、控制台卡片、密钥安全提示、终端感。\nToken modes：light / dark / code\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：开发者控制台 / API 平台风 · API 文档样张\nAI 标签：developer、api、console、docs、sdk",
+      "preview_type": "css-code-console",
+      "suitable_for": [
+        "对象数量多",
+        "需要搜索筛选",
+        "需要批量操作"
+      ],
+      "not_suitable_for": [
+        "强营销页面",
+        "少量精选内容展示"
+      ],
+      "ai_tags": [
+        "developer",
+        "api",
+        "console",
+        "docs",
+        "sdk",
+        "admin",
+        "list",
+        "p1"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-027&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-027",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Extended",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-028",
+      "name": "插件市场 / 应用市场风 · 市场首页样张",
+      "description": "基于「插件市场 / 应用市场风」的风格样张模板，用于展示「市场首页」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Incubation",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin dashboard",
+        "市场首页",
+        "reviewing",
+        "marketplace",
+        "plugin",
+        "app-store",
+        "integration",
+        "template",
+        "admin",
+        "dashboard",
+        "p2"
+      ],
+      "related_items": {
+        "style_pack": "style-028-marketplace-plugin",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "marketplace marker",
+          "plugin marker",
+          "app-store marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-028"
+        ],
+        "tokens": [
+          "token-light-marketplace-brand"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin dashboard",
+      "scene": "市场首页",
+      "style_pack_id": "style-028-marketplace-plugin",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "metric header",
+          "chart grid",
+          "task panel",
+          "recent activity"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "metric card",
+        "line chart",
+        "bar chart",
+        "activity list",
+        "marketplace marker",
+        "plugin marker",
+        "app-store marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "active",
+        "completed"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-028",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-028",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-028",
+      "ai_prompt_id": "prompt-template-tpl-sample-028",
+      "ai_prompt": "请使用「插件市场 / 应用市场风」生成一个市场首页的admin dashboard页面。\n风格要求：卡片网格、评分/标签、安装引导、详情页、兼容性信息。\nToken modes：light / marketplace / brand\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：插件市场 / 应用市场风 · 市场首页样张\nAI 标签：marketplace、plugin、app-store、integration、template",
+      "preview_type": "css-dashboard-cards",
+      "suitable_for": [
+        "指标概览",
+        "趋势分析",
+        "异常监控"
+      ],
+      "not_suitable_for": [
+        "大量逐条编辑",
+        "复杂长表单录入"
+      ],
+      "ai_tags": [
+        "marketplace",
+        "plugin",
+        "app-store",
+        "integration",
+        "template",
+        "admin",
+        "dashboard",
+        "p2"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-028&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-028",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Incubation",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-029",
+      "name": "多租户白标换肤风 · 品牌配置样张",
+      "description": "基于「多租户白标换肤风」的风格样张模板，用于展示「品牌配置」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin form",
+        "品牌配置",
+        "reviewing",
+        "white-label",
+        "tenant",
+        "theme",
+        "brand",
+        "configurable",
+        "admin",
+        "form",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-029-white-label-multitenant",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "form field",
+          "select",
+          "validation message",
+          "sticky submit bar",
+          "white-label marker",
+          "tenant marker",
+          "theme marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-029"
+        ],
+        "tokens": [
+          "token-brand-a-brand-b-dark-compact"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin form",
+      "scene": "品牌配置",
+      "style_pack_id": "style-029-white-label-multitenant",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "compact",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "step header",
+          "form sections",
+          "side help",
+          "submit bar"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "form field",
+        "select",
+        "validation message",
+        "sticky submit bar",
+        "white-label marker",
+        "tenant marker",
+        "theme marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "dirty",
+        "validation error",
+        "submit success"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-029",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-029",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-029",
+      "ai_prompt_id": "prompt-template-tpl-sample-029",
+      "ai_prompt": "请使用「多租户白标换肤风」生成一个品牌配置的admin form页面。\n风格要求：结构稳定、品牌色可替换、Logo/导航/图标可配置、主题可切换。\nToken modes：brand-a / brand-b / dark / compact\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：多租户白标换肤风 · 品牌配置样张\nAI 标签：white-label、tenant、theme、brand、configurable",
+      "preview_type": "css-admin-form",
+      "suitable_for": [
+        "信息录入",
+        "配置创建",
+        "校验反馈"
+      ],
+      "not_suitable_for": [
+        "强品牌传播页",
+        "完全定制交互页面"
+      ],
+      "ai_tags": [
+        "white-label",
+        "tenant",
+        "theme",
+        "brand",
+        "configurable",
+        "admin",
+        "form",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-029&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-029",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-sample-030",
+      "name": "移动优先企业轻办公风 · 移动工作台样张",
+      "description": "基于「移动优先企业轻办公风」的风格样张模板，用于展示「移动工作台」在该视觉体系下的页面方向。",
+      "status": "reviewing",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "mobile",
+        "mobile workbench",
+        "移动工作台",
+        "reviewing",
+        "enterprise",
+        "oa",
+        "fieldwork",
+        "app",
+        "workbench",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-030-mobile-first-enterprise",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "mobile card",
+          "bottom nav",
+          "large tap button",
+          "message badge",
+          "mobile marker",
+          "enterprise marker",
+          "oa marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-sample-030"
+        ],
+        "tokens": [
+          "token-mobile-light-mobile-dark-compact"
+        ]
+      },
+      "platform": "mobile-web",
+      "legacy_platform": "mobile",
+      "type": "mobile workbench",
+      "scene": "移动工作台",
+      "style_pack_id": "style-030-mobile-first-enterprise",
+      "layout": {
+        "shell": "mobile app shell",
+        "density": "compact",
+        "navigation": "bottom tabs",
+        "responsive": "mobile first, tablet compatible",
+        "regions": [
+          "mobile header",
+          "card feed",
+          "bottom navigation",
+          "offline hint"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "mobile card",
+        "bottom nav",
+        "large tap button",
+        "message badge",
+        "mobile marker",
+        "enterprise marker",
+        "oa marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "offline",
+        "weak network",
+        "new message"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-030",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-sample-030",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-sample-030",
+      "ai_prompt_id": "prompt-template-tpl-sample-030",
+      "ai_prompt": "请使用「移动优先企业轻办公风」生成一个移动工作台的mobile workbench页面。\n风格要求：底部导航、大触控区、卡片流、状态醒目、离线/弱网友好。\nToken modes：mobile-light / mobile-dark / compact\n页面完整度：风格样张，重点表达视觉方向和核心模块\n模板名称：移动优先企业轻办公风 · 移动工作台样张\nAI 标签：mobile、enterprise、oa、fieldwork、app",
+      "preview_type": "css-mobile-workbench",
+      "suitable_for": [
+        "移动办公",
+        "快速入口",
+        "任务处理"
+      ],
+      "not_suitable_for": [
+        "超宽复杂表格",
+        "桌面端重配置流程"
+      ],
+      "ai_tags": [
+        "mobile",
+        "enterprise",
+        "oa",
+        "fieldwork",
+        "app",
+        "workbench",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-030&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-sample-030",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-p0-001",
+      "name": "现代 SaaS 极简风 · SaaS 经营驾驶舱",
+      "description": "基于「现代 SaaS 极简风」的 P0 完整模板，覆盖「SaaS 经营驾驶舱」的核心布局、组件和关键状态。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin dashboard",
+        "SaaS 经营驾驶舱",
+        "approved",
+        "saas",
+        "minimal",
+        "admin",
+        "card",
+        "clean",
+        "dashboard",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-001-modern-saas-clean",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "metric card",
+          "line chart",
+          "bar chart",
+          "activity list",
+          "saas marker",
+          "minimal marker",
+          "admin marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-p0-001"
+        ],
+        "tokens": [
+          "token-light-dark-brand-basic"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin dashboard",
+      "scene": "SaaS 经营驾驶舱",
+      "style_pack_id": "style-001-modern-saas-clean",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "metric header",
+          "chart grid",
+          "task panel",
+          "recent activity"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "metric card",
+        "line chart",
+        "bar chart",
+        "activity list",
+        "saas marker",
+        "minimal marker",
+        "admin marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "active",
+        "completed"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-001",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-p0-001",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-p0-001",
+      "ai_prompt_id": "prompt-template-tpl-p0-001",
+      "ai_prompt": "请使用「现代 SaaS 极简风」生成一个SaaS 经营驾驶舱的admin dashboard页面。\n风格要求：大留白、浅灰背景、卡片化、低饱和品牌色、弱边框、清晰层级。\nToken modes：light / dark / brand-basic\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：现代 SaaS 极简风 · SaaS 经营驾驶舱\nAI 标签：saas、minimal、admin、card、clean",
+      "preview_type": "css-dashboard-cards",
+      "suitable_for": [
+        "指标概览",
+        "趋势分析",
+        "异常监控"
+      ],
+      "not_suitable_for": [
+        "大量逐条编辑",
+        "复杂长表单录入"
+      ],
+      "ai_tags": [
+        "saas",
+        "minimal",
+        "admin",
+        "card",
+        "clean",
+        "dashboard",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-001&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-001",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-p0-002",
+      "name": "企业经典表格风 · 企业高密度筛选列表",
+      "description": "基于「企业经典表格风」的 P0 完整模板，覆盖「企业高密度筛选列表」的核心布局、组件和关键状态。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin list",
+        "企业高密度筛选列表",
+        "approved",
+        "enterprise",
+        "table",
+        "crud",
+        "antd-like",
+        "dense",
+        "admin",
+        "list",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-002-enterprise-classic-table",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "search input",
+          "filter group",
+          "data table",
+          "batch action bar",
+          "enterprise marker",
+          "table marker",
+          "crud marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-p0-002"
+        ],
+        "tokens": [
+          "token-light-compact-dark"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin list",
+      "scene": "企业高密度筛选列表",
+      "style_pack_id": "style-002-enterprise-classic-table",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "compact",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "filter bar",
+          "toolbar",
+          "data table",
+          "pagination",
+          "batch actions"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "search input",
+        "filter group",
+        "data table",
+        "batch action bar",
+        "enterprise marker",
+        "table marker",
+        "crud marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "filtered",
+        "selected rows",
+        "batch processing"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-002",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-p0-002",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-p0-002",
+      "ai_prompt_id": "prompt-template-tpl-p0-002",
+      "ai_prompt": "请使用「企业经典表格风」生成一个企业高密度筛选列表的admin list页面。\n风格要求：信息密度高、表格优先、蓝灰色系、清晰分割线、强操作区。\nToken modes：light / compact / dark\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：企业经典表格风 · 企业高密度筛选列表\nAI 标签：enterprise、table、crud、antd-like、dense",
+      "preview_type": "css-admin-table",
+      "suitable_for": [
+        "对象数量多",
+        "需要搜索筛选",
+        "需要批量操作"
+      ],
+      "not_suitable_for": [
+        "强营销页面",
+        "少量精选内容展示"
+      ],
+      "ai_tags": [
+        "enterprise",
+        "table",
+        "crud",
+        "antd-like",
+        "dense",
+        "admin",
+        "list",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-002&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-002",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-p0-003",
+      "name": "Fluent 办公协同风 · 办公协同工作台",
+      "description": "基于「Fluent 办公协同风」的 P0 完整模板，覆盖「办公协同工作台」的核心布局、组件和关键状态。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "responsive app",
+        "app home",
+        "办公协同工作台",
+        "approved",
+        "office",
+        "collaboration",
+        "fluent",
+        "copilot",
+        "productivity",
+        "app",
+        "home",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-003-fluent-office-collab",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "welcome panel",
+          "quick action",
+          "feed card",
+          "notification item",
+          "office marker",
+          "collaboration marker",
+          "fluent marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-p0-003"
+        ],
+        "tokens": [
+          "token-light-dark-copilot-accent"
+        ]
+      },
+      "platform": "app",
+      "legacy_platform": "responsive app",
+      "type": "app home",
+      "scene": "办公协同工作台",
+      "style_pack_id": "style-003-fluent-office-collab",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "workspace header",
+          "quick actions",
+          "content feed",
+          "notification rail"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "welcome panel",
+        "quick action",
+        "feed card",
+        "notification item",
+        "office marker",
+        "collaboration marker",
+        "fluent marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "active",
+        "completed"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-003",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-p0-003",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-p0-003",
+      "ai_prompt_id": "prompt-template-tpl-p0-003",
+      "ai_prompt": "请使用「Fluent 办公协同风」生成一个办公协同工作台的app home页面。\n风格要求：柔和圆角、轻阴影、微软办公感、上下文工具栏、渐进披露。\nToken modes：light / dark / copilot-accent\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：Fluent 办公协同风 · 办公协同工作台\nAI 标签：office、collaboration、fluent、copilot、productivity",
+      "preview_type": "css-ai-copilot-workspace",
+      "suitable_for": [
+        "移动办公",
+        "快速入口",
+        "任务处理"
+      ],
+      "not_suitable_for": [
+        "超宽复杂表格",
+        "桌面端重配置流程"
+      ],
+      "ai_tags": [
+        "office",
+        "collaboration",
+        "fluent",
+        "copilot",
+        "productivity",
+        "app",
+        "home",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-003&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-003",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-p0-004",
+      "name": "Carbon 数据密集风 · 云资源配置详情",
+      "description": "基于「Carbon 数据密集风」的 P0 完整模板，覆盖「云资源配置详情」的核心布局、组件和关键状态。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin detail",
+        "云资源配置详情",
+        "approved",
+        "carbon",
+        "data",
+        "ibm",
+        "cloud",
+        "dense",
+        "admin",
+        "detail",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-004-carbon-data-enterprise",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "detail header",
+          "tab group",
+          "description list",
+          "timeline",
+          "carbon marker",
+          "data marker",
+          "ibm marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-p0-004"
+        ],
+        "tokens": [
+          "token-light-dark-high-contrast"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin detail",
+      "scene": "云资源配置详情",
+      "style_pack_id": "style-004-carbon-data-enterprise",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "object header",
+          "tabs",
+          "summary cards",
+          "activity timeline"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "detail header",
+        "tab group",
+        "description list",
+        "timeline",
+        "carbon marker",
+        "data marker",
+        "ibm marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "read only",
+        "editing",
+        "activity expanded"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-004",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-p0-004",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-p0-004",
+      "ai_prompt_id": "prompt-template-tpl-p0-004",
+      "ai_prompt": "请使用「Carbon 数据密集风」生成一个云资源配置详情的admin detail页面。\n风格要求：黑白灰基础、网格严谨、信息层级硬朗、数据卡片和表单规范。\nToken modes：light / dark / high-contrast\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：Carbon 数据密集风 · 云资源配置详情\nAI 标签：carbon、data、ibm、cloud、dense",
+      "preview_type": "css-object-detail",
+      "suitable_for": [
+        "对象详情",
+        "记录追踪",
+        "状态查看"
+      ],
+      "not_suitable_for": [
+        "强品牌传播页",
+        "完全定制交互页面"
+      ],
+      "ai_tags": [
+        "carbon",
+        "data",
+        "ibm",
+        "cloud",
+        "dense",
+        "admin",
+        "detail",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-004&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-004",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-p0-005",
+      "name": "CRM 商务销售风 · CRM 客户记录详情",
+      "description": "基于「CRM 商务销售风」的 P0 完整模板，覆盖「CRM 客户记录详情」的核心布局、组件和关键状态。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "responsive app",
+        "app detail",
+        "CRM 客户记录详情",
+        "approved",
+        "crm",
+        "sales",
+        "record",
+        "timeline",
+        "pipeline",
+        "app",
+        "detail",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-005-crm-salesforce-lightning",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "record summary",
+          "side activity",
+          "related list",
+          "comment box",
+          "crm marker",
+          "sales marker",
+          "record marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-p0-005"
+        ],
+        "tokens": [
+          "token-light-brand-blue-compact"
+        ]
+      },
+      "platform": "app",
+      "legacy_platform": "responsive app",
+      "type": "app detail",
+      "scene": "CRM 客户记录详情",
+      "style_pack_id": "style-005-crm-salesforce-lightning",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "compact",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "record header",
+          "related objects",
+          "timeline",
+          "context actions"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "record summary",
+        "side activity",
+        "related list",
+        "comment box",
+        "crm marker",
+        "sales marker",
+        "record marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "active",
+        "completed"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-005",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-p0-005",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-p0-005",
+      "ai_prompt_id": "prompt-template-tpl-p0-005",
+      "ai_prompt": "请使用「CRM 商务销售风」生成一个CRM 客户记录详情的app detail页面。\n风格要求：业务对象卡片、记录详情页、路径进度、右侧活动流、可配置布局。\nToken modes：light / brand-blue / compact\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：CRM 商务销售风 · CRM 客户记录详情\nAI 标签：crm、sales、record、timeline、pipeline",
+      "preview_type": "css-object-detail",
+      "suitable_for": [
+        "移动办公",
+        "快速入口",
+        "任务处理"
+      ],
+      "not_suitable_for": [
+        "超宽复杂表格",
+        "桌面端重配置流程"
+      ],
+      "ai_tags": [
+        "crm",
+        "sales",
+        "record",
+        "timeline",
+        "pipeline",
+        "app",
+        "detail",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-005&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-005",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-p0-006",
+      "name": "团队协作效率风 · 研发任务看板列表",
+      "description": "基于「团队协作效率风」的 P0 完整模板，覆盖「研发任务看板列表」的核心布局、组件和关键状态。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "responsive app",
+        "app list",
+        "研发任务看板列表",
+        "approved",
+        "kanban",
+        "project",
+        "team",
+        "issue",
+        "collaboration",
+        "app",
+        "list",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-006-atlassian-teamwork",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "kanban column",
+          "list item",
+          "status filter",
+          "assignee chip",
+          "kanban marker",
+          "project marker",
+          "team marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-p0-006"
+        ],
+        "tokens": [
+          "token-light-dark-agile"
+        ]
+      },
+      "platform": "app",
+      "legacy_platform": "responsive app",
+      "type": "app list",
+      "scene": "研发任务看板列表",
+      "style_pack_id": "style-006-atlassian-teamwork",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "view switcher",
+          "status columns",
+          "item cards",
+          "team filters"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "kanban column",
+        "list item",
+        "status filter",
+        "assignee chip",
+        "kanban marker",
+        "project marker",
+        "team marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "grouped",
+        "dragging",
+        "archived"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-006",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-p0-006",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-p0-006",
+      "ai_prompt_id": "prompt-template-tpl-p0-006",
+      "ai_prompt": "请使用「团队协作效率风」生成一个研发任务看板列表的app list页面。\n风格要求：清晰导航、标签状态、多列看板、快捷操作、强调可读性。\nToken modes：light / dark / agile\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：团队协作效率风 · 研发任务看板列表\nAI 标签：kanban、project、team、issue、collaboration",
+      "preview_type": "css-kanban-board",
+      "suitable_for": [
+        "对象数量多",
+        "需要搜索筛选",
+        "需要批量操作"
+      ],
+      "not_suitable_for": [
+        "强营销页面",
+        "少量精选内容展示"
+      ],
+      "ai_tags": [
+        "kanban",
+        "project",
+        "team",
+        "issue",
+        "collaboration",
+        "app",
+        "list",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-006&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-006",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-p0-007",
+      "name": "流程型企业管理风 · 企业流程审批中心",
+      "description": "基于「流程型企业管理风」的 P0 完整模板，覆盖「企业流程审批中心」的核心布局、组件和关键状态。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin approval",
+        "企业流程审批中心",
+        "approved",
+        "process",
+        "sap-like",
+        "erp",
+        "workflow",
+        "adaptive",
+        "admin",
+        "approval",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-007-sap-process-enterprise",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "approval card",
+          "evidence viewer",
+          "decision buttons",
+          "audit log",
+          "process marker",
+          "sap-like marker",
+          "erp marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-p0-007"
+        ],
+        "tokens": [
+          "token-light-compact-role-based"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin approval",
+      "scene": "企业流程审批中心",
+      "style_pack_id": "style-007-sap-process-enterprise",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "compact",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "approval queue",
+          "evidence panel",
+          "decision actions",
+          "audit trail"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "approval card",
+        "evidence viewer",
+        "decision buttons",
+        "audit log",
+        "process marker",
+        "sap-like marker",
+        "erp marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "pending",
+        "approved",
+        "rejected",
+        "returned"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-007",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-p0-007",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-p0-007",
+      "ai_prompt_id": "prompt-template-tpl-p0-007",
+      "ai_prompt": "请使用「流程型企业管理风」生成一个企业流程审批中心的admin approval页面。\n风格要求：角色导向、流程清晰、页签与对象页、状态流转、可适配多终端。\nToken modes：light / compact / role-based\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：流程型企业管理风 · 企业流程审批中心\nAI 标签：process、sap-like、erp、workflow、adaptive",
+      "preview_type": "css-process-flow",
+      "suitable_for": [
+        "流程审批",
+        "节点流转",
+        "处理意见"
+      ],
+      "not_suitable_for": [
+        "无流程状态的内容页",
+        "纯数据大屏"
+      ],
+      "ai_tags": [
+        "process",
+        "sap-like",
+        "erp",
+        "workflow",
+        "adaptive",
+        "admin",
+        "approval",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-007&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-007",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-p0-008",
+      "name": "商家运营管理风 · 商家营销活动配置",
+      "description": "基于「商家运营管理风」的 P0 完整模板，覆盖「商家营销活动配置」的核心布局、组件和关键状态。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "web admin",
+        "admin form",
+        "商家营销活动配置",
+        "approved",
+        "commerce",
+        "merchant",
+        "orders",
+        "inventory",
+        "polaris-like",
+        "admin",
+        "form",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-008-polars-merchant-ops",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "form field",
+          "select",
+          "validation message",
+          "sticky submit bar",
+          "commerce marker",
+          "merchant marker",
+          "orders marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-p0-008"
+        ],
+        "tokens": [
+          "token-light-commerce-mobile-admin"
+        ]
+      },
+      "platform": "admin",
+      "legacy_platform": "web admin",
+      "type": "admin form",
+      "scene": "商家营销活动配置",
+      "style_pack_id": "style-008-polars-merchant-ops",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "step header",
+          "form sections",
+          "side help",
+          "submit bar"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "form field",
+        "select",
+        "validation message",
+        "sticky submit bar",
+        "commerce marker",
+        "merchant marker",
+        "orders marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "dirty",
+        "validation error",
+        "submit success"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-008",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-p0-008",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-p0-008",
+      "ai_prompt_id": "prompt-template-tpl-p0-008",
+      "ai_prompt": "请使用「商家运营管理风」生成一个商家营销活动配置的admin form页面。\n风格要求：运营卡片、易懂表单、商品图+数据、操作引导、商家友好。\nToken modes：light / commerce / mobile-admin\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：商家运营管理风 · 商家营销活动配置\nAI 标签：commerce、merchant、orders、inventory、polaris-like",
+      "preview_type": "css-commerce-ops",
+      "suitable_for": [
+        "信息录入",
+        "配置创建",
+        "校验反馈"
+      ],
+      "not_suitable_for": [
+        "强品牌传播页",
+        "完全定制交互页面"
+      ],
+      "ai_tags": [
+        "commerce",
+        "merchant",
+        "orders",
+        "inventory",
+        "polaris-like",
+        "admin",
+        "form",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-008&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-008",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-p0-009",
+      "name": "深色数据可视化大屏风 · 经营监控深色大屏",
+      "description": "基于「深色数据可视化大屏风」的 P0 完整模板，覆盖「经营监控深色大屏」的核心布局、组件和关键状态。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "large screen",
+        "dark dashboard",
+        "经营监控深色大屏",
+        "approved",
+        "dashboard",
+        "dataviz",
+        "dark",
+        "command-center",
+        "realtime",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-024-dark-dataviz-dashboard",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "dark metric tile",
+          "glow chart",
+          "map module",
+          "realtime ticker",
+          "dashboard marker",
+          "dataviz marker",
+          "dark marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-p0-009"
+        ],
+        "tokens": [
+          "token-dark-high-contrast-chart"
+        ]
+      },
+      "platform": "dashboard",
+      "legacy_platform": "large screen",
+      "type": "dark dashboard",
+      "scene": "经营监控深色大屏",
+      "style_pack_id": "style-024-dark-dataviz-dashboard",
+      "layout": {
+        "shell": "enterprise app shell",
+        "density": "standard",
+        "navigation": "top nav + left sidebar",
+        "responsive": "desktop first, collapses to tablet",
+        "regions": [
+          "full screen canvas",
+          "realtime metrics",
+          "chart modules",
+          "map panel"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "dark metric tile",
+        "glow chart",
+        "map module",
+        "realtime ticker",
+        "dashboard marker",
+        "dataviz marker",
+        "dark marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "live",
+        "warning",
+        "critical"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-009",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-p0-009",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-p0-009",
+      "ai_prompt_id": "prompt-template-tpl-p0-009",
+      "ai_prompt": "请使用「深色数据可视化大屏风」生成一个经营监控深色大屏的dark dashboard页面。\n风格要求：深色背景、高对比图表、发光重点、模块边框、实时动效。\nToken modes：dark / high-contrast / chart\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：深色数据可视化大屏风 · 经营监控深色大屏\nAI 标签：dashboard、dataviz、dark、command-center、realtime",
+      "preview_type": "css-dark-dataviz-dashboard",
+      "suitable_for": [
+        "指标概览",
+        "趋势分析",
+        "异常监控"
+      ],
+      "not_suitable_for": [
+        "大量逐条编辑",
+        "复杂长表单录入"
+      ],
+      "ai_tags": [
+        "dashboard",
+        "dataviz",
+        "dark",
+        "command-center",
+        "realtime",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-009&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-009",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    },
+    {
+      "id": "tpl-p0-010",
+      "name": "移动优先企业轻办公风 · 移动轻办公工作台",
+      "description": "基于「移动优先企业轻办公风」的 P0 完整模板，覆盖「移动轻办公工作台」的核心布局、组件和关键状态。",
+      "status": "approved",
+      "version": "1.0.0",
+      "owner": "Design Platform Core",
+      "created_at": "2026-06-04",
+      "updated_at": "2026-06-04",
+      "tags": [
+        "mobile",
+        "mobile workbench",
+        "移动轻办公工作台",
+        "approved",
+        "enterprise",
+        "oa",
+        "fieldwork",
+        "app",
+        "workbench",
+        "p0"
+      ],
+      "related_items": {
+        "style_pack": "style-030-mobile-first-enterprise",
+        "components": [
+          "app shell",
+          "navigation",
+          "status tag",
+          "empty state",
+          "mobile card",
+          "bottom nav",
+          "large tap button",
+          "message badge",
+          "mobile marker",
+          "enterprise marker",
+          "oa marker"
+        ],
+        "prompts": [
+          "prompt-template-tpl-p0-010"
+        ],
+        "tokens": [
+          "token-mobile-light-mobile-dark-compact"
+        ]
+      },
+      "platform": "mobile-web",
+      "legacy_platform": "mobile",
+      "type": "mobile workbench",
+      "scene": "移动轻办公工作台",
+      "style_pack_id": "style-030-mobile-first-enterprise",
+      "layout": {
+        "shell": "mobile app shell",
+        "density": "compact",
+        "navigation": "bottom tabs",
+        "responsive": "mobile first, tablet compatible",
+        "regions": [
+          "mobile header",
+          "card feed",
+          "bottom navigation",
+          "offline hint"
+        ]
+      },
+      "components": [
+        "app shell",
+        "navigation",
+        "status tag",
+        "empty state",
+        "mobile card",
+        "bottom nav",
+        "large tap button",
+        "message badge",
+        "mobile marker",
+        "enterprise marker",
+        "oa marker"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "offline",
+        "weak network",
+        "new message"
+      ],
+      "figma_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-010",
+      "storybook_url": "https://storybook.example.com/?path=/story/templates-tpl-p0-010",
+      "code_url": "https://github.com/MarkCeci/ui-template-library/tree/main/templates/tpl-p0-010",
+      "ai_prompt_id": "prompt-template-tpl-p0-010",
+      "ai_prompt": "请使用「移动优先企业轻办公风」生成一个移动轻办公工作台的mobile workbench页面。\n风格要求：底部导航、大触控区、卡片流、状态醒目、离线/弱网友好。\nToken modes：mobile-light / mobile-dark / compact\n页面完整度：完整模板，包含关键区域、状态和交互说明\n模板名称：移动优先企业轻办公风 · 移动轻办公工作台\nAI 标签：mobile、enterprise、oa、fieldwork、app",
+      "preview_type": "css-mobile-workbench",
+      "suitable_for": [
+        "移动办公",
+        "快速入口",
+        "任务处理"
+      ],
+      "not_suitable_for": [
+        "超宽复杂表格",
+        "桌面端重配置流程"
+      ],
+      "ai_tags": [
+        "mobile",
+        "enterprise",
+        "oa",
+        "fieldwork",
+        "app",
+        "workbench",
+        "p0"
+      ],
+      "figma_file_url": "https://figma.example.com/file/ui-template-library",
+      "figma_component_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-010&kind=template-components",
+      "figma_page_url": "https://figma.example.com/file/ui-template-library?node=tpl-p0-010",
+      "figma_last_updated": "2026-06-04",
+      "figma_owner": "Design Platform Core",
+      "design_acceptance": {
+        "follows_style_pack": true,
+        "uses_standard_components": true,
+        "includes_empty_state": true,
+        "includes_error_state": true,
+        "includes_loading_state": true,
+        "includes_responsive_notes": true,
+        "includes_figma_link": true
+      }
+    }
+  ]
+}
