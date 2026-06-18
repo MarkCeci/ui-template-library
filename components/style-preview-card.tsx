@@ -35,7 +35,14 @@ export function StylePreviewCard({ style, normalized, parentStyleName }: StylePr
   const isLocalPublished = viewModel.source.tags.includes("本地发布");
   const isMergedVariant = viewModel.source.displayLevel === "hidden";
   const isVariant = !viewModel.source.isMainStyle;
-  const displayBadge = viewModel.source.displayLevel === "hero" ? "主推" : isVariant ? "变体" : "主风格";
+  const displayBadge =
+    viewModel.source.displayLevel === "hero"
+      ? "主推"
+      : isMergedVariant
+        ? "相近方向"
+        : isVariant
+          ? "相近风格"
+          : "精选风格";
   const score = viewModel.source.differentiationScore;
   const detailHref = isLocalPublished ? `/styles/local/${viewModel.id}` : `/styles/${viewModel.id}`;
   return (
@@ -47,7 +54,7 @@ export function StylePreviewCard({ style, normalized, parentStyleName }: StylePr
     >
       <Link href={detailHref} className="style-preview-link">
         <div className="style-preview-stage">
-          <EnterpriseStyleCover style={viewModel} />
+          <EnterpriseStyleCover style={viewModel} presentation="app-gallery" />
         </div>
 
         <div className="style-preview-info">
@@ -86,7 +93,7 @@ export function StylePreviewCard({ style, normalized, parentStyleName }: StylePr
               </div>
               {isVariant ? (
                 <p className="line-clamp-1 text-xs font-semibold text-[var(--styles-pitch-color-text-muted)]">
-                  属于：{parentStyleName ?? viewModel.source.parentStyleId ?? "主风格体系"}
+                  相近方向：{parentStyleName ?? viewModel.source.parentStyleId ?? "相近风格"}
                 </p>
               ) : null}
             </div>
@@ -94,7 +101,7 @@ export function StylePreviewCard({ style, normalized, parentStyleName }: StylePr
             <div className="flex shrink-0 items-center gap-2">
               {isMergedVariant ? (
                 <span className="rounded-full bg-[var(--styles-pitch-color-surface-muted)] px-2 py-1 text-xs font-semibold text-[var(--styles-pitch-color-text-muted)]">
-                  已归并为变体
+                  已收纳
                 </span>
               ) : null}
               <span className="style-detail-cta">查看详情 →</span>
@@ -137,7 +144,14 @@ function getProjectTags(style: NormalizedStyle) {
 }
 
 function getMechanismTags(style: NormalizedStyle, variant: string) {
+  const differentiators = style.source.styleDifferentiators;
   const text = [
+    differentiators?.typography,
+    differentiators?.shadow,
+    differentiators?.iconLanguage,
+    differentiators?.layoutRhythm,
+    differentiators?.border,
+    differentiators?.atmosphere,
     style.source.visualMechanism,
     style.source.layoutMechanism,
     style.source.componentMechanism,

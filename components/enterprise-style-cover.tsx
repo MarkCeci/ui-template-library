@@ -32,6 +32,7 @@ export type EnterpriseCoverVariant =
 type EnterpriseStyleCoverProps = {
   style: NormalizedStyle;
   variant?: EnterpriseCoverVariant;
+  presentation?: "default" | "app-gallery";
 };
 
 export const enterpriseCoverTokens = {
@@ -360,13 +361,26 @@ function isEnterpriseCoverVariant(value: unknown): value is EnterpriseCoverVaria
   );
 }
 
-export function EnterpriseStyleCover({ style, variant = mapToEnterpriseCoverVariant(style) }: EnterpriseStyleCoverProps) {
+export function EnterpriseStyleCover({
+  style,
+  variant = mapToEnterpriseCoverVariant(style),
+  presentation = "default",
+}: EnterpriseStyleCoverProps) {
   const vars = applyTheme(style) as CSSProperties;
   const useMainstreamCaseCover = hasMainstreamCaseCover(style);
+  const differentiatorAttrs = getDifferentiatorAttributes(style);
 
   return (
-    <div className="enterprise-style-cover" data-enterprise-variant={variant} style={vars}>
-      {useMainstreamCaseCover ? (
+    <div
+      className="enterprise-style-cover"
+      data-enterprise-variant={variant}
+      data-presentation={presentation}
+      {...differentiatorAttrs}
+      style={vars}
+    >
+      {presentation === "app-gallery" ? (
+        <AppGalleryCover style={style} variant={variant} />
+      ) : useMainstreamCaseCover ? (
         <MainstreamStyleCaseCover style={style} />
       ) : (
         <>
@@ -396,6 +410,378 @@ export function EnterpriseStyleCover({ style, variant = mapToEnterpriseCoverVari
     </div>
   );
 }
+
+function getDifferentiatorAttributes(style: NormalizedStyle) {
+  const diff = style.source.styleDifferentiators;
+  const densityText = [style.source.layoutDensity, diff?.layoutRhythm].filter(Boolean).join(" ");
+  const typeText = [diff?.typography, style.source.visualMechanism].filter(Boolean).join(" ");
+  const shadowText = [diff?.shadow, style.source.glowStyle].filter(Boolean).join(" ");
+  const borderText = [diff?.border, style.source.componentMechanism].filter(Boolean).join(" ");
+  const iconText = [diff?.iconLanguage, style.source.componentMechanism].filter(Boolean).join(" ");
+
+  return {
+    "data-density": includesAny(densityText, ["紧凑", "dense", "compact"])
+      ? "dense"
+      : includesAny(densityText, ["宽松", "超大留白", "relaxed"])
+        ? "airy"
+        : "comfortable",
+    "data-type-style": includesAny(typeText, ["等宽", "mono"])
+      ? "mono"
+      : includesAny(typeText, ["宽字距", "字距"])
+        ? "wide"
+        : includesAny(typeText, ["细字", "轻量"])
+          ? "thin"
+          : includesAny(typeText, ["粗", "强标题", "bold"])
+            ? "bold"
+            : "balanced",
+    "data-shadow-style": includesAny(shadowText, ["无阴影", "扁平", "flat"])
+      ? "flat"
+      : includesAny(shadowText, ["硬质", "清晰硬", "hard"])
+        ? "hard"
+        : includesAny(shadowText, ["多层", "纵深", "layered"])
+          ? "layered"
+          : "soft",
+    "data-border-style": includesAny(borderText, ["虚线", "dashed"])
+      ? "dashed"
+      : includesAny(borderText, ["主题色", "渐变", "金属"])
+        ? "accent"
+        : includesAny(borderText, ["无边框", "无描边"])
+          ? "none"
+          : "fine",
+    "data-icon-style": includesAny(iconText, ["实心", "填充"])
+      ? "filled"
+      : includesAny(iconText, ["粗线"])
+        ? "bold-line"
+        : includesAny(iconText, ["双线"])
+          ? "double-line"
+          : "line",
+  };
+}
+
+function includesAny(value: string, needles: string[]) {
+  const text = value.toLowerCase();
+  return needles.some((needle) => text.includes(needle.toLowerCase()));
+}
+
+type AppGalleryScenario =
+  | "aesthetic"
+  | "beauty"
+  | "fitness"
+  | "medical"
+  | "local"
+  | "commerce"
+  | "finance"
+  | "ai"
+  | "enterprise"
+  | "dark";
+
+type AppGalleryContent = {
+  eyebrow: string;
+  title: string;
+  greeting: string;
+  metricLabel: string;
+  metricValue: string;
+  metricHint: string;
+  actions: string[];
+  list: Array<[string, string]>;
+  nav: string[];
+  sideTitle: string;
+  sideValue: string;
+  sideHint: string;
+};
+
+function AppGalleryCover({
+  style,
+  variant,
+}: {
+  style: NormalizedStyle;
+  variant: EnterpriseCoverVariant;
+}) {
+  const scenario = getAppGalleryScenario(style, variant);
+  const content = appGalleryContent[scenario];
+
+  return (
+    <div className={`app-gallery-cover app-gallery-${scenario}`}>
+      <span className="app-gallery-glow app-gallery-glow-a" />
+      <span className="app-gallery-glow app-gallery-glow-b" />
+
+      <section className="app-gallery-phone" aria-label={`${style.name} App 风格预览`}>
+        <div className="app-phone-status">
+          <span>9:41</span>
+          <span>5G 100%</span>
+        </div>
+
+        <header className="app-phone-header">
+          <div>
+            <span>{content.eyebrow}</span>
+            <strong>{content.greeting}</strong>
+          </div>
+          <b>{style.name.slice(0, 1)}</b>
+        </header>
+
+        <div className="app-hero-card">
+          <span>{content.metricLabel}</span>
+          <strong>{content.metricValue}</strong>
+          <p>{content.metricHint}</p>
+        </div>
+
+        <div className="app-action-grid">
+          {content.actions.map((action) => (
+            <div key={action} className="app-action-item">
+              <i>{action.slice(0, 1)}</i>
+              <span>{action}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="app-task-list">
+          {content.list.map(([title, status], index) => (
+            <p key={title}>
+              <i>{index + 1}</i>
+              <span>{title}</span>
+              <b>{status}</b>
+            </p>
+          ))}
+        </div>
+
+        <nav className="app-tabbar" aria-label="App 底部导航预览">
+          {content.nav.map((item, index) => (
+            <span key={item} className={index === 0 ? "active" : ""}>
+              {item}
+            </span>
+          ))}
+        </nav>
+      </section>
+
+      <aside className="app-gallery-story">
+        <span>{content.sideTitle}</span>
+        <strong>{content.title}</strong>
+        <p>{content.sideHint}</p>
+        <div className="app-story-metric">
+          <b>{content.sideValue}</b>
+          <small>适合 App 首屏、列表与个人中心</small>
+        </div>
+      </aside>
+    </div>
+  );
+}
+
+function getAppGalleryScenario(
+  style: NormalizedStyle,
+  variant: EnterpriseCoverVariant,
+): AppGalleryScenario {
+  if (variant === "ai-workspace" || variant === "ai-copilot") {
+    return "ai";
+  }
+  if (variant === "dark-command" || variant === "dark-dashboard") {
+    return "dark";
+  }
+  if (variant === "finance-trust" || styleHas(style, ["finance", "金融", "资产", "交易", "黑金"])) {
+    return "finance";
+  }
+  if (variant === "medical-health" || variant === "healthcare-report" || styleHas(style, ["medical", "health", "医疗", "健康"])) {
+    return "medical";
+  }
+  if (variant === "ecommerce-growth" || styleHas(style, ["commerce", "电商", "商家", "订单", "增长", "营销"])) {
+    return "commerce";
+  }
+  if (variant === "local-service" || styleHas(style, ["local", "本地生活", "门店", "预约", "服务"])) {
+    return "local";
+  }
+  if (styleHas(style, ["医美", "clinic", "aesthetic", "轻奢", "premium", "glass", "美容"])) {
+    return "aesthetic";
+  }
+  if (styleHas(style, ["fitness", "健身", "运动", "活力"])) {
+    return "fitness";
+  }
+  if (styleHas(style, ["beauty", "生美", "护理", "美业"])) {
+    return "beauty";
+  }
+  return "enterprise";
+}
+
+const appGalleryContent: Record<AppGalleryScenario, AppGalleryContent> = {
+  enterprise: {
+    eyebrow: "企业工作台",
+    title: "移动办公 App",
+    greeting: "上午好，李经理",
+    metricLabel: "本月业绩",
+    metricValue: "¥128,430",
+    metricHint: "较上月提升 18%，重点关注续约客户",
+    actions: ["审批", "客户", "报表", "任务"],
+    list: [
+      ["华东区客户续约待确认", "待处理"],
+      ["Q2 运营报表已生成", "已完成"],
+      ["新增 3 条商机线索", "跟进中"],
+    ],
+    nav: ["首页", "工作台", "消息", "我的"],
+    sideTitle: "移动端优先",
+    sideValue: "12 项待办",
+    sideHint: "用真实待办、客户与报表场景展示风格落地效果。",
+  },
+  ai: {
+    eyebrow: "AI 助手",
+    title: "智能 Copilot App",
+    greeting: "你好，运营同学",
+    metricLabel: "AI 摘要",
+    metricValue: "5 条建议",
+    metricHint: "已识别高意向客户，并生成下一步行动",
+    actions: ["会话", "知识", "生成", "审阅"],
+    list: [
+      ["客户续约策略已生成", "建议"],
+      ["周报自动汇总完成", "完成"],
+      ["知识库新增 12 条内容", "同步"],
+    ],
+    nav: ["助手", "任务", "知识", "我的"],
+    sideTitle: "智能工作流",
+    sideValue: "AI 建议 5",
+    sideHint: "突出对话、知识、生成和审阅等 AI App 核心动作。",
+  },
+  medical: {
+    eyebrow: "健康服务",
+    title: "医疗健康 App",
+    greeting: "今日健康概览",
+    metricLabel: "报告完成",
+    metricValue: "96%",
+    metricHint: "2 项指标需关注，建议安排复查提醒",
+    actions: ["预约", "随访", "报告", "患者"],
+    list: [
+      ["张女士体检报告待解读", "待处理"],
+      ["术后随访问卷已提交", "已完成"],
+      ["健康指标出现轻微波动", "关注"],
+    ],
+    nav: ["首页", "报告", "问诊", "我的"],
+    sideTitle: "专业可信",
+    sideValue: "3 项提醒",
+    sideHint: "适合医疗、健康管理和报告解读类移动端产品。",
+  },
+  aesthetic: {
+    eyebrow: "医美顾问",
+    title: "医美咨询 App",
+    greeting: "下午好，林顾问",
+    metricLabel: "今日预约",
+    metricValue: "18 位",
+    metricHint: "热玛吉复诊 4 位，皮肤检测 6 位",
+    actions: ["预约", "检测", "方案", "回访"],
+    list: [
+      ["王女士皮肤检测待确认", "待跟进"],
+      ["热玛吉护理方案已生成", "已完成"],
+      ["老客复购券即将到期", "提醒"],
+    ],
+    nav: ["首页", "客户", "方案", "我的"],
+    sideTitle: "高级服务",
+    sideValue: "18 位预约",
+    sideHint: "适合医美、美容顾问、会员服务等精致 App 场景。",
+  },
+  beauty: {
+    eyebrow: "生美门店",
+    title: "美容护理 App",
+    greeting: "欢迎回来，小雅",
+    metricLabel: "护理进度",
+    metricValue: "72%",
+    metricHint: "今日推荐补水护理与肩颈放松",
+    actions: ["预约", "护理", "会员", "商城"],
+    list: [
+      ["水光护理预约成功", "待到店"],
+      ["会员积分可兑换面膜", "可用"],
+      ["店长推荐舒缓护理", "推荐"],
+    ],
+    nav: ["首页", "服务", "会员", "我的"],
+    sideTitle: "亲和精致",
+    sideValue: "4 项服务",
+    sideHint: "适合生美美容、SPA、会员护理和门店服务。",
+  },
+  fitness: {
+    eyebrow: "运动计划",
+    title: "健身训练 App",
+    greeting: "今天练背和有氧",
+    metricLabel: "本周消耗",
+    metricValue: "3,280 kcal",
+    metricHint: "已完成 4 次训练，超过 72% 用户",
+    actions: ["课程", "饮食", "体测", "打卡"],
+    list: [
+      ["19:30 燃脂小团课", "预约"],
+      ["体测报告已更新", "查看"],
+      ["蛋白摄入还差 28g", "提醒"],
+    ],
+    nav: ["训练", "课程", "社群", "我的"],
+    sideTitle: "活力运动",
+    sideValue: "4 次训练",
+    sideHint: "适合健身房、私教、课程预约和训练打卡 App。",
+  },
+  local: {
+    eyebrow: "门店服务",
+    title: "本地生活 App",
+    greeting: "附近好店推荐",
+    metricLabel: "今日预约",
+    metricValue: "326 单",
+    metricHint: "到店率 86%，晚高峰服务容量充足",
+    actions: ["门店", "预约", "优惠", "评价"],
+    list: [
+      ["雅致护理中心 2km", "可约"],
+      ["周三会员日优惠上线", "活动"],
+      ["新增 48 条五星评价", "口碑"],
+    ],
+    nav: ["首页", "附近", "订单", "我的"],
+    sideTitle: "生活服务",
+    sideValue: "326 单",
+    sideHint: "适合门店、预约、服务卡和本地生活交易闭环。",
+  },
+  commerce: {
+    eyebrow: "商家运营",
+    title: "电商增长 App",
+    greeting: "今日销售正在增长",
+    metricLabel: "成交 GMV",
+    metricValue: "¥428K",
+    metricHint: "活动转化率 18.6%，建议加推会员券",
+    actions: ["订单", "商品", "活动", "直播"],
+    list: [
+      ["夏季护理套装销量上涨", "热卖"],
+      ["3 个商品库存预警", "处理"],
+      ["会员复购活动已开启", "进行中"],
+    ],
+    nav: ["首页", "订单", "商品", "我的"],
+    sideTitle: "增长运营",
+    sideValue: "+18.6%",
+    sideHint: "适合订单、商品、营销活动和商家经营移动端。",
+  },
+  finance: {
+    eyebrow: "资产管理",
+    title: "金融可信 App",
+    greeting: "账户运行稳定",
+    metricLabel: "总资产",
+    metricValue: "¥1.28M",
+    metricHint: "风险等级低，今日 4 笔交易待确认",
+    actions: ["资产", "交易", "风控", "报告"],
+    list: [
+      ["稳健组合收益更新", "查看"],
+      ["大额交易待复核", "审核"],
+      ["风险评估报告已生成", "完成"],
+    ],
+    nav: ["资产", "交易", "资讯", "我的"],
+    sideTitle: "稳重可信",
+    sideValue: "低风险",
+    sideHint: "适合金融账户、交易记录、资产管理和风控提醒。",
+  },
+  dark: {
+    eyebrow: "监控中心",
+    title: "暗色运维 App",
+    greeting: "系统运行中",
+    metricLabel: "在线节点",
+    metricValue: "18,420",
+    metricHint: "4 个风险预警已分派，处置率 98.2%",
+    actions: ["节点", "告警", "日志", "处置"],
+    list: [
+      ["华东链路延迟升高", "高"],
+      ["自动扩容已完成", "完成"],
+      ["安全巡检待确认", "待处理"],
+    ],
+    nav: ["总览", "告警", "日志", "我的"],
+    sideTitle: "暗色科技",
+    sideValue: "4 条告警",
+    sideHint: "适合深色监控、运维、指挥中心和实时数据类 App。",
+  },
+};
 
 export function legacyToEnterpriseVariant(variant: StyleCoverVariant): EnterpriseCoverVariant | "deprecated" {
   if (variant === "saas-clean-showroom") return "saas-clean";

@@ -3,7 +3,6 @@
 import type { ReactNode } from "react";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { StyleCard } from "@/components/style-card";
-import { StyleFamilyView } from "@/components/style-family-view";
 import {
   colorPreferenceFilters,
   getStyleColorPreference,
@@ -18,8 +17,6 @@ import type { StylePack } from "@/lib/catalog";
 type StylesExplorerProps = {
   styles: StylePack[];
 };
-
-type ViewMode = "cards" | "families";
 
 const colorChipStyles: Record<
   Exclude<ColorPreference, "全部">,
@@ -39,7 +36,6 @@ const colorChipStyles: Record<
 export function StylesExplorer({ styles }: StylesExplorerProps) {
   const [mood, setMood] = useState<MoodFilter>("全部");
   const [colorPreference, setColorPreference] = useState<ColorPreference>("全部");
-  const [viewMode, setViewMode] = useState<ViewMode>("families");
   const [localStyles, setLocalStyles] = useState<StylePack[]>([]);
 
   useEffect(() => {
@@ -59,8 +55,8 @@ export function StylesExplorer({ styles }: StylesExplorerProps) {
     () => normalizedStyles.filter((style) => style.source.displayLevel !== "hidden"),
     [normalizedStyles],
   );
-  const historicalStyles = useMemo(
-    () => normalizedStyles.filter((style) => style.source.displayLevel === "hidden"),
+  const hiddenVariantCount = useMemo(
+    () => normalizedStyles.filter((style) => style.source.displayLevel === "hidden").length,
     [normalizedStyles],
   );
   const styleNameById = useMemo(
@@ -77,17 +73,14 @@ export function StylesExplorer({ styles }: StylesExplorerProps) {
     () => featuredStyles.filter(matchesActiveFilters),
     [featuredStyles, matchesActiveFilters],
   );
-  const matchingHistoricalStyles = useMemo(
-    () => historicalStyles.filter(matchesActiveFilters),
-    [historicalStyles, matchesActiveFilters],
+  const matchingHiddenVariantCount = useMemo(
+    () => normalizedStyles.filter((style) => style.source.displayLevel === "hidden" && matchesActiveFilters(style)).length,
+    [matchesActiveFilters, normalizedStyles],
   );
 
   const hasActiveFilters = mood !== "全部" || colorPreference !== "全部";
-  const hasResults =
-    viewMode === "families"
-      ? filteredFeaturedStyles.length > 0 || matchingHistoricalStyles.length > 0
-      : filteredFeaturedStyles.length > 0;
-  const resultsMotionKey = `${viewMode}-${mood}-${colorPreference}-${filteredFeaturedStyles.length}-${matchingHistoricalStyles.length}`;
+  const hasResults = filteredFeaturedStyles.length > 0;
+  const resultsMotionKey = `${mood}-${colorPreference}-${filteredFeaturedStyles.length}-${matchingHiddenVariantCount}`;
   const clearFilters = () => {
     setMood("全部");
     setColorPreference("全部");
@@ -135,23 +128,16 @@ export function StylesExplorer({ styles }: StylesExplorerProps) {
 
         <div className="mt-5 flex flex-col gap-3 border-t border-[var(--styles-pitch-color-border)] pt-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-[var(--styles-pitch-color-text-secondary)]">
-            {viewMode === "cards" ? (
-              <span>
-                正在展示{" "}
-                <span className="font-semibold text-[var(--styles-pitch-color-text-primary)]">
-                  {filteredFeaturedStyles.length}
-                </span>{" "}
-                / {featuredStyles.length} 个精选风格
-              </span>
-            ) : (
-              <span>
-                正在浏览主流风格族，包含{" "}
-                <span className="font-semibold text-[var(--styles-pitch-color-text-primary)]">
-                  {filteredFeaturedStyles.length}
-                </span>{" "}
-                / {featuredStyles.length} 个精选风格。
-              </span>
-            )}
+            正在展示{" "}
+            <span className="font-semibold text-[var(--styles-pitch-color-text-primary)]">
+              {filteredFeaturedStyles.length}
+            </span>{" "}
+            / {featuredStyles.length} 个精选方向
+            {matchingHiddenVariantCount > 0 ? (
+              <span>，另有 {matchingHiddenVariantCount} 个相近方向可在详情页查看。</span>
+            ) : hiddenVariantCount > 0 ? (
+              <span>，相近方向已收纳到详情页。</span>
+            ) : null}
           </p>
 
           <div className="flex flex-wrap items-center gap-3">
@@ -167,45 +153,19 @@ export function StylesExplorer({ styles }: StylesExplorerProps) {
         </div>
       </div>
 
-      <div className="rounded-[var(--styles-pitch-radius-card)] border border-[var(--styles-pitch-color-border)] bg-white p-4 shadow-[var(--styles-pitch-shadow-card)] sm:flex sm:items-center sm:justify-between sm:gap-4">
-        <div>
-          <h2 className="text-base font-semibold text-[var(--styles-pitch-color-text-primary)]">
-            浏览方式
-          </h2>
-          <p className="mt-1 text-sm text-[var(--styles-pitch-color-text-secondary)]">
-            先看主流风格族，再进入全部风格卡片做细选。
-          </p>
-        </div>
-        <div className="mt-3 sm:mt-0">
-          <ViewModeSwitch value={viewMode} onChange={setViewMode} />
-        </div>
-      </div>
-
       {hasResults ? (
         <div key={resultsMotionKey} className="styles-results-motion space-y-8">
-          {viewMode === "families" ? (
-            <StyleFamilyView
-              featuredStyles={filteredFeaturedStyles}
-              historicalStyles={matchingHistoricalStyles}
-            />
-          ) : (
-            <>
-              {filteredFeaturedStyles.length > 0 ? (
-                <section className="space-y-5">
-                  <div className="styles-gallery-grid grid gap-6 lg:grid-cols-2">
-                    {filteredFeaturedStyles.map((style) => (
-                      <StyleCard
-                        key={style.id}
-                        normalized={style}
-                        parentStyleName={getParentStyleName(style, styleNameById)}
-                      />
-                    ))}
-                  </div>
-                </section>
-              ) : null}
-
-            </>
-          )}
+          <section className="space-y-5">
+            <div className="styles-gallery-grid grid gap-6 xl:grid-cols-2">
+              {filteredFeaturedStyles.map((style) => (
+                <StyleCard
+                  key={style.id}
+                  normalized={style}
+                  parentStyleName={getParentStyleName(style, styleNameById)}
+                />
+              ))}
+            </div>
+          </section>
         </div>
       ) : (
         <div className="rounded-[var(--styles-pitch-radius-card)] border border-dashed border-[var(--styles-pitch-color-border)] bg-white p-8 text-center shadow-[var(--styles-pitch-shadow-card)] sm:p-12">
@@ -235,39 +195,6 @@ function getParentStyleName(
   const parentStyleId = style.source.parentStyleId;
   if (!parentStyleId || parentStyleId === style.id) return undefined;
   return styleNameById.get(parentStyleId) ?? parentStyleId;
-}
-
-function ViewModeSwitch({
-  value,
-  onChange,
-}: {
-  value: ViewMode;
-  onChange: (value: ViewMode) => void;
-}) {
-  return (
-    <div className="inline-flex w-full rounded-full border border-[var(--styles-pitch-color-border)] bg-[var(--styles-pitch-color-surface-muted)] p-1 shadow-[var(--styles-pitch-shadow-card)] sm:w-fit">
-      {[
-        { id: "families", label: "风格族视图" },
-        { id: "cards", label: "全部风格卡片" },
-      ].map((option) => {
-        const active = option.id === value;
-        return (
-          <button
-            key={option.id}
-            type="button"
-            onClick={() => onChange(option.id as ViewMode)}
-            className={`min-w-0 flex-1 rounded-full px-4 py-2 text-sm font-semibold transition sm:flex-none ${
-              active
-                ? "bg-[var(--styles-pitch-color-primary-soft)] text-[var(--styles-pitch-color-primary)]"
-                : "text-[var(--styles-pitch-color-text-secondary)] hover:bg-[var(--styles-pitch-color-surface-muted)] hover:text-[var(--styles-pitch-color-text-primary)]"
-            }`}
-          >
-            {option.label}
-          </button>
-        );
-      })}
-    </div>
-  );
 }
 
 function MoodFilterGroup({

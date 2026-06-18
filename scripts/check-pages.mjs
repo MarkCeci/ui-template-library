@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import stylesData from "../data/styles.json" with { type: "json" };
 import advancedStylesData from "../data/advanced-styles-v4.json" with { type: "json" };
+import expandedStylesData from "../data/expanded-styles-v5.json" with { type: "json" };
 import templatesData from "../data/templates.json" with { type: "json" };
 
 const root = process.cwd();
@@ -73,7 +74,7 @@ function validateDynamicRoutes() {
 }
 
 function getAllStyles() {
-  return [...stylesData.styles, ...advancedStylesData.styles];
+  return [...stylesData.styles, ...advancedStylesData.styles, ...expandedStylesData.styles];
 }
 
 function validateQualityMarkers() {

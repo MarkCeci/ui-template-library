@@ -1,14 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import { EnterpriseStyleCover } from "@/components/enterprise-style-cover";
 import { Icon, type IconName } from "@/components/icon";
-import {
-  getPrimaryScenario,
-  getStyleCoverVariant,
-  getVisualKeywords,
-} from "@/components/style-showroom-cover";
+import { StyleCard } from "@/components/style-card";
 import { styles } from "@/lib/catalog";
-import { normalizeStyle } from "@/lib/style-theme";
 
 const featuredStyleIds = [
   "style-001-modern-saas-clean",
@@ -159,9 +153,9 @@ export default function HomePage() {
             浏览全部风格
           </Link>
         </div>
-        <div className="mt-5 grid gap-4">
+        <div className="mt-5 grid gap-6 xl:grid-cols-2">
           {featuredStyles.map((style) => (
-            <FeaturedStyleCard key={style!.id} style={style!} />
+            <StyleCard key={style!.id} style={style!} />
           ))}
         </div>
       </section>
@@ -219,47 +213,5 @@ function OverviewMetric({
         <small>{value}</small>
       </div>
     </div>
-  );
-}
-
-function FeaturedStyleCard({ style }: { style: NonNullable<(typeof styles)[number]> }) {
-  const normalized = normalizeStyle(style);
-  const variant = getStyleCoverVariant(normalized);
-  const visualTags = getVisualKeywords(normalized, variant).slice(0, 3);
-  const scenario = getPrimaryScenario(normalized, variant);
-
-  return (
-    <article className="grid overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:border-violet-200 hover:shadow-md xl:grid-cols-[minmax(460px,0.92fr)_minmax(320px,1fr)]">
-      <div className="home-feature-cover border-b border-slate-200 bg-slate-50 p-3 xl:border-b-0 xl:border-r">
-        <EnterpriseStyleCover style={normalized} />
-      </div>
-      <div className="flex min-h-[300px] flex-col justify-between p-5">
-        <div>
-          <p className="text-sm font-semibold text-violet-700">{scenario}</p>
-          <h3 className="mt-2 text-xl font-semibold text-slate-950">
-            {normalized.name}
-          </h3>
-          <p className="mt-3 line-clamp-2 text-sm leading-6 text-slate-600">
-            {normalized.slogan}
-          </p>
-          <div className="mt-4 flex flex-wrap gap-2">
-            {[scenario, normalized.endpoint, ...visualTags].slice(0, 5).map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-semibold text-slate-600"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-        <Link
-          href={`/styles/${normalized.id}`}
-          className="mt-5 inline-flex w-fit items-center rounded-md border border-violet-200 bg-violet-50 px-3.5 py-2 text-sm font-semibold text-violet-800 transition hover:bg-violet-100"
-        >
-          查看详情 →
-        </Link>
-      </div>
-    </article>
   );
 }

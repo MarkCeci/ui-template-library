@@ -1,5 +1,6 @@
 import catalog from "@/data/styles.json";
 import advancedStylesCatalog from "@/data/advanced-styles-v4.json";
+import expandedStylesCatalog from "@/data/expanded-styles-v5.json";
 import templatesCatalog from "@/data/templates.json";
 import componentsCatalog from "@/data/components.json";
 import promptsCatalog from "@/data/prompts.json";
@@ -86,6 +87,16 @@ export type StylePack = {
   parentStyleId?: string;
   variantName?: string;
   styleFamily?: string;
+  styleDifferentiators?: {
+    typography?: string;
+    shadow?: string;
+    iconLanguage?: string;
+    layoutRhythm?: string;
+    colorLogic?: string;
+    motion?: string;
+    border?: string;
+    atmosphere?: string;
+  };
   visualMechanism?: string;
   layoutMechanism?: string;
   componentMechanism?: string;
@@ -288,11 +299,12 @@ const templateGroups: TemplateGroup[] = [
 
 export const baseStyles = catalog.styles as StylePack[];
 export const advancedStyles = advancedStylesCatalog.styles as StylePack[];
-export const styles = [...baseStyles, ...advancedStyles];
+export const expandedStyles = expandedStylesCatalog.styles as StylePack[];
+export const styles = [...baseStyles, ...advancedStyles, ...expandedStyles];
 export const catalogMeta = {
   version: catalog.version,
   generatedAt: catalog.generated_at,
-  description: `${catalog.description} Appended ${advancedStyles.length} V4 advanced visual styles from data/advanced-styles-v4.json.`,
+  description: `${catalog.description} Appended ${advancedStyles.length} V4 advanced visual styles and ${expandedStyles.length} V5 mainstream app-first styles.`,
 };
 
 export const templates = templatesCatalog.templates as TemplateItem[];

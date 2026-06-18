@@ -882,7 +882,7 @@ function getRejectedReason(style: StylePack, input: InputState) {
     return "当前需求需要数据看板，但这个风格不以图表、指标或数据密度为核心。";
   }
 
-  return "与当前行业、平台或视觉偏好的命中较少，作为第一版主风格不够稳妥。";
+  return "与当前行业、平台或视觉偏好的命中较少，作为第一版首选方向不够稳妥。";
 }
 
 function buildDesignPrompt(

@@ -103,7 +103,7 @@ const datasets = new Map(
     const data = readJson(spec.file);
     const items =
       spec.collection === "styles"
-        ? [...data[spec.collection], ...readOptionalAdvancedStyles()]
+        ? [...data[spec.collection], ...readOptionalStyleExtensions()]
         : data[spec.collection];
     if (!Array.isArray(items)) {
       errors.push(`${spec.file}: missing array "${spec.collection}"`);
@@ -130,13 +130,15 @@ function readJson(filePath) {
   return JSON.parse(fs.readFileSync(path.join(root, filePath), "utf8"));
 }
 
-function readOptionalAdvancedStyles() {
-  const filePath = path.join(root, "data/advanced-styles-v4.json");
-  if (!fs.existsSync(filePath)) {
-    return [];
-  }
-  const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
-  return Array.isArray(data.styles) ? data.styles : [];
+function readOptionalStyleExtensions() {
+  return ["data/advanced-styles-v4.json", "data/expanded-styles-v5.json"].flatMap((file) => {
+    const filePath = path.join(root, file);
+    if (!fs.existsSync(filePath)) {
+      return [];
+    }
+    const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    return Array.isArray(data.styles) ? data.styles : [];
+  });
 }
 
 function validateItems(file, items, requiredFields) {

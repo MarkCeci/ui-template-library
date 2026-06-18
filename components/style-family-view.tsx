@@ -159,7 +159,7 @@ export function StyleFamilyView({ featuredStyles, historicalStyles }: StyleFamil
     return (
       <div className="rounded-2xl border border-dashed border-[var(--styles-pitch-color-border)] bg-white p-8 text-center">
         <p className="text-sm text-[var(--styles-pitch-color-text-secondary)]">
-          当前筛选条件下没有可展示的风格家族。
+          当前筛选条件下没有可展示的精选方向。
         </p>
       </div>
     );
@@ -185,7 +185,7 @@ export function StyleFamilyView({ featuredStyles, historicalStyles }: StyleFamil
         <div className="flex flex-col gap-3 border-b border-[var(--styles-pitch-color-border)] pb-5 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--styles-pitch-color-primary)]">
-              Style Family
+              Related Styles
             </p>
             <h2 className="mt-2 text-2xl font-semibold text-[var(--styles-pitch-color-text-primary)]">
               {activeFamily.label}
@@ -196,19 +196,19 @@ export function StyleFamilyView({ featuredStyles, historicalStyles }: StyleFamil
           </div>
           <div className="flex flex-wrap gap-2 text-xs font-semibold">
             <span className="rounded-full bg-[var(--styles-pitch-color-primary-soft)] px-3 py-1 text-[var(--styles-pitch-color-primary)]">
-              主风格 {activeFamily.mainStyles.length}
+              精选方向 {activeFamily.mainStyles.length}
             </span>
             <span className="rounded-full bg-[var(--styles-pitch-color-surface-muted)] px-3 py-1 text-[var(--styles-pitch-color-text-secondary)]">
-              变体 {activeFamily.variants.length}
+              相近方向 {activeFamily.variants.length}
             </span>
             <span className="rounded-full bg-[var(--styles-pitch-color-surface-muted)] px-3 py-1 text-[var(--styles-pitch-color-text-secondary)]">
-              hidden 历史 {activeFamily.historical.length}
+              历史方向 {activeFamily.historical.length}
             </span>
           </div>
         </div>
 
         <div className="mt-6 space-y-6">
-          <FamilyBlock title="主风格" description="优先从这些风格开始选，它们代表该家族的核心视觉方向。">
+          <FamilyBlock title="精选方向" description="优先从这些风格开始选，它们代表这一类的核心视觉方向。">
             <div className="grid gap-3 md:grid-cols-2">
               {activeFamily.mainStyles.map((style) => (
                 <FamilyStyleCard key={style.id} style={style} emphasis />
@@ -216,7 +216,7 @@ export function StyleFamilyView({ featuredStyles, historicalStyles }: StyleFamil
             </div>
           </FamilyBlock>
 
-          <FamilyBlock title="变体" description="变体用于处理颜色、密度、行业或平台侧重点，不建议当成完全独立风格理解。">
+          <FamilyBlock title="相近风格" description="这些方向在颜色、密度、行业或平台侧重点上不同，适合做进一步比较。">
             {activeFamily.variants.length ? (
               <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
                 {activeFamily.variants.map((style) => (
@@ -225,7 +225,7 @@ export function StyleFamilyView({ featuredStyles, historicalStyles }: StyleFamil
               </div>
             ) : (
               <p className="rounded-2xl bg-[var(--styles-pitch-color-surface-muted)] px-4 py-3 text-sm text-[var(--styles-pitch-color-text-secondary)]">
-                当前筛选条件下，这个家族暂无可展示变体。
+                当前筛选条件下，这一类暂无更多相近推荐。
               </p>
             )}
           </FamilyBlock>
@@ -234,10 +234,10 @@ export function StyleFamilyView({ featuredStyles, historicalStyles }: StyleFamil
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <h3 className="text-sm font-semibold text-[var(--styles-pitch-color-text-primary)]">
-                  hidden 历史风格
+                  历史方向
                 </h3>
                 <p className="mt-1 text-sm text-[var(--styles-pitch-color-text-secondary)]">
-                  {activeFamily.historical.length} 个风格已归并到这个家族，默认不展开，避免干扰选择。
+                  {activeFamily.historical.length} 个风格已收纳到这一类，默认不展开，避免干扰选择。
                 </p>
               </div>
               {activeFamily.historical.length ? (
@@ -274,7 +274,7 @@ function FamilySummaryCard({
   active: boolean;
   onEnter: () => void;
 }) {
-  const previewStyle = group.representative ?? group.mainStyles[0] ?? group.featured[0];
+  const previewStyle = pickFamilyPreviewStyle(group);
 
   return (
     <article
@@ -286,7 +286,7 @@ function FamilySummaryCard({
     >
       {previewStyle ? (
         <div className="style-family-showcase">
-          <EnterpriseStyleCover style={previewStyle} />
+          <EnterpriseStyleCover style={previewStyle} presentation="app-gallery" />
         </div>
       ) : (
         <div className="style-family-empty-showcase">
@@ -336,7 +336,7 @@ function FamilySummaryCard({
 
         <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-[var(--styles-pitch-color-border)] pt-4">
           <p className="text-sm text-[var(--styles-pitch-color-text-secondary)]">
-            {group.mainStyles.length} 个主风格 · {group.variants.length} 个变体
+            {group.mainStyles.length} 个精选方向 · {group.variants.length} 个相近方向
           </p>
           <button
             type="button"
@@ -427,19 +427,62 @@ function isMainStyle(style: NormalizedStyle) {
   return style.source.isMainStyle || (style.source.parentStyleId ?? style.id) === style.id;
 }
 
+function pickFamilyPreviewStyle(group: StyleFamilyGroup) {
+  const candidates = [
+    ...group.mainStyles,
+    ...(group.representative ? [group.representative] : []),
+    ...group.featured,
+  ];
+  const unique = Array.from(new Map(candidates.map((style) => [style.id, style])).values());
+
+  return unique.sort((a, b) => scoreFamilyPreview(b, group) - scoreFamilyPreview(a, group))[0];
+}
+
+function scoreFamilyPreview(style: NormalizedStyle, group: StyleFamilyGroup) {
+  const text = getSearchText(style);
+  let score = 0;
+
+  if (isMainStyle(style)) score += 12;
+  if (style.source.displayLevel === "hero") score += 8;
+  if (style.source.displayLevel === "hidden") score -= 12;
+  score += group.keywords.reduce((sum, keyword) => sum + (text.includes(keyword.toLowerCase()) ? 2 : 0), 0);
+
+  if (group.key === "现代 SaaS / B2B 工具") {
+    if (text.includes("saas") || text.includes("clean") || text.includes("modern") || text.includes("极简")) score += 12;
+    if (text.includes("dark") || text.includes("暗色") || text.includes("command")) score -= 16;
+    if (text.includes("ai") || text.includes("copilot") || text.includes("agent")) score -= 8;
+  }
+
+  if (group.key === "AI Copilot / Agent 工作台") {
+    if (text.includes("ai") || text.includes("copilot") || text.includes("agent") || text.includes("智能")) score += 12;
+  }
+
+  if (group.key === "深色数据大屏 / 指挥中心") {
+    if (text.includes("dark") || text.includes("暗色") || text.includes("command")) score += 12;
+  }
+
+  return score;
+}
+
 function getStyleRoleLabel(style: NormalizedStyle) {
-  if (style.source.displayLevel === "hidden") return "已归并";
+  if (style.source.displayLevel === "hidden") return "已收纳";
   if (style.source.displayLevel === "hero") return "主推";
-  return isMainStyle(style) ? "主风格" : style.source.variantName || "变体";
+  return isMainStyle(style) ? "精选方向" : getFriendlyDirectionName(style.source.variantName);
+}
+
+function getFriendlyDirectionName(value?: string) {
+  if (!value) return "相近方向";
+  return value.replace(/变体/g, "方向").replace(/主风格/g, "精选方向");
 }
 
 function getFamilyKey(style: NormalizedStyle) {
+  const explicit = explicitFamilyByStyleId(style.id);
+  if (explicit) return explicit;
+
   const raw = normalizeFamilyName(style.source.styleFamily);
   if (raw && familyDefinitions.some((item) => item.key === raw)) return raw;
 
   const text = getSearchText(style);
-  const explicit = explicitFamilyByStyleId(style.id);
-  if (explicit) return explicit;
 
   const ranked = familyDefinitions
     .map((definition) => ({
@@ -488,6 +531,14 @@ function normalizeFamilyName(value?: string) {
 
 function explicitFamilyByStyleId(id: string) {
   const text = id.toLowerCase();
+  if (
+    text.includes("style-001-modern-saas-clean") ||
+    text.includes("style-006-atlassian-teamwork") ||
+    text.includes("style-029-white-label-multitenant") ||
+    text.includes("glacier-blue")
+  ) {
+    return "现代 SaaS / B2B 工具";
+  }
   if (text.includes("liquid") || text.includes("glass") || text.includes("apple") || text.includes("premium")) {
     return "Apple / Liquid Glass 高端系统";
   }

@@ -18,6 +18,8 @@ type ThemeStyle = "normal" | "gradient" | "glass" | "linear" | "glow";
 type RadiusMode = "restrained" | "soft" | "rounded";
 type ShadowMode = "none" | "light" | "medium";
 type DensityMode = "comfortable" | "compact";
+type CaptureMode = "image" | "website";
+type AppScenario = "aesthetic-clinic" | "fitness" | "medical" | "beauty-salon";
 type PreviewTab = "app-home" | "profile" | "card-list" | "dashboard";
 type ExportTab = "css" | "tailwind" | "json";
 type ExportScope = "light" | "dark" | "both";
@@ -125,6 +127,47 @@ type ThemeRecommendation = {
   options: ThemeOptions;
 };
 
+type WebsiteCaptureResult = {
+  url: string;
+  host: string;
+  title: string;
+  description: string;
+  palette: Palette;
+  colors: string[];
+  keywords: string[];
+  screenshotPreview?: string;
+  captureMethod?: "rendered-screenshot" | "html-css-fallback";
+  captureNote?: string;
+  capturedAt: string;
+};
+
+type ScenarioContent = {
+  name: string;
+  shortName: string;
+  userName: string;
+  userRole: string;
+  greeting: string;
+  subGreeting: string;
+  heroLabel: string;
+  heroValue: string;
+  heroDescription: string;
+  quickActions: Array<{ label: string; icon: "calendar" | "customer" | "report" | "task" | "approval" | "message" }>;
+  metrics: Array<[string, string]>;
+  listTitle: string;
+  searchPlaceholder: string;
+  filters: string[];
+  listItems: Array<{ title: string; subtitle: string; tag: string; icon: "calendar" | "customer" | "report" | "task" | "approval" | "message" }>;
+  profileTitle: string;
+  profileSubtitle: string;
+  profileStats: string[];
+  profileMenu: Array<{ label: string; icon: "calendar" | "customer" | "report" | "settings" }>;
+  dashboardTitle: string;
+  dashboardSubtitle: string;
+  dashboardKpis: Array<[string, string, string]>;
+  dashboardTasks: string[];
+  tableRows: Array<[string, string, string, string, string]>;
+};
+
 const fallbackPalette: Palette = {
   vibrant: "#6D28D9",
   muted: "#64748B",
@@ -150,6 +193,192 @@ const previewTabs: Array<[PreviewTab, string]> = [
   ["dashboard", "网页仪表盘"],
 ];
 
+const appScenarios: Array<[AppScenario, string]> = [
+  ["aesthetic-clinic", "医美美容"],
+  ["fitness", "健身运动"],
+  ["medical", "医疗健康"],
+  ["beauty-salon", "生美美容"],
+];
+
+const scenarioContents: Record<AppScenario, ScenarioContent> = {
+  "aesthetic-clinic": {
+    name: "医美美容",
+    shortName: "医美",
+    userName: "林顾问",
+    userRole: "皮肤管理顾问 · 星级会员",
+    greeting: "上午好，林顾问",
+    subGreeting: "今天有 9 位客户预约到店",
+    heroLabel: "今日预约",
+    heroValue: "9 位",
+    heroDescription: "热玛吉复诊 3 位，皮肤检测 6 位",
+    quickActions: [
+      { label: "预约", icon: "calendar" },
+      { label: "客户", icon: "customer" },
+      { label: "方案", icon: "report" },
+      { label: "回访", icon: "message" },
+    ],
+    metrics: [["待确认", "3"], ["今日到店", "9"], ["成交额", "¥42,800"], ["满意度", "98%"]],
+    listTitle: "客户预约",
+    searchPlaceholder: "搜索客户 / 项目",
+    filters: ["全部", "待到店", "复诊", "高意向"],
+    listItems: [
+      { title: "周女士 · 光子嫩肤", subtitle: "14:30 到店 · 需皮肤检测", tag: "待到店", icon: "calendar" },
+      { title: "陈小姐 · 水光复诊", subtitle: "术后第 7 天回访", tag: "复诊", icon: "customer" },
+      { title: "王女士 · 抗衰方案", subtitle: "方案待确认 · 高意向", tag: "高意向", icon: "report" },
+    ],
+    profileTitle: "林顾问",
+    profileSubtitle: "皮肤管理顾问 · 本月服务 86 人",
+    profileStats: ["86 服务", "12 待访", "98% 满意"],
+    profileMenu: [
+      { label: "我的预约", icon: "calendar" },
+      { label: "客户档案", icon: "customer" },
+      { label: "疗程记录", icon: "report" },
+      { label: "门店设置", icon: "settings" },
+    ],
+    dashboardTitle: "门店预约看板",
+    dashboardSubtitle: "查看预约、项目转化和客户回访情况。",
+    dashboardKpis: [["今日预约", "9", "+18%"], ["待回访", "12", "今日"], ["成交率", "42%", "+6%"]],
+    dashboardTasks: ["热玛吉复诊客户待确认", "3 位高意向客户需跟进", "术后护理提醒已生成"],
+    tableRows: [
+      ["周女士", "光子嫩肤", "林顾问", "14:30", "待到店"],
+      ["陈小姐", "水光复诊", "赵顾问", "16:00", "复诊"],
+      ["王女士", "抗衰方案", "林顾问", "明天", "高意向"],
+    ],
+  },
+  fitness: {
+    name: "健身运动",
+    shortName: "健身",
+    userName: "张教练",
+    userRole: "私教主管 · 会员增长",
+    greeting: "早上好，张教练",
+    subGreeting: "今天有 6 节课程和 18 位会员训练",
+    heroLabel: "今日课程",
+    heroValue: "6 节",
+    heroDescription: "私教 4 节，小团课 2 节，续费提醒 5 人",
+    quickActions: [
+      { label: "课程", icon: "calendar" },
+      { label: "会员", icon: "customer" },
+      { label: "体测", icon: "report" },
+      { label: "计划", icon: "task" },
+    ],
+    metrics: [["待上课", "6"], ["训练会员", "18"], ["续费线索", "5"], ["达标率", "82%"]],
+    listTitle: "课程安排",
+    searchPlaceholder: "搜索会员 / 课程",
+    filters: ["全部", "待上课", "小团课", "续费"],
+    listItems: [
+      { title: "刘先生 · 增肌私教", subtitle: "10:00 力量训练 · 需记录体重", tag: "待上课", icon: "calendar" },
+      { title: "燃脂小团课", subtitle: "12 人报名 · 18:30 开始", tag: "小团课", icon: "task" },
+      { title: "赵女士 · 续费沟通", subtitle: "剩余 2 节课 · 推荐套餐", tag: "续费", icon: "customer" },
+    ],
+    profileTitle: "张教练",
+    profileSubtitle: "私教主管 · 本月完成 64 节课",
+    profileStats: ["64 课程", "18 会员", "82% 达标"],
+    profileMenu: [
+      { label: "我的课程", icon: "calendar" },
+      { label: "会员管理", icon: "customer" },
+      { label: "训练报表", icon: "report" },
+      { label: "训练设置", icon: "settings" },
+    ],
+    dashboardTitle: "门店训练看板",
+    dashboardSubtitle: "跟踪课程、会员活跃和续费线索。",
+    dashboardKpis: [["今日课程", "6", "+12%"], ["活跃会员", "328", "本周"], ["续费率", "76%", "+4%"]],
+    dashboardTasks: ["晚间燃脂课待确认人数", "5 位会员进入续费周期", "本周体测报告待生成"],
+    tableRows: [
+      ["刘先生", "增肌私教", "张教练", "10:00", "待上课"],
+      ["燃脂小团课", "团课", "王教练", "18:30", "已排课"],
+      ["赵女士", "续费沟通", "张教练", "明天", "高意向"],
+    ],
+  },
+  medical: {
+    name: "医疗健康",
+    shortName: "医疗",
+    userName: "王医生",
+    userRole: "全科医生 · 健康管理",
+    greeting: "您好，王医生",
+    subGreeting: "今天有 14 份报告需要查看",
+    heroLabel: "报告待读",
+    heroValue: "14 份",
+    heroDescription: "慢病随访 8 人，异常指标 3 项需提醒",
+    quickActions: [
+      { label: "问诊", icon: "message" },
+      { label: "患者", icon: "customer" },
+      { label: "报告", icon: "report" },
+      { label: "随访", icon: "calendar" },
+    ],
+    metrics: [["待问诊", "7"], ["报告", "14"], ["预警", "3"], ["随访率", "91%"]],
+    listTitle: "患者随访",
+    searchPlaceholder: "搜索患者 / 报告",
+    filters: ["全部", "待问诊", "异常", "已随访"],
+    listItems: [
+      { title: "李女士 · 血糖复查", subtitle: "空腹血糖偏高 · 建议随访", tag: "异常", icon: "report" },
+      { title: "张先生 · 血压管理", subtitle: "本周数据稳定 · 待复诊", tag: "待问诊", icon: "customer" },
+      { title: "赵女士 · 体检报告", subtitle: "报告已生成 · 待解读", tag: "待解读", icon: "approval" },
+    ],
+    profileTitle: "王医生",
+    profileSubtitle: "全科医生 · 管理患者 126 人",
+    profileStats: ["126 患者", "14 报告", "91% 随访"],
+    profileMenu: [
+      { label: "今日问诊", icon: "calendar" },
+      { label: "患者档案", icon: "customer" },
+      { label: "健康报告", icon: "report" },
+      { label: "系统设置", icon: "settings" },
+    ],
+    dashboardTitle: "健康管理看板",
+    dashboardSubtitle: "集中查看报告、随访和风险预警。",
+    dashboardKpis: [["报告待读", "14", "今日"], ["随访患者", "126", "+8%"], ["异常预警", "3", "需处理"]],
+    dashboardTasks: ["李女士血糖异常需提醒", "慢病随访名单已生成", "3 份体检报告待解读"],
+    tableRows: [
+      ["李女士", "血糖复查", "王医生", "今天", "异常"],
+      ["张先生", "血压管理", "刘医生", "昨天", "稳定"],
+      ["赵女士", "体检报告", "王医生", "周二", "待解读"],
+    ],
+  },
+  "beauty-salon": {
+    name: "生美美容",
+    shortName: "生美",
+    userName: "许店长",
+    userRole: "门店店长 · 会员运营",
+    greeting: "下午好，许店长",
+    subGreeting: "今天有 11 个护理预约待服务",
+    heroLabel: "护理预约",
+    heroValue: "11 单",
+    heroDescription: "面护 6 单，身体护理 3 单，会员续卡 2 单",
+    quickActions: [
+      { label: "预约", icon: "calendar" },
+      { label: "会员", icon: "customer" },
+      { label: "护理", icon: "task" },
+      { label: "业绩", icon: "report" },
+    ],
+    metrics: [["待服务", "11"], ["会员到店", "8"], ["续卡", "2"], ["好评", "4.9"]],
+    listTitle: "护理订单",
+    searchPlaceholder: "搜索会员 / 护理项目",
+    filters: ["全部", "待服务", "续卡", "已完成"],
+    listItems: [
+      { title: "孙小姐 · 舒缓补水护理", subtitle: "15:00 到店 · 老客复购", tag: "待服务", icon: "calendar" },
+      { title: "高女士 · 身体疏通", subtitle: "疗程第 3 次 · 需记录反馈", tag: "疗程中", icon: "task" },
+      { title: "周女士 · 会员续卡", subtitle: "余额不足 · 推荐季卡", tag: "续卡", icon: "customer" },
+    ],
+    profileTitle: "许店长",
+    profileSubtitle: "门店店长 · 本月服务 213 单",
+    profileStats: ["213 服务", "42 会员", "4.9 好评"],
+    profileMenu: [
+      { label: "门店预约", icon: "calendar" },
+      { label: "会员档案", icon: "customer" },
+      { label: "护理记录", icon: "report" },
+      { label: "门店设置", icon: "settings" },
+    ],
+    dashboardTitle: "门店经营看板",
+    dashboardSubtitle: "查看预约、会员复购和护理项目表现。",
+    dashboardKpis: [["护理预约", "11", "今日"], ["会员到店", "8", "+15%"], ["好评率", "98%", "+3%"]],
+    dashboardTasks: ["舒缓补水护理待开单", "2 位会员进入续卡周期", "本周门店好评待回复"],
+    tableRows: [
+      ["孙小姐", "补水护理", "许店长", "15:00", "待服务"],
+      ["高女士", "身体疏通", "陈美容师", "16:30", "疗程中"],
+      ["周女士", "会员续卡", "许店长", "明天", "续卡"],
+    ],
+  },
+};
+
 const exportTabs: Array<[ExportTab, string]> = [
   ["css", "CSS Variables"],
   ["tailwind", "Tailwind Config"],
@@ -157,21 +386,25 @@ const exportTabs: Array<[ExportTab, string]> = [
 ];
 
 const captureSteps = [
-  ["01", "上传参考图", "把喜欢的截图放进来"],
+  ["01", "提供参考源", "上传截图或输入网站"],
   ["02", "选择方案", "先选一个可用方向"],
   ["03", "微调主题", "只改关键颜色和风格"],
   ["04", "预览交付", "确认效果后复制给开发"],
 ] as const;
 
 export function StyleCaptureTool() {
+  const [captureMode, setCaptureMode] = useState<CaptureMode>("image");
   const [imageUrl, setImageUrl] = useState("");
   const [imageName, setImageName] = useState("");
+  const [websiteUrl, setWebsiteUrl] = useState("");
+  const [websiteResult, setWebsiteResult] = useState<WebsiteCaptureResult | null>(null);
   const [palette, setPalette] = useState<Palette>(fallbackPalette);
   const [colorModes, setColorModes] = useState<Record<ThemeMode, EditableModeColors>>(() =>
     paletteToEditableColorModes(fallbackPalette),
   );
   const [options, setOptions] = useState<ThemeOptions>(defaultOptions);
   const [styleName, setStyleName] = useState("蓝紫智能风");
+  const [appScenario, setAppScenario] = useState<AppScenario>("aesthetic-clinic");
   const [previewTab, setPreviewTab] = useState<PreviewTab>("app-home");
   const [exportTab, setExportTab] = useState<ExportTab>("css");
   const [exportScope, setExportScope] = useState<ExportScope>("both");
@@ -192,6 +425,7 @@ export function StyleCaptureTool() {
   const activeColors = colorModes[options.mode];
   const qualityChecks = useMemo(() => getThemeQualityChecks(themeTokens), [themeTokens]);
   const recommendations = useMemo(() => buildThemeRecommendations(palette), [palette]);
+  const scenarioContent = scenarioContents[appScenario];
 
   const exportCode = useMemo(
     () => ({
@@ -204,6 +438,9 @@ export function StyleCaptureTool() {
 
   async function handleUpload(file?: File) {
     if (!file) return;
+
+    setCaptureMode("image");
+    setWebsiteResult(null);
 
     if (!["image/png", "image/jpeg", "image/jpg", "image/webp"].includes(file.type)) {
       setStatus("error");
@@ -235,6 +472,46 @@ export function StyleCaptureTool() {
       setStyleName(suggestName(fallback.vibrant, fallback));
       setStatus("error");
       setMessage("自动提取失败，已使用兜底色板生成主题。");
+    }
+  }
+
+  async function handleWebsiteCapture() {
+    const url = websiteUrl.trim();
+    if (!url) {
+      setStatus("error");
+      setMessage("请输入要捕捉的网站地址，例如 https://example.com。");
+      return;
+    }
+
+    setCaptureMode("website");
+    setStatus("loading");
+    setMessage("正在解析目标网站的颜色、样式和视觉线索...");
+
+    try {
+      const response = await fetch("/api/style-capture/website", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url }),
+      });
+      const result = (await response.json()) as WebsiteCaptureResult & { error?: string };
+
+      if (!response.ok || result.error) {
+        throw new Error(result.error || "网站解析失败。");
+      }
+
+      setWebsiteResult(result);
+      setImageUrl("");
+      setImageName("");
+      setPalette(result.palette);
+      setColorModes(paletteToEditableColorModes(result.palette));
+      setSelectedRecommendation("enterprise");
+      setStyleName(suggestWebsiteStyleName(result));
+      setStatus("ready");
+      setMessage("网站视觉线索已生成主题草稿，你可以继续微调颜色和预览效果。");
+    } catch (error) {
+      setStatus("error");
+      setWebsiteResult(null);
+      setMessage(error instanceof Error ? error.message : "网站解析失败，可以改用截图上传。");
     }
   }
 
@@ -284,21 +561,26 @@ export function StyleCaptureTool() {
   function saveDraft() {
     const now = new Date().toISOString();
     const draftId = `style-capture-${Date.now()}`;
+    const fromWebsite = captureMode === "website" && websiteResult;
     const draft = {
       id: draftId,
       name: styleName || "未命名捕捉风格",
       source: "style-capture",
+      captureSource: fromWebsite ? "website" : "image",
+      sourceUrl: fromWebsite ? websiteResult.url : undefined,
       status: "draft",
       mood: [options.style === "glass" ? "高级轻奢" : options.style === "glow" ? "科技 AI" : "商务稳重"],
       colorPreference: inferColorPreference(activeTokens.colors.primary),
-      description: "从风格捕捉器生成的网页内维护草稿，可以继续微调 Token、预览和验收项。",
+      description: fromWebsite
+        ? `从 ${websiteResult.host} 捕捉生成的网页内维护草稿，可以继续微调 Token、预览和验收项。`
+        : "从风格捕捉器生成的网页内维护草稿，可以继续微调 Token、预览和验收项。",
       suitableFor: ["企业后台", "移动 App", "视觉探索"],
       notSuitableFor: ["需要严格品牌规范的正式发布"],
-      tags: ["风格捕捉", options.style, options.mode],
+      tags: [fromWebsite ? "网站捕捉" : "图片捕捉", options.style, options.mode],
       tokens: themeTokens,
       preview: {
         coverVariant: options.style === "glass" ? "glass-premium" : options.mode === "dark" ? "dark-dashboard" : "saas-clean",
-        scenarios: [previewTab, "网页仪表盘"],
+        scenarios: [appScenario, previewTab, "网页仪表盘"],
         showAppHome: true,
         showProfile: true,
         showCardList: true,
@@ -320,9 +602,11 @@ export function StyleCaptureTool() {
       },
       changelog: [
         {
-          title: "从截图生成风格草稿",
+          title: fromWebsite ? "从网站生成风格草稿" : "从截图生成风格草稿",
           type: "新增风格",
-          description: "通过上传图片提取色板，并生成浅色、深色和共享 Token。",
+          description: fromWebsite
+            ? `通过目标网站 ${websiteResult.host} 提取颜色和视觉线索，并生成浅色、深色和共享 Token。`
+            : "通过上传图片提取色板，并生成浅色、深色和共享 Token。",
           scope: "颜色 Token、预览场景、代码导出",
           owner: "设计团队",
           updatedAt: now,
@@ -348,12 +632,16 @@ export function StyleCaptureTool() {
   }
 
   function resetTheme() {
+    setCaptureMode("image");
     setImageUrl("");
     setImageName("");
+    setWebsiteUrl("");
+    setWebsiteResult(null);
     setPalette(fallbackPalette);
     setColorModes(paletteToEditableColorModes(fallbackPalette));
     setOptions(defaultOptions);
     setStyleName("蓝紫智能风");
+    setAppScenario("aesthetic-clinic");
     setStatus("idle");
     setMessage("");
   }
@@ -391,12 +679,10 @@ export function StyleCaptureTool() {
       <section className="min-w-0 overflow-hidden rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm">
         <div className="flex min-w-0 flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
           <div className="min-w-0">
-            <p className="text-sm font-semibold text-violet-700">上传一张喜欢的截图</p>
-            <h2 className="mt-1 text-2xl font-semibold tracking-tight text-slate-950">
-              我们会帮你提取颜色并生成主题
-            </h2>
+            <p className="text-sm font-semibold text-violet-700">上传截图或输入网站</p>
+            <h2 className="mt-1 text-2xl font-semibold tracking-tight text-slate-950">把视觉参考变成可用主题</h2>
             <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-500">
-              这不是普通取色器：上传图片后会生成可读性更好的 UI 语义 Token，并同步预览 App、列表和后台页面效果。
+              你可以上传图片，也可以输入目标网站。系统会提取颜色和视觉线索，生成可读性更好的 UI Token，并同步预览 App、列表和后台页面效果。
             </p>
           </div>
           <div className="flex min-w-0 flex-col gap-2 sm:flex-row sm:flex-wrap lg:shrink-0">
@@ -422,34 +708,50 @@ export function StyleCaptureTool() {
       <div className="grid min-w-0 gap-5 2xl:grid-cols-[minmax(360px,0.92fr)_minmax(560px,1.08fr)]">
         <div className="grid min-w-0 gap-5">
           <section className="rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm">
-            <SectionTitle title="1. 上传图片" helper="支持 png、jpg、jpeg、webp。" />
-            <label className="mt-4 flex min-h-[220px] cursor-pointer flex-col items-center justify-center rounded-2xl border border-dashed border-violet-200 bg-violet-50/50 p-5 text-center transition hover:bg-violet-50">
-              <input
-                type="file"
-                accept="image/png,image/jpeg,image/jpg,image/webp"
-                className="sr-only"
-                onChange={(event) => handleUpload(event.target.files?.[0])}
+            <SectionTitle
+              title="1. 提供参考来源"
+              helper="可以上传截图，也可以输入网站地址。网站捕捉会提取颜色和样式线索，不复制图片和品牌资产。"
+            />
+            <SourceModeSwitch mode={captureMode} onChange={setCaptureMode} />
+            {captureMode === "image" ? (
+              <>
+                <label className="mt-4 flex min-h-[220px] cursor-pointer flex-col items-center justify-center rounded-2xl border border-dashed border-violet-200 bg-violet-50/50 p-5 text-center transition hover:bg-violet-50">
+                  <input
+                    type="file"
+                    accept="image/png,image/jpeg,image/jpg,image/webp"
+                    className="sr-only"
+                    onChange={(event) => handleUpload(event.target.files?.[0])}
+                  />
+                  {imageUrl ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={imageUrl}
+                      alt={imageName || "上传图片预览"}
+                      className="max-h-64 w-full rounded-2xl object-contain"
+                    />
+                  ) : (
+                    <>
+                      <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-violet-700 shadow-sm">
+                        <Icon icon="layers" size={22} color="currentColor" />
+                      </span>
+                      <span className="mt-4 text-base font-semibold text-slate-950">点击上传截图</span>
+                      <span className="mt-2 text-sm leading-6 text-slate-500">
+                        例如产品截图、品牌海报、竞品页面或视觉参考图。
+                      </span>
+                    </>
+                  )}
+                </label>
+                {imageName ? <p className="mt-3 truncate text-xs font-medium text-slate-500">{imageName}</p> : null}
+              </>
+            ) : (
+              <WebsiteCapturePanel
+                websiteUrl={websiteUrl}
+                result={websiteResult}
+                status={status}
+                onUrlChange={setWebsiteUrl}
+                onCapture={handleWebsiteCapture}
               />
-              {imageUrl ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={imageUrl}
-                  alt={imageName || "上传图片预览"}
-                  className="max-h-64 w-full rounded-2xl object-contain"
-                />
-              ) : (
-                <>
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-violet-700 shadow-sm">
-                    <Icon icon="layers" size={22} color="currentColor" />
-                  </span>
-                  <span className="mt-4 text-base font-semibold text-slate-950">点击上传截图</span>
-                  <span className="mt-2 text-sm leading-6 text-slate-500">
-                    例如产品截图、品牌海报、竞品页面或视觉参考图。
-                  </span>
-                </>
-              )}
-            </label>
-            {imageName ? <p className="mt-3 truncate text-xs font-medium text-slate-500">{imageName}</p> : null}
+            )}
             <StatusMessage status={status} message={message} />
             <PalettePanel palette={palette} />
           </section>
@@ -598,6 +900,26 @@ export function StyleCaptureTool() {
 
         <section className="min-w-0 rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm 2xl:sticky 2xl:top-24 2xl:self-start">
           <SectionTitle title="4. 实时预览" helper="预览是真实业务页面，会跟随 Token 变化。" />
+          <div className="mt-4 rounded-2xl border border-slate-200 bg-slate-50 p-3">
+            <p className="text-sm font-semibold text-slate-800">App 行业场景</p>
+            <p className="mt-1 text-xs leading-5 text-slate-500">优先用移动端业务内容验证主题是否真实可用。</p>
+            <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
+              {appScenarios.map(([id, label]) => (
+                <button
+                  key={id}
+                  type="button"
+                  onClick={() => setAppScenario(id)}
+                  className={`shrink-0 rounded-full border px-3 py-2 text-sm font-semibold transition ${
+                    appScenario === id
+                      ? "border-violet-200 bg-violet-50 text-violet-800"
+                      : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+          </div>
           <div className="mt-4 flex gap-2 overflow-x-auto pb-1">
             {previewTabs.map(([id, label]) => (
               <button
@@ -614,7 +936,7 @@ export function StyleCaptureTool() {
               </button>
             ))}
           </div>
-          <ThemePreview tab={previewTab} tokens={activeTokens} name={styleName} options={options} />
+          <ThemePreview tab={previewTab} tokens={activeTokens} name={styleName} options={options} content={scenarioContent} />
         </section>
       </div>
 
@@ -686,6 +1008,140 @@ function SectionTitle({ title, helper }: { title: string; helper: string }) {
     <div>
       <h2 className="text-base font-semibold text-slate-950">{title}</h2>
       <p className="mt-1 text-sm leading-6 text-slate-500">{helper}</p>
+    </div>
+  );
+}
+
+function SourceModeSwitch({
+  mode,
+  onChange,
+}: {
+  mode: CaptureMode;
+  onChange: (mode: CaptureMode) => void;
+}) {
+  const options: Array<[CaptureMode, string, string, "layers" | "link"]> = [
+    ["image", "从图片捕捉", "适合已有截图、品牌图和视觉参考", "layers"],
+    ["website", "从网站捕捉", "输入网址，提取页面颜色和样式线索", "link"],
+  ];
+
+  return (
+    <div className="mt-4 grid gap-2 sm:grid-cols-2">
+      {options.map(([id, title, helper, icon]) => {
+        const active = mode === id;
+        return (
+          <button
+            key={id}
+            type="button"
+            onClick={() => onChange(id)}
+            className={`flex min-w-0 items-center gap-3 rounded-2xl border p-3 text-left transition ${
+              active
+                ? "border-violet-200 bg-violet-50 text-violet-900"
+                : "border-slate-200 bg-white text-slate-700 hover:border-violet-100 hover:bg-slate-50"
+            }`}
+          >
+            <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${active ? "bg-white text-violet-700" : "bg-slate-50 text-slate-500"}`}>
+              <Icon icon={icon} size={19} color="currentColor" />
+            </span>
+            <span className="min-w-0">
+              <span className="block text-sm font-semibold">{title}</span>
+              <span className="mt-0.5 block text-xs leading-5 text-slate-500">{helper}</span>
+            </span>
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+function WebsiteCapturePanel({
+  websiteUrl,
+  result,
+  status,
+  onUrlChange,
+  onCapture,
+}: {
+  websiteUrl: string;
+  result: WebsiteCaptureResult | null;
+  status: string;
+  onUrlChange: (value: string) => void;
+  onCapture: () => void;
+}) {
+  return (
+    <div className="mt-4 grid gap-4">
+      <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+        <label className="block">
+          <span className="text-sm font-semibold text-slate-700">目标网站地址</span>
+          <span className="mt-2 flex min-w-0 flex-col gap-2 sm:flex-row">
+            <input
+              value={websiteUrl}
+              onChange={(event) => onUrlChange(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter") onCapture();
+              }}
+              placeholder="https://example.com"
+              className="min-w-0 flex-1 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-semibold text-slate-950 outline-none transition focus:border-violet-300 focus:ring-4 focus:ring-violet-100"
+            />
+            <button
+              type="button"
+              onClick={onCapture}
+              disabled={status === "loading"}
+              className="rounded-xl bg-violet-700 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-violet-800 disabled:cursor-not-allowed disabled:bg-slate-300"
+            >
+              {status === "loading" ? "解析中..." : "开始解析网站"}
+            </button>
+          </span>
+        </label>
+        <div className="mt-3 flex gap-2 rounded-xl border border-blue-100 bg-blue-50 px-3 py-2 text-xs leading-5 text-blue-800">
+          <Icon icon="info-circle" size={16} color="currentColor" className="mt-0.5 shrink-0" />
+          <span>会优先渲染真实首屏截图来提取颜色和氛围；如果目标网站限制访问，再自动降级为源码颜色解析。</span>
+        </div>
+      </div>
+      {result ? <WebsiteSummaryPanel result={result} /> : null}
+    </div>
+  );
+}
+
+function WebsiteSummaryPanel({ result }: { result: WebsiteCaptureResult }) {
+  return (
+    <div className="rounded-2xl border border-emerald-100 bg-emerald-50/70 p-4">
+      <div className="flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700">Website captured</p>
+          <h3 className="mt-2 truncate text-base font-semibold text-slate-950">{result.title || result.host}</h3>
+          <p className="mt-1 truncate text-sm text-slate-500">{result.host}</p>
+        </div>
+        <span className="shrink-0 rounded-full bg-white px-2.5 py-1 text-xs font-semibold text-emerald-700">
+          {result.captureMethod === "rendered-screenshot" ? "真实首屏" : "降级解析"}
+        </span>
+      </div>
+      <p className="mt-3 line-clamp-2 text-sm leading-6 text-slate-600">{result.description}</p>
+      {result.screenshotPreview ? (
+        <div className="mt-4 overflow-hidden rounded-xl border border-white bg-white shadow-sm">
+          <div
+            aria-label={`${result.title} 首屏截图`}
+            role="img"
+            className="h-36 w-full bg-cover bg-top"
+            style={{ backgroundImage: `url(${result.screenshotPreview})` }}
+          />
+        </div>
+      ) : null}
+      <div className="mt-4 flex h-3 overflow-hidden rounded-full border border-white bg-white">
+        {result.colors.slice(0, 8).map((color) => (
+          <span key={color} className="flex-1" style={{ background: color }} />
+        ))}
+      </div>
+      {result.keywords.length ? (
+        <div className="mt-3 flex flex-wrap gap-2">
+          {result.keywords.map((keyword) => (
+            <span key={keyword} className="rounded-full bg-white px-2.5 py-1 text-xs font-semibold text-slate-600">
+              {keyword}
+            </span>
+          ))}
+        </div>
+      ) : null}
+      {result.captureNote ? (
+        <p className="mt-3 rounded-xl bg-white/80 px-3 py-2 text-xs leading-5 text-slate-500">{result.captureNote}</p>
+      ) : null}
     </div>
   );
 }
@@ -956,11 +1412,13 @@ function ThemePreview({
   tokens,
   name,
   options,
+  content,
 }: {
   tab: PreviewTab;
   tokens: ActiveThemeTokens;
   name: string;
   options: ThemeOptions;
+  content: ScenarioContent;
 }) {
   const css = tokenStyle(tokens, options);
   const heroCard = getHeroCardStyle(tokens, options.mode);
@@ -973,10 +1431,10 @@ function ThemePreview({
         className="mt-4 overflow-hidden rounded-[24px] border border-[var(--capture-border)] bg-[var(--capture-bg)] p-4 shadow-[var(--capture-shadow)]"
         style={css}
       >
-        {tab === "app-home" ? <AppHomePreview heroCard={heroCard} name={name} /> : null}
-        {tab === "profile" ? <ProfilePreview /> : null}
-        {tab === "card-list" ? <CardListPreview /> : null}
-        {tab === "dashboard" ? <DashboardPreview /> : null}
+        {tab === "app-home" ? <AppHomePreview heroCard={heroCard} name={name} content={content} /> : null}
+        {tab === "profile" ? <ProfilePreview content={content} /> : null}
+        {tab === "card-list" ? <CardListPreview content={content} /> : null}
+        {tab === "dashboard" ? <DashboardPreview content={content} /> : null}
       </div>
       <TokenDebugPanel checks={tokenChecks} heroTextColor={heroTextColor} tokens={tokens} mode={options.mode} />
     </>
@@ -986,45 +1444,59 @@ function ThemePreview({
 function AppHomePreview({
   heroCard,
   name,
+  content,
 }: {
   heroCard: React.CSSProperties;
   name: string;
+  content: ScenarioContent;
 }) {
   return (
     <PhoneFrame>
       <div className="flex items-center justify-between">
         <div>
           <p className="text-xs font-semibold text-[var(--capture-muted)]">9:41</p>
-          <h3 className="mt-6 text-xl font-semibold text-[var(--capture-text)]">上午好，李经理</h3>
-          <p className="mt-1 text-sm text-[var(--capture-muted)]">今天有 12 项待办需要处理</p>
+          <h3 className="mt-6 text-xl font-semibold text-[var(--capture-text)]">{content.greeting}</h3>
+          <p className="mt-1 text-sm text-[var(--capture-muted)]">{content.subGreeting}</p>
         </div>
         <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--capture-primary)] text-lg font-semibold text-[var(--capture-inverse)]">
-          李
+          {content.userName.slice(0, 1)}
         </div>
       </div>
       <div className="mt-5 rounded-[var(--capture-radius-xl)] border border-[var(--capture-border)] p-5 shadow-[var(--capture-floating)]" style={heroCard}>
-        <p className="text-sm font-semibold opacity-90">{name}</p>
-        <p className="mt-3 text-3xl font-bold">¥128,430</p>
-        <p className="mt-2 text-sm opacity-90">本月业绩提升 18%，重点关注续约客户</p>
+        <p className="text-sm font-semibold opacity-90">{content.heroLabel}</p>
+        <p className="mt-3 text-3xl font-bold">{content.heroValue}</p>
+        <p className="mt-2 text-sm opacity-90">{content.heroDescription}</p>
+        <p className="mt-3 w-fit rounded-full bg-white/20 px-2.5 py-1 text-xs font-semibold opacity-90">{name}</p>
+      </div>
+      <div className="mt-4 grid grid-cols-2 gap-2">
+        {content.metrics.map(([label, value]) => (
+          <div key={label} className="rounded-2xl border border-[var(--capture-border)] bg-[var(--capture-surface)] p-3 shadow-[var(--capture-card-shadow)]">
+            <p className="text-xs font-semibold text-[var(--capture-muted)]">{label}</p>
+            <p className="mt-2 text-lg font-bold text-[var(--capture-text)]">{value}</p>
+          </div>
+        ))}
       </div>
       <div className="mt-4 grid grid-cols-4 gap-2">
-        {["审批", "客户", "报表", "任务"].map((item, index) => (
-          <div key={item} className="rounded-2xl border border-[var(--capture-border)] bg-[var(--capture-surface)] p-3 text-center shadow-[var(--capture-card-shadow)]">
+        {content.quickActions.map((item) => (
+          <div key={item.label} className="rounded-2xl border border-[var(--capture-border)] bg-[var(--capture-surface)] p-3 text-center shadow-[var(--capture-card-shadow)]">
             <span className="mx-auto flex h-8 w-8 items-center justify-center rounded-xl bg-[var(--capture-primary-soft)] text-[var(--capture-primary)]">
-              <Icon icon={["approval", "customer", "bar-chart", "task"][index] as never} size={17} color="currentColor" />
+              <Icon icon={item.icon} size={17} color="currentColor" />
             </span>
-            <p className="mt-2 text-xs font-semibold text-[var(--capture-text)]">{item}</p>
+            <p className="mt-2 text-xs font-semibold text-[var(--capture-text)]">{item.label}</p>
           </div>
         ))}
       </div>
       <div className="mt-4 grid gap-2">
-        {["华东区客户续约待确认", "Q2 运营报表已生成", "新增 3 条商机线索"].map((item, index) => (
-          <div key={item} className="flex items-center gap-3 rounded-2xl border border-[var(--capture-border)] bg-[var(--capture-surface)] p-3 shadow-[var(--capture-card-shadow)]">
+        {content.listItems.map((item) => (
+          <div key={item.title} className="flex items-center gap-3 rounded-2xl border border-[var(--capture-border)] bg-[var(--capture-surface)] p-3 shadow-[var(--capture-card-shadow)]">
             <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[var(--capture-surface-muted)] text-[var(--capture-primary)]">
-              <Icon icon={["refresh", "report", "lead"][index] as never} size={17} color="currentColor" />
+              <Icon icon={item.icon} size={17} color="currentColor" />
             </span>
-            <p className="min-w-0 flex-1 text-sm font-semibold text-[var(--capture-text)]">{item}</p>
-            <StatusPill>待处理</StatusPill>
+            <div className="min-w-0 flex-1">
+              <p className="truncate text-sm font-semibold text-[var(--capture-text)]">{item.title}</p>
+              <p className="mt-0.5 truncate text-xs text-[var(--capture-muted)]">{item.subtitle}</p>
+            </div>
+            <StatusPill>{item.tag}</StatusPill>
           </div>
         ))}
       </div>
@@ -1033,19 +1505,19 @@ function AppHomePreview({
   );
 }
 
-function ProfilePreview() {
+function ProfilePreview({ content }: { content: ScenarioContent }) {
   return (
     <PhoneFrame>
       <div className="rounded-[var(--capture-radius-xl)] border border-[var(--capture-border)] bg-[var(--capture-gradient-card)] p-5 shadow-[var(--capture-card-shadow)]">
         <div className="flex items-center gap-3">
-          <div className="h-14 w-14 rounded-2xl bg-[var(--capture-primary)] text-center text-xl font-bold leading-[56px] text-[var(--capture-inverse)]">李</div>
+          <div className="h-14 w-14 rounded-2xl bg-[var(--capture-primary)] text-center text-xl font-bold leading-[56px] text-[var(--capture-inverse)]">{content.userName.slice(0, 1)}</div>
           <div>
-            <h3 className="text-lg font-semibold text-[var(--capture-text)]">李经理</h3>
-            <p className="text-sm text-[var(--capture-muted)]">企业客户部 · 高级会员</p>
+            <h3 className="text-lg font-semibold text-[var(--capture-text)]">{content.profileTitle}</h3>
+            <p className="text-sm text-[var(--capture-muted)]">{content.profileSubtitle}</p>
           </div>
         </div>
         <div className="mt-5 grid grid-cols-3 gap-2">
-          {["24 完成", "6 待办", "86% 达成"].map((item) => (
+          {content.profileStats.map((item) => (
             <div key={item} className="rounded-2xl border border-[var(--capture-border)] bg-[var(--capture-surface-elevated)] p-3 text-center text-sm font-semibold text-[var(--capture-text)]">
               {item}
             </div>
@@ -1053,10 +1525,10 @@ function ProfilePreview() {
         </div>
       </div>
       <div className="mt-4 grid gap-2">
-        {["我的审批", "我的客户", "数据报表", "系统设置"].map((item, index) => (
-          <div key={item} className="flex items-center gap-3 rounded-2xl border border-[var(--capture-border)] bg-[var(--capture-surface)] p-4 shadow-[var(--capture-card-shadow)]">
-            <Icon icon={["approval", "customer", "bar-chart", "settings"][index] as never} size={18} color="var(--capture-text-accent)" />
-            <span className="flex-1 text-sm font-semibold text-[var(--capture-text)]">{item}</span>
+        {content.profileMenu.map((item) => (
+          <div key={item.label} className="flex items-center gap-3 rounded-2xl border border-[var(--capture-border)] bg-[var(--capture-surface)] p-4 shadow-[var(--capture-card-shadow)]">
+            <Icon icon={item.icon} size={18} color="var(--capture-text-accent)" />
+            <span className="flex-1 text-sm font-semibold text-[var(--capture-text)]">{item.label}</span>
             <span className="text-[var(--capture-muted)]">›</span>
           </div>
         ))}
@@ -1066,16 +1538,16 @@ function ProfilePreview() {
   );
 }
 
-function CardListPreview() {
+function CardListPreview({ content }: { content: ScenarioContent }) {
   return (
     <PhoneFrame>
-      <h3 className="text-xl font-semibold text-[var(--capture-text)]">客户跟进</h3>
+      <h3 className="text-xl font-semibold text-[var(--capture-text)]">{content.listTitle}</h3>
       <div className="mt-4 flex items-center gap-2 rounded-2xl bg-[var(--capture-surface-muted)] px-3 py-3 text-sm text-[var(--capture-muted)]">
         <Icon icon="search" size={16} color="currentColor" />
-        搜索客户 / 项目
+        {content.searchPlaceholder}
       </div>
       <div className="mt-3 flex gap-2 overflow-hidden">
-        {["全部", "待跟进", "高优先级"].map((item, index) => (
+        {content.filters.map((item, index) => (
           <span
             key={item}
             className={`rounded-full px-3 py-1.5 text-xs font-semibold ${
@@ -1089,21 +1561,17 @@ function CardListPreview() {
         ))}
       </div>
       <div className="mt-4 grid gap-3">
-        {[
-          ["星河科技", "续约沟通", "高优先级"],
-          ["云启软件", "方案确认", "进行中"],
-          ["蓝海集团", "合同审批", "待处理"],
-        ].map(([name, step, tag]) => (
-          <div key={name} className="rounded-2xl border border-[var(--capture-border)] bg-[var(--capture-surface)] p-4 shadow-[var(--capture-card-shadow)]">
+        {content.listItems.map((item) => (
+          <div key={item.title} className="rounded-2xl border border-[var(--capture-border)] bg-[var(--capture-surface)] p-4 shadow-[var(--capture-card-shadow)]">
             <div className="flex items-center justify-between gap-3">
-              <div>
-                <p className="font-semibold text-[var(--capture-text)]">{name}</p>
-                <p className="mt-1 text-sm text-[var(--capture-muted)]">{step} · 李经理</p>
+              <div className="min-w-0">
+                <p className="truncate font-semibold text-[var(--capture-text)]">{item.title}</p>
+                <p className="mt-1 truncate text-sm text-[var(--capture-muted)]">{item.subtitle}</p>
               </div>
-              <StatusPill>{tag}</StatusPill>
+              <StatusPill>{item.tag}</StatusPill>
             </div>
             <button className="mt-3 rounded-xl bg-[var(--capture-primary)] px-3 py-2 text-sm font-semibold text-[var(--capture-inverse)]">
-              添加跟进
+              查看详情
             </button>
           </div>
         ))}
@@ -1112,24 +1580,21 @@ function CardListPreview() {
   );
 }
 
-function DashboardPreview() {
+function DashboardPreview({ content }: { content: ScenarioContent }) {
   return (
     <div className="min-h-[520px] rounded-[var(--capture-radius-xl)] bg-[var(--capture-surface)] p-4 shadow-[var(--capture-card-shadow)]">
       <div className="flex items-center justify-between border-b border-[var(--capture-divider)] pb-4">
         <div>
-          <p className="text-xs font-semibold text-[var(--capture-text-accent)]">AIMIRA Ops</p>
-          <h3 className="mt-1 text-xl font-semibold text-[var(--capture-text)]">客户运营看板</h3>
+          <p className="text-xs font-semibold text-[var(--capture-text-accent)]">AIMIRA {content.shortName}</p>
+          <h3 className="mt-1 text-xl font-semibold text-[var(--capture-text)]">{content.dashboardTitle}</h3>
+          <p className="mt-1 text-sm text-[var(--capture-muted)]">{content.dashboardSubtitle}</p>
         </div>
         <button className="rounded-xl bg-[var(--capture-primary)] px-4 py-2 text-sm font-semibold text-[var(--capture-inverse)]">
-          新建任务
+          新建预约
         </button>
       </div>
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
-        {[
-          ["活跃客户", "2,846", "+12%"],
-          ["待跟进", "128", "今日"],
-          ["续约率", "86%", "+6%"],
-        ].map(([label, value, change]) => (
+        {content.dashboardKpis.map(([label, value, change]) => (
           <div key={label} className="rounded-2xl border border-[var(--capture-border)] bg-[var(--capture-surface-elevated)] p-4">
             <p className="text-sm font-semibold text-[var(--capture-muted)]">{label}</p>
             <p className="mt-3 text-2xl font-bold text-[var(--capture-text)]">{value}</p>
@@ -1149,7 +1614,7 @@ function DashboardPreview() {
         <div className="rounded-2xl border border-[var(--capture-border)] bg-[var(--capture-surface-elevated)] p-4">
           <p className="font-semibold text-[var(--capture-text)]">任务提醒</p>
           <div className="mt-4 grid gap-2">
-            {["华东区续约报价需确认", "3 条商机线索待分配", "Q2 报表已生成待复核"].map((item) => (
+            {content.dashboardTasks.map((item) => (
               <p key={item} className="rounded-xl bg-[var(--capture-surface-muted)] px-3 py-2 text-sm font-semibold text-[var(--capture-text)]">{item}</p>
             ))}
           </div>
@@ -1157,13 +1622,9 @@ function DashboardPreview() {
       </div>
       <div className="mt-4 overflow-hidden rounded-2xl border border-[var(--capture-border)]">
         <div className="grid grid-cols-5 bg-[var(--capture-surface-muted)] px-4 py-3 text-sm font-semibold text-[var(--capture-muted)]">
-          <span>客户名称</span><span>阶段</span><span>负责人</span><span>最近跟进</span><span>状态</span>
+          <span>名称</span><span>项目</span><span>负责人</span><span>时间</span><span>状态</span>
         </div>
-        {[
-          ["星河科技", "续约沟通", "李经理", "今天", "高优先级"],
-          ["云启软件", "方案确认", "周主管", "昨天", "进行中"],
-          ["蓝海集团", "合同审批", "王敏", "周二", "待处理"],
-        ].map((row) => (
+        {content.tableRows.map((row) => (
           <div key={row[0]} className="grid grid-cols-5 border-t border-[var(--capture-divider)] px-4 py-3 text-sm font-semibold text-[var(--capture-text)]">
             {row.slice(0, 4).map((cell) => <span key={cell}>{cell}</span>)}
             <span className="w-fit rounded-full bg-[var(--capture-primary-soft)] px-2 py-1 text-xs text-[var(--capture-text-accent)]">{row[4]}</span>
@@ -1917,6 +2378,21 @@ function suggestName(primary: string, palette: Palette) {
   if (hue >= 20 && hue < 70) return "橙金增长风";
   if (hue >= 200 && hue < 240) return "冰川专业风";
   return "图片捕捉风";
+}
+
+function suggestWebsiteStyleName(result: WebsiteCaptureResult) {
+  const baseName = result.keywords.includes("黑金轻奢")
+    ? "黑金轻奢风"
+    : result.keywords.includes("美业品牌")
+      ? "美业品牌风"
+      : suggestName(result.palette.vibrant, result.palette);
+  const brand = result.title
+    .replace(/\s+/g, " ")
+    .split(/[|｜\-–—]/)[0]
+    .trim()
+    .slice(0, 14);
+
+  return brand ? `${brand} ${baseName}` : `${result.host} ${baseName}`;
 }
 
 function inferColorPreference(primary: string) {

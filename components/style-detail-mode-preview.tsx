@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { AdminPreview, MobilePreview } from "@/components/style-preview-panels";
+import { RealScenarioPreview } from "@/components/real-scenario-preview";
 import type { NormalizedStyle } from "@/lib/style-theme";
 
 type PreviewMode = "light" | "dark";
@@ -30,18 +30,34 @@ export function StyleDetailModePreview({ style }: { style: NormalizedStyle }) {
         <p className="text-sm text-[#9CA3AF]">深色预览基于同一主色生成，用于判断夜间和大屏适配方向。</p>
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="overflow-hidden rounded-2xl border border-[#E9ECEF] bg-white">
-          <div className="border-b border-[#E9ECEF] px-4 py-3">
-            <p className="text-sm font-semibold text-[#111827]">后台 Dashboard 预览</p>
+      <div className="grid gap-5 xl:grid-cols-[1.12fr_0.88fr]">
+        <div className="overflow-hidden rounded-[24px] border border-[#E9ECEF] bg-white shadow-[0_16px_40px_rgba(15,23,42,0.06)]">
+          <div className="border-b border-[#E9ECEF] px-5 py-4">
+            <p className="text-sm font-semibold text-[#111827]">后台 Dashboard 真实场景预览</p>
+            <p className="mt-1 text-xs leading-5 text-[#6B7280]">用客户运营看板、KPI、趋势图、任务提醒和业务表格检查风格是否能落到真实后台。</p>
           </div>
-          <AdminPreview style={previewStyle} size="detail" />
+          <RealScenarioPreview
+            style={previewStyle}
+            platform="dashboard"
+            state="default"
+            showControls={false}
+            showPlatformTabs={false}
+            density="comfortable"
+          />
         </div>
-        <div className="overflow-hidden rounded-2xl border border-[#E9ECEF] bg-white">
-          <div className="border-b border-[#E9ECEF] px-4 py-3">
-            <p className="text-sm font-semibold text-[#111827]">移动端 App 首页预览</p>
+        <div className="overflow-hidden rounded-[24px] border border-[#E9ECEF] bg-white shadow-[0_16px_40px_rgba(15,23,42,0.06)]">
+          <div className="border-b border-[#E9ECEF] px-5 py-4">
+            <p className="text-sm font-semibold text-[#111827]">移动端 App 首页真实场景预览</p>
+            <p className="mt-1 text-xs leading-5 text-[#6B7280]">用问候语、核心业绩卡、快捷入口、待办列表和底部导航检查 App 端效果。</p>
           </div>
-          <MobilePreview style={previewStyle} size="detail" />
+          <RealScenarioPreview
+            style={previewStyle}
+            platform="app"
+            state="default"
+            showControls={false}
+            showPlatformTabs={false}
+            density="comfortable"
+          />
         </div>
       </div>
     </div>

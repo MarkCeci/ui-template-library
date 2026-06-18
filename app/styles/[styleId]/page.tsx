@@ -84,11 +84,11 @@ export default async function StyleDetailPage({
               </div>
               {!isMainStyle ? (
                 <p className="mt-5 text-sm text-[#6B7280]">
-                  属于：
+                  相近方向：
                   <Link href={`/styles/${parentStyle.id}`} className="font-semibold text-[#6C5CE7] hover:underline">
                     {parentStyle.name}
                   </Link>
-                  {sourceStyle.variantName ? ` · ${sourceStyle.variantName}` : null}
+                  {sourceStyle.variantName ? ` · ${getFriendlyDirectionName(sourceStyle.variantName)}` : null}
                 </p>
               ) : null}
             </div>
@@ -163,9 +163,9 @@ export default async function StyleDetailPage({
         </div>
 
         <Section
-          eyebrow="Variants"
-          title={isMainStyle ? "主风格下的变体" : "所属主风格与同族变体"}
-          description={isMainStyle ? "主风格负责基础气质，变体用于处理不同业务密度、颜色或行业语境。" : "当前风格已归入一个主风格体系，可和同族变体一起比较选择。"}
+          eyebrow="Related"
+          title="相近风格推荐"
+          description="这些风格和当前方向接近，但在颜色、质感、信息密度或适用场景上有所不同。"
         >
           <VariantSection
             currentStyle={style}
@@ -182,12 +182,12 @@ export default async function StyleDetailPage({
 function HiddenNotice({ style, parentStyle }: { style: NormalizedStyle; parentStyle: NormalizedStyle }) {
   return (
     <div className="rounded-2xl border border-amber-200 bg-amber-50 px-5 py-4 text-sm leading-6 text-amber-900">
-      <span className="font-semibold">该风格已归并为某主风格变体。</span>
+      <span className="font-semibold">该风格已收纳为相近方向。</span>
       当前仍可访问详情用于历史追溯；建议优先查看
       <Link href={`/styles/${parentStyle.id}`} className="mx-1 font-semibold underline underline-offset-4">
         {parentStyle.name}
       </Link>
-      ，再决定是否使用 {style.name} 作为局部变体。
+      ，再决定是否使用 {style.name} 作为局部方向。
     </div>
   );
 }
@@ -350,7 +350,7 @@ function VariantSection({
   return (
     <div className="space-y-4">
       {!isMainStyle ? (
-        <VariantCard style={parentStyle} note="所属主风格" />
+        <VariantCard style={parentStyle} note="推荐先看" />
       ) : null}
       {list.length ? (
         <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
@@ -358,13 +358,13 @@ function VariantSection({
             <VariantCard
               key={item.id}
               style={item}
-              note={item.id === currentStyle.id ? "当前风格" : item.source.variantName || getDisplayBadge(item.source, item.source.isMainStyle ?? false).label}
+              note={item.id === currentStyle.id ? "当前风格" : getFriendlyDirectionName(item.source.variantName)}
             />
           ))}
         </div>
       ) : (
         <p className="rounded-2xl bg-[#F7F8FA] px-4 py-3 text-sm text-[#6B7280]">
-          当前主风格暂无单独变体，可以直接作为标准版使用。
+          当前方向暂无更多相近推荐，可以直接作为标准方案使用。
         </p>
       )}
     </div>
@@ -372,6 +372,8 @@ function VariantSection({
 }
 
 function VariantCard({ style, note }: { style: NormalizedStyle; note: string }) {
+  const differentiators = getVariantDifferentiators(style);
+
   return (
     <Link
       href={`/styles/${style.id}`}
@@ -382,8 +384,46 @@ function VariantCard({ style, note }: { style: NormalizedStyle; note: string }) 
       <p className="mt-2 line-clamp-2 text-xs leading-5 text-[#6B7280]">
         {style.source.positioning || style.description}
       </p>
+      {differentiators.length ? (
+        <div className="mt-3 flex flex-wrap gap-1.5">
+          {differentiators.map((item) => (
+            <span key={item} className="rounded-full bg-white px-2 py-1 text-[11px] font-semibold text-[#667085]">
+              {item}
+            </span>
+          ))}
+        </div>
+      ) : null}
     </Link>
   );
+}
+
+function getVariantDifferentiators(style: NormalizedStyle) {
+  const diff = style.source.styleDifferentiators;
+  const text = [
+    diff?.typography,
+    diff?.shadow,
+    diff?.iconLanguage,
+    diff?.layoutRhythm,
+    diff?.border,
+  ].filter(Boolean).join(" ");
+
+  const rules: Array<[RegExp, string]> = [
+    [/细字|轻量/, "轻字重"],
+    [/粗|强标题/, "强标题"],
+    [/宽字距|字距/, "宽字距"],
+    [/等宽|mono/i, "等宽"],
+    [/紧凑|dense|compact/i, "高密度"],
+    [/宽松|超大留白|relaxed/i, "大留白"],
+    [/柔光|软阴影/, "柔光阴影"],
+    [/硬质|清晰硬/, "硬阴影"],
+    [/无阴影|扁平/, "扁平"],
+    [/实心|填充/, "面性图标"],
+    [/线性|细线/, "线性图标"],
+    [/虚线/, "虚线分割"],
+    [/主题色|渐变|金属/, "强调描边"],
+  ];
+
+  return Array.from(new Set(rules.flatMap(([pattern, label]) => (pattern.test(text) ? [label] : [])))).slice(0, 4);
 }
 
 function Badge({ children, tone }: { children: React.ReactNode; tone: "primary" | "muted" | "score" | "hidden" }) {
@@ -399,10 +439,15 @@ function Badge({ children, tone }: { children: React.ReactNode; tone: "primary" 
 }
 
 function getDisplayBadge(style: StylePack, isMainStyle: boolean): { label: string; tone: "primary" | "muted" | "score" | "hidden" } {
-  if (style.displayLevel === "hidden") return { label: "已归并", tone: "hidden" };
+  if (style.displayLevel === "hidden") return { label: "相近方向", tone: "hidden" };
   if (style.displayLevel === "hero") return { label: "主推", tone: "primary" };
-  if (isMainStyle) return { label: "主风格", tone: "primary" };
-  return { label: "变体", tone: "muted" };
+  if (isMainStyle) return { label: "精选风格", tone: "primary" };
+  return { label: "相近风格", tone: "muted" };
+}
+
+function getFriendlyDirectionName(value?: string) {
+  if (!value) return "相近风格";
+  return value.replace(/变体/g, "方向").replace(/主风格/g, "精选方向");
 }
 
 function pickItems(items: string[], count: number) {
