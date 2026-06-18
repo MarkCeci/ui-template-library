@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import { EnterpriseStyleCover } from "@/components/enterprise-style-cover";
 import { ColorSwatches } from "@/components/style-preview-panels";
 import type { NormalizedStyle } from "@/lib/style-theme";
 
@@ -14,6 +15,9 @@ type FamilyDefinition = {
   key: string;
   label: string;
   description: string;
+  tone: string;
+  bestFor: string[];
+  keywords: string[];
 };
 
 type StyleFamilyGroup = FamilyDefinition & {
@@ -21,38 +25,105 @@ type StyleFamilyGroup = FamilyDefinition & {
   historical: NormalizedStyle[];
   mainStyles: NormalizedStyle[];
   variants: NormalizedStyle[];
+  representative?: NormalizedStyle;
 };
 
 const familyDefinitions: FamilyDefinition[] = [
   {
-    key: "企业后台基础",
-    label: "企业后台基础",
-    description: "稳定、清晰、可维护，适合 CRM、ERP、OA、SaaS 后台和数据录入流程。",
+    key: "现代 SaaS / B2B 工具",
+    label: "现代 SaaS / B2B 工具",
+    description: "浅色、留白、卡片化，适合客户运营、项目管理、团队协作等企业 SaaS。",
+    tone: "清爽、可信、低学习成本",
+    bestFor: ["企业后台", "客户运营", "协作工具"],
+    keywords: ["saas", "b2b", "minimal", "modern", "客户", "运营", "项目", "协作"],
   },
   {
-    key: "AI 科技",
-    label: "AI 科技",
-    description: "强调智能助手、推荐、自动化和轻科技感，适合 AI 工具与 Copilot 工作台。",
+    key: "Linear / 极简效率",
+    label: "Linear / 极简效率",
+    description: "更克制、更工具化，适合任务流、开发者平台、资源管理和高频操作界面。",
+    tone: "极简、高效、结构清楚",
+    bestFor: ["任务管理", "开发者工具", "资源控制台"],
+    keywords: ["linear", "developer", "console", "devops", "cloud", "resource", "资源", "开发者", "控制台", "效率"],
   },
   {
-    key: "深色数据",
-    label: "深色数据",
-    description: "面向监控、大屏、运维和高信息密度分析场景，突出可视化和状态感知。",
+    key: "AI Copilot / Agent 工作台",
+    label: "AI Copilot / Agent 工作台",
+    description: "突出对话、知识卡片和智能建议，适合 AI 助手、Agent、智能分析产品。",
+    tone: "智能、轻科技、辅助决策",
+    bestFor: ["AI 助手", "智能分析", "知识工作台"],
+    keywords: ["ai", "copilot", "agent", "assistant", "chat", "education", "智能", "助手", "知识", "教育"],
   },
   {
-    key: "高级视觉",
-    label: "高级视觉",
-    description: "适合品牌感更强的企业产品，用玻璃、极光、黑金等机制提升质感。",
+    key: "Apple / Liquid Glass 高端系统",
+    label: "Apple / Liquid Glass 高端系统",
+    description: "玻璃、半透明和柔和光感，适合需要高级感但仍要可读的品牌型产品。",
+    tone: "高级、轻盈、未来感",
+    bestFor: ["品牌型产品", "高端工具", "移动体验"],
+    keywords: ["apple", "liquid", "glass", "premium", "aqua", "aurora", "高级", "轻奢", "玻璃", "极光"],
   },
   {
-    key: "行业业务",
-    label: "行业业务",
-    description: "围绕医疗、金融、本地生活、电商、教育等行业任务组织视觉与组件。",
+    key: "企业 ERP / CRM 表格",
+    label: "企业 ERP / CRM 表格",
+    description: "表格、筛选、审批和批量操作优先，适合复杂管理后台和数据录入流程。",
+    tone: "稳重、高密度、强管理",
+    bestFor: ["ERP / CRM", "审批流程", "主数据管理"],
+    keywords: ["enterprise", "table", "erp", "crm", "salesforce", "sap", "carbon", "process", "approval", "表格", "审批", "流程", "主数据"],
   },
   {
-    key: "特殊机制",
-    label: "特殊机制",
-    description: "用于 Linear、Web3、开发者控制台等有明确交互机制和技术语境的项目。",
+    key: "深色数据大屏 / 指挥中心",
+    label: "深色数据大屏 / 指挥中心",
+    description: "深色、KPI、监控图表和告警列表，适合运营大屏、运维、安全和指挥中心。",
+    tone: "沉浸、数据化、状态感强",
+    bestFor: ["数据大屏", "监控中心", "安全运营"],
+    keywords: ["dark", "dashboard", "data", "visualization", "soc", "security", "monitor", "暗色", "大屏", "数据", "监控", "指挥"],
+  },
+  {
+    key: "金融科技 / 可信交易",
+    label: "金融科技 / 可信交易",
+    description: "强调资产、交易、风控和可信感，适合金融、支付、风控和经营分析。",
+    tone: "稳重、可信、精密",
+    bestFor: ["金融系统", "资产看板", "风控交易"],
+    keywords: ["finance", "fintech", "trust", "risk", "asset", "payment", "金融", "资产", "风控", "交易", "可信"],
+  },
+  {
+    key: "医疗健康 / 清洁专业",
+    label: "医疗健康 / 清洁专业",
+    description: "蓝绿、留白和清洁层级，适合健康报告、医疗管理和检测服务。",
+    tone: "干净、专业、安心",
+    bestFor: ["医疗健康", "检测报告", "患者管理"],
+    keywords: ["medical", "health", "doctor", "patient", "report", "医疗", "健康", "检测", "报告", "患者"],
+  },
+  {
+    key: "电商运营 / 增长后台",
+    label: "电商运营 / 增长后台",
+    description: "订单、商品、活动和转化率优先，适合电商、商家运营和增长工具。",
+    tone: "活跃、运营感、目标明确",
+    bestFor: ["电商运营", "订单增长", "营销活动"],
+    keywords: ["ecommerce", "commerce", "growth", "merchant", "order", "shop", "电商", "商家", "订单", "增长", "营销"],
+  },
+  {
+    key: "本地生活 / 门店服务",
+    label: "本地生活 / 门店服务",
+    description: "门店、预约、服务卡和评价标签，适合生活服务、到店和区域运营。",
+    tone: "亲和、生活化、轻运营",
+    bestFor: ["门店服务", "预约订单", "本地生活"],
+    keywords: ["local", "life", "service", "store", "booking", "appointment", "本地生活", "门店", "预约", "服务", "到店"],
+  },
+  {
+    key: "年轻消费 / 内容社区",
+    label: "年轻消费 / 内容社区",
+    description: "更活力、更轻社交，适合内容社区、活动、会员和年轻消费产品。",
+    tone: "活力、轻松、视觉记忆点强",
+    bestFor: ["内容社区", "会员活动", "年轻消费"],
+    keywords: ["young", "content", "community", "pink", "red", "dopamine", "activity", "年轻", "内容", "社区", "活动", "红粉"],
+  },
+  {
+    key: "国潮文化 / 新消费品牌",
+    label: "国潮文化 / 新消费品牌",
+    description: "红金、文化符号和品牌仪式感，适合文旅、茶饮、新消费和文化产品。",
+    tone: "文化感、品牌感、东方气质",
+    bestFor: ["文旅品牌", "茶饮零售", "文化项目"],
+    keywords: ["guochao", "culture", "oriental", "red", "gold", "tea", "travel", "国潮", "文化", "文旅", "茶饮", "红金"],
   },
 ];
 
@@ -67,6 +138,7 @@ export function StyleFamilyView({ featuredStyles, historicalStyles }: StyleFamil
         const historical = historicalStyles.filter((style) => getFamilyKey(style) === definition.key);
         const mainStyles = featured.filter(isMainStyle);
         const variants = featured.filter((style) => !isMainStyle(style));
+        const representative = pickRepresentativeStyle(definition, mainStyles.length ? mainStyles : featured, historical);
 
         return {
           ...definition,
@@ -74,6 +146,7 @@ export function StyleFamilyView({ featuredStyles, historicalStyles }: StyleFamil
           historical,
           mainStyles: mainStyles.length ? mainStyles : featured.slice(0, 2),
           variants,
+          representative,
         };
       }),
     [featuredStyles, historicalStyles],
@@ -201,54 +274,78 @@ function FamilySummaryCard({
   active: boolean;
   onEnter: () => void;
 }) {
-  const previewStyles = group.mainStyles.slice(0, 2);
+  const previewStyle = group.representative ?? group.mainStyles[0] ?? group.featured[0];
 
   return (
     <article
-      className={`rounded-[var(--styles-pitch-radius-card)] border bg-white p-5 shadow-[var(--styles-pitch-shadow-card)] transition ${
+      className={`style-family-card rounded-[var(--styles-pitch-radius-card)] border bg-white shadow-[var(--styles-pitch-shadow-card)] transition ${
         active
           ? "border-[var(--styles-pitch-color-primary-soft)] ring-1 ring-[var(--styles-pitch-color-primary-soft)]"
           : "border-[var(--styles-pitch-color-border)] hover:-translate-y-0.5 hover:border-[#DFE3E8] hover:shadow-[var(--styles-pitch-shadow-card-hover)]"
       }`}
     >
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <h3 className="text-lg font-semibold text-[var(--styles-pitch-color-text-primary)]">
-            {group.label}
-          </h3>
-          <p className="mt-2 text-sm leading-6 text-[var(--styles-pitch-color-text-secondary)]">
-            {group.description}
-          </p>
+      {previewStyle ? (
+        <div className="style-family-showcase">
+          <EnterpriseStyleCover style={previewStyle} />
         </div>
-        <span className="shrink-0 rounded-full bg-[var(--styles-pitch-color-primary-soft)] px-2.5 py-1 text-xs font-semibold text-[var(--styles-pitch-color-primary)]">
-          {group.featured.length}
-        </span>
-      </div>
+      ) : (
+        <div className="style-family-empty-showcase">
+          <span>{group.tone}</span>
+        </div>
+      )}
 
-      <div className="mt-4 grid gap-2">
-        {previewStyles.map((style) => (
-          <div key={style.id} className="rounded-xl bg-[var(--styles-pitch-color-surface-muted)] p-3">
+      <div className="p-5">
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--styles-pitch-color-primary)]">
+              {group.tone}
+            </p>
+            <h3 className="mt-2 text-lg font-semibold text-[var(--styles-pitch-color-text-primary)]">
+              {group.label}
+            </h3>
+            <p className="mt-2 line-clamp-2 text-sm leading-6 text-[var(--styles-pitch-color-text-secondary)]">
+              {group.description}
+            </p>
+          </div>
+          <span className="shrink-0 rounded-full bg-[var(--styles-pitch-color-primary-soft)] px-2.5 py-1 text-xs font-semibold text-[var(--styles-pitch-color-primary)]">
+            {group.featured.length}
+          </span>
+        </div>
+
+        <div className="mt-4 flex flex-wrap gap-2">
+          {group.bestFor.slice(0, 3).map((item) => (
+            <span
+              key={item}
+              className="rounded-full bg-[var(--styles-pitch-color-surface-muted)] px-2.5 py-1 text-xs font-semibold text-[var(--styles-pitch-color-text-secondary)]"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+
+        {previewStyle ? (
+          <div className="mt-4 rounded-xl bg-[var(--styles-pitch-color-surface-muted)] p-3">
             <div className="flex items-center justify-between gap-3">
               <p className="line-clamp-1 text-sm font-semibold text-[var(--styles-pitch-color-text-primary)]">
-                {style.name}
+                代表风格：{previewStyle.name}
               </p>
-              <ColorSwatches style={style} />
+              <ColorSwatches style={previewStyle} />
             </div>
           </div>
-        ))}
-      </div>
+        ) : null}
 
-      <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-[var(--styles-pitch-color-border)] pt-4">
-        <p className="text-sm text-[var(--styles-pitch-color-text-secondary)]">
-          {group.mainStyles.length} 个主风格 · {group.variants.length} 个变体 · {group.historical.length} 个历史
-        </p>
-        <button
-          type="button"
-          onClick={onEnter}
-          className="rounded-[var(--styles-pitch-radius-button)] border border-[var(--styles-pitch-color-border)] bg-white px-3 py-2 text-sm font-semibold text-[var(--styles-pitch-color-text-primary)] transition hover:border-[var(--styles-pitch-color-primary-soft)] hover:bg-[var(--styles-pitch-color-primary-soft)] hover:text-[var(--styles-pitch-color-primary)]"
-        >
-          进入该家族
-        </button>
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-[var(--styles-pitch-color-border)] pt-4">
+          <p className="text-sm text-[var(--styles-pitch-color-text-secondary)]">
+            {group.mainStyles.length} 个主风格 · {group.variants.length} 个变体
+          </p>
+          <button
+            type="button"
+            onClick={onEnter}
+            className="rounded-[var(--styles-pitch-radius-button)] border border-[var(--styles-pitch-color-border)] bg-white px-3 py-2 text-sm font-semibold text-[var(--styles-pitch-color-text-primary)] transition hover:border-[var(--styles-pitch-color-primary-soft)] hover:bg-[var(--styles-pitch-color-primary-soft)] hover:text-[var(--styles-pitch-color-primary)]"
+          >
+            查看这一类
+          </button>
+        </div>
       </div>
     </article>
   );
@@ -337,7 +434,122 @@ function getStyleRoleLabel(style: NormalizedStyle) {
 }
 
 function getFamilyKey(style: NormalizedStyle) {
-  const raw = style.source.styleFamily || "企业后台基础";
-  if (raw === "AI科技") return "AI 科技";
-  return familyDefinitions.some((item) => item.key === raw) ? raw : "企业后台基础";
+  const raw = normalizeFamilyName(style.source.styleFamily);
+  if (raw && familyDefinitions.some((item) => item.key === raw)) return raw;
+
+  const text = getSearchText(style);
+  const explicit = explicitFamilyByStyleId(style.id);
+  if (explicit) return explicit;
+
+  const ranked = familyDefinitions
+    .map((definition) => ({
+      key: definition.key,
+      score: definition.keywords.reduce((score, keyword) => score + (text.includes(keyword.toLowerCase()) ? 1 : 0), 0),
+    }))
+    .sort((a, b) => b.score - a.score);
+
+  return ranked[0]?.score ? ranked[0].key : "现代 SaaS / B2B 工具";
+}
+
+function pickRepresentativeStyle(
+  definition: FamilyDefinition,
+  featured: NormalizedStyle[],
+  historical: NormalizedStyle[],
+) {
+  const candidates = [...featured, ...historical];
+  if (!candidates.length) return undefined;
+
+  return (
+    candidates.find((style) => style.source.displayLevel === "hero" && isFamilyMatch(style, definition)) ??
+    candidates.find((style) => style.source.isMainStyle && isFamilyMatch(style, definition)) ??
+    candidates.find((style) => isFamilyMatch(style, definition)) ??
+    candidates[0]
+  );
+}
+
+function isFamilyMatch(style: NormalizedStyle, definition: FamilyDefinition) {
+  const text = getSearchText(style);
+  return definition.keywords.some((keyword) => text.includes(keyword.toLowerCase()));
+}
+
+function normalizeFamilyName(value?: string) {
+  if (!value) return undefined;
+  const mapping: Record<string, string> = {
+    企业后台基础: "企业 ERP / CRM 表格",
+    AI科技: "AI Copilot / Agent 工作台",
+    "AI 科技": "AI Copilot / Agent 工作台",
+    深色数据: "深色数据大屏 / 指挥中心",
+    高级视觉: "Apple / Liquid Glass 高端系统",
+    行业业务: "电商运营 / 增长后台",
+    特殊机制: "Linear / 极简效率",
+  };
+  return mapping[value] ?? value;
+}
+
+function explicitFamilyByStyleId(id: string) {
+  const text = id.toLowerCase();
+  if (text.includes("liquid") || text.includes("glass") || text.includes("apple") || text.includes("premium")) {
+    return "Apple / Liquid Glass 高端系统";
+  }
+  if (text.includes("ai") || text.includes("copilot") || text.includes("agent") || text.includes("education")) {
+    return "AI Copilot / Agent 工作台";
+  }
+  if (text.includes("dark") || text.includes("dashboard") || text.includes("security") || text.includes("soc")) {
+    return "深色数据大屏 / 指挥中心";
+  }
+  if (text.includes("finance") || text.includes("fintech") || text.includes("risk")) {
+    return "金融科技 / 可信交易";
+  }
+  if (text.includes("health") || text.includes("medical")) {
+    return "医疗健康 / 清洁专业";
+  }
+  if (text.includes("commerce") || text.includes("merchant") || text.includes("growth") || text.includes("order")) {
+    return "电商运营 / 增长后台";
+  }
+  if (text.includes("local") || text.includes("life") || text.includes("store")) {
+    return "本地生活 / 门店服务";
+  }
+  if (text.includes("guochao") || text.includes("culture") || text.includes("tea")) {
+    return "国潮文化 / 新消费品牌";
+  }
+  if (text.includes("young") || text.includes("community") || text.includes("content")) {
+    return "年轻消费 / 内容社区";
+  }
+  if (text.includes("linear") || text.includes("developer") || text.includes("devops") || text.includes("cloud")) {
+    return "Linear / 极简效率";
+  }
+  if (text.includes("table") || text.includes("crm") || text.includes("erp") || text.includes("carbon") || text.includes("process")) {
+    return "企业 ERP / CRM 表格";
+  }
+  return undefined;
+}
+
+function getSearchText(style: NormalizedStyle) {
+  return [
+    style.id,
+    style.name,
+    style.slogan,
+    style.description,
+    style.moodTheme,
+    style.endpoint,
+    style.colorPreference,
+    style.previewScenario,
+    style.source.category,
+    style.source.group,
+    style.source.coverVariant,
+    style.source.styleFamily,
+    style.source.themeKey,
+    style.source.visual,
+    style.source.scenario,
+    style.source.positioning,
+    ...(style.mood ?? []),
+    ...(style.suitableFor ?? []),
+    ...(style.visualSignature ?? []),
+    ...(style.source.tags ?? []),
+    ...(style.source.visualKeywords ?? []),
+    ...(style.source.bestFor ?? []),
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
 }

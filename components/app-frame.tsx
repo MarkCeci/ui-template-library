@@ -27,7 +27,7 @@ export function AppFrame({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen">
       <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/92 backdrop-blur">
         <div className="h-0.5 bg-[linear-gradient(90deg,#eef2ff_0%,#7c3aed_42%,#bfdbfe_72%,#f8fafc_100%)]" />
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-3">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-3 sm:px-6">
           <Link href="/" className="flex min-w-0 items-center gap-3">
             <span className="flex h-10 w-36 shrink-0 items-center px-1">
               <Image
@@ -36,7 +36,7 @@ export function AppFrame({ children }: { children: React.ReactNode }) {
                 width={132}
                 height={28}
                 priority
-                className="h-7 w-auto object-contain"
+                className="object-contain"
               />
             </span>
             <span className="hidden min-w-0 border-l border-slate-200 pl-3 sm:block">
@@ -70,7 +70,7 @@ export function AppFrame({ children }: { children: React.ReactNode }) {
           </nav>
         </div>
 
-        <nav className="flex gap-2 overflow-x-auto border-t border-slate-100 bg-white px-5 py-2 lg:hidden">
+        <nav className="flex max-w-full gap-2 overflow-x-auto border-t border-slate-100 bg-white px-4 py-2 lg:hidden">
           {primaryNav.map((item) => {
             const active = isActive(pathname, item.href);
 
@@ -89,7 +89,7 @@ export function AppFrame({ children }: { children: React.ReactNode }) {
         </nav>
       </header>
 
-      <main className="mx-auto max-w-7xl px-6 py-6">{children}</main>
+      <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6">{children}</main>
     </div>
   );
 }

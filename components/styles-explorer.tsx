@@ -39,8 +39,7 @@ const colorChipStyles: Record<
 export function StylesExplorer({ styles }: StylesExplorerProps) {
   const [mood, setMood] = useState<MoodFilter>("全部");
   const [colorPreference, setColorPreference] = useState<ColorPreference>("全部");
-  const [showHistoricalStyles, setShowHistoricalStyles] = useState(false);
-  const [viewMode, setViewMode] = useState<ViewMode>("cards");
+  const [viewMode, setViewMode] = useState<ViewMode>("families");
   const [localStyles, setLocalStyles] = useState<StylePack[]>([]);
 
   useEffect(() => {
@@ -78,10 +77,6 @@ export function StylesExplorer({ styles }: StylesExplorerProps) {
     () => featuredStyles.filter(matchesActiveFilters),
     [featuredStyles, matchesActiveFilters],
   );
-  const filteredHistoricalStyles = useMemo(
-    () => (showHistoricalStyles ? historicalStyles.filter(matchesActiveFilters) : []),
-    [historicalStyles, matchesActiveFilters, showHistoricalStyles],
-  );
   const matchingHistoricalStyles = useMemo(
     () => historicalStyles.filter(matchesActiveFilters),
     [historicalStyles, matchesActiveFilters],
@@ -91,8 +86,8 @@ export function StylesExplorer({ styles }: StylesExplorerProps) {
   const hasResults =
     viewMode === "families"
       ? filteredFeaturedStyles.length > 0 || matchingHistoricalStyles.length > 0
-      : filteredFeaturedStyles.length > 0 || filteredHistoricalStyles.length > 0;
-  const resultsMotionKey = `${viewMode}-${mood}-${colorPreference}-${showHistoricalStyles}-${filteredFeaturedStyles.length}-${filteredHistoricalStyles.length}-${matchingHistoricalStyles.length}`;
+      : filteredFeaturedStyles.length > 0;
+  const resultsMotionKey = `${viewMode}-${mood}-${colorPreference}-${filteredFeaturedStyles.length}-${matchingHistoricalStyles.length}`;
   const clearFilters = () => {
     setMood("全部");
     setColorPreference("全部");
@@ -146,38 +141,20 @@ export function StylesExplorer({ styles }: StylesExplorerProps) {
                 <span className="font-semibold text-[var(--styles-pitch-color-text-primary)]">
                   {filteredFeaturedStyles.length}
                 </span>{" "}
-                / {allStyles.length} 个精选风格
-                {showHistoricalStyles ? (
-                  <span>
-                    ，另显示{" "}
-                    <span className="font-semibold text-[var(--styles-pitch-color-text-primary)]">
-                      {filteredHistoricalStyles.length}
-                    </span>{" "}
-                    个历史风格
-                  </span>
-                ) : null}
+                / {featuredStyles.length} 个精选风格
               </span>
             ) : (
               <span>
-                正在浏览风格家族，包含{" "}
+                正在浏览主流风格族，包含{" "}
                 <span className="font-semibold text-[var(--styles-pitch-color-text-primary)]">
                   {filteredFeaturedStyles.length}
                 </span>{" "}
-                个精选风格，历史归并风格默认折叠。
+                / {featuredStyles.length} 个精选风格。
               </span>
             )}
           </p>
 
           <div className="flex flex-wrap items-center gap-3">
-            {viewMode === "cards" ? (
-              <button
-                type="button"
-                onClick={() => setShowHistoricalStyles((value) => !value)}
-                className="inline-flex w-fit justify-center rounded-md px-1 py-1.5 text-sm font-semibold text-[var(--styles-pitch-color-text-muted)] transition hover:text-[var(--styles-pitch-color-primary)]"
-              >
-                {showHistoricalStyles ? "收起隐藏风格" : "查看隐藏风格 / 查看全部历史风格"}
-              </button>
-            ) : null}
             <button
               type="button"
               onClick={clearFilters}
@@ -196,7 +173,7 @@ export function StylesExplorer({ styles }: StylesExplorerProps) {
             浏览方式
           </h2>
           <p className="mt-1 text-sm text-[var(--styles-pitch-color-text-secondary)]">
-            卡片适合快速挑选，家族适合理解体系。
+            先看主流风格族，再进入全部风格卡片做细选。
           </p>
         </div>
         <div className="mt-3 sm:mt-0">
@@ -227,27 +204,6 @@ export function StylesExplorer({ styles }: StylesExplorerProps) {
                 </section>
               ) : null}
 
-              {showHistoricalStyles && filteredHistoricalStyles.length > 0 ? (
-                <section className="rounded-[var(--styles-pitch-radius-card)] border border-dashed border-[var(--styles-pitch-color-border)] bg-white/70 p-5 shadow-[var(--styles-pitch-shadow-card)]">
-                  <div className="mb-5">
-                    <h2 className="text-base font-semibold text-[var(--styles-pitch-color-text-primary)]">
-                      历史归并风格
-                    </h2>
-                    <p className="mt-1 text-sm text-[var(--styles-pitch-color-text-secondary)]">
-                      这些风格仍可查看详情，但默认已归并到主风格或变体体系中。
-                    </p>
-                  </div>
-                  <div className="styles-gallery-grid grid gap-6 lg:grid-cols-2">
-                    {filteredHistoricalStyles.map((style) => (
-                      <StyleCard
-                        key={style.id}
-                        normalized={style}
-                        parentStyleName={getParentStyleName(style, styleNameById)}
-                      />
-                    ))}
-                  </div>
-                </section>
-              ) : null}
             </>
           )}
         </div>
@@ -291,8 +247,8 @@ function ViewModeSwitch({
   return (
     <div className="inline-flex w-full rounded-full border border-[var(--styles-pitch-color-border)] bg-[var(--styles-pitch-color-surface-muted)] p-1 shadow-[var(--styles-pitch-shadow-card)] sm:w-fit">
       {[
-        { id: "cards", label: "卡片视图" },
-        { id: "families", label: "家族视图" },
+        { id: "families", label: "风格族视图" },
+        { id: "cards", label: "全部风格卡片" },
       ].map((option) => {
         const active = option.id === value;
         return (

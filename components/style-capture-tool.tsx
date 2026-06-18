@@ -21,6 +21,7 @@ type DensityMode = "comfortable" | "compact";
 type PreviewTab = "app-home" | "profile" | "card-list" | "dashboard";
 type ExportTab = "css" | "tailwind" | "json";
 type ExportScope = "light" | "dark" | "both";
+type RecommendationId = "enterprise" | "fresh" | "dark";
 
 type ThemeOptions = {
   mode: ThemeMode;
@@ -114,6 +115,16 @@ type ThemeTokens = {
   shared: SharedTokens;
 };
 
+type ThemeRecommendation = {
+  id: RecommendationId;
+  name: string;
+  summary: string;
+  bestFor: string;
+  styleName: string;
+  colorModes: Record<ThemeMode, EditableModeColors>;
+  options: ThemeOptions;
+};
+
 const fallbackPalette: Palette = {
   vibrant: "#6D28D9",
   muted: "#64748B",
@@ -145,6 +156,13 @@ const exportTabs: Array<[ExportTab, string]> = [
   ["json", "Design Tokens JSON"],
 ];
 
+const captureSteps = [
+  ["01", "上传参考图", "把喜欢的截图放进来"],
+  ["02", "选择方案", "先选一个可用方向"],
+  ["03", "微调主题", "只改关键颜色和风格"],
+  ["04", "预览交付", "确认效果后复制给开发"],
+] as const;
+
 export function StyleCaptureTool() {
   const [imageUrl, setImageUrl] = useState("");
   const [imageName, setImageName] = useState("");
@@ -161,6 +179,7 @@ export function StyleCaptureTool() {
   const [message, setMessage] = useState("");
   const [copied, setCopied] = useState("");
   const [savedCount, setSavedCount] = useState(0);
+  const [selectedRecommendation, setSelectedRecommendation] = useState<RecommendationId>("enterprise");
 
   const themeTokens = useMemo(
     () => buildThemeTokens(colorModes, options),
@@ -172,6 +191,7 @@ export function StyleCaptureTool() {
   );
   const activeColors = colorModes[options.mode];
   const qualityChecks = useMemo(() => getThemeQualityChecks(themeTokens), [themeTokens]);
+  const recommendations = useMemo(() => buildThemeRecommendations(palette), [palette]);
 
   const exportCode = useMemo(
     () => ({
@@ -202,6 +222,7 @@ export function StyleCaptureTool() {
       setPalette(extracted);
       const nextColorModes = paletteToEditableColorModes(extracted);
       setColorModes(nextColorModes);
+      setSelectedRecommendation("enterprise");
       setStyleName(suggestName(nextColorModes.light.primary, extracted));
       setStatus("ready");
       setMessage("色板已生成，你可以微调后复制给开发使用。");
@@ -210,6 +231,7 @@ export function StyleCaptureTool() {
       const fallback = { ...fallbackPalette, averageColor: average };
       setPalette(fallback);
       setColorModes(paletteToEditableColorModes(fallback));
+      setSelectedRecommendation("enterprise");
       setStyleName(suggestName(fallback.vibrant, fallback));
       setStatus("error");
       setMessage("自动提取失败，已使用兜底色板生成主题。");
@@ -239,6 +261,14 @@ export function StyleCaptureTool() {
 
   function updateOption<K extends keyof ThemeOptions>(key: K, value: ThemeOptions[K]) {
     setOptions((current) => ({ ...current, [key]: value }));
+  }
+
+  function applyRecommendation(recommendation: ThemeRecommendation) {
+    setSelectedRecommendation(recommendation.id);
+    setColorModes(recommendation.colorModes);
+    setOptions(recommendation.options);
+    setStyleName(recommendation.styleName);
+    setMessage(`已应用「${recommendation.name}」，右侧预览已同步更新。`);
   }
 
   async function copyCode(label: string, value: string) {
@@ -358,9 +388,9 @@ export function StyleCaptureTool() {
 
   return (
     <div className="grid gap-5">
-      <section className="rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm">
-        <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
-          <div>
+      <section className="min-w-0 overflow-hidden rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm">
+        <div className="flex min-w-0 flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+          <div className="min-w-0">
             <p className="text-sm font-semibold text-violet-700">上传一张喜欢的截图</p>
             <h2 className="mt-1 text-2xl font-semibold tracking-tight text-slate-950">
               我们会帮你提取颜色并生成主题
@@ -369,26 +399,27 @@ export function StyleCaptureTool() {
               这不是普通取色器：上传图片后会生成可读性更好的 UI 语义 Token，并同步预览 App、列表和后台页面效果。
             </p>
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex min-w-0 flex-col gap-2 sm:flex-row sm:flex-wrap lg:shrink-0">
             <button
               type="button"
               onClick={saveDraft}
-              className="rounded-xl bg-violet-700 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-violet-800"
+              className="rounded-xl bg-violet-700 px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-violet-800"
             >
               保存为风格草稿
             </button>
             <button
               type="button"
               onClick={resetTheme}
-              className="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+              className="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
             >
               重置主题
             </button>
           </div>
         </div>
+        <CaptureStepper currentStep={status === "idle" || status === "loading" ? 0 : 1} />
       </section>
 
-      <div className="grid gap-5 2xl:grid-cols-[minmax(360px,0.92fr)_minmax(560px,1.08fr)]">
+      <div className="grid min-w-0 gap-5 2xl:grid-cols-[minmax(360px,0.92fr)_minmax(560px,1.08fr)]">
         <div className="grid min-w-0 gap-5">
           <section className="rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm">
             <SectionTitle title="1. 上传图片" helper="支持 png、jpg、jpeg、webp。" />
@@ -424,7 +455,16 @@ export function StyleCaptureTool() {
           </section>
 
           <section className="rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm">
-            <SectionTitle title="2. 调整主题" helper="颜色可以手动微调，右侧预览会实时变化。" />
+            <SectionTitle title="2. 选择推荐方案" helper="先选一个方向，再进入微调。每套方案都会自动处理浅色和深色模式。" />
+            <RecommendationPanel
+              recommendations={recommendations}
+              selectedId={selectedRecommendation}
+              onSelect={applyRecommendation}
+            />
+          </section>
+
+          <section className="rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm">
+            <SectionTitle title="3. 微调主题" helper="只改对视觉影响最大的字段，右侧预览会实时变化。" />
             <div className="mt-4 rounded-2xl border border-violet-100 bg-violet-50 p-3">
               <p className="text-sm font-semibold text-violet-900">
                 当前正在编辑：{options.mode === "light" ? "浅色模式" : "深色模式"}
@@ -557,7 +597,7 @@ export function StyleCaptureTool() {
         </div>
 
         <section className="min-w-0 rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm 2xl:sticky 2xl:top-24 2xl:self-start">
-          <SectionTitle title="3. 实时预览" helper="预览是真实业务页面，会跟随 Token 变化。" />
+          <SectionTitle title="4. 实时预览" helper="预览是真实业务页面，会跟随 Token 变化。" />
           <div className="mt-4 flex gap-2 overflow-x-auto pb-1">
             {previewTabs.map(([id, label]) => (
               <button
@@ -580,7 +620,7 @@ export function StyleCaptureTool() {
 
       <section className="rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm">
         <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
-          <SectionTitle title="4. 复制给开发" helper="MVP 先导出代码片段，后续可以接入 Admin 审核和数据库。" />
+          <SectionTitle title="复制给开发" helper="确认预览可读后，复制主题代码或保存为风格草稿。" />
           <div className="grid gap-2">
             <div className="flex gap-2 overflow-x-auto">
               {(["light", "dark", "both"] as ExportScope[]).map((scope) => (
@@ -646,6 +686,97 @@ function SectionTitle({ title, helper }: { title: string; helper: string }) {
     <div>
       <h2 className="text-base font-semibold text-slate-950">{title}</h2>
       <p className="mt-1 text-sm leading-6 text-slate-500">{helper}</p>
+    </div>
+  );
+}
+
+function CaptureStepper({ currentStep }: { currentStep: number }) {
+  return (
+    <div className="mt-5 grid gap-2 sm:grid-cols-2 xl:grid-cols-4">
+      {captureSteps.map(([step, title, helper], index) => {
+        const active = index === currentStep;
+        const done = index < currentStep;
+        return (
+          <div
+            key={step}
+            className={`rounded-2xl border p-3 transition ${
+              active
+                ? "border-violet-200 bg-violet-50"
+                : done
+                  ? "border-emerald-100 bg-emerald-50"
+                  : "border-slate-200 bg-slate-50"
+            }`}
+          >
+            <div className="flex items-center gap-2">
+              <span
+                className={`flex h-7 w-7 items-center justify-center rounded-xl text-xs font-bold ${
+                  active
+                    ? "bg-violet-700 text-white"
+                    : done
+                      ? "bg-emerald-600 text-white"
+                      : "bg-white text-slate-400"
+                }`}
+              >
+                {done ? "✓" : step}
+              </span>
+              <span className="text-sm font-semibold text-slate-950">{title}</span>
+            </div>
+            <p className="mt-2 text-xs leading-5 text-slate-500">{helper}</p>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function RecommendationPanel({
+  recommendations,
+  selectedId,
+  onSelect,
+}: {
+  recommendations: ThemeRecommendation[];
+  selectedId: RecommendationId;
+  onSelect: (recommendation: ThemeRecommendation) => void;
+}) {
+  return (
+    <div className="mt-4 grid gap-3 lg:grid-cols-3">
+      {recommendations.map((item) => {
+        const active = item.id === selectedId;
+        const previewColors = [
+          item.colorModes.light.primary,
+          item.colorModes.light.secondary,
+          item.colorModes.light.accent,
+          item.colorModes.light.background,
+        ];
+        return (
+          <button
+            key={item.id}
+            type="button"
+            onClick={() => onSelect(item)}
+            className={`min-w-0 rounded-2xl border p-4 text-left transition ${
+              active
+                ? "border-violet-300 bg-violet-50 shadow-sm"
+                : "border-slate-200 bg-slate-50 hover:border-violet-200 hover:bg-white"
+            }`}
+          >
+            <div className="flex items-start justify-between gap-3">
+              <div className="min-w-0">
+                <p className="text-sm font-semibold text-slate-950">{item.name}</p>
+                <p className="mt-1 text-xs leading-5 text-slate-500">{item.summary}</p>
+              </div>
+              {active ? (
+                <span className="shrink-0 rounded-full bg-violet-700 px-2 py-1 text-xs font-semibold text-white">已选</span>
+              ) : null}
+            </div>
+            <div className="mt-4 flex h-2 overflow-hidden rounded-full border border-white/70 bg-white">
+              {previewColors.map((color) => (
+                <span key={color} className="flex-1" style={{ background: color }} />
+              ))}
+            </div>
+            <p className="mt-3 text-xs font-semibold text-slate-500">适合：{item.bestFor}</p>
+          </button>
+        );
+      })}
     </div>
   );
 }
@@ -1358,6 +1489,121 @@ function paletteToEditableColorModes(palette: Palette): Record<ThemeMode, Editab
       "dark",
     ),
   };
+}
+
+function buildThemeRecommendations(palette: Palette): ThemeRecommendation[] {
+  const base = paletteToEditableColorModes(palette);
+  const primary = base.light.primary;
+  const secondary = base.light.secondary;
+  const accent = base.light.accent;
+  const name = suggestName(primary, palette);
+
+  const enterpriseModes: Record<ThemeMode, EditableModeColors> = {
+    light: optimizeModeColors({
+      ...base.light,
+      background: "#F8FAFC",
+      surface: "#FFFFFF",
+      surfaceMuted: mix(primary, "#FFFFFF", 0.94),
+      border: "#E2E8F0",
+      textPrimary: "#0F172A",
+      textSecondary: "#475569",
+    }, "light"),
+    dark: optimizeModeColors({
+      ...base.dark,
+      background: "#0F172A",
+      surface: "#111827",
+      surfaceMuted: "#1E293B",
+      border: "#334155",
+      textPrimary: "#F8FAFC",
+      textSecondary: "#CBD5E1",
+    }, "dark"),
+  };
+
+  const freshPrimary = mix(primary, "#06B6D4", 0.48);
+  const freshAccent = mix(accent, "#22C55E", 0.44);
+  const freshModes: Record<ThemeMode, EditableModeColors> = {
+    light: optimizeModeColors({
+      primary: freshPrimary,
+      secondary: mix(secondary, "#67E8F9", 0.48),
+      accent: freshAccent,
+      background: mix(freshPrimary, "#FFFFFF", 0.95),
+      surface: "#FFFFFF",
+      surfaceMuted: mix(freshPrimary, "#FFFFFF", 0.9),
+      textPrimary: "#102033",
+      textSecondary: "#5B6B82",
+      textAccent: ensureText(darken(freshPrimary, 0.18), "#FFFFFF"),
+      textInverse: "#FFFFFF",
+      border: mix(freshPrimary, "#E2E8F0", 0.72),
+    }, "light"),
+    dark: optimizeModeColors({
+      primary: deriveModeColor(freshPrimary, "dark", "primary"),
+      secondary: deriveModeColor(secondary, "dark", "secondary"),
+      accent: deriveModeColor(freshAccent, "dark", "accent"),
+      background: "#071A24",
+      surface: "#0D2532",
+      surfaceMuted: "#163544",
+      textPrimary: "#F3FBFF",
+      textSecondary: "#B8D4DE",
+      textAccent: deriveModeColor(freshPrimary, "dark", "textAccent"),
+      textInverse: "#FFFFFF",
+      border: "rgba(148, 219, 230, 0.24)",
+    }, "dark"),
+  };
+
+  const darkModes: Record<ThemeMode, EditableModeColors> = {
+    light: optimizeModeColors({
+      ...base.light,
+      background: "#F6F7FB",
+      surface: "#FFFFFF",
+      surfaceMuted: "#EEF1F7",
+      border: "#DDE3EE",
+      textPrimary: "#111827",
+      textSecondary: "#4B5563",
+    }, "light"),
+    dark: optimizeModeColors({
+      primary: deriveModeColor(primary, "dark", "primary"),
+      secondary: deriveModeColor(secondary, "dark", "secondary"),
+      accent: deriveModeColor(accent, "dark", "accent"),
+      background: "#070A12",
+      surface: "#0F172A",
+      surfaceMuted: "#1A2438",
+      textPrimary: "#F8FAFC",
+      textSecondary: "#CBD5E1",
+      textAccent: deriveModeColor(primary, "dark", "textAccent"),
+      textInverse: "#FFFFFF",
+      border: "rgba(148, 163, 184, 0.22)",
+    }, "dark"),
+  };
+
+  return [
+    {
+      id: "enterprise",
+      name: "稳重企业版",
+      summary: "适合后台、内部系统和需要可信感的业务页面。",
+      bestFor: "SaaS 后台、CRM、运营看板",
+      styleName: name,
+      colorModes: enterpriseModes,
+      options: { mode: "light", style: "gradient", radius: "soft", shadow: "light", density: "comfortable" },
+    },
+    {
+      id: "fresh",
+      name: "明亮清爽版",
+      summary: "整体更轻、更亲和，适合 App 首页和轻办公场景。",
+      bestFor: "移动 App、健康服务、轻办公",
+      styleName: name.replace("智能", "清爽"),
+      colorModes: freshModes,
+      options: { mode: "light", style: "linear", radius: "rounded", shadow: "light", density: "comfortable" },
+    },
+    {
+      id: "dark",
+      name: "深色高级版",
+      summary: "保留主色基因，生成独立深色 Token，不做简单反色。",
+      bestFor: "AI 工具、数据看板、指挥中心",
+      styleName: name.replace("风", "深色风"),
+      colorModes: darkModes,
+      options: { mode: "dark", style: "glow", radius: "soft", shadow: "medium", density: "compact" },
+    },
+  ];
 }
 
 function tokenStyle(tokens: ActiveThemeTokens, options: ThemeOptions) {

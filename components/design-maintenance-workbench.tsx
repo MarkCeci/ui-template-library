@@ -293,17 +293,17 @@ export function DesignMaintenanceWorkbench({ initialStyles }: { initialStyles: S
   }
 
   return (
-    <section className="grid gap-5 xl:grid-cols-[360px_minmax(0,1fr)]">
-      <aside className="rounded-[24px] border border-slate-200 bg-white p-4 shadow-sm xl:sticky xl:top-24 xl:self-start">
+    <section className="grid min-w-0 gap-5 xl:grid-cols-[360px_minmax(0,1fr)]">
+      <aside className="min-w-0 overflow-hidden rounded-[24px] border border-slate-200 bg-white p-4 shadow-sm xl:sticky xl:top-24 xl:self-start">
         <div className="flex items-center justify-between gap-3">
-          <div>
+          <div className="min-w-0">
             <p className="text-xs font-semibold text-violet-700">风格列表</p>
             <h2 className="mt-1 text-lg font-semibold text-slate-950">网页内维护</h2>
           </div>
           <button
             type="button"
             onClick={() => setShowCreate((value) => !value)}
-            className="inline-flex items-center gap-2 rounded-xl bg-violet-700 px-3 py-2 text-sm font-semibold text-white transition hover:bg-violet-800"
+            className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-violet-700 px-3 py-2 text-sm font-semibold text-white transition hover:bg-violet-800"
           >
             <Icon icon="pen-tool" size={16} color="currentColor" />
             新增
@@ -327,7 +327,7 @@ export function DesignMaintenanceWorkbench({ initialStyles }: { initialStyles: S
           </div>
         ) : null}
 
-        <div className="mt-4 flex gap-2 overflow-x-auto pb-1">
+        <div className="mt-4 flex max-w-full gap-2 overflow-x-auto pb-1">
           {statusOptions.map((item) => (
             <button
               key={item.value}
@@ -344,13 +344,13 @@ export function DesignMaintenanceWorkbench({ initialStyles }: { initialStyles: S
           ))}
         </div>
 
-        <div className="mt-4 max-h-[720px] space-y-2 overflow-auto pr-1">
+        <div className="mt-4 max-h-[720px] min-w-0 space-y-2 overflow-auto pr-1">
           {filteredStyles.map((style) => (
             <button
               key={style.id}
               type="button"
               onClick={() => setSelectedId(style.id)}
-              className={`w-full rounded-2xl border p-3 text-left transition ${
+              className={`w-full min-w-0 rounded-2xl border p-3 text-left transition ${
                 style.id === selectedStyle.id
                   ? "border-violet-200 bg-violet-50 shadow-sm"
                   : "border-slate-200 bg-white hover:border-violet-100 hover:bg-slate-50"
@@ -470,7 +470,7 @@ export function DesignMaintenanceWorkbench({ initialStyles }: { initialStyles: S
               </div>
               <StatusBadge status={selectedStyle.status} />
             </div>
-            <div className="mt-4 grid gap-4 lg:grid-cols-2">
+            <div className="mt-4 grid min-w-0 gap-4 2xl:grid-cols-2">
               <MiniAppPreview style={selectedStyle} />
               <MiniDashboardPreview style={selectedStyle} />
             </div>
@@ -575,8 +575,8 @@ function WorkflowStepper({
   const activeIndex = workflowSteps.findIndex((step) => step.id === activeTab);
 
   return (
-    <div className="mt-5 rounded-[22px] border border-slate-200 bg-slate-50 p-3">
-      <div className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1 xl:grid xl:grid-cols-5 xl:overflow-visible xl:pb-0">
+    <div className="mt-5 min-w-0 overflow-hidden rounded-[22px] border border-slate-200 bg-slate-50 p-3">
+      <div className="-mx-1 flex max-w-full gap-2 overflow-x-auto px-1 pb-1 xl:grid xl:grid-cols-5 xl:overflow-visible xl:pb-0">
         {workflowSteps.map((item, index) => {
           const active = item.id === activeTab;
           const done = index < activeIndex;
@@ -917,8 +917,8 @@ function TokenGroup({
 function MiniAppPreview({ style }: { style: MaintenanceStyle }) {
   const t = style.tokens.light;
   return (
-    <div className="rounded-[28px] border p-3" style={{ background: t.background, borderColor: t.border }}>
-      <div className="rounded-[24px] border p-3 shadow-sm" style={{ background: t.surface, borderColor: t.border }}>
+    <div className="min-w-0 overflow-hidden rounded-[28px] border p-3" style={{ background: t.background, borderColor: t.border }}>
+      <div className="min-w-0 rounded-[24px] border p-3 shadow-sm" style={{ background: t.surface, borderColor: t.border }}>
         <div className="flex items-center justify-between">
           <div>
             <p className="text-xs" style={{ color: t.textSecondary }}>上午好，李经理</p>
@@ -945,7 +945,7 @@ function MiniAppPreview({ style }: { style: MaintenanceStyle }) {
 function MiniDashboardPreview({ style }: { style: MaintenanceStyle }) {
   const t = style.tokens.light;
   return (
-    <div className="rounded-[22px] border p-3" style={{ background: t.background, borderColor: t.border }}>
+    <div className="min-w-0 overflow-hidden rounded-[22px] border p-3" style={{ background: t.background, borderColor: t.border }}>
       <div className="flex items-center justify-between">
         <p className="text-sm font-semibold" style={{ color: t.textPrimary }}>客户运营看板</p>
         <span className="rounded-lg px-2 py-1 text-xs font-semibold" style={{ background: t.primary, color: t.textInverse }}>新建</span>

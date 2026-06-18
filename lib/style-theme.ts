@@ -580,38 +580,195 @@ function pickColorPreference(
   const explicit = normalizeColorPreference(style.colorPreference);
   if (explicit) return explicit;
 
-  const paletteText = Object.values(palette).join(" ").toLowerCase();
-  const text = `${haystack} ${paletteText}`;
+  const palettePreference = inferColorPreferenceFromPalette(palette);
+  const specialPreference = inferSpecialColorPreference(haystack, palette, palettePreference);
+  if (specialPreference) return specialPreference;
+  if (palettePreference) return palettePreference;
 
-  if (matches(text, ["black-gold", "black_gold", "黑金", "暗绿金", "金色", "gold", "obsidian", "quiet-luxury"])) {
+  if (matches(haystack, ["black-gold", "black_gold", "黑金", "暗绿金", "gold", "obsidian", "quiet-luxury"])) {
     return "黑金系";
   }
-  if (matches(text, ["gradient", "dream", "glass", "iridescent", "colorful", "aurora", "pastel", "梦幻", "渐变", "玻璃", "多彩", "幻彩", "虹彩", "珠贝"])) {
+  if (matches(haystack, ["gradient", "dream", "iridescent", "colorful", "aurora", "pastel", "梦幻", "渐变", "多彩", "幻彩", "虹彩", "珠贝"])) {
     return "渐变多彩";
   }
-  if (matches(text, ["neutral", "gray", "grey", "minimal", "carbon", "table", "mono", "graphite", "black white", "黑白灰", "中性", "极简", "数据密集", "石墨", "灰阶"])) {
+  if (matches(haystack, ["neutral", "gray", "grey", "mono", "graphite", "black white", "黑白灰", "中性", "石墨", "灰阶"])) {
     return "黑白灰";
   }
-  if (matches(text, ["pink", "red", "rose", "young", "activity", "burgundy", "guochao", "国潮", "年轻", "活动", "红", "粉", "酒红", "朱砂", "赤焰"])) {
+  if (matches(haystack, ["pink", "red", "rose", "burgundy", "红", "粉", "酒红", "朱砂", "赤焰"])) {
     return "红粉系";
   }
-  if (matches(text, ["orange", "growth", "operation", "local", "commerce", "campaign", "yellow", "amber", "活力", "增长", "运营", "橙色", "黄色", "促销", "珊瑚", "日落"])) {
+  if (matches(haystack, ["orange", "yellow", "amber", "橙色", "黄色", "珊瑚", "日落"])) {
     return "橙色系";
   }
-  if (matches(text, ["green", "medical", "health", "eco", "emerald", "mint", "jade", "life", "医疗", "健康", "绿色", "环保", "薄荷", "翡翠"])) {
+  if (matches(haystack, ["green", "eco", "emerald", "mint", "jade", "绿色", "环保", "薄荷", "翡翠"])) {
     return "绿色系";
   }
-  if (matches(text, ["cyan", "teal", "data", "dashboard", "清爽", "青色", "青绿", "冷光"])) {
+  if (matches(haystack, ["cyan", "teal", "青色", "青绿", "冷光"])) {
     return "青色系";
   }
-  if (matches(text, ["purple", "violet", "ai", "copilot", "assistant", "tech", "智能", "紫", "ai", "薰衣草"])) {
+  if (matches(haystack, ["purple", "violet", "紫", "薰衣草"])) {
     return "紫色系";
   }
-  if (matches(text, ["blue", "saas", "enterprise", "business", "finance", "admin", "商务", "企业", "蓝", "可信", "后台", "政企", "城市"])) {
+  if (matches(haystack, ["blue", "蓝"])) {
     return "蓝色系";
   }
 
   return "蓝色系";
+}
+
+type HslSignal = {
+  hue: number;
+  saturation: number;
+  lightness: number;
+};
+
+function inferSpecialColorPreference(
+  haystack: string,
+  palette: StylePalette,
+  palettePreference: Exclude<ColorPreference, "全部"> | null,
+): Exclude<ColorPreference, "全部"> | null {
+  const signals = getPaletteSignals(palette);
+  const hasDarkBase = [palette.primary, palette.background, palette.surface, palette.textPrimary]
+    .map(parseHexColor)
+    .some((color) => color ? getRelativeLuminance(color) < 0.08 : false);
+  const hasGoldAccent = [palette.secondary, palette.accent, palette.primary]
+    .map(parseHexColor)
+    .some((color) => {
+      if (!color) return false;
+      const hsl = rgbToHsl(color);
+      return hsl.hue >= 35 && hsl.hue <= 58 && hsl.saturation >= 0.28;
+    });
+
+  if (
+    matches(haystack, ["black-gold", "black_gold", "黑金", "暗绿金", "obsidian", "quiet-luxury"]) ||
+    (hasDarkBase && hasGoldAccent)
+  ) {
+    return "黑金系";
+  }
+
+  const chromaticSignals = signals.filter((signal) => signal.saturation > 0.2);
+  const hueBuckets = new Set(chromaticSignals.map((signal) => getHueBucket(signal.hue)));
+  if (
+    matches(haystack, ["gradient", "dream", "iridescent", "colorful", "aurora", "pastel", "梦幻", "渐变", "多彩", "幻彩", "虹彩", "珠贝"]) &&
+    (hueBuckets.size >= 2 || palettePreference === "渐变多彩")
+  ) {
+    return "渐变多彩";
+  }
+
+  const lowSaturationCount = signals.filter((signal) => signal.saturation < 0.12).length;
+  if (
+    signals.length > 0 &&
+    lowSaturationCount >= Math.max(2, signals.length - 1) &&
+    matches(haystack, ["neutral", "gray", "grey", "mono", "graphite", "black white", "黑白灰", "中性", "石墨", "灰阶", "carbon"])
+  ) {
+    return "黑白灰";
+  }
+
+  return null;
+}
+
+function inferColorPreferenceFromPalette(palette: StylePalette): Exclude<ColorPreference, "全部"> | null {
+  const candidates = [palette.primary, palette.secondary, palette.accent]
+    .map((value) => parseHexColor(value))
+    .filter((value): value is RgbColor => Boolean(value))
+    .map((color, index) => ({
+      ...rgbToHsl(color),
+      luminance: getRelativeLuminance(color),
+      weight: index === 0 ? 4 : index === 1 ? 2 : 1.5,
+    }))
+    .filter((signal) => signal.saturation >= 0.12 && signal.lightness > 0.08 && signal.lightness < 0.94);
+
+  if (!candidates.length) {
+    return null;
+  }
+
+  const strongest = candidates.sort((a, b) => {
+    const aScore = a.saturation * a.weight * (a.luminance > 0.92 ? 0.7 : 1);
+    const bScore = b.saturation * b.weight * (b.luminance > 0.92 ? 0.7 : 1);
+    return bScore - aScore;
+  })[0];
+
+  return getColorPreferenceByHue(strongest.hue);
+}
+
+function getPaletteSignals(palette: StylePalette): HslSignal[] {
+  return [palette.primary, palette.secondary, palette.accent]
+    .map((value) => parseHexColor(value))
+    .filter((value): value is RgbColor => Boolean(value))
+    .map(rgbToHsl);
+}
+
+function getColorPreferenceByHue(hue: number): Exclude<ColorPreference, "全部"> {
+  if (hue < 15 || hue >= 315) return "红粉系";
+  if (hue < 62) return "橙色系";
+  if (hue < 165) return "绿色系";
+  if (hue < 200) return "青色系";
+  if (hue < 255) return "蓝色系";
+  return "紫色系";
+}
+
+function getHueBucket(hue: number) {
+  return getColorPreferenceByHue(hue);
+}
+
+type RgbColor = {
+  r: number;
+  g: number;
+  b: number;
+};
+
+function parseHexColor(value: string): RgbColor | null {
+  const trimmed = value.trim();
+  const match = trimmed.match(/^#([0-9a-f]{3}|[0-9a-f]{6})$/i);
+  if (!match) return null;
+
+  const raw = match[1];
+  const hex =
+    raw.length === 3
+      ? raw.split("").map((char) => `${char}${char}`).join("")
+      : raw;
+
+  return {
+    r: Number.parseInt(hex.slice(0, 2), 16),
+    g: Number.parseInt(hex.slice(2, 4), 16),
+    b: Number.parseInt(hex.slice(4, 6), 16),
+  };
+}
+
+function rgbToHsl(color: RgbColor): HslSignal {
+  const r = color.r / 255;
+  const g = color.g / 255;
+  const b = color.b / 255;
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  const lightness = (max + min) / 2;
+
+  if (max === min) {
+    return { hue: 0, saturation: 0, lightness };
+  }
+
+  const delta = max - min;
+  const saturation = lightness > 0.5 ? delta / (2 - max - min) : delta / (max + min);
+  let hue = 0;
+
+  if (max === r) {
+    hue = (g - b) / delta + (g < b ? 6 : 0);
+  } else if (max === g) {
+    hue = (b - r) / delta + 2;
+  } else {
+    hue = (r - g) / delta + 4;
+  }
+
+  return { hue: hue * 60, saturation, lightness };
+}
+
+function getRelativeLuminance(color: RgbColor) {
+  const [r, g, b] = [color.r, color.g, color.b].map((channel) => {
+    const value = channel / 255;
+    return value <= 0.03928 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4;
+  });
+
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 }
 
 function normalizeColorPreference(value: unknown): Exclude<ColorPreference, "全部"> | null {

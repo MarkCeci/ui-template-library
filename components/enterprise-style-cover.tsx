@@ -1,6 +1,10 @@
 import type { CSSProperties } from "react";
 import { applyTheme, type NormalizedStyle } from "@/lib/style-theme";
 import { getStyleCoverVariant, type StyleCoverVariant } from "@/components/style-showroom-cover";
+import {
+  hasMainstreamCaseCover,
+  MainstreamStyleCaseCover,
+} from "@/components/mainstream-style-case-cover";
 
 export type EnterpriseCoverVariant =
   | "saas-dashboard"
@@ -358,30 +362,37 @@ function isEnterpriseCoverVariant(value: unknown): value is EnterpriseCoverVaria
 
 export function EnterpriseStyleCover({ style, variant = mapToEnterpriseCoverVariant(style) }: EnterpriseStyleCoverProps) {
   const vars = applyTheme(style) as CSSProperties;
+  const useMainstreamCaseCover = hasMainstreamCaseCover(style);
 
   return (
     <div className="enterprise-style-cover" data-enterprise-variant={variant} style={vars}>
-      {variant === "enterprise-table" ? <EnterpriseTableCover style={style} /> : null}
-      {variant === "mobile-workbench" ? <MobileWorkbenchCover /> : null}
-      {variant === "ai-workspace" ? <AiWorkspaceCover style={style} /> : null}
-      {variant === "ai-copilot" ? <AiCopilotCover style={style} /> : null}
-      {variant === "dark-command" ? <DarkCommandCover style={style} /> : null}
-      {variant === "dark-dashboard" ? <DarkDashboardCover /> : null}
-      {variant === "glass-premium" ? <GlassPremiumCover /> : null}
-      {variant === "healthcare-report" ? <HealthcareReportCover /> : null}
-      {variant === "medical-health" ? <MedicalHealthCover /> : null}
-      {variant === "finance-trust" ? <FinanceTrustCover /> : null}
-      {variant === "ecommerce-growth" ? <EcommerceGrowthCover /> : null}
-      {variant === "local-service" ? <LocalServiceCover /> : null}
-      {variant === "gradient-aurora" ? <GradientAuroraCover style={style} /> : null}
-      {variant === "dark-command-center" ? <DarkCommandCenterCover style={style} /> : null}
-      {variant === "glow-ai-workspace" ? <GlowAiWorkspaceCover style={style} /> : null}
-      {variant === "linear-system" ? <LinearSystemCover style={style} /> : null}
-      {variant === "linear-enterprise" ? <LinearEnterpriseCover style={style} /> : null}
-      {variant === "web3-console" ? <Web3ConsoleCover style={style} /> : null}
-      {variant === "glass-aurora" ? <GlassAuroraCover style={style} /> : null}
-      {variant === "saas-dashboard" ? <SaasDashboardCover style={style} /> : null}
-      {variant === "saas-clean" ? <SaasCleanCover style={style} /> : null}
+      {useMainstreamCaseCover ? (
+        <MainstreamStyleCaseCover style={style} />
+      ) : (
+        <>
+          {variant === "enterprise-table" ? <EnterpriseTableCover style={style} /> : null}
+          {variant === "mobile-workbench" ? <MobileWorkbenchCover /> : null}
+          {variant === "ai-workspace" ? <AiWorkspaceCover style={style} /> : null}
+          {variant === "ai-copilot" ? <AiCopilotCover style={style} /> : null}
+          {variant === "dark-command" ? <DarkCommandCover style={style} /> : null}
+          {variant === "dark-dashboard" ? <DarkDashboardCover /> : null}
+          {variant === "glass-premium" ? <GlassPremiumCover /> : null}
+          {variant === "healthcare-report" ? <HealthcareReportCover /> : null}
+          {variant === "medical-health" ? <MedicalHealthCover /> : null}
+          {variant === "finance-trust" ? <FinanceTrustCover /> : null}
+          {variant === "ecommerce-growth" ? <EcommerceGrowthCover /> : null}
+          {variant === "local-service" ? <LocalServiceCover /> : null}
+          {variant === "gradient-aurora" ? <GradientAuroraCover style={style} /> : null}
+          {variant === "dark-command-center" ? <DarkCommandCenterCover style={style} /> : null}
+          {variant === "glow-ai-workspace" ? <GlowAiWorkspaceCover style={style} /> : null}
+          {variant === "linear-system" ? <LinearSystemCover style={style} /> : null}
+          {variant === "linear-enterprise" ? <LinearEnterpriseCover style={style} /> : null}
+          {variant === "web3-console" ? <Web3ConsoleCover style={style} /> : null}
+          {variant === "glass-aurora" ? <GlassAuroraCover style={style} /> : null}
+          {variant === "saas-dashboard" ? <SaasDashboardCover style={style} /> : null}
+          {variant === "saas-clean" ? <SaasCleanCover style={style} /> : null}
+        </>
+      )}
     </div>
   );
 }
